@@ -33,7 +33,7 @@ import edu.cuny.util.Utils;
 /**
  * This valuer generator creates valuation policies in which we randomly
  * determine our valuation across all auctions and all units at
- * agent-initialisation time. Valuations are drawn from a certain distribution
+ * agent-initialization time. Valuations are drawn from a certain distribution
  * with the specified range.
  * 
  * </p>

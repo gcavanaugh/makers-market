@@ -82,6 +82,8 @@ public class RandomValuer extends AbstractRandomValuer {
 	 *
 	 * 
 	 * I still don't get where the random value gets sent to.
+	 * 
+	 * To see the code for drawRandomValue(), see AbstractRandomValuer.java.
 	 */
 	@Override
 	public void drawRandomValue() {

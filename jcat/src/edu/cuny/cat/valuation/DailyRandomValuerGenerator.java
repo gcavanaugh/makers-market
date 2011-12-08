@@ -29,16 +29,51 @@ import org.apache.log4j.Logger;
  */
 
 public class DailyRandomValuerGenerator extends RandomValuerGenerator {
+	/**
+	 * Here we initialize a logger which is from a class that is meant to keep a
+	 * running tally of output that might be helpful in debugging.
+	 * 
+	 */
 
 	static Logger logger = Logger.getLogger(DailyRandomValuerGenerator.class);
 
+	/**
+	 * Instances of this class do nothing unless given some key parameters
+	 */
 	public DailyRandomValuerGenerator() {
 	}
 
-	public DailyRandomValuerGenerator(final double minValue, final double maxValue) {
+	/**
+	 * When given key parameters, this class simply invokes it's superclass'
+	 * constructor.
+	 */
+	public DailyRandomValuerGenerator(final double minValue,
+			final double maxValue) {
 		super(minValue, maxValue);
 	}
 
+	/**
+	 * From
+	 * http://docs.oracle.com/javase/tutorial/essential/concurrency/sync.html
+	 * Synchronization: Threads communicate primarily by sharing access to
+	 * fields and the objects reference fields refer to. This form of
+	 * communication is extremely efficient, but makes two kinds of errors
+	 * possible: thread interference and memory consistency errors. The tool
+	 * needed to prevent these errors is synchronization.
+	 * 
+	 * Below we get an example of a synchronized method. I think the reason we
+	 * do this here is because the object is threaded...but I don't actually
+	 * know. In essence the synchronized method makes sure that only one such
+	 * method can act on a given object at a time when you have concurrent
+	 * threads.
+	 * 
+	 * The method returns an object of class ValuationPolicy. We initialize a
+	 * RandomValuer and make it final so that threads can't try and access it
+	 * before its actually been created.
+	 * 
+	 * I'm not exactly sure what "this" refers to in this context. I guess its
+	 * an object of class DailyRandomValuerGenerator.
+	 */
 	@Override
 	public synchronized ValuationPolicy createValuer() {
 		final RandomValuer valuer = new DailyRandomValuer();
