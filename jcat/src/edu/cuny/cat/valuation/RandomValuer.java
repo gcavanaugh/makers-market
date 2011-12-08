@@ -51,9 +51,17 @@ public class RandomValuer extends AbstractRandomValuer {
 	 * the maximum times to redraw the valuation from the distribution when
 	 * previous drawings bring values out of the range defined in
 	 * {@link RandomValuerGenerator}.
+	 * 
+	 * This value belongs to the class, hence static.
+	 * 
+	 * The final modifier indicates that the value of this field cannot change.
+	 * It is used to define constants (which are generally in all upper case.)
 	 */
 	public static final int MAX_REDRAWING_TIMES = 5;
-
+	
+	/**
+	 * TODO: find out what a Logger is/does.
+	 */
 	static Logger logger = Logger.getLogger(RandomValuer.class);
 
 	public void setGenerator(final RandomValuerGenerator generator) {
@@ -66,6 +74,14 @@ public class RandomValuer extends AbstractRandomValuer {
 
 	/**
 	 * TODO: to check later if this non-deterministic behavior is supposed so.
+	 * 
+	 * This little method simply draws a value. If the returned value is within 
+	 * a prespecified range, the while loop is broken. If the value that comes back is outside 
+	 * the specified range than it increments its counter and tries again. If it maxes out 
+	 * its alloted number of ties, it sends back an error.
+	 *
+	 * 
+	 * I still don't get where the random value gets sent to.
 	 */
 	@Override
 	public void drawRandomValue() {

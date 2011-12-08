@@ -19,7 +19,7 @@ import org.apache.log4j.Logger;
 
 /**
  * <p>
- * This valuer generator creates valutions drawn from distributions similar to
+ * This valuer generator creates valuations drawn from distributions similar to
  * the situation in {@link RandomValuerGenerator}, but the valuations are
  * redrawn at the end of each day.
  * </p>

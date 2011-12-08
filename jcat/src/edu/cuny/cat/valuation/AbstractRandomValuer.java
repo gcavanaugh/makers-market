@@ -29,6 +29,9 @@
 
 package edu.cuny.cat.valuation;
 
+/**
+* Here we import the external class that includes all our distribution types
+*/
 import cern.jet.random.AbstractDistribution;
 
 /**
@@ -54,6 +57,20 @@ public class AbstractRandomValuer extends ValuationPolicy {
 		return distribution;
 	}
 
+	/**
+	 * In addition to our getters and setters, we also have a method that draws a random
+	 * value from the chosen distribution. In fact, it really just calls the method nextDouble()
+	 * on the distribution.
+	 * 
+	 * Now I have to track down nextDouble().
+	 * Right now I'm checking:
+	 * -the colt jar
+	 * -the cern.jet.random package
+	 * ...yup that's where it appears to be
+	 * 
+	 * It simply sets that value using the setValue() method from the ValuationPolicy class.
+	 *
+	 */
 	public void drawRandomValue() {
 		setValue(distribution.nextDouble());
 	}

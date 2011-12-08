@@ -51,18 +51,20 @@ import edu.cuny.util.Utils;
 public class TradingAgent extends AbstractTradingAgent implements Serializable {
 
 	/**
-	 * 
+	 * AbstractTradingAgent is the superclass for TradingAgent
 	 */
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * The number of units this agent is entitlted to have yet to trade on a
+	 * The number of units this agent is entitled to have yet to trade on a
 	 * trading day.
 	 */
 	protected int tradeEntitlement;
 
 	/**
 	 * The initial value of tradeEntitlement
+	 * 
+	 * TODO: Understand the difference between tradeEntitlement and initialTradeEntitlement
 	 */
 	protected int initialTradeEntitlement;
 
@@ -71,14 +73,26 @@ public class TradingAgent extends AbstractTradingAgent implements Serializable {
 	 */
 	protected boolean isActive = true;
 
+	/**
+	 * P_INITIAL_TRADE_ENTITLEMENT seems to be a class variable and I'm wondering if
+	 * it refers to a line on the master parameters page...although I don't see the link to that page
+	 */
 	public static final String P_INITIAL_TRADE_ENTITLEMENT = "initialtradeentitlement";
+	
 
 	static Logger logger = Logger.getLogger(TradingAgent.class);
-
+	
+	/**
+	 * constructor for default trading agent - a private value of 0, an endowment of 1, and non-active
+	 */
 	public TradingAgent() {
 		this(0, 1, false);
 	}
-
+	
+	/**
+	 * This constructor calls the the superclass constructor and then adds initialization code of its own
+	 * Invocation of a superclass constructor must be the first line in the subclass constructor.
+	 */
 	public TradingAgent(final double privateValue,
 			final int initialTradeEntitlement, final boolean isSeller) {
 		super(privateValue, isSeller);
