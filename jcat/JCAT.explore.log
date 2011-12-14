@@ -1,0 +1,26 @@
+within jcat.params.moduels.cat.params
+found following code in lines 223-231
+
+# valuer
+
+cat.server.valuation.buyer = edu.cuny.cat.valuation.RandomValuerGenerator
+cat.server.valuation.buyer.minvalue = 50
+cat.server.valuation.buyer.maxvalue = 150
+
+cat.server.valuation.seller = edu.cuny.cat.valuation.RandomValuerGenerator
+cat.server.valuation.seller.minvalue = 50
+cat.server.valuation.seller.maxvalue = 150
+
+This indicates to me that they are setting a single demand/supply schedule for the entire group.
+
+-------------------
+
+Earlier today
+read in Overview of CAT: A Market Design Competition Version 2.0
+
+Seem to me to be contradictory statements
+
+Private values and the demand and supply of the markets are allocated by the CAT server, and are reset at the start of each day. Although private values remain constant during a day, these values may change from day to day.
+
+Meanwhile, the CAT server assigns to each trader a private value and the number of goods the trader needs to trade on the day. Different traders have different private values, each drawn from a random distribution. Currently, for any one trader, all the goods that the trader needs to trade have the same private value. These various private values and entitlements form the supply and demand schedules of the global market.
+

@@ -29,20 +29,29 @@ import edu.cuny.util.Utils;
 
 public class PrivateValueAssignedEvent extends AuctionEvent implements
 		Cloneable {
-//this class is an example of AuctionEvent and uses the Cloneable interface
+	/**
+	 * this class is an example of AuctionEvent and uses the Cloneable interface
+	 * Protected variables, are variables that are visible only to the class to
+	 * which they belong, and any subclasses. every instance of this class must
+	 * have a traderID and a privateValue
+	 */
 	protected String traderId;
 
 	protected double privateValue;
-//	Protected variables, are variables that are visible only to the class to which they belong, and any subclasses.
-//	every instance of this class must have a traderID and a privateValue
-	
+
+	/**
+	 * the values of those must-have variables is assigned when an instance is
+	 * initialized  
+	 * method PrivateValueAssignedEvent takes in an Id and
+	 * a private value and assigns the instance variables of the class to those
+	 * local variables 
+	 */
 	public PrivateValueAssignedEvent(final String traderId,
 			final double privateValue) {
 		this.traderId = traderId;
 		this.privateValue = privateValue;
 	}
-// the values of those must-have variables is assigned when an instance is initialized
-	
+
 	public String getTraderId() {
 		return traderId;
 	}
