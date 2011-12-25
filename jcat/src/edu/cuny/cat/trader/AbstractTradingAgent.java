@@ -68,8 +68,7 @@ public abstract class AbstractTradingAgent extends Observable implements
 		Cloneable, Observer, Resetable {
 
 	/**
-	 * The first step is to set up default values for various characteristics of
-	 * an agent
+	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
@@ -129,7 +128,7 @@ public abstract class AbstractTradingAgent extends Observable implements
 	static Logger logger = Logger.getLogger(AbstractTradingAgent.class);
 
 	/**
-	 * Parameter names used when initializing from parameter db
+	 * Parameter names used when initialising from parameter db
 	 */
 
 	public static final String P_DEF_BASE = "agent";
@@ -144,26 +143,13 @@ public abstract class AbstractTradingAgent extends Observable implements
 
 	public static final String P_RESETTING_CONDITION = "resetting";
 
-	/**
-	 * Given no parameters, the agent starts up with a private value of 0 and is
-	 * a buyer (isSeller=false)
-	 */
 	public AbstractTradingAgent() {
 		this(0, false);
 	}
 
-	public AbstractTradingAgent(final double privateValue,
-			final boolean isSeller) {
+	public AbstractTradingAgent(final double privateValue, final boolean isSeller) {
 		this(privateValue, isSeller, null);
 	}
-
-	/**
-	 * 
-	 * Note: to get a list of the available markets, look to
-	 * Collections.synchronizedMap(new HashMap<String, Specialist>());
-	 * 
-	 * TODO: Find out what shoutIdList does
-	 */
 
 	public AbstractTradingAgent(final double privateValue,
 			final boolean isSeller, final AbstractStrategy strategy) {
@@ -175,53 +161,41 @@ public abstract class AbstractTradingAgent extends Observable implements
 		shoutIdList = Collections.synchronizedSet(new HashSet<String>());
 	}
 
-	/**
-	 * This bad boy sets up our agent using params files Its not a constructor
-	 * so I guess we construct our files then run this method on them
-	 */
 	public void setup(final ParameterDatabase parameters, final Parameter base) {
-		/**
-		 * We use the object AbstractTradingAgent.agent to set up a parameter
-		 * database
-		 * 
-		 * TODO: Figure out the difference between ParameterDatabase and
-		 * Parameter
-		 * 
-		 */
+
 		final Parameter defBase = new Parameter(AbstractTradingAgent.P_DEF_BASE);
 
-		isSeller = parameters.getBoolean(
-				base.push(AbstractTradingAgent.P_IS_SELLER), null, false);
+		isSeller = parameters.getBoolean(base
+				.push(AbstractTradingAgent.P_IS_SELLER), null, false);
 
-		strategy = parameters.getInstanceForParameter(
-				base.push(AbstractTradingAgent.P_STRATEGY),
-				defBase.push(AbstractTradingAgent.P_STRATEGY),
-				AbstractStrategy.class);
+		strategy = parameters.getInstanceForParameter(base
+				.push(AbstractTradingAgent.P_STRATEGY), defBase
+				.push(AbstractTradingAgent.P_STRATEGY), AbstractStrategy.class);
 		strategy.setAgent(this);
 		strategy.addObserver(this);
-		((Parameterizable) strategy).setup(parameters,
-				base.push(AbstractTradingAgent.P_STRATEGY));
+		((Parameterizable) strategy).setup(parameters, base
+				.push(AbstractTradingAgent.P_STRATEGY));
 		strategy.initialize();
 
-		marketSelectionStrategy = parameters.getInstanceForParameter(
-				base.push(AbstractTradingAgent.P_MARKET_SELECTION_STRATEGY),
-				defBase.push(AbstractTradingAgent.P_MARKET_SELECTION_STRATEGY),
+		marketSelectionStrategy = parameters.getInstanceForParameter(base
+				.push(AbstractTradingAgent.P_MARKET_SELECTION_STRATEGY), defBase
+				.push(AbstractTradingAgent.P_MARKET_SELECTION_STRATEGY),
 				AbstractMarketSelectionStrategy.class);
 		marketSelectionStrategy.setAgent(this);
 		marketSelectionStrategy.addObserver(this);
-		((Parameterizable) marketSelectionStrategy).setup(parameters,
-				base.push(AbstractTradingAgent.P_MARKET_SELECTION_STRATEGY));
+		((Parameterizable) marketSelectionStrategy).setup(parameters, base
+				.push(AbstractTradingAgent.P_MARKET_SELECTION_STRATEGY));
 		marketSelectionStrategy.initialize();
 
 		try {
-			resettingCondition = parameters.getInstanceForParameter(
-					base.push(AbstractTradingAgent.P_RESETTING_CONDITION),
-					defBase.push(AbstractTradingAgent.P_RESETTING_CONDITION),
+			resettingCondition = parameters.getInstanceForParameter(base
+					.push(AbstractTradingAgent.P_RESETTING_CONDITION), defBase
+					.push(AbstractTradingAgent.P_RESETTING_CONDITION),
 					ResettingCondition.class);
 			resettingCondition.setAgent(this);
 			resettingCondition.addObserver(this);
-			((Parameterizable) resettingCondition).setup(parameters,
-					base.push(AbstractTradingAgent.P_RESETTING_CONDITION));
+			((Parameterizable) resettingCondition).setup(parameters, base
+					.push(AbstractTradingAgent.P_RESETTING_CONDITION));
 			resettingCondition.initialize();
 		} catch (final ParamClassLoadException e) {
 			resettingCondition = null;
@@ -257,8 +231,7 @@ public abstract class AbstractTradingAgent extends Observable implements
 	public void shoutAccepted(final Shout shout, final double price,
 			final int quantity) {
 
-		// logger.info(traderId + " : " + privateValue + " -> " +
-		// shout.getPrice() +
+		// logger.info(traderId + " : " + privateValue + " -> " + shout.getPrice() +
 		// " -> " + price);
 		// logger.info("\n");
 		if (isBuyer()) {
@@ -333,12 +306,6 @@ public abstract class AbstractTradingAgent extends Observable implements
 		}
 	}
 
-	/**
-	 * We can see here that the method getID which is called on an
-	 * IdAssignedEvent sets the agent's unique id
-	 * 
-	 * @param event
-	 */
 	protected void processIdAssigned(final IdAssignedEvent event) {
 		setTraderId(event.getId());
 	}
@@ -367,8 +334,7 @@ public abstract class AbstractTradingAgent extends Observable implements
 	}
 
 	public void processRegistration(final RegistrationEvent event) {
-		final Specialist specialist = availableMarkets.get(event
-				.getSpecialistId());
+		final Specialist specialist = availableMarkets.get(event.getSpecialistId());
 
 		if (specialist == null) {
 			final Exception e = new Exception("Possible bug: "
@@ -432,25 +398,18 @@ public abstract class AbstractTradingAgent extends Observable implements
 		currentShout = new Shout();
 	}
 
-	/**
-	 * Here a PrivateValueAssignedEvent is passed and calls the getter
-	 * getPrivateValue()
-	 * 
-	 * @param event
-	 */
-	public void processPrivateValueAssigned(
-			final PrivateValueAssignedEvent event) {
+	public void processPrivateValueAssigned(final PrivateValueAssignedEvent event) {
 		setPrivateValue(event.getPrivateValue());
 	}
 
 	public void processTransactionExecuted(final TransactionExecutedEvent event) {
 		final Transaction transaction = event.getTransaction();
 		if (shoutIdList.contains(transaction.getAsk().getId())) {
-			shoutAccepted(transaction.getAsk(), transaction.getPrice(),
-					transaction.getQuantity());
+			shoutAccepted(transaction.getAsk(), transaction.getPrice(), transaction
+					.getQuantity());
 		} else if (shoutIdList.contains(transaction.getBid().getId())) {
-			shoutAccepted(transaction.getBid(), transaction.getPrice(),
-					transaction.getQuantity());
+			shoutAccepted(transaction.getBid(), transaction.getPrice(), transaction
+					.getQuantity());
 		}
 	}
 
@@ -490,13 +449,6 @@ public abstract class AbstractTradingAgent extends Observable implements
 		return traderId;
 	}
 
-	/**
-	 * JACKPOT BABY! Here things seem to come 3/5ths (not full) circle. I can
-	 * use this to set the private value of the abstract agent I just have to
-	 * figure out how to do it each day
-	 * 
-	 * @param privateValue
-	 */
 	public void setPrivateValue(final double privateValue) {
 		this.privateValue = privateValue;
 	}
@@ -570,8 +522,7 @@ public abstract class AbstractTradingAgent extends Observable implements
 
 	/**
 	 * 
-	 * @return true if this trading agent is actively trading or false
-	 *         otherwise. 
+	 * @return true if this trading agent is actively trading or false otherwise.
 	 */
 	public abstract boolean isActive();
 
