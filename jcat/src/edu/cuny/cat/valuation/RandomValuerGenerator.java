@@ -76,6 +76,13 @@ import edu.cuny.util.Utils;
  */
 
 public class RandomValuerGenerator implements ValuerGenerator {
+	/**
+	 * TODO: Add in two additional instance variables
+	 * 
+	 * protected double paramOne;
+	 * 
+	 * protected double paramTwo;
+	 */
 
 	/**
 	 * The minimum valuation to use.
@@ -86,6 +93,14 @@ public class RandomValuerGenerator implements ValuerGenerator {
 	 * The maximum valuation to use.
 	 */
 	protected double maxValue;
+	
+	private double alphaGammaValue;
+	
+	private double lambdaValue;
+
+	private double alphaBetaValue;
+
+	private double betaValue;
 
 	/**
 	 * The template distribution for generating distributions in
@@ -99,6 +114,14 @@ public class RandomValuerGenerator implements ValuerGenerator {
 
 	public static final String P_MAXVALUE = "maxvalue";
 
+	public static final String P_ALPHAGAMMA = "alpha_gamma";
+
+	public static final String P_LAMBDA = "lambda";
+	
+	public static final String P_ALPHABETA = "alpha_beta";
+
+	public static final String P_BETA = "beta";
+	
 	public static final String P_DISTRIBUTION = "distribution";
 
 	static Logger logger = Logger.getLogger(RandomValuerGenerator.class);
@@ -111,25 +134,53 @@ public class RandomValuerGenerator implements ValuerGenerator {
 		this.maxValue = maxValue;
 	}
 
-	public void setup(final ParameterDatabase parameters, final Parameter base) {
-		final Parameter defBase = new Parameter(RandomValuerGenerator.P_DEF_BASE);
+	/**
+	 * Right now we only have constructors that take min/max values TODO:set up
+	 * a constructor to take in a distribution and two params
+	 * 
+	 * public RandomValuerGenerator(String distribution, final double paramOne,
+	 * final double paramTwo) { this.distribution = new
+	 * AbstractDistribution(distribution); ???? this.paramOne = paramOne;
+	 * this.paramTwo = paramTwo; }
+	 */
 
+	/**
+	 * Don't fully understand if this already does what we are looking for it to
+	 * do (i.e. in the pseudo-code constructor) above
+	 */
+	public void setup(final ParameterDatabase parameters, final Parameter base) {
+		final Parameter defBase = new Parameter(
+				RandomValuerGenerator.P_DEF_BASE);
+		
+// Need to add something in here for my two parameters
 		minValue = parameters.getDouble(
-				base.push(RandomValuerGenerator.P_MINVALUE), defBase
-						.push(RandomValuerGenerator.P_MINVALUE), 0);
+				base.push(RandomValuerGenerator.P_MINVALUE),
+				defBase.push(RandomValuerGenerator.P_MINVALUE), 0);
 		maxValue = parameters.getDouble(
-				base.push(RandomValuerGenerator.P_MAXVALUE), defBase
-						.push(RandomValuerGenerator.P_MAXVALUE), minValue);
+				base.push(RandomValuerGenerator.P_MAXVALUE),
+				defBase.push(RandomValuerGenerator.P_MAXVALUE), minValue);
+		alphaGammaValue = parameters.getDouble(
+				base.push(RandomValuerGenerator.P_ALPHAGAMMA),
+				defBase.push(RandomValuerGenerator.P_ALPHAGAMMA), 1);
+		lambdaValue = parameters.getDouble(
+				base.push(RandomValuerGenerator.P_LAMBDA),
+				defBase.push(RandomValuerGenerator.P_LAMBDA), alphaGammaValue);
+		alphaBetaValue = parameters.getDouble(
+				base.push(RandomValuerGenerator.P_ALPHABETA),
+				defBase.push(RandomValuerGenerator.P_ALPHABETA), 1);
+		betaValue = parameters.getDouble(
+				base.push(RandomValuerGenerator.P_BETA),
+				defBase.push(RandomValuerGenerator.P_BETA), alphaBetaValue);
 
 		try {
-			distribution = parameters.getInstanceForParameterEq(base
-					.push(RandomValuerGenerator.P_DISTRIBUTION), defBase
-					.push(RandomValuerGenerator.P_DISTRIBUTION),
+			distribution = parameters.getInstanceForParameterEq(
+					base.push(RandomValuerGenerator.P_DISTRIBUTION),
+					defBase.push(RandomValuerGenerator.P_DISTRIBUTION),
 					AbstractDistribution.class);
 
 			if (distribution instanceof Parameterizable) {
-				((Parameterizable) distribution).setup(parameters, base
-						.push(RandomValuerGenerator.P_DISTRIBUTION));
+				((Parameterizable) distribution).setup(parameters,
+						base.push(RandomValuerGenerator.P_DISTRIBUTION));
 			}
 		} catch (final ParamClassLoadException e) {
 			distribution = new Uniform(minValue, maxValue, Galaxy.getInstance()
@@ -149,6 +200,38 @@ public class RandomValuerGenerator implements ValuerGenerator {
 		}
 	}
 
+	public double getAlphaGammaValue() {
+		return alphaGammaValue;
+	}
+
+	public void setAlphaGammaValue(double alphaGammaValue) {
+		this.alphaGammaValue = alphaGammaValue;
+	}
+
+	public double getLambdaValue() {
+		return lambdaValue;
+	}
+
+	public void setLambdaValue(double lambdaValue) {
+		this.lambdaValue = lambdaValue;
+	}
+
+	public double getAlphaBetaValue() {
+		return alphaBetaValue;
+	}
+
+	public void setAlphaBetaValue(double alphaBetaValue) {
+		this.alphaBetaValue = alphaBetaValue;
+	}
+
+	public double getBetaValue() {
+		return betaValue;
+	}
+
+	public void setBetaValue(double betaValue) {
+		this.betaValue = betaValue;
+	}
+	
 	public double getMaxValue() {
 		return maxValue;
 	}
@@ -179,8 +262,10 @@ public class RandomValuerGenerator implements ValuerGenerator {
 
 		AbstractDistribution dist = null;
 		try {
-			// NOTE: cloning the template distribution is not used before it will
-			// cause all generated distributions to have a random engine in the same
+			// NOTE: cloning the template distribution is not used before it
+			// will
+			// cause all generated distributions to have a random engine in the
+			// same
 			// situation and thus generate the same random numbers.
 
 			if (distribution != null) {
@@ -200,8 +285,8 @@ public class RandomValuerGenerator implements ValuerGenerator {
 		}
 
 		if (dist == null) {
-			dist = new Uniform(minValue, maxValue, Galaxy.getInstance().getTyped(
-					Game.P_CAT, GlobalPRNG.class).getEngine());
+			dist = new Uniform(minValue, maxValue, Galaxy.getInstance()
+					.getTyped(Game.P_CAT, GlobalPRNG.class).getEngine());
 		}
 
 		return dist;
@@ -228,6 +313,10 @@ public class RandomValuerGenerator implements ValuerGenerator {
 		String s = getClass().getSimpleName();
 		s += "\n" + Utils.indent("minValue:" + minValue);
 		s += "\n" + Utils.indent("maxValue:" + maxValue);
+		s += "\n" + Utils.indent("alphaGammaValue:" + alphaGammaValue);
+		s += "\n" + Utils.indent("lambda:" + lambdaValue);
+		s += "\n" + Utils.indent("alphaBetaValue:" + alphaBetaValue);
+		s += "\n" + Utils.indent("beta:" + betaValue);
 		s += "\n" + Utils.indent("distribution:" + distribution);
 
 		return s;
