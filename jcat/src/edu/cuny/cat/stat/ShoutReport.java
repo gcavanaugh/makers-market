@@ -32,6 +32,8 @@ import edu.cuny.util.CumulativeDistribution;
  * <p>
  * A report tracking shouts and transactions that have been made at specialists
  * day by day.
+ * 
+ * Modified by Grant Cavanaugh (University of Kentucky) on January 4, 2012 to include opening and closing prices.
  * </p>
  * 
  * <p>
@@ -230,6 +232,7 @@ public class ShoutReport implements GameReport {
 
 		// calculate transactions
 		final int transactionNums[] = new int[specialists.length];
+		//Added by Grant Cavanaugh on 01.04.12
 		final CumulativeDistribution pricesOfTransaction[] = ShoutReport
 				.createDistArray(specialists.length);
 
@@ -299,9 +302,18 @@ public class ShoutReport implements GameReport {
 						+ ReportVariable.SEPARATOR + GameReport.MAX, priceDistribution
 						.getMax());
 		board
-				.reportValue(name + ReportVariable.SEPARATOR + type
-						+ ReportVariable.SEPARATOR + GameReport.PRICE
-						+ ReportVariable.SEPARATOR + GameReport.MIN, priceDistribution
-						.getMin());
+		.reportValue(name + ReportVariable.SEPARATOR + type
+				+ ReportVariable.SEPARATOR + GameReport.PRICE
+				+ ReportVariable.SEPARATOR + GameReport.MIN, priceDistribution
+				.getMin());
+		board
+		.reportValue(name + ReportVariable.SEPARATOR + type
+				+ ReportVariable.SEPARATOR + GameReport.PRICE
+				+ ReportVariable.SEPARATOR + GameReport.OPEN, priceDistribution.getOpen());
+		board
+		.reportValue(name + ReportVariable.SEPARATOR + type
+				+ ReportVariable.SEPARATOR + GameReport.PRICE
+				+ ReportVariable.SEPARATOR + GameReport.CLOSE, priceDistribution.getClose());
+
 	}
 }

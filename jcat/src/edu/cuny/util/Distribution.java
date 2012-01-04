@@ -93,6 +93,16 @@ public interface Distribution {
 	 * Get the total of the data
 	 */
 	public abstract double getTotal();
+	
+	/**
+	 * Get the first value in the series
+	 */
+	public abstract double getOpen();
+	
+	/**
+	 * Get the last value in the series 
+	 */
+	public abstract double getClose();
 
 	/**
 	 * Combine this distribution with the supplied distribution.

@@ -1,4 +1,8 @@
-/*
+/* Modified by Grant Cavanaugh
+ * University of Kentucky 
+ * 01/04/2012
+ * 
+ * 
  * JCAT - TAC Market Design Competition Platform
  * Copyright (C) 2006-2010 Jinzhong Niu, Kai Cai
  *
@@ -38,6 +42,8 @@ import org.apache.log4j.Logger;
  * A utility class for cumulative tracking of stats for a series of doubles.
  * Moments are incremented dynamically, rather than keeping the actual cases in
  * memory.
+ * 
+ * Updated to include open and close values (first and last in series) by Grant Cavanaugh on Jan 4, 2012.
  * </p>
  * 
  * <p>
@@ -82,7 +88,7 @@ public class CumulativeDistribution implements Serializable, Cloneable,
 	protected int n;
 
 	/**
-	 * The cummulative total of all numbers in the series so far.
+	 * The cumulative total of all numbers in the series so far.
 	 */
 	protected double total;
 
@@ -100,11 +106,22 @@ public class CumulativeDistribution implements Serializable, Cloneable,
 	 * The maximum so far.
 	 */
 	protected double max;
+	
+	/**
+	 * The first value in this series.
+	 */
+	protected double open;
+	
+	/**
+	 * The last value in this series.
+	 */
+	protected double close;
 
 	/**
 	 * The name of this series.
 	 */
 	protected String varName;
+	
 
 	static Logger logger = Logger.getLogger(CumulativeDistribution.class);
 
@@ -123,6 +140,8 @@ public class CumulativeDistribution implements Serializable, Cloneable,
 		min = Double.POSITIVE_INFINITY;
 		max = Double.NEGATIVE_INFINITY;
 		totalSq = 0;
+		open = 0;
+		close = 0;
 	}
 
 	public void reset() {
@@ -134,6 +153,10 @@ public class CumulativeDistribution implements Serializable, Cloneable,
 	 */
 	public void newData(final double i) {
 		n++;
+		close = i;
+		if (n == 1) {
+			open = i;
+		}
 		total += i;
 		totalSq += i * i;
 		if (i > max) {
@@ -234,6 +257,20 @@ public class CumulativeDistribution implements Serializable, Cloneable,
 	 */
 	public double getTotal() {
 		return total;
+	}
+	
+	/**
+	 * Get the number of items in the series.
+	 */
+	public double getOpen() {
+		return open;
+	}
+	
+	/**
+	 * Get the number of items in the series.
+	 */
+	public double getClose() {
+		return close;
 	}
 
 	public void setVarName(String varName) {

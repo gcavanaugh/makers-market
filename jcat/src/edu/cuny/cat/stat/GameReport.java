@@ -70,6 +70,10 @@ public interface GameReport extends AuctionEventListener {
 	public final static String ASK = "ask";
 
 	public final static String BID = "bid";
+	
+	public final static String OPEN = "open";
+	
+	public final static String CLOSE = "close";
 
 	public final static String TRANSACTION = "transaction";
 

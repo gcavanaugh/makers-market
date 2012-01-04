@@ -81,7 +81,7 @@ public class Gamma extends cern.jet.random.Gamma implements Parameterizable,
 
 	public static final String P_DEF_BASE = "gamma";
 
-	public static final int DEFAULT_ALPHA = 1;
+	public static final double DEFAULT_ALPHA = 1;
 
 	public static final double DEFAULT_LAMBDA = 1;
 
@@ -98,7 +98,7 @@ public class Gamma extends cern.jet.random.Gamma implements Parameterizable,
 	public void setup(final ParameterDatabase parameters, final Parameter base) {
 		final Parameter defBase = new Parameter(Gamma.P_DEF_BASE);
 
-		final double alpha = parameters.getIntWithDefault(base.push(Gamma.P_ALPHA),
+		final double alpha = parameters.getDoubleWithDefault(base.push(Gamma.P_ALPHA),
 				defBase.push(Gamma.P_ALPHA), Gamma.DEFAULT_ALPHA);
 		final double lambda = parameters.getDoubleWithDefault(base
 				.push(Gamma.P_LAMBDA), defBase.push(Gamma.P_LAMBDA),
