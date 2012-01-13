@@ -260,14 +260,14 @@ public class CumulativeDistribution implements Serializable, Cloneable,
 	}
 	
 	/**
-	 * Get the number of items in the series.
+	 * Get the first value in the series.
 	 */
 	public double getOpen() {
 		return open;
 	}
 	
 	/**
-	 * Get the number of items in the series.
+	 * Get the final value in the series.
 	 */
 	public double getClose() {
 		return close;
@@ -288,6 +288,8 @@ public class CumulativeDistribution implements Serializable, Cloneable,
 		CumulativeDistribution.logger.info(Utils.indent("max:\t" + getMax()));
 		CumulativeDistribution.logger.info(Utils.indent("mean:\t" + getMean()));
 		CumulativeDistribution.logger.info(Utils.indent("stdev:\t" + getStdDev()));
+		CumulativeDistribution.logger.info(Utils.indent("open:\t" + getOpen()));
+		CumulativeDistribution.logger.info(Utils.indent("close:\t" + getClose()));
 	}
 
 	public void combine(final Distribution other) {
@@ -295,6 +297,7 @@ public class CumulativeDistribution implements Serializable, Cloneable,
 		min = Math.min(min, d.min);
 		max = Math.max(max, d.max);
 		n += d.n;
+		close = d.close;
 		total += d.total;
 		totalSq += d.totalSq;
 	}
@@ -310,8 +313,8 @@ public class CumulativeDistribution implements Serializable, Cloneable,
 	@Override
 	public String toString() {
 		return getClass().getSimpleName() + " varName:" + varName + " n:" + n
-				+ " mean:" + getMean() + " stdev:" + getStdDev() + " min:" + min
-				+ " max:" + max;
+				+ " mean:" + getMean() + " stdev:" + getStdDev() + " min:" + getMin()
+				+ " max:" + getMax() + " open:" + getOpen() + " close:" + getClose();
 	}
 
 }

@@ -33,7 +33,10 @@ import edu.cuny.util.CumulativeDistribution;
  * A report tracking shouts and transactions that have been made at specialists
  * day by day.
  * 
- * Modified by Grant Cavanaugh (University of Kentucky) on January 4, 2012 to include opening and closing prices.
+ * Modified by Grant Cavanaugh (University of Kentucky) on January 4, 2012 to
+ * include opening and closing prices.
+ * 
+ * TODO: Output a full order book showing each transaction
  * </p>
  * 
  * <p>
@@ -151,8 +154,8 @@ public class ShoutReport implements GameReport {
 	}
 
 	protected void generateStat() {
-		final Specialist specialists[] = GameController.getInstance().getRegistry()
-				.getSpecialists();
+		final Specialist specialists[] = GameController.getInstance()
+				.getRegistry().getSpecialists();
 		final Map<String, Integer> specialistIndices = new HashMap<String, Integer>();
 		for (int i = 0; i < specialists.length; i++) {
 			specialistIndices.put(specialists[i].getId(), new Integer(i));
@@ -177,30 +180,31 @@ public class ShoutReport implements GameReport {
 		int index;
 		for (final Shout shout2 : shouts) {
 			if ((shout2.getSpecialist() != null)
-					&& specialistIndices.containsKey((shout2.getSpecialist().getId()))) {
+					&& specialistIndices.containsKey((shout2.getSpecialist()
+							.getId()))) {
 				index = specialistIndices.get(shout2.getSpecialist().getId())
 						.intValue();
 				if ((shout2.getState() == Shout.PLACED)
 						|| (shout2.getState() == Shout.MATCHED)) {
 					if (shout2.isAsk()) {
 						askPlacedNums[index]++;
-						pricesOfAskPlaced[index].newData(shout2.getPrice(), shout2
-								.getQuantity());
+						pricesOfAskPlaced[index].newData(shout2.getPrice(),
+								shout2.getQuantity());
 					} else {
 						bidPlacedNums[index]++;
-						pricesOfBidPlaced[index].newData(shout2.getPrice(), shout2
-								.getQuantity());
+						pricesOfBidPlaced[index].newData(shout2.getPrice(),
+								shout2.getQuantity());
 					}
 
 					if (shout2.getState() == Shout.MATCHED) {
 						if (shout2.isAsk()) {
 							askAcceptedNums[index]++;
-							pricesOfAskAccepted[index].newData(shout2.getPrice(), shout2
-									.getQuantity());
+							pricesOfAskAccepted[index].newData(
+									shout2.getPrice(), shout2.getQuantity());
 						} else {
 							bidAcceptedNums[index]++;
-							pricesOfBidAccepted[index].newData(shout2.getPrice(), shout2
-									.getQuantity());
+							pricesOfBidAccepted[index].newData(
+									shout2.getPrice(), shout2.getQuantity());
 						}
 					}
 				}
@@ -216,23 +220,23 @@ public class ShoutReport implements GameReport {
 			}
 
 			ShoutReport.reportVariables(specialists[i].getId(), GameReport.ASK
-					+ ReportVariable.SEPARATOR + GameReport.PLACED, askPlacedNums[i],
-					pricesOfAskPlaced[i]);
+					+ ReportVariable.SEPARATOR + GameReport.PLACED,
+					askPlacedNums[i], pricesOfAskPlaced[i]);
 			ShoutReport.reportVariables(specialists[i].getId(), GameReport.ASK
-					+ ReportVariable.SEPARATOR + GameReport.ACCEPTED, askAcceptedNums[i],
-					pricesOfAskAccepted[i]);
+					+ ReportVariable.SEPARATOR + GameReport.ACCEPTED,
+					askAcceptedNums[i], pricesOfAskAccepted[i]);
 			ShoutReport.reportVariables(specialists[i].getId(), GameReport.BID
-					+ ReportVariable.SEPARATOR + GameReport.PLACED, bidPlacedNums[i],
-					pricesOfBidPlaced[i]);
+					+ ReportVariable.SEPARATOR + GameReport.PLACED,
+					bidPlacedNums[i], pricesOfBidPlaced[i]);
 			ShoutReport.reportVariables(specialists[i].getId(), GameReport.BID
-					+ ReportVariable.SEPARATOR + GameReport.ACCEPTED, bidAcceptedNums[i],
-					pricesOfBidAccepted[i]);
+					+ ReportVariable.SEPARATOR + GameReport.ACCEPTED,
+					bidAcceptedNums[i], pricesOfBidAccepted[i]);
 
 		}
 
 		// calculate transactions
 		final int transactionNums[] = new int[specialists.length];
-		//Added by Grant Cavanaugh on 01.04.12
+		// Added by Grant Cavanaugh on 01.04.12
 		final CumulativeDistribution pricesOfTransaction[] = ShoutReport
 				.createDistArray(specialists.length);
 
@@ -240,10 +244,10 @@ public class ShoutReport implements GameReport {
 				.getRegistry().getTransactions();
 		for (final Transaction transaction2 : transactions) {
 			if ((transaction2.getSpecialist() != null)
-					&& specialistIndices.containsKey((transaction2.getSpecialist()
-							.getId()))) {
-				index = specialistIndices.get(transaction2.getSpecialist().getId())
-						.intValue();
+					&& specialistIndices.containsKey((transaction2
+							.getSpecialist().getId()))) {
+				index = specialistIndices.get(
+						transaction2.getSpecialist().getId()).intValue();
 				transactionNums[index]++;
 				pricesOfTransaction[index].newData(transaction2.getPrice(),
 						transaction2.getQuantity());
@@ -258,7 +262,8 @@ public class ShoutReport implements GameReport {
 			}
 
 			ShoutReport.reportVariables(specialists[i].getId(),
-					GameReport.TRANSACTION, transactionNums[i], pricesOfTransaction[i]);
+					GameReport.TRANSACTION, transactionNums[i],
+					pricesOfTransaction[i]);
 		}
 	}
 
@@ -266,7 +271,7 @@ public class ShoutReport implements GameReport {
 	 * creates an array of {@link edu.cuny.util.CumulativeDistribution}s.
 	 * 
 	 * @param num
-	 *          the length of the array
+	 *            the length of the array
 	 * @return the array
 	 */
 	private static CumulativeDistribution[] createDistArray(final int num) {
@@ -285,35 +290,33 @@ public class ShoutReport implements GameReport {
 		board.reportValue(name + ReportVariable.SEPARATOR + type, num);
 
 		board.reportValue(name + ReportVariable.SEPARATOR + type
-				+ ReportVariable.SEPARATOR + GameReport.QUANTITY, priceDistribution
-				.getN());
+				+ ReportVariable.SEPARATOR + GameReport.QUANTITY,
+				priceDistribution.getN());
 
 		board.reportValue(name + ReportVariable.SEPARATOR + type
 				+ ReportVariable.SEPARATOR + GameReport.PRICE
-				+ ReportVariable.SEPARATOR + GameReport.MEAN, priceDistribution
-				.getMean());
+				+ ReportVariable.SEPARATOR + GameReport.MEAN,
+				priceDistribution.getMean());
 		board.reportValue(name + ReportVariable.SEPARATOR + type
 				+ ReportVariable.SEPARATOR + GameReport.PRICE
-				+ ReportVariable.SEPARATOR + GameReport.STDEV, priceDistribution
-				.getStdDev());
-		board
-				.reportValue(name + ReportVariable.SEPARATOR + type
-						+ ReportVariable.SEPARATOR + GameReport.PRICE
-						+ ReportVariable.SEPARATOR + GameReport.MAX, priceDistribution
-						.getMax());
-		board
-		.reportValue(name + ReportVariable.SEPARATOR + type
+				+ ReportVariable.SEPARATOR + GameReport.STDEV,
+				priceDistribution.getStdDev());
+		board.reportValue(name + ReportVariable.SEPARATOR + type
 				+ ReportVariable.SEPARATOR + GameReport.PRICE
-				+ ReportVariable.SEPARATOR + GameReport.MIN, priceDistribution
-				.getMin());
-		board
-		.reportValue(name + ReportVariable.SEPARATOR + type
+				+ ReportVariable.SEPARATOR + GameReport.MAX,
+				priceDistribution.getMax());
+		board.reportValue(name + ReportVariable.SEPARATOR + type
 				+ ReportVariable.SEPARATOR + GameReport.PRICE
-				+ ReportVariable.SEPARATOR + GameReport.OPEN, priceDistribution.getOpen());
-		board
-		.reportValue(name + ReportVariable.SEPARATOR + type
+				+ ReportVariable.SEPARATOR + GameReport.MIN,
+				priceDistribution.getMin());
+		board.reportValue(name + ReportVariable.SEPARATOR + type
 				+ ReportVariable.SEPARATOR + GameReport.PRICE
-				+ ReportVariable.SEPARATOR + GameReport.CLOSE, priceDistribution.getClose());
+				+ ReportVariable.SEPARATOR + GameReport.OPEN,
+				priceDistribution.getOpen());
+		board.reportValue(name + ReportVariable.SEPARATOR + type
+				+ ReportVariable.SEPARATOR + GameReport.PRICE
+				+ ReportVariable.SEPARATOR + GameReport.CLOSE,
+				priceDistribution.getClose());
 
 	}
 }

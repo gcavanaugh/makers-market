@@ -1,4 +1,6 @@
+edu.cuny
 edu.cuny.ai.learning
+edu.cuny.ai.learning.prob
 edu.cuny.cat
 edu.cuny.cat.comm
 edu.cuny.cat.core
@@ -15,6 +17,7 @@ edu.cuny.cat.market.subscribing
 edu.cuny.cat.registry
 edu.cuny.cat.server
 edu.cuny.cat.stat
+edu.cuny.cat.sys
 edu.cuny.cat.task
 edu.cuny.cat.trader
 edu.cuny.cat.trader.marketselection
