@@ -13,7 +13,7 @@ cat.server.gc = true
 cat.agent.n = 8
 
 initialtradeentitlement = 3
-size = 12
+size = 5
 
 cat.agent.0 = edu.cuny.cat.TraderClient
 cat.agent.0.n = &size;
@@ -198,7 +198,7 @@ cat.server.registry = edu.cuny.cat.registry.SimpleRegistry
 
 cat.server.valuation.buyer = edu.cuny.cat.valuation.RandomValuerGenerator
 cat.server.valuation.buyer.distribution = edu.cuny.random.Normal
-cat.server.valuation.buyer.distribution.mean = 120
+cat.server.valuation.buyer.distribution.mean = NA
 cat.server.valuation.buyer.distribution.stdev = 20
 cat.server.valuation.buyer.minvalue = 1
 cat.server.valuation.buyer.maxvalue = 10000
