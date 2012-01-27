@@ -47,6 +47,7 @@ import edu.cuny.util.ParamClassLoadException;
 import edu.cuny.util.Parameter;
 import edu.cuny.util.ParameterDatabase;
 import edu.cuny.util.Parameterizable;
+import edu.cuny.util.Utils;
 
 /**
  * <p>
@@ -69,18 +70,7 @@ public class UpdatingDailyRandomValuerGenerator extends
 	 * running tally of output that might be helpful in debugging.
 	 * 
 	 */
-	
-	public static final String P_DISTRIBUTION = "distribution";
-	
-	public static final String P_LOC = "location";
-	
-	public static final String P_PRES = "precision";
-	
-	public static final String P_SCALE = "scale";
 
-	public static final String P_SHAPE = "shape";
-
-	public static final String P_DEF_BASE = "random_valuer";
 	
 	public static final String P_DEF_NORM = "normal";
 	
@@ -112,43 +102,48 @@ public class UpdatingDailyRandomValuerGenerator extends
 	// these Parameters were originally inside the startup but I moved them outside
 	// COPIED FROM RandomValuerGenerator (which I'm overriding here)
 	//I think this points the simulation toward a specific file within the internal database
-	final Parameter defBase = new Parameter(UpdatingDailyRandomValuerGenerator.P_DEF_BASE);
+	
 	/*
 	 * This could be a problem...in the  random valuer, the line is
 	 * 
 	 * final Parameter defBase = new Parameter(RandomValuerGenerator.P_DEF_BASE);
 	 */
-	
+	Parameter defBase = new Parameter(RandomValuerGenerator.P_DEF_BASE);
 	
 	// I think I have to include one for the normal so that I am mimicking the code within the Normal class
-	final Parameter defBaseNorm = new Parameter(Normal.P_DEF_BASE);
+	Parameter defBaseNorm = new Parameter(Normal.P_DEF_BASE);
 	// I need to store the parameter database so that I can access it in other methods in this class
 	
+	// Just mimicking the DailyRandomValuerGenerator
 	static Logger logger = Logger.getLogger(UpdatingDailyRandomValuerGenerator.class);
-	
 	
 	@Override
 	public void setup(final ParameterDatabase parameters, final Parameter base) {
+		//moved these inside setup
+		final Parameter defBase = new Parameter(RandomValuerGenerator.P_DEF_BASE);
+		final Parameter defBaseNorm = new Parameter(Normal.P_DEF_BASE);
 		// Need to store this for later use
 		paramholder = parameters;		
 		// COPIED FROM RandomValuerGenerator (which I'm overriding here)
 		minValue = parameters.getDouble(
-				base.push(UpdatingDailyRandomValuerGenerator.P_MINVALUE), defBase
-						.push(UpdatingDailyRandomValuerGenerator.P_MINVALUE), 0);
+				base.push(RandomValuerGenerator.P_MINVALUE), defBase
+						.push(RandomValuerGenerator.P_MINVALUE), 0);
 		maxValue = parameters.getDouble(
-				base.push(UpdatingDailyRandomValuerGenerator.P_MAXVALUE), defBase
-						.push(UpdatingDailyRandomValuerGenerator.P_MAXVALUE), minValue);
+				base.push(RandomValuerGenerator.P_MAXVALUE), defBase
+						.push(RandomValuerGenerator.P_MAXVALUE), minValue);
 		// COPIED FROM RandomValuerGenerator (which I'm overriding here)
 		try {
 			distribution = parameters.getInstanceForParameterEq(base
-					.push(UpdatingDailyRandomValuerGenerator.P_DISTRIBUTION), defBase
-					.push(UpdatingDailyRandomValuerGenerator.P_DISTRIBUTION),
+					.push(RandomValuerGenerator.P_DISTRIBUTION), defBase
+					.push(RandomValuerGenerator.P_DISTRIBUTION),
 					AbstractDistribution.class);
 
 			if (distribution instanceof Parameterizable) {
 				((Parameterizable) distribution).setup(parameters, base
-						.push(UpdatingDailyRandomValuerGenerator.P_DISTRIBUTION));
+						.push(RandomValuerGenerator.P_DISTRIBUTION));
 				//check if the distribution you're dealing with is normal
+				// not sure this works as a check, but the toString method in 
+				// RandomValuerGenerator gives hints that it does
 				if (distribution.equals(P_DEF_NORM)){
 					// COPIED FROM Normal class but the variables are not made final
 					// as in the Normal class
@@ -167,17 +162,17 @@ public class UpdatingDailyRandomValuerGenerator extends
 					// recognizes them
 					// As I reckon it, I will need to 
 					location = parameters.getDouble(
-							base.push(UpdatingDailyRandomValuerGenerator.P_LOC), defBase
-									.push(UpdatingDailyRandomValuerGenerator.P_LOC), location);
+							base.push(RandomValuerGenerator.P_LOC), defBase
+									.push(RandomValuerGenerator.P_LOC), location);
 					precision = parameters.getDouble(
-							base.push(UpdatingDailyRandomValuerGenerator.P_PRES), defBase
-									.push(UpdatingDailyRandomValuerGenerator.P_PRES), precision);
+							base.push(RandomValuerGenerator.P_PRES), defBase
+									.push(RandomValuerGenerator.P_PRES), precision);
 					scale = parameters.getDouble(
-							base.push(UpdatingDailyRandomValuerGenerator.P_SCALE), defBase
-									.push(UpdatingDailyRandomValuerGenerator.P_SCALE), scale);
+							base.push(RandomValuerGenerator.P_SCALE), defBase
+									.push(RandomValuerGenerator.P_SCALE), scale);
 					shape = parameters.getDouble(
-							base.push(UpdatingDailyRandomValuerGenerator.P_SHAPE), defBase
-									.push(UpdatingDailyRandomValuerGenerator.P_SHAPE), shape);
+							base.push(RandomValuerGenerator.P_SHAPE), defBase
+									.push(RandomValuerGenerator.P_SHAPE), shape);
 		// COPIED FROM RandomValuerGenerator (which I'm overriding here)
 				}
 			}
@@ -202,6 +197,19 @@ public class UpdatingDailyRandomValuerGenerator extends
 			final double maxValue) {
 		super(minValue, maxValue);
 	}
+	
+	//copied from DailyRandomValuerGenerator
+	@Override
+	public synchronized ValuationPolicy createValuer() {
+		final RandomValuer valuer = new UpdatingDailyRandomValuer();
+		valuer.setGenerator(this);
+		// This next line is the weird one in my mind, it sets the distribution
+		// to default, which I guess is uniform
+		valuer.setDistribution(createDistribution());
+		valuer.drawRandomValue();
+		return valuer;
+	}
+	
 	//Allow access to the parameter database for updating
 	public void updateMeanSD (double mean, double stdev){
 		// convert the values to strings so they can be fed into the param database
@@ -226,12 +234,25 @@ public class UpdatingDailyRandomValuerGenerator extends
 		String spres = dpres.toString();
 		String sscale = dscale.toString();
 		String sshape = dshape.toString();
-		paramholder.set(defBase.push(UpdatingDailyRandomValuerGenerator.P_LOC), sloc);
-		paramholder.set(defBase.push(UpdatingDailyRandomValuerGenerator.P_PRES), spres);
-		paramholder.set(defBase.push(UpdatingDailyRandomValuerGenerator.P_SCALE), sscale);
-		paramholder.set(defBase.push(UpdatingDailyRandomValuerGenerator.P_SHAPE), sshape);
+		paramholder.set(defBase.push(RandomValuerGenerator.P_LOC), sloc);
+		paramholder.set(defBase.push(RandomValuerGenerator.P_PRES), spres);
+		paramholder.set(defBase.push(RandomValuerGenerator.P_SCALE), sscale);
+		paramholder.set(defBase.push(RandomValuerGenerator.P_SHAPE), sshape);
 		
 	}
-
+	
+	// Extended from RandomValuerGenerator
+	@Override
+	public String toString() {
+		String s = getClass().getSimpleName();
+		s += "\n" + Utils.indent("minValue:" + minValue);
+		s += "\n" + Utils.indent("maxValue:" + maxValue);
+		s += "\n" + Utils.indent("distribution:" + distribution);
+		s += "\n" + Utils.indent("location:" + location);
+		s += "\n" + Utils.indent("precision:" + precision);
+		s += "\n" + Utils.indent("scale:" + scale);
+		s += "\n" + Utils.indent("shape:" + shape);
+		return s;
+	}
 
 }

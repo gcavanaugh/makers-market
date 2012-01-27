@@ -18,9 +18,11 @@ package edu.cuny.cat.valuation;
 import org.apache.log4j.Logger;
 
 import cern.jet.random.AbstractDistribution;
+// Where does this package get used?
 import edu.cuny.cat.Game;
 import edu.cuny.cat.event.AuctionEvent;
 import edu.cuny.prng.GlobalPRNG;
+//Where does this package get used?
 import edu.cuny.random.StateCopyable;
 import edu.cuny.random.Uniform;
 import edu.cuny.util.Galaxy;
@@ -100,6 +102,16 @@ public class RandomValuerGenerator implements ValuerGenerator {
 	public static final String P_MAXVALUE = "maxvalue";
 
 	public static final String P_DISTRIBUTION = "distribution";
+	
+	// Added in to make the class capable of storing the parms I need to get a prior initialized
+	
+	public static final String P_LOC = "location";
+	
+	public static final String P_PRES = "precision";
+	
+	public static final String P_SCALE = "scale";
+
+	public static final String P_SHAPE = "shape";
 
 	static Logger logger = Logger.getLogger(RandomValuerGenerator.class);
 
