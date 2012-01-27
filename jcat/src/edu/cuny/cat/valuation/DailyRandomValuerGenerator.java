@@ -53,30 +53,6 @@ public class DailyRandomValuerGenerator extends RandomValuerGenerator {
 	}
 
 	/**
-	 * My own little constructor
-	 */
-	// public DailyRandomValuerGenerator(String distribution, final double
-	// alpha,
-	// final double beta) {
-	// ;
-	// }
-	/**
-	 * This thing should create a valuers that sets the distribution. I should
-	 * be able to pass in a distribution from the .params file and have it read
-	 * and passed here.
-	 */
-	// public synchronized ValuationPolicy createValuer(Sting distrib) {
-	// final RandomValuer valuer = new DailyRandomValuer();
-	// valuer.setGenerator(this);
-	// //This next line is the weird one in my mind, it sets the distribution to
-	// default, which I guess is uniform
-	// valuer.setDistribution(createDistribution(Sting distrib));
-	// valuer.drawRandomValue();
-	// return valuer;
-	// }
-	// }
-
-	/**
 	 * From
 	 * http://docs.oracle.com/javase/tutorial/essential/concurrency/sync.html
 	 * Synchronization: Threads communicate primarily by sharing access to

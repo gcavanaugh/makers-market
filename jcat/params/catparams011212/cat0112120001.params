@@ -268,4 +268,4 @@ log4j.appender.guihtml.layout.LocationInfo=true
 cat.prng = edu.cuny.prng.MT32
 
 #  with the following PRNG seed
-cat.seed = 11212
+cat.seed = 874847

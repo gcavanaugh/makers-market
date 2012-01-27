@@ -11,6 +11,8 @@
 	<classpathentry kind="lib" path="jcat/lib/Repast-3.1/RepastJ/lib/junit.jar"/>
 	<classpathentry kind="lib" path="jcat/lib/Repast-3.1/RepastJ/lib/log4j-1.2.8.jar"/>
 	<classpathentry kind="lib" path="jcat/lib/trove-1.1b4/lib/trove.jar"/>
+	<classpathentry kind="lib" path="jcat/lib/gov/gov-sandia-cognition-common-core.jar"/>
+	<classpathentry kind="lib" path="jcat/lib/gov/gov-sandia-cognition-learning-core.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="jcat/classes"/>
 </classpath>

@@ -80,8 +80,10 @@ public class Normal extends cern.jet.random.Normal implements Parameterizable,
 	public static final String P_STDEV = "stdev";
 
 	public static final String P_DEF_BASE = "normal";
+	
+	// Changed from int to double
 
-	public static final int DEFAULT_MEAN = 0;
+	public static final double DEFAULT_MEAN = 0;
 
 	public static final double DEFAULT_STDEV = 1;
 
@@ -98,9 +100,12 @@ public class Normal extends cern.jet.random.Normal implements Parameterizable,
 	public void setup(final ParameterDatabase parameters, final Parameter base) {
 		final Parameter defBase = new Parameter(Normal.P_DEF_BASE);
 
-		final double mean = parameters.getIntWithDefault(base.push(Normal.P_MEAN),
+		// I'm gonna eliminate final as in
+		// final double mean = parameters.getIntWithDefault(base.push(Normal.P_MEAN), defBase.push(Normal.P_MEAN), Normal.DEFAULT_MEAN);
+		// I'm not sure how that will screw things up
+		double mean = parameters.getDoubleWithDefault(base.push(Normal.P_MEAN),
 				defBase.push(Normal.P_MEAN), Normal.DEFAULT_MEAN);
-		final double stdev = parameters.getDoubleWithDefault(base
+		double stdev = parameters.getDoubleWithDefault(base
 				.push(Normal.P_STDEV), defBase.push(Normal.P_STDEV),
 				Normal.DEFAULT_STDEV);
 
