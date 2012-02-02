@@ -128,6 +128,7 @@ public final class Game {
 			+ " * JASA (Java Auction Simulator API), (C) 2001-2006 Steve Phelps\n"
 			+ " * JAF (Java Application Framework), (C) 1999-2007 Jinzhong Niu\n"
 			+ " * ECJ (Evolutionary Computation in Java), (C) 2005 Sean Luke\n"
+			+ " * BLEEP_BLORP\n"
 			// + "--------------------------------------------------------------\n"
 			+ "\n";
 

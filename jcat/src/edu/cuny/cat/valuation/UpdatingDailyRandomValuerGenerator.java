@@ -70,34 +70,32 @@ public class UpdatingDailyRandomValuerGenerator extends
 	 * running tally of output that might be helpful in debugging.
 	 * 
 	 */
-
-	
-	public static final String P_DEF_NORM = "normal";
-	
 	// Need to access the values of the Normal distribution
 	// They are marked as final in the Normal class
 	// That would worry me but I think I'm okay because we are
 	// Changing the underlying values in the internal database
 	// in this class.
+	public double mean;
 	
-	public double mean = 0;	
-	
-	public double stdev = 1;
+	public double stdev;
 	
 	// Also need to hold the parameters necessary to launch a normal
 	// inverse gamma distribution, which will be our Bayesian prior
 	
-	public double location = mean;
+	public double location;
 	
-	public double precision = 1/(stdev*stdev);
+	public double precision;
 	
-	public double scale = .0001;
+	public double scale;
 	
-	public double shape = 1;
+	public double shape;
+
+	// need this for house keeping
+	public static final String P_DEF_NORM = "normal";
+
+	//Added in a static variable to hold the parameter database I'm gonna feed in
 	
-//	Added in a static variable to hold the parameter database I'm gonna feed in
-	
-	public static ParameterDatabase paramholder = new ParameterDatabase();
+	static ParameterDatabase paramholder;
 	
 	// these Parameters were originally inside the startup but I moved them outside
 	// COPIED FROM RandomValuerGenerator (which I'm overriding here)
@@ -108,23 +106,23 @@ public class UpdatingDailyRandomValuerGenerator extends
 	 * 
 	 * final Parameter defBase = new Parameter(RandomValuerGenerator.P_DEF_BASE);
 	 */
-	Parameter defBase = new Parameter(RandomValuerGenerator.P_DEF_BASE);
+	static Parameter defBase;
 	
 	// I think I have to include one for the normal so that I am mimicking the code within the Normal class
-	Parameter defBaseNorm = new Parameter(Normal.P_DEF_BASE);
+	static Parameter defBaseNorm;
 	// I need to store the parameter database so that I can access it in other methods in this class
 	
 	// Just mimicking the DailyRandomValuerGenerator
-	static Logger logger = Logger.getLogger(UpdatingDailyRandomValuerGenerator.class);
+	static Logger logger = Logger.getLogger(RandomValuerGenerator.class);
 	
 	@Override
 	public void setup(final ParameterDatabase parameters, final Parameter base) {
 		//moved these inside setup
-		final Parameter defBase = new Parameter(RandomValuerGenerator.P_DEF_BASE);
-		final Parameter defBaseNorm = new Parameter(Normal.P_DEF_BASE);
+		defBase = new Parameter(RandomValuerGenerator.P_DEF_BASE);
+		defBaseNorm = new Parameter(Normal.P_DEF_BASE);
 		// Need to store this for later use
 		paramholder = parameters;		
-		// COPIED FROM RandomValuerGenerator (which I'm overriding here)
+		// COPIED FROM UpdatingDailyRandomValuerGenerator (which I'm overriding here)
 		minValue = parameters.getDouble(
 				base.push(RandomValuerGenerator.P_MINVALUE), defBase
 						.push(RandomValuerGenerator.P_MINVALUE), 0);
@@ -144,7 +142,7 @@ public class UpdatingDailyRandomValuerGenerator extends
 				//check if the distribution you're dealing with is normal
 				// not sure this works as a check, but the toString method in 
 				// RandomValuerGenerator gives hints that it does
-				if (distribution.equals(P_DEF_NORM)){
+				if (distribution instanceof Normal){
 					// COPIED FROM Normal class but the variables are not made final
 					// as in the Normal class
 					// question: Why is the mean initialized with an int in original code?
@@ -163,16 +161,16 @@ public class UpdatingDailyRandomValuerGenerator extends
 					// As I reckon it, I will need to 
 					location = parameters.getDouble(
 							base.push(RandomValuerGenerator.P_LOC), defBase
-									.push(RandomValuerGenerator.P_LOC), location);
+									.push(RandomValuerGenerator.P_LOC), mean);
 					precision = parameters.getDouble(
 							base.push(RandomValuerGenerator.P_PRES), defBase
-									.push(RandomValuerGenerator.P_PRES), precision);
+									.push(RandomValuerGenerator.P_PRES), 1/(stdev*stdev));
 					scale = parameters.getDouble(
 							base.push(RandomValuerGenerator.P_SCALE), defBase
-									.push(RandomValuerGenerator.P_SCALE), scale);
+									.push(RandomValuerGenerator.P_SCALE), .0001);
 					shape = parameters.getDouble(
 							base.push(RandomValuerGenerator.P_SHAPE), defBase
-									.push(RandomValuerGenerator.P_SHAPE), shape);
+									.push(RandomValuerGenerator.P_SHAPE), 1);
 		// COPIED FROM RandomValuerGenerator (which I'm overriding here)
 				}
 			}

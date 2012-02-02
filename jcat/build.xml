@@ -48,7 +48,14 @@
 	<property name="collectionsLoc" value="${libDir}/collections-generic-4.01/collections-generic-4.01.jar" />
 	<property name="commonsLoc" value="${libDir}/commons-io/commons-io-1.4.jar" />
 	<property name="jfreechartPath" value="${libDir}/jfreechart-1.0.13.jar:${libDir}/jcommon-1.0.16.jar" />
-
+	<property name="cognitioncommonPath" value="${libDir}/cognitive-foundry/gov-sandia-cognition-common-core.jar"/>
+	<property name="cognitionlearningPath" value="${libDir}/cognitive-foundry/gov-sandia-cognition-learning-core.jar"/>
+	<property name="mtjPath" value="${libDir}/cognitive-foundry/mtj-0.9.14.jar"/>
+	<property name="netlibPath" value="${libDir}/cognitive-foundry/netlib-java-0.9.3.jar"/>
+	<property name="porterPath" value="${libDir}/cognitive-foundry/porter-stemmer-1.4.jar"/>
+	<property name="xpp3Path" value="${libDir}/cognitive-foundry/xpp3_min-1.1.4c.jar"/>
+	<property name="xstreamPath" value="${libDir}/cognitive-foundry/xstream-1.3.1.jar"/>
+	<property name="arpackPath" value="${libDir}/cognitive-foundry/arpack-combo-0.1.jar"/>
 
 	<path id="project.lib.path">
 		<pathelement location="${junitLoc}" />
@@ -58,6 +65,14 @@
 		<pathelement location="${commonsLoc}" />
 		<pathelement location="${collectionsLoc}" />
 		<pathelement path="${jfreechartPath}" />
+		<pathelement path="${cognitioncommonPath}" />
+		<pathelement path="${cognitionlearningPath}" />
+		<pathelement path="${mtjPath}" />
+		<pathelement path="${netlibPath}" />
+		<pathelement path="${porterPath}" />
+		<pathelement path="${xpp3Path}" />
+		<pathelement path="${xstreamPath}" />
+		<pathelement path="${arpackPath}" />
 	</path>
 
 	<path id="project.compile.classpath">

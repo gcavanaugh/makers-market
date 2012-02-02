@@ -23,6 +23,7 @@ import edu.cuny.cat.Game;
 import edu.cuny.cat.event.AuctionEvent;
 import edu.cuny.prng.GlobalPRNG;
 //Where does this package get used?
+//import edu.cuny.random.Normal;
 import edu.cuny.random.StateCopyable;
 import edu.cuny.random.Uniform;
 import edu.cuny.util.Galaxy;
@@ -103,7 +104,7 @@ public class RandomValuerGenerator implements ValuerGenerator {
 
 	public static final String P_DISTRIBUTION = "distribution";
 	
-	// Added in to make the class capable of storing the parms I need to get a prior initialized
+	// Added in to make the class capable of storing the params I need to get a prior initialized
 	
 	public static final String P_LOC = "location";
 	
@@ -112,6 +113,24 @@ public class RandomValuerGenerator implements ValuerGenerator {
 	public static final String P_SCALE = "scale";
 
 	public static final String P_SHAPE = "shape";
+	
+////Added code starts here
+//	public double mean;
+//	
+//	public double stdev;
+//	
+//	public double location;
+//	
+//	public double precision;
+//	
+//	public double scale;
+//	
+//	public double shape;
+//
+//	static Parameter defBaseNorm;
+//	
+//
+//// Added code ends here
 
 	static Logger logger = Logger.getLogger(RandomValuerGenerator.class);
 
@@ -126,12 +145,32 @@ public class RandomValuerGenerator implements ValuerGenerator {
 	public void setup(final ParameterDatabase parameters, final Parameter base) {
 		final Parameter defBase = new Parameter(RandomValuerGenerator.P_DEF_BASE);
 
-		minValue = parameters.getDouble(
-				base.push(RandomValuerGenerator.P_MINVALUE), defBase
-						.push(RandomValuerGenerator.P_MINVALUE), 0);
-		maxValue = parameters.getDouble(
-				base.push(RandomValuerGenerator.P_MAXVALUE), defBase
-						.push(RandomValuerGenerator.P_MAXVALUE), minValue);
+//// Added code starts here
+//		defBaseNorm = new Parameter(Normal.P_DEF_BASE);
+//// Added code ends here
+//
+//		minValue = parameters.getDouble(
+//				base.push(RandomValuerGenerator.P_MINVALUE), defBase
+//						.push(RandomValuerGenerator.P_MINVALUE), 0);
+//		maxValue = parameters.getDouble(
+//				base.push(RandomValuerGenerator.P_MAXVALUE), defBase
+//						.push(RandomValuerGenerator.P_MAXVALUE), minValue);
+//// Added code starts here
+//		
+//		location = parameters.getDouble(
+//				base.push(RandomValuerGenerator.P_LOC), defBase
+//						.push(RandomValuerGenerator.P_LOC), mean);
+//		precision = parameters.getDouble(
+//				base.push(RandomValuerGenerator.P_PRES), defBase
+//						.push(RandomValuerGenerator.P_PRES), 1/(stdev*stdev));
+//		scale = parameters.getDouble(
+//				base.push(RandomValuerGenerator.P_SCALE), defBase
+//						.push(RandomValuerGenerator.P_SCALE), .0001);
+//		shape = parameters.getDouble(
+//				base.push(RandomValuerGenerator.P_SHAPE), defBase
+//						.push(RandomValuerGenerator.P_SHAPE), 1);
+//	
+////Added code ends here
 
 		try {
 			distribution = parameters.getInstanceForParameterEq(base
@@ -142,6 +181,7 @@ public class RandomValuerGenerator implements ValuerGenerator {
 			if (distribution instanceof Parameterizable) {
 				((Parameterizable) distribution).setup(parameters, base
 						.push(RandomValuerGenerator.P_DISTRIBUTION));
+				
 			}
 		} catch (final ParamClassLoadException e) {
 			distribution = new Uniform(minValue, maxValue, Galaxy.getInstance()
@@ -244,4 +284,5 @@ public class RandomValuerGenerator implements ValuerGenerator {
 
 		return s;
 	}
+
 }
