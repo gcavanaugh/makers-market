@@ -149,12 +149,12 @@ public class RandomValuerGenerator implements ValuerGenerator {
 //		defBaseNorm = new Parameter(Normal.P_DEF_BASE);
 //// Added code ends here
 //
-//		minValue = parameters.getDouble(
-//				base.push(RandomValuerGenerator.P_MINVALUE), defBase
-//						.push(RandomValuerGenerator.P_MINVALUE), 0);
-//		maxValue = parameters.getDouble(
-//				base.push(RandomValuerGenerator.P_MAXVALUE), defBase
-//						.push(RandomValuerGenerator.P_MAXVALUE), minValue);
+		minValue = parameters.getDouble(
+				base.push(RandomValuerGenerator.P_MINVALUE), defBase
+						.push(RandomValuerGenerator.P_MINVALUE), 0);
+		maxValue = parameters.getDouble(
+				base.push(RandomValuerGenerator.P_MAXVALUE), defBase
+						.push(RandomValuerGenerator.P_MAXVALUE), minValue);
 //// Added code starts here
 //		
 //		location = parameters.getDouble(

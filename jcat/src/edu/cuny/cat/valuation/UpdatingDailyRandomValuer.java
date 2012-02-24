@@ -70,6 +70,11 @@ public class UpdatingDailyRandomValuer extends DailyRandomValuer {
 
 	protected UpdatingDailyRandomValuerGenerator generator;
 
+	Double dloc = new Double(generator.location);
+	Double dpres = new Double(generator.precision);
+	Double dscale = new Double(generator.scale);
+	Double dshape = new Double(generator.shape);
+
 	public static final String P_DEF_BASE = "normal";
 
 	@Override
@@ -78,32 +83,52 @@ public class UpdatingDailyRandomValuer extends DailyRandomValuer {
 		if (event instanceof TransactionPostedEvent) {
 			// trying to verify that the distribution being used is of type
 			// normal
-			if (generator.getDistribution().equals(P_DEF_BASE)) {
-				// initialize an inverse normal gamma distribution with those
-				// values (transformed)
-				// now we have mean and stdev so we need to initialize priors
-				// that correspond to those
-				NormalInverseGammaDistribution prior = new NormalInverseGammaDistribution(
-						generator.location, generator.precision,
-						generator.shape, generator.scale);
-				// call up a normal estimator with that prior and use it and the
-				// transaction price to update
-				UnivariateGaussianMeanVarianceBayesianEstimator estimator = new UnivariateGaussianMeanVarianceBayesianEstimator(
-						prior);
-				// after the update, the prior has been transformed
-				estimator.update(prior, ((TransactionPostedEvent) event)
-						.getTransaction().getPrice());
-				generator.updatePrior(prior.getLocation(),
-						prior.getPrecision(), prior.getScale(),
-						prior.getShape());
-				// save the predictive distribution
-				StudentTDistribution predictive = estimator
-						.createPredictiveDistribution(prior);
-				// use the predictive to update the underlying mean and stdev
-				// for the Normal
-				generator.updateMeanSD(predictive.getMean(),
-						Math.sqrt(1 / predictive.getPrecision()));
-			}
+			// TODO: Need a check to make sure we're working with a NORMAL
+			// initialize an inverse normal gamma distribution with those
+			// values (transformed)
+			// now we have mean and stdev so we need to initialize priors
+			// that correspond to those
+			//
+			// ERROR TRACING
+			// possible that I'm getting nullpointer error here because
+			// the generator has null values for its parameters
+			// Below is my attempt to fix it - the jar file will not compile
+			// with this code included
+			//
+			// if (Double.compare(dloc, Double.NaN) == 0
+			// && Double.compare(dpres, Double.NaN) == 0
+			// && Double.compare(dscale, Double.NaN) == 0
+			// && Double.compare(dshape, Double.NaN) == 0) {
+			// NormalInverseGammaDistribution prior = new
+			// NormalInverseGammaDistribution(
+			// generator.location, generator.precision,
+			// generator.shape, generator.scale);
+			// } else {
+			// generator.setup(generator.paramholder, generator.defBase);
+			// NormalInverseGammaDistribution prior = new
+			// NormalInverseGammaDistribution(
+			// generator.location, generator.precision,
+			// generator.shape, generator.scale);
+			// }
+			NormalInverseGammaDistribution prior = new NormalInverseGammaDistribution(
+					generator.location, generator.precision, generator.shape,
+					generator.scale);
+			// call up a normal estimator with that prior and use it and the
+			// transaction price to update
+			UnivariateGaussianMeanVarianceBayesianEstimator estimator = new UnivariateGaussianMeanVarianceBayesianEstimator(
+					prior);
+			// after the update, the prior has been transformed
+			estimator.update(prior, ((TransactionPostedEvent) event)
+					.getTransaction().getPrice());
+			generator.updatePrior(prior.getLocation(), prior.getPrecision(),
+					prior.getScale(), prior.getShape());
+			// save the predictive distribution
+			StudentTDistribution predictive = estimator
+					.createPredictiveDistribution(prior);
+			// use the predictive to update the underlying mean and stdev
+			// for the Normal
+			generator.updateMeanSD(predictive.getMean(),
+					Math.sqrt(1 / predictive.getPrecision()));
 
 		} else if (event instanceof DayClosedEvent) {
 			drawRandomValue();

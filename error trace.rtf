@@ -1,0 +1,421 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf360
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww21140\viewh15640\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+
+\f0\b\fs24 \cf0 1) edu.cuny.cat.Game.main(Game.java:218)
+\b0 \
+on the class:\
+Main class of jcat when jcat is run as a Java application to launch a game,including a \{@link GameServer\} and multiple \{@link GameClient\}s.\
+\
+offending code:\
+
+\i\b final GameServer server = Game.createServer();
+\i0\b0 \
+creates an instance of GameServer and initializes it with parameter database in the object galaxy\
+\
+
+\b 2) edu.cuny.cat.Game.createServer(Game.java:388)
+\b0 \
+    on the class: \
+Main class of jcat when jcat is run as a Java application to launch a game,including a \{@link GameServer\} and multiple \{@link GameClient\}s.\
+\
+offending code:\
+\
+	/**\
+\
+	 * creates an instance of \{@link GameServer\} and initializes it with parameter\
+\
+	 * database in the object galaxy.\
+\
+	 */\
+\
+	public static GameServer createServer() \{\
+\
+		Game.logger.info("\\n");\
+\
+		Game.logger.info("creating server ...");\
+\
+		Game.logger.info("\\n");\
+\
+		final ParameterDatabase parameters = Galaxy.getInstance().getTyped(\
+\
+				Game.P_CAT, ParameterDatabase.class);\
+\
+		final Parameter base = new Parameter(Game.P_CAT);\
+\
+		final GameServer server = new GameServer();\
+\
+
+\i\b 		server.setup(parameters, base.push(Game.P_SERVER));
+\i0\b0 \
+\
+		return server;\
+\
+	\}\
+\
+
+\b 3) edu.cuny.cat.GameServer.setup(GameServer.java:45)
+\b0 \
+on the class:\
+ Main class of jcat game server, used when the server is launched separatedly from the game clients; otherwise the \{@link Game\} class should be used.\
+\
+offending code:\
+\
+\
+Initialise this object from a parameter database.\
+public void setup(final ParameterDatabase parameters, final Parameter base) \{\
+\
+		controller.setup(parameters, base);\
+\
+		controller.initialize();\
+\
+	\}\
+\
+
+\b 4) edu.cuny.cat.server.GameController.setup(GameController.java:235)
+\b0 \
+on the class:\
+public final class GameController\
+extends java.util.Observable\
+implements Parameterizable, AuctionEventListener\
+ A class used at GameServer as a control hub, initializing various components, event passing, etc.\
+\
+ The game console and clock controller configured should match to support different ways of running cat games.\
+\
+\
+offending code:\
+\
+	public void setup(final ParameterDatabase parameters, final Parameter base) \{\
+\
+		GameController.logger.info("\\n");\
+\
+		clock.setup(parameters, base);\
+\
+		clock.initialize();\
+\
+		GameController.logger.info(Utils.indent(clock.toString()));\
+\
+		timeoutController.setup(parameters, base);\
+\
+		GameController.logger.info(Utils.indent(timeoutController.toString()));\
+\
+		behaviorController.setup(parameters, base);\
+\
+		GameController.logger.info(Utils.indent(behaviorController.toString()));\
+\
+		securityManager.setup(parameters, base.push(SecurityManager.P_DEF_BASE));\
+\
+		GameController.logger.info(Utils.indent(securityManager.toString()));\
+\
+		shoutValidator.setup(parameters, base.push(ShoutValidator.P_DEF_BASE));\
+\
+		chargeValidator.setup(parameters, base.push(ChargeValidator.P_DEF_BASE));\
+\
+
+\i\b 		valuerFactory.setup(parameters, base.push(ValuerFactory.P_DEF_BASE));
+\i0\b0 \
+\
+		GameController.logger.info(Utils.indent(valuerFactory.toString()));\
+\
+		registry = parameters.getInstanceForParameter(base\
+\
+				.push(GameController.P_REGISTRY), null, Registry.class);\
+\
+		if (registry instanceof Parameterizable) \{\
+\
+			((Parameterizable) registry).setup(parameters, base\
+\
+					.push(GameController.P_REGISTRY));\
+\
+		\}\
+\
+ edu.cuny.cat.server.ValuerFactory.setup(ValuerFactory.java:83)\
+on the class:\
+A factory class providing \{@link edu.cuny.cat.valuation.ValuerGenerator\} instances that can in turn create \{@link edu.cuny.cat.valuation.ValuationPolicy\} instances to generate demand and supply schedules among simulated trading agents.\
+\
+\
+offending code:\
+
+\i\b 	static Logger logger = Logger.getLogger(ValuerFactory.class);
+\i0\b0 \
+\
+
+\b 5) edu.cuny.util.ParameterDatabase.getInstanceForParameter(ParameterDatabase.java:652)
+\b0 \
+on the class:\
+public final class ParameterDatabase\
+extends java.util.Properties\
+implements java.io.Serializable\
+ This extension of the Properties class allows you to set, get, and delete\
+\
+ Parameters in a hierarchical tree-like database. The database consists of a\
+ list of Parameters, plus an array of "parent databases" which it falls back\
+ on when it can't find the Parameter you're looking for. Parents may also have\
+ arrays of parents, and so on..\
+\
+ The parameters are loaded from a Java property-list file, which is basically\
+ a collection of parameter=value pairs, one per line. Empty lines and lines\
+ beginning with # are ignored. These parameters and their values are\
+ case-sensitive , and whitespace is trimmed I believe.\
+\
+ An optional set of parameters, "parent. n ", where n  are\
+ consecutive integers starting at 0, define the filenames of the database's\
+ parents.\
+\
+ An optional set of parameters, "print-params", specifies whether or not\
+ parameters should be printed as they are used (through one of the get(...)\
+ methods). If print-params is unset, or set to false or FALSE, nothing is\
+ printed. If set to non-false, then the parameters are printed prepended with\
+ a "P:" when their values are requested, "E:" when their existence is tested.\
+ Prior to the "P:" or "E:" you may see a "!" (meaning that the parameter isn't\
+ in the database), or a "<" (meaning that the parameter was a default\
+ parameter which was never looked up because the primary parameter contained\
+ the value).\
+\
+ When you create a ParameterDatabase using new ParameterDatabase(), it is\
+ created thus:\
+\
+DATABASE:	 database\
+FROM:	 (empty)\
+\
+ When you create a ParameterDatabase using new ParameterDatabase( file\
+ ), it is created by loading the database file, and its parent file tree,\
+ thus:\
+\
+DATABASE:	 database	 ->	 parent0	 +->	 parent0	 +->	 parent0	 +->	 ....\
+FROM:	 (empty)	 	 (file)	 |	 (parent.0)	 |	 (parent.0)	 	 ....\
+ 	 	 	 	 |	 	 +->	 parent1	 +->	 ....\
+ 	 	 	 	 |	 	 |	 (parent.1)	 	 \
+ 	 	 	 	 |	 	 ....	 	 	 \
+ 	 	 	 	 |	 	 	 	 	 \
+ 	 	 	 	 +->	 parent1	 +->	 ....	 	 \
+ 	 	 	 	 |	 (parent.1)	 	 	 	 \
+ 	 	 	 	 ....	 	 	 	 	 \
+\
+ When you create a ParameterDatabase using new ParameterDatabase( file,argv\
+ ), the preferred way, it is created thus:\
+ \
+\
+DATABASE:	 database	 ->	 parent0	 +->	 parent0	 +->	 parent0	 +->	 parent0	 +->	 ....\
+FROM:	 (empty)	 	(argv)	 	 (file)	 |	 (parent.0)	 |	 (parent.0)	 	 ....\
+ 	 	 	 	 	 	 |	 	 +->	 parent1	 +->	 ....\
+ 	 	 	 	 	 	 |	 	 |	 (parent.1)	 	 \
+ 	 	 	 	 	 	 |	 	 ....	 	 	 \
+ 	 	 	 	 	 	 |	 	 	 	 	 \
+ 	 	 	 	 	 	 +->	 parent1	 +->	 ....	 	 \
+ 	 	 	 	 	 	 |	 (parent.1)	 	 	 	 \
+ 	 	 	 	 	 	 ....	 	 	 	 	 \
+\
+ ...that is, the actual top database is empty, and stores parameters added\
+ programmatically; its parent is a database formed from arguments passed in on\
+ the command line; its  parent is the parameter database which actually\
+ loads from foo. This allows you to programmatically add parameters which\
+ override those in foo, then delete them, thus bringing foo's parameters back\
+ in view.\
+\
+ Once a parameter database is loaded, you query it with the get\
+ methods. The database, then its parents, are searched until a match is found\
+ for your parameter. The search rules are thus: (1) the root database is\
+ searched first. (2) If a database being searched doesn't contain the data, it\
+ searches its parents recursively, starting with parent 0, then moving up,\
+ until all searches are exhausted or something was found. (3) No database is\
+ searched twice.\
+ \
+\
+ The various get methods all take two parameters. The first parameter\
+ is fetched and retrieved first. If that fails, the second one (known as the\
+ default parameter) is fetched and retrieved. You can pass in\
+ null for the default parameter if you don't have one.\
+ \
+\
+ You can test a parameter for existence with the exists methods.\
+ \
+\
+ You can set a parameter (in the topmost database only  with the\
+ set command. The remove command removes a parameter from\
+ the topmost database only. The removeDeeply command removes that\
+ parameter from every database.\
+\
+ The values stored in a parameter database must not contain "#", "=",\
+ non-ascii values, or whitespace.\
+\
+ Note for JDK 1.1 . Finally recovering from stupendous idiocy, JDK 1.2\
+ included parseDouble() and parseFloat() commands; now you can READ A FLOAT\
+ FROM A STRING without having to create a Float object first! Anyway, you will\
+ need to modify the getFloat() method below if you're running on JDK 1.1, but\
+ understand that large numbers of calls to the method may be inefficient.\
+ Sample JDK 1.1 code is given with those methods, but is commented out.\
+\
+ This is a modified version of the class from the original ECJ package by Sean\
+ Luke, et al..\
+ \
+\
+offending code:\
+\
+	/**\
+\
+	 * Searches down through databases to find a given parameter, whose value must\
+\
+	 * be a full Class name, and the class must be a descendent of but not equal\
+\
+	 * to <i>mustCastTosuperclass </i>. Loads the class and returns an instance\
+\
+	 * (constructed with the default constructor), or throws a\
+\
+	 * ParamClassLoadException if there is no such Class. If the parameter is not\
+\
+	 * found, the defaultParameter is used. The parameter chosen is marked "used".\
+\
+	 */\
+\
+	public final <V> V getInstanceForParameter(final Parameter parameter,\
+\
+			final Parameter defaultParameter, final Class<V> mustCastTosuperclass)\
+\
+			throws ParamClassLoadException \{\
+\
+		printGotten(parameter, defaultParameter, false);\
+\
+		Parameter p;\
+\
+		if (_exists(parameter)) \{\
+\
+			p = parameter;\
+\
+		\} else if (_exists(defaultParameter)) \{\
+\
+			p = defaultParameter;\
+\
+		\} else \{\
+\
+			throw new ParamClassLoadException(\
+\
+					"No class name provided.\\nPARAMETER: "\
+\
+							+ parameter\
+\
+							+ (defaultParameter == null ? "" : "\\n     ALSO: "\
+\
+							+ defaultParameter));\
+\
+		\}\
+\
+		
+\i\b try \{\
+\
+			final Class<?> c = Class.forName(get(p));
+\i0 \
+\
+			
+\b0 if (!mustCastTosuperclass.isAssignableFrom(c)) \{\
+\
+				throw new ParamClassLoadException("The class "\
+\
+						+ c.getName()\
+\
+						+ "\\ndoes not cast into the superclass "\
+\
+						+ mustCastTosuperclass.getName()\
+\
+						+ "\\nPARAMETER: "\
+\
+						+ parameter\
+\
+						+ (defaultParameter == null ? "" : "\\n     ALSO: "\
+\
+						+ defaultParameter));\
+\
+			\}\
+\
+			if (mustCastTosuperclass == c) \{\
+\
+				throw new ParamClassLoadException("The class "\
+\
+						+ c.getName()\
+\
+						+ "\\nmust not be the same as the required superclass "\
+\
+						+ mustCastTosuperclass.getName()\
+\
+						+ "\\nPARAMETER: "\
+\
+						+ parameter\
+\
+						+ (defaultParameter == null ? "" : "\\n     ALSO: "\
+\
+						+ defaultParameter));\
+\
+			\}\
+\
+			return mustCastTosuperclass.cast(c.newInstance());\
+\
+		\} 
+\b catch (final ClassNotFoundException e) \{\
+\
+			throw new ParamClassLoadException(\
+\
+					"Class not found: "\
+\
+							+ get(p)\
+\
+							+ "\\nPARAMETER: "\
+\
+							+ parameter\
+\
+							+ (defaultParameter == null ? "" : "\\n     ALSO: "\
+\
+							+ defaultParameter) + "\\nEXCEPTION: \\n\\n" + e);
+\b0 \
+\
+		\} catch (final IllegalArgumentException e) \{\
+\
+			throw new ParamClassLoadException(\
+\
+					"Could not load class: "\
+\
+							+ get(p)\
+\
+							+ "\\nPARAMETER: "\
+\
+							+ parameter\
+\
+        						+ (defaultParameter == null ? "" : "\\n     ALSO: "\
+\
+							+ defaultParameter) + "\\nEXCEPTION: \\n\\n" + e);\
+\
+		\} catch (final InstantiationException e) \{\
+\
+			throw new ParamClassLoadException(\
+\
+					"The requested class is an interface or an abstract class: "\
+\
+							+ get(p)\
+\
+							+ "\\nPARAMETER: "\
+\
+							+ parameter\
+\
+							+ (defaultParameter == null ? "" : "\\n     ALSO: "\
+\
+							+ defaultParameter) + "\\nEXCEPTION: \\n\\n" + e);\
+\
+		\} catch (final IllegalAccessException e) \{\
+\
+			throw new ParamClassLoadException(\
+\
+					"The requested class cannot be initialized with the default initializer: "							+ get(p)\
+\
+							+ "\\nPARAMETER: "\
+\
+							+ parameter\
+\
+							+ (defaultParameter == null ? "" : "\\n     ALSO: "\
+\
+							+ defaultParameter) + "\\nEXCEPTION: \\n\\n" + e);\
+\
+		\}\
+\
+	\}\
+}

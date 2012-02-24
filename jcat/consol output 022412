@@ -1,0 +1,376 @@
+    [java] starting server ...
+     [java] 
+     [java] 
+     [java] 
+     [java] 
+     [java] 
+     [java] Game 0  (2)
+     [java] 
+     [java]   Game day 0  (20)
+     [java] 
+     [java]   score day - 0
+     [java] 
+     [java] 	specialists: 2	 traders: 40
+     [java] 
+     [java] Exception occurred in dispatching TransactionPostedEvent to listener buyerZIP_3 !
+     [java] java.lang.NullPointerException
+     [java] 	at edu.cuny.cat.valuation.UpdatingDailyRandomValuer.eventOccurred(UpdatingDailyRandomValuer.java:86)
+     [java] 	at edu.cuny.cat.server.ConnectionAdaptor.eventOccurred(ConnectionAdaptor.java:745)
+     [java] 	at edu.cuny.cat.task.EventDispatchingTaskOnServerSide.run(EventDispatchingTaskOnServerSide.java:64)
+     [java] 	at edu.cuny.cat.task.PrioritySynchronousDispatcher.process(PrioritySynchronousDispatcher.java:70)
+     [java] 	at edu.cuny.cat.task.PrioritySynchronousDispatcher.processTask(PrioritySynchronousDispatcher.java:82)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:339)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:325)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:312)
+     [java] 	at edu.cuny.cat.server.GameController.eventOccurred(GameController.java:497)
+     [java] 	at edu.cuny.cat.server.GameClock.fireEvent(GameClock.java:595)
+     [java] 	at edu.cuny.cat.server.GameClock.round(GameClock.java:480)
+     [java] 	at edu.cuny.cat.server.GameClock.day(GameClock.java:390)
+     [java] 	at edu.cuny.cat.server.GameClock.game(GameClock.java:327)
+     [java] 	at edu.cuny.cat.server.GameClock.run(GameClock.java:308)
+     [java] 	at java.lang.Thread.run(Thread.java:680)
+     [java] Adaptor for CDA failed to notify buyerZIP_3 of the transaction TRANSACTION_0 !
+     [java] 
+     [java] Exception occurred in dispatching TransactionPostedEvent to listener buyerGD_1 !
+     [java] java.lang.NullPointerException
+     [java] 	at edu.cuny.cat.valuation.UpdatingDailyRandomValuer.eventOccurred(UpdatingDailyRandomValuer.java:86)
+     [java] 	at edu.cuny.cat.server.ConnectionAdaptor.eventOccurred(ConnectionAdaptor.java:745)
+     [java] 	at edu.cuny.cat.task.EventDispatchingTaskOnServerSide.run(EventDispatchingTaskOnServerSide.java:64)
+     [java] 	at edu.cuny.cat.task.PrioritySynchronousDispatcher.process(PrioritySynchronousDispatcher.java:70)
+     [java] 	at edu.cuny.cat.task.PrioritySynchronousDispatcher.processTask(PrioritySynchronousDispatcher.java:82)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:339)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:325)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:312)
+     [java] 	at edu.cuny.cat.server.GameController.eventOccurred(GameController.java:497)
+     [java] 	at edu.cuny.cat.server.GameClock.fireEvent(GameClock.java:595)
+     [java] 	at edu.cuny.cat.server.GameClock.round(GameClock.java:480)
+     [java] 	at edu.cuny.cat.server.GameClock.day(GameClock.java:390)
+     [java] 	at edu.cuny.cat.server.GameClock.game(GameClock.java:327)
+     [java] 	at edu.cuny.cat.server.GameClock.run(GameClock.java:308)
+     [java] 	at java.lang.Thread.run(Thread.java:680)
+     [java] Adaptor for CDA failed to notify buyerGD_1 of the transaction TRANSACTION_0 !
+     [java] 
+     [java] Exception occurred in dispatching TransactionPostedEvent to listener buyerGD_2 !
+     [java] java.lang.NullPointerException
+     [java] 	at edu.cuny.cat.valuation.UpdatingDailyRandomValuer.eventOccurred(UpdatingDailyRandomValuer.java:86)
+     [java] 	at edu.cuny.cat.server.ConnectionAdaptor.eventOccurred(ConnectionAdaptor.java:745)
+     [java] 	at edu.cuny.cat.task.EventDispatchingTaskOnServerSide.run(EventDispatchingTaskOnServerSide.java:64)
+     [java] 	at edu.cuny.cat.task.PrioritySynchronousDispatcher.process(PrioritySynchronousDispatcher.java:70)
+     [java] 	at edu.cuny.cat.task.PrioritySynchronousDispatcher.processTask(PrioritySynchronousDispatcher.java:82)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:339)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:325)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:312)
+     [java] 	at edu.cuny.cat.server.GameController.eventOccurred(GameController.java:497)
+     [java] 	at edu.cuny.cat.server.GameClock.fireEvent(GameClock.java:595)
+     [java] 	at edu.cuny.cat.server.GameClock.round(GameClock.java:480)
+     [java] 	at edu.cuny.cat.server.GameClock.day(GameClock.java:390)
+     [java] 	at edu.cuny.cat.server.GameClock.game(GameClock.java:327)
+     [java] 	at edu.cuny.cat.server.GameClock.run(GameClock.java:308)
+     [java] 	at java.lang.Thread.run(Thread.java:680)
+     [java] Adaptor for CDA failed to notify buyerGD_2 of the transaction TRANSACTION_0 !
+     [java] 
+     [java] Exception occurred in dispatching TransactionPostedEvent to listener buyerZIP_2 !
+     [java] java.lang.NullPointerException
+     [java] 	at edu.cuny.cat.valuation.UpdatingDailyRandomValuer.eventOccurred(UpdatingDailyRandomValuer.java:86)
+     [java] 	at edu.cuny.cat.server.ConnectionAdaptor.eventOccurred(ConnectionAdaptor.java:745)
+     [java] 	at edu.cuny.cat.task.EventDispatchingTaskOnServerSide.run(EventDispatchingTaskOnServerSide.java:64)
+     [java] 	at edu.cuny.cat.task.PrioritySynchronousDispatcher.process(PrioritySynchronousDispatcher.java:70)
+     [java] 	at edu.cuny.cat.task.PrioritySynchronousDispatcher.processTask(PrioritySynchronousDispatcher.java:82)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:339)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:325)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:312)
+     [java] 	at edu.cuny.cat.server.GameController.eventOccurred(GameController.java:497)
+     [java] 	at edu.cuny.cat.server.GameClock.fireEvent(GameClock.java:595)
+     [java] 	at edu.cuny.cat.server.GameClock.round(GameClock.java:480)
+     [java] 	at edu.cuny.cat.server.GameClock.day(GameClock.java:390)
+     [java] 	at edu.cuny.cat.server.GameClock.game(GameClock.java:327)
+     [java] 	at edu.cuny.cat.server.GameClock.run(GameClock.java:308)
+     [java] 	at java.lang.Thread.run(Thread.java:680)
+     [java] Adaptor for CDA failed to notify buyerZIP_2 of the transaction TRANSACTION_0 !
+     [java] 
+     [java] Exception occurred in dispatching TransactionPostedEvent to listener buyerGD_2 !
+     [java] java.lang.NullPointerException
+     [java] 	at edu.cuny.cat.valuation.UpdatingDailyRandomValuer.eventOccurred(UpdatingDailyRandomValuer.java:86)
+     [java] 	at edu.cuny.cat.server.ConnectionAdaptor.eventOccurred(ConnectionAdaptor.java:745)
+     [java] 	at edu.cuny.cat.task.EventDispatchingTaskOnServerSide.run(EventDispatchingTaskOnServerSide.java:64)
+     [java] 	at edu.cuny.cat.task.PrioritySynchronousDispatcher.process(PrioritySynchronousDispatcher.java:70)
+     [java] 	at edu.cuny.cat.task.PrioritySynchronousDispatcher.processTask(PrioritySynchronousDispatcher.java:82)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:339)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:325)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:312)
+     [java] 	at edu.cuny.cat.server.GameController.eventOccurred(GameController.java:497)
+     [java] 	at edu.cuny.cat.server.GameClock.fireEvent(GameClock.java:595)
+     [java] 	at edu.cuny.cat.server.GameClock.round(GameClock.java:480)
+     [java] 	at edu.cuny.cat.server.GameClock.day(GameClock.java:390)
+     [java] 	at edu.cuny.cat.server.GameClock.game(GameClock.java:327)
+     [java] 	at edu.cuny.cat.server.GameClock.run(GameClock.java:308)
+     [java] 	at java.lang.Thread.run(Thread.java:680)
+     [java] Adaptor for CDA failed to notify buyerGD_2 of the transaction TRANSACTION_1 !
+     [java] 
+     [java] Exception occurred in dispatching TransactionPostedEvent to listener buyerZIP_3 !
+     [java] java.lang.NullPointerException
+     [java] 	at edu.cuny.cat.valuation.UpdatingDailyRandomValuer.eventOccurred(UpdatingDailyRandomValuer.java:86)
+     [java] 	at edu.cuny.cat.server.ConnectionAdaptor.eventOccurred(ConnectionAdaptor.java:745)
+     [java] 	at edu.cuny.cat.task.EventDispatchingTaskOnServerSide.run(EventDispatchingTaskOnServerSide.java:64)
+     [java] 	at edu.cuny.cat.task.PrioritySynchronousDispatcher.process(PrioritySynchronousDispatcher.java:70)
+     [java] 	at edu.cuny.cat.task.PrioritySynchronousDispatcher.processTask(PrioritySynchronousDispatcher.java:82)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:339)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:325)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:312)
+     [java] 	at edu.cuny.cat.server.GameController.eventOccurred(GameController.java:497)
+     [java] 	at edu.cuny.cat.server.GameClock.fireEvent(GameClock.java:595)
+     [java] 	at edu.cuny.cat.server.GameClock.round(GameClock.java:480)
+     [java] 	at edu.cuny.cat.server.GameClock.day(GameClock.java:390)
+     [java] 	at edu.cuny.cat.server.GameClock.game(GameClock.java:327)
+     [java] 	at edu.cuny.cat.server.GameClock.run(GameClock.java:308)
+     [java] 	at java.lang.Thread.run(Thread.java:680)
+     [java] Adaptor for CDA failed to notify buyerZIP_3 of the transaction TRANSACTION_1 !
+     [java] 
+     [java] Exception occurred in dispatching TransactionPostedEvent to listener buyerGD_1 !
+     [java] java.lang.NullPointerException
+     [java] 	at edu.cuny.cat.valuation.UpdatingDailyRandomValuer.eventOccurred(UpdatingDailyRandomValuer.java:86)
+     [java] 	at edu.cuny.cat.server.ConnectionAdaptor.eventOccurred(ConnectionAdaptor.java:745)
+     [java] 	at edu.cuny.cat.task.EventDispatchingTaskOnServerSide.run(EventDispatchingTaskOnServerSide.java:64)
+     [java] 	at edu.cuny.cat.task.PrioritySynchronousDispatcher.process(PrioritySynchronousDispatcher.java:70)
+     [java] 	at edu.cuny.cat.task.PrioritySynchronousDispatcher.processTask(PrioritySynchronousDispatcher.java:82)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:339)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:325)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:312)
+     [java] 	at edu.cuny.cat.server.GameController.eventOccurred(GameController.java:497)
+     [java] 	at edu.cuny.cat.server.GameClock.fireEvent(GameClock.java:595)
+     [java] 	at edu.cuny.cat.server.GameClock.round(GameClock.java:480)
+     [java] 	at edu.cuny.cat.server.GameClock.day(GameClock.java:390)
+     [java] 	at edu.cuny.cat.server.GameClock.game(GameClock.java:327)
+     [java] 	at edu.cuny.cat.server.GameClock.run(GameClock.java:308)
+     [java] 	at java.lang.Thread.run(Thread.java:680)
+     [java] Adaptor for CDA failed to notify buyerGD_1 of the transaction TRANSACTION_1 !
+     [java] 
+     [java] Exception occurred in dispatching TransactionPostedEvent to listener buyerZIP_2 !
+     [java] java.lang.NullPointerException
+     [java] 	at edu.cuny.cat.valuation.UpdatingDailyRandomValuer.eventOccurred(UpdatingDailyRandomValuer.java:86)
+     [java] 	at edu.cuny.cat.server.ConnectionAdaptor.eventOccurred(ConnectionAdaptor.java:745)
+     [java] 	at edu.cuny.cat.task.EventDispatchingTaskOnServerSide.run(EventDispatchingTaskOnServerSide.java:64)
+     [java] 	at edu.cuny.cat.task.PrioritySynchronousDispatcher.process(PrioritySynchronousDispatcher.java:70)
+     [java] 	at edu.cuny.cat.task.PrioritySynchronousDispatcher.processTask(PrioritySynchronousDispatcher.java:82)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:339)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:325)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:312)
+     [java] 	at edu.cuny.cat.server.GameController.eventOccurred(GameController.java:497)
+     [java] 	at edu.cuny.cat.server.GameClock.fireEvent(GameClock.java:595)
+     [java] 	at edu.cuny.cat.server.GameClock.round(GameClock.java:480)
+     [java] 	at edu.cuny.cat.server.GameClock.day(GameClock.java:390)
+     [java] 	at edu.cuny.cat.server.GameClock.game(GameClock.java:327)
+     [java] 	at edu.cuny.cat.server.GameClock.run(GameClock.java:308)
+     [java] 	at java.lang.Thread.run(Thread.java:680)
+     [java] Adaptor for CDA failed to notify buyerZIP_2 of the transaction TRANSACTION_1 !
+     [java] 
+     [java] Exception occurred in dispatching TransactionPostedEvent to listener buyerGD_1 !
+     [java] java.lang.NullPointerException
+     [java] 	at edu.cuny.cat.valuation.UpdatingDailyRandomValuer.eventOccurred(UpdatingDailyRandomValuer.java:86)
+     [java] 	at edu.cuny.cat.server.ConnectionAdaptor.eventOccurred(ConnectionAdaptor.java:745)
+     [java] 	at edu.cuny.cat.task.EventDispatchingTaskOnServerSide.run(EventDispatchingTaskOnServerSide.java:64)
+     [java] 	at edu.cuny.cat.task.PrioritySynchronousDispatcher.process(PrioritySynchronousDispatcher.java:70)
+     [java] 	at edu.cuny.cat.task.PrioritySynchronousDispatcher.processTask(PrioritySynchronousDispatcher.java:82)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:339)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:325)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:312)
+     [java] 	at edu.cuny.cat.server.GameController.eventOccurred(GameController.java:497)
+     [java] 	at edu.cuny.cat.server.GameClock.fireEvent(GameClock.java:595)
+     [java] 	at edu.cuny.cat.server.GameClock.round(GameClock.java:480)
+     [java] 	at edu.cuny.cat.server.GameClock.day(GameClock.java:390)
+     [java] 	at edu.cuny.cat.server.GameClock.game(GameClock.java:327)
+     [java] 	at edu.cuny.cat.server.GameClock.run(GameClock.java:308)
+     [java] 	at java.lang.Thread.run(Thread.java:680)
+     [java] Adaptor for CDA failed to notify buyerGD_1 of the transaction TRANSACTION_2 !
+     [java] 
+     [java] Exception occurred in dispatching TransactionPostedEvent to listener buyerZIP_2 !
+     [java] java.lang.NullPointerException
+     [java] 	at edu.cuny.cat.valuation.UpdatingDailyRandomValuer.eventOccurred(UpdatingDailyRandomValuer.java:86)
+     [java] 	at edu.cuny.cat.server.ConnectionAdaptor.eventOccurred(ConnectionAdaptor.java:745)
+     [java] 	at edu.cuny.cat.task.EventDispatchingTaskOnServerSide.run(EventDispatchingTaskOnServerSide.java:64)
+     [java] 	at edu.cuny.cat.task.PrioritySynchronousDispatcher.process(PrioritySynchronousDispatcher.java:70)
+     [java] 	at edu.cuny.cat.task.PrioritySynchronousDispatcher.processTask(PrioritySynchronousDispatcher.java:82)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:339)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:325)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:312)
+     [java] 	at edu.cuny.cat.server.GameController.eventOccurred(GameController.java:497)
+     [java] 	at edu.cuny.cat.server.GameClock.fireEvent(GameClock.java:595)
+     [java] 	at edu.cuny.cat.server.GameClock.round(GameClock.java:480)
+     [java] 	at edu.cuny.cat.server.GameClock.day(GameClock.java:390)
+     [java] 	at edu.cuny.cat.server.GameClock.game(GameClock.java:327)
+     [java] 	at edu.cuny.cat.server.GameClock.run(GameClock.java:308)
+     [java] 	at java.lang.Thread.run(Thread.java:680)
+     [java] Adaptor for CDA failed to notify buyerZIP_2 of the transaction TRANSACTION_2 !
+     [java] 
+     [java] Exception occurred in dispatching TransactionPostedEvent to listener buyerGD_2 !
+     [java] java.lang.NullPointerException
+     [java] 	at edu.cuny.cat.valuation.UpdatingDailyRandomValuer.eventOccurred(UpdatingDailyRandomValuer.java:86)
+     [java] 	at edu.cuny.cat.server.ConnectionAdaptor.eventOccurred(ConnectionAdaptor.java:745)
+     [java] 	at edu.cuny.cat.task.EventDispatchingTaskOnServerSide.run(EventDispatchingTaskOnServerSide.java:64)
+     [java] 	at edu.cuny.cat.task.PrioritySynchronousDispatcher.process(PrioritySynchronousDispatcher.java:70)
+     [java] 	at edu.cuny.cat.task.PrioritySynchronousDispatcher.processTask(PrioritySynchronousDispatcher.java:82)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:339)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:325)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:312)
+     [java] 	at edu.cuny.cat.server.GameController.eventOccurred(GameController.java:497)
+     [java] 	at edu.cuny.cat.server.GameClock.fireEvent(GameClock.java:595)
+     [java] 	at edu.cuny.cat.server.GameClock.round(GameClock.java:480)
+     [java] 	at edu.cuny.cat.server.GameClock.day(GameClock.java:390)
+     [java] 	at edu.cuny.cat.server.GameClock.game(GameClock.java:327)
+     [java] 	at edu.cuny.cat.server.GameClock.run(GameClock.java:308)
+     [java] 	at java.lang.Thread.run(Thread.java:680)
+     [java] Adaptor for CDA failed to notify buyerGD_2 of the transaction TRANSACTION_2 !
+     [java] 
+     [java] Exception occurred in dispatching TransactionPostedEvent to listener buyerZIP_3 !
+     [java] java.lang.NullPointerException
+     [java] 	at edu.cuny.cat.valuation.UpdatingDailyRandomValuer.eventOccurred(UpdatingDailyRandomValuer.java:86)
+     [java] 	at edu.cuny.cat.server.ConnectionAdaptor.eventOccurred(ConnectionAdaptor.java:745)
+     [java] 	at edu.cuny.cat.task.EventDispatchingTaskOnServerSide.run(EventDispatchingTaskOnServerSide.java:64)
+     [java] 	at edu.cuny.cat.task.PrioritySynchronousDispatcher.process(PrioritySynchronousDispatcher.java:70)
+     [java] 	at edu.cuny.cat.task.PrioritySynchronousDispatcher.processTask(PrioritySynchronousDispatcher.java:82)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:339)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:325)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:312)
+     [java] 	at edu.cuny.cat.server.GameController.eventOccurred(GameController.java:497)
+     [java] 	at edu.cuny.cat.server.GameClock.fireEvent(GameClock.java:595)
+     [java] 	at edu.cuny.cat.server.GameClock.round(GameClock.java:480)
+     [java] 	at edu.cuny.cat.server.GameClock.day(GameClock.java:390)
+     [java] 	at edu.cuny.cat.server.GameClock.game(GameClock.java:327)
+     [java] 	at edu.cuny.cat.server.GameClock.run(GameClock.java:308)
+     [java] 	at java.lang.Thread.run(Thread.java:680)
+     [java] Adaptor for CDA failed to notify buyerZIP_3 of the transaction TRANSACTION_2 !
+     [java] 
+     [java]     Game round 0  (10)
+     [java] 
+     [java] Exception occurred in dispatching TransactionPostedEvent to listener buyerZIP_0 !
+     [java] java.lang.NullPointerException
+     [java] 	at edu.cuny.cat.valuation.UpdatingDailyRandomValuer.eventOccurred(UpdatingDailyRandomValuer.java:86)
+     [java] 	at edu.cuny.cat.server.ConnectionAdaptor.eventOccurred(ConnectionAdaptor.java:745)
+     [java] 	at edu.cuny.cat.task.EventDispatchingTaskOnServerSide.run(EventDispatchingTaskOnServerSide.java:64)
+     [java] 	at edu.cuny.cat.task.PrioritySynchronousDispatcher.process(PrioritySynchronousDispatcher.java:70)
+     [java] 	at edu.cuny.cat.task.PrioritySynchronousDispatcher.processTask(PrioritySynchronousDispatcher.java:82)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:339)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:325)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:312)
+     [java] 	at edu.cuny.cat.server.GameController.eventOccurred(GameController.java:497)
+     [java] 	at edu.cuny.cat.server.GameClock.fireEvent(GameClock.java:595)
+     [java] 	at edu.cuny.cat.server.GameClock.round(GameClock.java:494)
+     [java] 	at edu.cuny.cat.server.GameClock.day(GameClock.java:390)
+     [java] 	at edu.cuny.cat.server.GameClock.game(GameClock.java:327)
+     [java] 	at edu.cuny.cat.server.GameClock.run(GameClock.java:308)
+     [java] 	at java.lang.Thread.run(Thread.java:680)
+     [java] Adaptor for CH failed to notify buyerZIP_0 of the transaction TRANSACTION_3 !
+     [java] 
+     [java] Exception occurred in dispatching TransactionPostedEvent to listener buyerGD_3 !
+     [java] java.lang.NullPointerException
+     [java] 	at edu.cuny.cat.valuation.UpdatingDailyRandomValuer.eventOccurred(UpdatingDailyRandomValuer.java:86)
+     [java] 	at edu.cuny.cat.server.ConnectionAdaptor.eventOccurred(ConnectionAdaptor.java:745)
+     [java] 	at edu.cuny.cat.task.EventDispatchingTaskOnServerSide.run(EventDispatchingTaskOnServerSide.java:64)
+     [java] 	at edu.cuny.cat.task.PrioritySynchronousDispatcher.process(PrioritySynchronousDispatcher.java:70)
+     [java] 	at edu.cuny.cat.task.PrioritySynchronousDispatcher.processTask(PrioritySynchronousDispatcher.java:82)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:339)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:325)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:312)
+     [java] 	at edu.cuny.cat.server.GameController.eventOccurred(GameController.java:497)
+     [java] 	at edu.cuny.cat.server.GameClock.fireEvent(GameClock.java:595)
+     [java] 	at edu.cuny.cat.server.GameClock.round(GameClock.java:494)
+     [java] 	at edu.cuny.cat.server.GameClock.day(GameClock.java:390)
+     [java] 	at edu.cuny.cat.server.GameClock.game(GameClock.java:327)
+     [java] 	at edu.cuny.cat.server.GameClock.run(GameClock.java:308)
+     [java] 	at java.lang.Thread.run(Thread.java:680)
+     [java] Adaptor for CH failed to notify buyerGD_3 of the transaction TRANSACTION_3 !
+     [java] 
+     [java] Exception occurred in dispatching TransactionPostedEvent to listener buyerZIP_4 !
+     [java] java.lang.NullPointerException
+     [java] 	at edu.cuny.cat.valuation.UpdatingDailyRandomValuer.eventOccurred(UpdatingDailyRandomValuer.java:86)
+     [java] 	at edu.cuny.cat.server.ConnectionAdaptor.eventOccurred(ConnectionAdaptor.java:745)
+     [java] 	at edu.cuny.cat.task.EventDispatchingTaskOnServerSide.run(EventDispatchingTaskOnServerSide.java:64)
+     [java] 	at edu.cuny.cat.task.PrioritySynchronousDispatcher.process(PrioritySynchronousDispatcher.java:70)
+     [java] 	at edu.cuny.cat.task.PrioritySynchronousDispatcher.processTask(PrioritySynchronousDispatcher.java:82)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:339)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:325)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:312)
+     [java] 	at edu.cuny.cat.server.GameController.eventOccurred(GameController.java:497)
+     [java] 	at edu.cuny.cat.server.GameClock.fireEvent(GameClock.java:595)
+     [java] 	at edu.cuny.cat.server.GameClock.round(GameClock.java:494)
+     [java] 	at edu.cuny.cat.server.GameClock.day(GameClock.java:390)
+     [java] 	at edu.cuny.cat.server.GameClock.game(GameClock.java:327)
+     [java] 	at edu.cuny.cat.server.GameClock.run(GameClock.java:308)
+     [java] 	at java.lang.Thread.run(Thread.java:680)
+     [java] Adaptor for CH failed to notify buyerZIP_4 of the transaction TRANSACTION_3 !
+     [java] 
+     [java] Exception occurred in dispatching TransactionPostedEvent to listener buyerGD_0 !
+     [java] java.lang.NullPointerException
+     [java] 	at edu.cuny.cat.valuation.UpdatingDailyRandomValuer.eventOccurred(UpdatingDailyRandomValuer.java:86)
+     [java] 	at edu.cuny.cat.server.ConnectionAdaptor.eventOccurred(ConnectionAdaptor.java:745)
+     [java] 	at edu.cuny.cat.task.EventDispatchingTaskOnServerSide.run(EventDispatchingTaskOnServerSide.java:64)
+     [java] 	at edu.cuny.cat.task.PrioritySynchronousDispatcher.process(PrioritySynchronousDispatcher.java:70)
+     [java] 	at edu.cuny.cat.task.PrioritySynchronousDispatcher.processTask(PrioritySynchronousDispatcher.java:82)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:339)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:325)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:312)
+     [java] 	at edu.cuny.cat.server.GameController.eventOccurred(GameController.java:497)
+     [java] 	at edu.cuny.cat.server.GameClock.fireEvent(GameClock.java:595)
+     [java] 	at edu.cuny.cat.server.GameClock.round(GameClock.java:494)
+     [java] 	at edu.cuny.cat.server.GameClock.day(GameClock.java:390)
+     [java] 	at edu.cuny.cat.server.GameClock.game(GameClock.java:327)
+     [java] 	at edu.cuny.cat.server.GameClock.run(GameClock.java:308)
+     [java] 	at java.lang.Thread.run(Thread.java:680)
+     [java] Adaptor for CH failed to notify buyerGD_0 of the transaction TRANSACTION_3 !
+     [java] 
+     [java] Exception occurred in dispatching TransactionPostedEvent to listener buyerZIP_1 !
+     [java] java.lang.NullPointerException
+     [java] 	at edu.cuny.cat.valuation.UpdatingDailyRandomValuer.eventOccurred(UpdatingDailyRandomValuer.java:86)
+     [java] 	at edu.cuny.cat.server.ConnectionAdaptor.eventOccurred(ConnectionAdaptor.java:745)
+     [java] 	at edu.cuny.cat.task.EventDispatchingTaskOnServerSide.run(EventDispatchingTaskOnServerSide.java:64)
+     [java] 	at edu.cuny.cat.task.PrioritySynchronousDispatcher.process(PrioritySynchronousDispatcher.java:70)
+     [java] 	at edu.cuny.cat.task.PrioritySynchronousDispatcher.processTask(PrioritySynchronousDispatcher.java:82)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:339)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:325)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:312)
+     [java] 	at edu.cuny.cat.server.GameController.eventOccurred(GameController.java:497)
+     [java] 	at edu.cuny.cat.server.GameClock.fireEvent(GameClock.java:595)
+     [java] 	at edu.cuny.cat.server.GameClock.round(GameClock.java:494)
+     [java] 	at edu.cuny.cat.server.GameClock.day(GameClock.java:390)
+     [java] 	at edu.cuny.cat.server.GameClock.game(GameClock.java:327)
+     [java] 	at edu.cuny.cat.server.GameClock.run(GameClock.java:308)
+     [java] 	at java.lang.Thread.run(Thread.java:680)
+     [java] Adaptor for CH failed to notify buyerZIP_1 of the transaction TRANSACTION_3 !
+     [java] 
+     [java] Exception occurred in dispatching TransactionPostedEvent to listener buyerGD_4 !
+     [java] java.lang.NullPointerException
+     [java] 	at edu.cuny.cat.valuation.UpdatingDailyRandomValuer.eventOccurred(UpdatingDailyRandomValuer.java:86)
+     [java] 	at edu.cuny.cat.server.ConnectionAdaptor.eventOccurred(ConnectionAdaptor.java:745)
+     [java] 	at edu.cuny.cat.task.EventDispatchingTaskOnServerSide.run(EventDispatchingTaskOnServerSide.java:64)
+     [java] 	at edu.cuny.cat.task.PrioritySynchronousDispatcher.process(PrioritySynchronousDispatcher.java:70)
+     [java] 	at edu.cuny.cat.task.PrioritySynchronousDispatcher.processTask(PrioritySynchronousDispatcher.java:82)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:339)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:325)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:312)
+     [java] 	at edu.cuny.cat.server.GameController.eventOccurred(GameController.java:497)
+     [java] 	at edu.cuny.cat.server.GameClock.fireEvent(GameClock.java:595)
+     [java] 	at edu.cuny.cat.server.GameClock.round(GameClock.java:494)
+     [java] 	at edu.cuny.cat.server.GameClock.day(GameClock.java:390)
+     [java] 	at edu.cuny.cat.server.GameClock.game(GameClock.java:327)
+     [java] 	at edu.cuny.cat.server.GameClock.run(GameClock.java:308)
+     [java] 	at java.lang.Thread.run(Thread.java:680)
+     [java] Adaptor for CH failed to notify buyerGD_4 of the transaction TRANSACTION_3 !
+     [java] 
+     [java] Exception occurred in dispatching TransactionPostedEvent to listener buyerGD_2 !
+     [java] java.lang.NullPointerException
+     [java] 	at edu.cuny.cat.valuation.UpdatingDailyRandomValuer.eventOccurred(UpdatingDailyRandomValuer.java:86)
+     [java] 	at edu.cuny.cat.server.ConnectionAdaptor.eventOccurred(ConnectionAdaptor.java:745)
+     [java] 	at edu.cuny.cat.task.EventDispatchingTaskOnServerSide.run(EventDispatchingTaskOnServerSide.java:64)
+     [java] 	at edu.cuny.cat.task.PrioritySynchronousDispatcher.process(PrioritySynchronousDispatcher.java:70)
+     [java] 	at edu.cuny.cat.task.PrioritySynchronousDispatcher.processTask(PrioritySynchronousDispatcher.java:82)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:339)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:325)
+     [java] 	at edu.cuny.cat.server.ConnectionManager.dispatchEvent(ConnectionManager.java:312)
+     [java] 	at edu.cuny.cat.server.GameController.eventOccurred(GameController.java:497)
+     [java] 	at edu.cuny.cat.server.GameClock.fireEvent(GameClock.java:595)
+     [java] 	at edu.cuny.cat.server.GameClock.round(GameClock.java:480)
+     [java] 	at edu.cuny.cat.server.GameClock.day(GameClock.java:390)
+     [java] 	at edu.cuny.cat.server.GameClock.game(GameClock.java:327)
+     [java] 	at edu.cuny.cat.server.GameClock.run(GameClock.java:308)
+     [java] 	at java.lang.Thread.run(Thread.java:680)
+     [java] Adaptor for CDA failed to notify buyerGD_2 of the transaction TRANSACTION_4 !
