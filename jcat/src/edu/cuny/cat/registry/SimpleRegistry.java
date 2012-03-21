@@ -1,5 +1,5 @@
 /*
- * JCAT - TAC Market Design Competition Platform
+" * JCAT - TAC Market Design Competition Platform
  * Copyright (C) 2006-2010 Jinzhong Niu, Kai Cai
  *
  * This program is free software; you can redistribute it and/or
@@ -99,7 +99,7 @@ public class SimpleRegistry implements Registry {
 	protected GameClock clock;
 
 	final static DecimalFormat Formatter = new DecimalFormat(
-			"+#########0.00;-#########.00");
+			"+######0.00000;-######0.0-000");
 
 	public SimpleRegistry() {
 		workingTraders = Collections.synchronizedMap(new HashMap<String, Trader>());

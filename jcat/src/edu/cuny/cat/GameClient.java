@@ -70,6 +70,7 @@ import edu.cuny.cat.stat.GameReport;
 import edu.cuny.cat.task.Dispatcher;
 import edu.cuny.cat.task.EventDispatchingTaskOnClientSide;
 import edu.cuny.cat.task.SynchronousDispatcher;
+import edu.cuny.cat.valuation.UpdatingDailyRandomValuerGenerator;
 import edu.cuny.event.Event;
 import edu.cuny.event.EventEngine;
 import edu.cuny.prng.GlobalPRNG;
@@ -1588,6 +1589,9 @@ public abstract class GameClient implements Parameterizable, Runnable,
 
 	protected void printDayInfo(final int day) {
 		loginfo("\n  Game day " + day + "\n");
+		// Added in March 21, 2012 to monitor the params within my valuers
+		UpdatingDailyRandomValuerGenerator valuer = new UpdatingDailyRandomValuerGenerator();
+		loginfo(valuer.toString());
 	}
 
 	protected void printRoundInfo(final int round) {

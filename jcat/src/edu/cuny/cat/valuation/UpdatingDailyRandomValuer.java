@@ -68,12 +68,12 @@ import gov.sandia.cognition.statistics.distribution.StudentTDistribution;
 
 public class UpdatingDailyRandomValuer extends DailyRandomValuer {
 
-	protected UpdatingDailyRandomValuerGenerator generator;
+	protected UpdatingDailyRandomValuerGenerator generator = new UpdatingDailyRandomValuerGenerator();
 
-	Double dloc = new Double(generator.location);
-	Double dpres = new Double(generator.precision);
-	Double dscale = new Double(generator.scale);
-	Double dshape = new Double(generator.shape);
+//	Double dloc = new Double(generator.location);
+//	Double dpres = new Double(generator.precision);
+//	Double dscale = new Double(generator.scale);
+//	Double dshape = new Double(generator.shape);
 
 	public static final String P_DEF_BASE = "normal";
 
@@ -113,6 +113,14 @@ public class UpdatingDailyRandomValuer extends DailyRandomValuer {
 			NormalInverseGammaDistribution prior = new NormalInverseGammaDistribution(
 					generator.location, generator.precision, generator.shape,
 					generator.scale);
+			RandomValuerGenerator.logger
+			.info("Bayesian prior created by UpdatingDailyRandomValuer: location "
+					+ prior.getLocation()
+					+ ", precision "
+					+ prior.getPrecision()
+					+ ", scale "
+					+ prior.getScale()
+					+ ", shape " + prior.getShape());
 			// call up a normal estimator with that prior and use it and the
 			// transaction price to update
 			UnivariateGaussianMeanVarianceBayesianEstimator estimator = new UnivariateGaussianMeanVarianceBayesianEstimator(
