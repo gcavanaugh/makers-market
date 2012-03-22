@@ -242,6 +242,8 @@ cat.server.valuation.buyer.location = 100
 cat.server.valuation.buyer.precision = 0.20001
 cat.server.valuation.buyer.shape = 1.0
 cat.server.valuation.buyer.scale = 0.1
+cat.server.valuation.buyer.mean = 100
+cat.server.valuation.buyer.stdev = 25
 
 cat.server.valuation.seller = edu.cuny.cat.valuation.DailyRandomValuerGenerator
 cat.server.valuation.seller.minvalue = 50

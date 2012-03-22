@@ -106,13 +106,7 @@ public class RandomValuerGenerator implements ValuerGenerator {
 	
 	// Added in to make the class capable of storing the params I need to get a prior initialized
 	
-	public static final String P_LOC = "location";
-	
-	public static final String P_PRES = "precision";
-	
-	public static final String P_SCALE = "scale";
 
-	public static final String P_SHAPE = "shape";
 	
 ////Added code starts here
 //	public double mean;

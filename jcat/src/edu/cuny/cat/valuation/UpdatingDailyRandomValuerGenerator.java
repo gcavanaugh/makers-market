@@ -40,6 +40,7 @@ import org.apache.log4j.Logger;
 
 import cern.jet.random.AbstractDistribution;
 import edu.cuny.prng.GlobalPRNG;
+import edu.cuny.random.Binomial;
 import edu.cuny.random.Normal;
 import edu.cuny.random.Uniform;
 import edu.cuny.util.Galaxy;
@@ -92,6 +93,24 @@ public class UpdatingDailyRandomValuerGenerator extends
 
 	// need this for house keeping
 	public static final String P_DEF_NORM = "normal";
+	
+	// for retrieving params
+	
+	public static final String P_DEF_BUYER = "cat.server.valuation.buyer";
+	
+	public static final String P_DEF_DISTRO = "cat.server.valuation.buyer.distribution.mean";
+	
+	public static final String P_LOC = "location";
+	
+	public static final String P_PRES = "precision";
+	
+	public static final String P_SCALE = "scale";
+
+	public static final String P_SHAPE = "shape";
+	
+	public static final String P_MEAN = "mean";
+	
+	public static final String P_STDEV = "stdev";
 
 	// Added in a static variable to hold the parameter database I'm gonna feed
 	// in
@@ -119,23 +138,23 @@ public class UpdatingDailyRandomValuerGenerator extends
 	// methods in this class
 
 	// Just mimicking the DailyRandomValuerGenerator
-	static Logger logger = Logger.getLogger(RandomValuerGenerator.class);
+	static Logger logger = Logger.getLogger(UpdatingDailyRandomValuerGenerator.class);
 
 	@Override
 	public void setup(final ParameterDatabase parameters, final Parameter base) {
 		// moved these inside setup
-		defBase = new Parameter(RandomValuerGenerator.P_DEF_BASE);
+		defBase = new Parameter(UpdatingDailyRandomValuerGenerator.P_DEF_BASE);
 		defBaseNorm = new Parameter(Normal.P_DEF_BASE);
 		// Need to store this for later use
 		paramholder = parameters;
 		// COPIED FROM UpdatingDailyRandomValuerGenerator (which I'm overriding
 		// here)
-		minValue = parameters.getDouble(
-				base.push(RandomValuerGenerator.P_MINVALUE),
-				defBase.push(RandomValuerGenerator.P_MINVALUE), 0);
-		maxValue = parameters.getDouble(
-				base.push(RandomValuerGenerator.P_MAXVALUE),
-				defBase.push(RandomValuerGenerator.P_MAXVALUE), minValue);
+		minValue = parameters.getDoubleWithDefault(
+				base.push(UpdatingDailyRandomValuerGenerator.P_MINVALUE),
+				defBase.push(UpdatingDailyRandomValuerGenerator.P_MINVALUE), 0);
+		maxValue = parameters.getDoubleWithDefault(
+				base.push(UpdatingDailyRandomValuerGenerator.P_MAXVALUE),
+				defBase.push(UpdatingDailyRandomValuerGenerator.P_MAXVALUE), minValue);
 		// check if the distribution you're dealing with is normal
 		// not sure this works as a check, but the toString method in
 		// RandomValuerGenerator gives hints that it does
@@ -146,28 +165,22 @@ public class UpdatingDailyRandomValuerGenerator extends
 		// double mean = parameters.getIntWithDefault(base.push(Normal.P_MEAN),
 		// defBase.push(Normal.P_MEAN), Normal.DEFAULT_MEAN);
 		// I'm gonna change it
-		mean = parameters.getDoubleWithDefault(base.push(Normal.P_MEAN),
-				defBaseNorm.push(Normal.P_MEAN), Normal.DEFAULT_MEAN);
-		stdev = parameters.getDoubleWithDefault(base.push(Normal.P_STDEV),
-				defBaseNorm.push(Normal.P_STDEV), Normal.DEFAULT_STDEV);
-		RandomValuerGenerator.logger
-				.info("Through UpdatingDailyRandomValuerGenerator mean set to "
-						+ mean + " and stdev set to " + stdev);
+		
 		// Now for the tricky part...initializing variables within the
 		// underlying database from the params file. These variables don't
 		// exist in the code now and the current class is the only one that
 		// recognizes them
 		// As I reckon it, I will need to
-		location = parameters.getDouble(base.push(RandomValuerGenerator.P_LOC),
-				defBase.push(RandomValuerGenerator.P_LOC), 100.0);
-		precision = parameters.getDouble(
-				base.push(RandomValuerGenerator.P_PRES),
-				defBase.push(RandomValuerGenerator.P_PRES), 0.12);
-		scale = parameters.getDouble(base.push(RandomValuerGenerator.P_SCALE),
-				defBase.push(RandomValuerGenerator.P_SCALE), 0.1);
-		shape = parameters.getDouble(base.push(RandomValuerGenerator.P_SHAPE),
-				defBase.push(RandomValuerGenerator.P_SHAPE), 1.0);
-		RandomValuerGenerator.logger
+		location = parameters.getDoubleWithDefault(base.push(UpdatingDailyRandomValuerGenerator.P_LOC),
+				defBase.push(UpdatingDailyRandomValuerGenerator.P_LOC), 100.0);
+		precision = parameters.getDoubleWithDefault(
+				base.push(UpdatingDailyRandomValuerGenerator.P_PRES),
+				defBase.push(UpdatingDailyRandomValuerGenerator.P_PRES), 0.12);
+		scale = parameters.getDoubleWithDefault(base.push(UpdatingDailyRandomValuerGenerator.P_SCALE),
+				defBase.push(UpdatingDailyRandomValuerGenerator.P_SCALE), 0.1);
+		shape = parameters.getDoubleWithDefault(base.push(UpdatingDailyRandomValuerGenerator.P_SHAPE),
+				defBase.push(UpdatingDailyRandomValuerGenerator.P_SHAPE), 1.0);
+		UpdatingDailyRandomValuerGenerator.logger
 				.info("Through UpdatingDailyRandomValuerGenerator location set to "
 						+ location
 						+ ", precision set to "
@@ -176,19 +189,24 @@ public class UpdatingDailyRandomValuerGenerator extends
 						+ scale
 						+ ", and shape set to "
 						+ shape + ".");
-		// COPIED FROM RandomValuerGenerator (which I'm overriding here)
-		// }
 
-		// COPIED FROM RandomValuerGenerator (which I'm overriding here)
 		try {
 			distribution = parameters.getInstanceForParameterEq(
-					base.push(RandomValuerGenerator.P_DISTRIBUTION),
-					defBase.push(RandomValuerGenerator.P_DISTRIBUTION),
+					base.push(UpdatingDailyRandomValuerGenerator.P_DISTRIBUTION),
+					defBase.push(UpdatingDailyRandomValuerGenerator.P_DISTRIBUTION),
 					AbstractDistribution.class);
 
 			if (distribution instanceof Parameterizable) {
 				((Parameterizable) distribution).setup(parameters,
-						base.push(RandomValuerGenerator.P_DISTRIBUTION));
+						base.push(UpdatingDailyRandomValuerGenerator.P_DISTRIBUTION));
+				
+				mean = parameters.getDoubleWithDefault(base.push(UpdatingDailyRandomValuerGenerator.P_MEAN),
+						defBaseNorm.push(UpdatingDailyRandomValuerGenerator.P_MEAN), Normal.DEFAULT_MEAN);
+				stdev = parameters.getDoubleWithDefault(base.push(UpdatingDailyRandomValuerGenerator.P_STDEV),
+						defBaseNorm.push(UpdatingDailyRandomValuerGenerator.P_STDEV), Normal.DEFAULT_STDEV);
+				UpdatingDailyRandomValuerGenerator.logger
+						.info("Through UpdatingDailyRandomValuerGenerator mean set to "
+								+ mean + " and stdev set to " + stdev);
 
 			}
 		} catch (final ParamClassLoadException e) {
@@ -231,6 +249,7 @@ public class UpdatingDailyRandomValuerGenerator extends
 	public synchronized void updateMeanSD(double mean, double stdev) {
 		// convert the values to strings so they can be fed into the param
 		// database
+		defBaseNorm = new Parameter(UpdatingDailyRandomValuerGenerator.P_DEF_DISTRO);
 		Double dmean = new Double(mean);
 		Double dstdev = new Double(stdev);
 		String smean = dmean.toString();
@@ -241,13 +260,14 @@ public class UpdatingDailyRandomValuerGenerator extends
 		paramholder.set(defBaseNorm.push(Normal.P_MEAN), smean);
 		paramholder.set(defBaseNorm.push(Normal.P_STDEV), sstdev);
 		// I want to print something out here just so I can see the updating
-		RandomValuerGenerator.logger
+		UpdatingDailyRandomValuerGenerator.logger
 				.info("Bayesian update - posterior params in database now: mean "
 						+ smean + ", stdev " + sstdev);
 	}
 
 	public synchronized void updatePrior(double location, double precision,
 			double scale, double shape) {
+		defBase = new Parameter(UpdatingDailyRandomValuerGenerator.P_DEF_BUYER);
 		Double dloc = new Double(location);
 		Double dpres = new Double(precision);
 		Double dscale = new Double(scale);
@@ -256,12 +276,35 @@ public class UpdatingDailyRandomValuerGenerator extends
 		String spres = dpres.toString();
 		String sscale = dscale.toString();
 		String sshape = dshape.toString();
-		paramholder.set(defBase.push(RandomValuerGenerator.P_LOC), sloc);
-		paramholder.set(defBase.push(RandomValuerGenerator.P_PRES), spres);
-		paramholder.set(defBase.push(RandomValuerGenerator.P_SCALE), sscale);
-		paramholder.set(defBase.push(RandomValuerGenerator.P_SHAPE), sshape);
-		RandomValuerGenerator.logger
-				.info(toString());
+		paramholder.set(defBase.push(UpdatingDailyRandomValuerGenerator.P_LOC), sloc);
+		paramholder.set(defBase.push(UpdatingDailyRandomValuerGenerator.P_PRES), spres);
+		paramholder.set(defBase.push(UpdatingDailyRandomValuerGenerator.P_SCALE), sscale);
+		paramholder.set(defBase.push(UpdatingDailyRandomValuerGenerator.P_SHAPE), sshape);
+		
+	}
+	// these are meant just to reset the values to those in the database because it appears that everything gets reset when I generate a new object of this class
+	public synchronized void getPrior(){
+		defBase = new Parameter(UpdatingDailyRandomValuerGenerator.P_DEF_BUYER);
+		location = paramholder.getDouble(defBase.push(UpdatingDailyRandomValuerGenerator.P_LOC),
+				defBase.push(UpdatingDailyRandomValuerGenerator.P_LOC), 100.0);
+		precision = paramholder.getDouble(defBase.push(UpdatingDailyRandomValuerGenerator.P_PRES),
+				defBase.push(UpdatingDailyRandomValuerGenerator.P_PRES), 0.12);
+		scale = paramholder.getDouble(defBase.push(UpdatingDailyRandomValuerGenerator.P_SCALE),
+				defBase.push(UpdatingDailyRandomValuerGenerator.P_SCALE), 0.1);
+		shape = paramholder.getDouble(defBase.push(UpdatingDailyRandomValuerGenerator.P_SHAPE),
+				defBase.push(UpdatingDailyRandomValuerGenerator.P_SHAPE), 1.0);
+		maxValue = paramholder.getDouble(defBase.push(UpdatingDailyRandomValuerGenerator.P_SCALE),
+				defBase.push(UpdatingDailyRandomValuerGenerator.P_SCALE), 0.1);
+		minValue = paramholder.getDouble(defBase.push(UpdatingDailyRandomValuerGenerator.P_SHAPE),
+				defBase.push(UpdatingDailyRandomValuerGenerator.P_SHAPE), 1.0);
+	}
+	
+	public synchronized void getPosterior(){
+		defBaseNorm = new Parameter(UpdatingDailyRandomValuerGenerator.P_DEF_DISTRO);
+		mean = paramholder.getDoubleWithDefault(defBase.push(UpdatingDailyRandomValuerGenerator.P_MEAN),
+				defBaseNorm.push(UpdatingDailyRandomValuerGenerator.P_MEAN), Normal.DEFAULT_MEAN);
+		stdev = paramholder.getDoubleWithDefault(defBase.push(UpdatingDailyRandomValuerGenerator.P_STDEV),
+				defBaseNorm.push(UpdatingDailyRandomValuerGenerator.P_STDEV), Normal.DEFAULT_STDEV);
 	}
 
 	// Extended from RandomValuerGenerator

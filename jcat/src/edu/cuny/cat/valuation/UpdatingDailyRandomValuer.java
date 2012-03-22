@@ -36,6 +36,8 @@
 
 package edu.cuny.cat.valuation;
 
+import org.apache.log4j.Logger;
+
 import edu.cuny.cat.event.AuctionEvent;
 import edu.cuny.cat.event.DayClosedEvent;
 import edu.cuny.cat.event.TransactionPostedEvent;
@@ -69,6 +71,7 @@ import gov.sandia.cognition.statistics.distribution.StudentTDistribution;
 public class UpdatingDailyRandomValuer extends DailyRandomValuer {
 
 	protected UpdatingDailyRandomValuerGenerator generator = new UpdatingDailyRandomValuerGenerator();
+	
 
 //	Double dloc = new Double(generator.location);
 //	Double dpres = new Double(generator.precision);
@@ -110,10 +113,12 @@ public class UpdatingDailyRandomValuer extends DailyRandomValuer {
 			// generator.location, generator.precision,
 			// generator.shape, generator.scale);
 			// }
+			generator.getPrior();
+			generator.getPosterior();
 			NormalInverseGammaDistribution prior = new NormalInverseGammaDistribution(
 					generator.location, generator.precision, generator.shape,
 					generator.scale);
-			RandomValuerGenerator.logger
+			UpdatingDailyRandomValuer.logger
 			.info("Bayesian prior created by UpdatingDailyRandomValuer: location "
 					+ prior.getLocation()
 					+ ", precision "
