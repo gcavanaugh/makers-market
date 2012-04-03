@@ -119,8 +119,18 @@ public class UpdatingDailyRandomValuer extends DailyRandomValuer {
 					generator.location, generator.precision, generator.shape,
 					generator.scale);
 			UpdatingDailyRandomValuer.logger
+			.info("Normal inverse gamma given: location "
+					+ generator.location
+					+ ", precision "
+					+ generator.precision
+					+ ", scale "
+					+ generator.shape
+					+ ", shape " + generator.scale);
+			UpdatingDailyRandomValuer.logger
 			.info("Bayesian prior created by UpdatingDailyRandomValuer: location "
 					+ prior.getLocation()
+					+" based on location value in database of "
+					+ generator.location
 					+ ", precision "
 					+ prior.getPrecision()
 					+ ", scale "
@@ -140,6 +150,11 @@ public class UpdatingDailyRandomValuer extends DailyRandomValuer {
 					.createPredictiveDistribution(prior);
 			// use the predictive to update the underlying mean and stdev
 			// for the Normal
+			UpdatingDailyRandomValuer.logger
+			.info("Bayesian posterior created by UpdatingDailyRandomValuer: mean "
+					+ predictive.getMean()
+					+ "and stdev "
+					+ Math.sqrt(1 / predictive.getPrecision()));
 			generator.updateMeanSD(predictive.getMean(),
 					Math.sqrt(1 / predictive.getPrecision()));
 

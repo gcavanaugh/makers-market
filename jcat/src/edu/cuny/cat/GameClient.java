@@ -1590,10 +1590,10 @@ public abstract class GameClient implements Parameterizable, Runnable,
 	protected void printDayInfo(final int day) {
 		loginfo("\n  Game day " + day + "\n");
 		// Added in March 21, 2012 to monitor the params within my valuers
-		UpdatingDailyRandomValuerGenerator valuer = new UpdatingDailyRandomValuerGenerator();
-		valuer.getPrior();
-		valuer.getPosterior();
-		loginfo(valuer.toString());
+//		UpdatingDailyRandomValuerGenerator valuer = new UpdatingDailyRandomValuerGenerator();
+//		valuer.getPrior();
+//		valuer.getPosterior();
+//		loginfo(valuer.toString());
 	}
 
 	protected void printRoundInfo(final int round) {

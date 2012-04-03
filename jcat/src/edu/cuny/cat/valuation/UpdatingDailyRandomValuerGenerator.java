@@ -40,7 +40,6 @@ import org.apache.log4j.Logger;
 
 import cern.jet.random.AbstractDistribution;
 import edu.cuny.prng.GlobalPRNG;
-import edu.cuny.random.Binomial;
 import edu.cuny.random.Normal;
 import edu.cuny.random.Uniform;
 import edu.cuny.util.Galaxy;
@@ -98,7 +97,7 @@ public class UpdatingDailyRandomValuerGenerator extends
 	
 	public static final String P_DEF_BUYER = "cat.server.valuation.buyer";
 	
-	public static final String P_DEF_DISTRO = "cat.server.valuation.buyer.distribution.mean";
+	public static final String P_DEF_DISTRO = "cat.server.valuation.buyer.distribution";
 	
 	public static final String P_LOC = "location";
 	
@@ -191,14 +190,14 @@ public class UpdatingDailyRandomValuerGenerator extends
 						+ shape + ".");
 
 		try {
-			distribution = parameters.getInstanceForParameterEq(
-					base.push(UpdatingDailyRandomValuerGenerator.P_DISTRIBUTION),
-					defBase.push(UpdatingDailyRandomValuerGenerator.P_DISTRIBUTION),
+			distribution = parameters.getInstanceForParameterEq(base
+					.push(UpdatingDailyRandomValuerGenerator.P_DISTRIBUTION), defBase
+					.push(RandomValuerGenerator.P_DISTRIBUTION),
 					AbstractDistribution.class);
 
 			if (distribution instanceof Parameterizable) {
-				((Parameterizable) distribution).setup(parameters,
-						base.push(UpdatingDailyRandomValuerGenerator.P_DISTRIBUTION));
+				((Parameterizable) distribution).setup(parameters, base
+						.push(UpdatingDailyRandomValuerGenerator.P_DISTRIBUTION));
 				
 				mean = parameters.getDoubleWithDefault(base.push(UpdatingDailyRandomValuerGenerator.P_MEAN),
 						defBaseNorm.push(UpdatingDailyRandomValuerGenerator.P_MEAN), Normal.DEFAULT_MEAN);
@@ -250,19 +249,29 @@ public class UpdatingDailyRandomValuerGenerator extends
 		// convert the values to strings so they can be fed into the param
 		// database
 		defBaseNorm = new Parameter(UpdatingDailyRandomValuerGenerator.P_DEF_DISTRO);
+		defBase = new Parameter(UpdatingDailyRandomValuerGenerator.P_DEF_BUYER);
 		Double dmean = new Double(mean);
 		Double dstdev = new Double(stdev);
 		String smean = dmean.toString();
 		String sstdev = dstdev.toString();
+		UpdatingDailyRandomValuerGenerator.logger
+		.info("Bayesian update ready - using posterior params: mean "
+				+ smean + ", stdev " + sstdev);
 		// Don't really know what to do here
 		// need to call up the param database then
 		// and I need to give it a parameter
-		paramholder.set(defBaseNorm.push(Normal.P_MEAN), smean);
-		paramholder.set(defBaseNorm.push(Normal.P_STDEV), sstdev);
+		paramholder.set(defBaseNorm.push(UpdatingDailyRandomValuerGenerator.P_MEAN), smean);
+		paramholder.set(defBaseNorm.push(UpdatingDailyRandomValuerGenerator.P_STDEV), sstdev);
+		paramholder.set(defBase.push(UpdatingDailyRandomValuerGenerator.P_MEAN), smean);
+		paramholder.set(defBase.push(UpdatingDailyRandomValuerGenerator.P_STDEV), sstdev);
+		double checkmean = paramholder.getDoubleWithDefault(defBase.push(UpdatingDailyRandomValuerGenerator.P_MEAN),
+				defBaseNorm.push(UpdatingDailyRandomValuerGenerator.P_MEAN), Normal.DEFAULT_MEAN);
+		double checkstdev = paramholder.getDoubleWithDefault(defBase.push(UpdatingDailyRandomValuerGenerator.P_STDEV),
+				defBaseNorm.push(UpdatingDailyRandomValuerGenerator.P_STDEV), Normal.DEFAULT_STDEV);
 		// I want to print something out here just so I can see the updating
 		UpdatingDailyRandomValuerGenerator.logger
 				.info("Bayesian update - posterior params in database now: mean "
-						+ smean + ", stdev " + sstdev);
+						+ checkmean + ", stdev " + checkstdev);
 	}
 
 	public synchronized void updatePrior(double location, double precision,
@@ -276,27 +285,71 @@ public class UpdatingDailyRandomValuerGenerator extends
 		String spres = dpres.toString();
 		String sscale = dscale.toString();
 		String sshape = dshape.toString();
+		UpdatingDailyRandomValuerGenerator.logger
+		.info("Bayesian update ready - using prior params: location "
+					+ sloc
+					+ ", precision "
+					+ spres
+					+ ", scale "
+					+ sscale
+					+ ", shape " 
+					+ sshape);
 		paramholder.set(defBase.push(UpdatingDailyRandomValuerGenerator.P_LOC), sloc);
 		paramholder.set(defBase.push(UpdatingDailyRandomValuerGenerator.P_PRES), spres);
 		paramholder.set(defBase.push(UpdatingDailyRandomValuerGenerator.P_SCALE), sscale);
 		paramholder.set(defBase.push(UpdatingDailyRandomValuerGenerator.P_SHAPE), sshape);
-		
+		double checklocation = paramholder.getDouble(defBase.push(UpdatingDailyRandomValuerGenerator.P_LOC),
+				defBase.push(UpdatingDailyRandomValuerGenerator.P_LOC), 75.0);
+		double checkprecision = paramholder.getDouble(defBase.push(UpdatingDailyRandomValuerGenerator.P_PRES),
+				defBase.push(UpdatingDailyRandomValuerGenerator.P_PRES), 0.12);
+		double checkscale = paramholder.getDouble(defBase.push(UpdatingDailyRandomValuerGenerator.P_SCALE),
+				defBase.push(UpdatingDailyRandomValuerGenerator.P_SCALE), 0.1);
+		double checkshape = paramholder.getDouble(defBase.push(UpdatingDailyRandomValuerGenerator.P_SHAPE),
+				defBase.push(UpdatingDailyRandomValuerGenerator.P_SHAPE), 1.0);
+		UpdatingDailyRandomValuerGenerator.logger
+		.info("Bayesian update - prior params in database now: location "
+					+ checklocation
+					+ ", precision "
+					+ checkprecision
+					+ ", scale "
+					+ checkscale
+					+ ", shape " 
+					+ checkshape);
 	}
 	// these are meant just to reset the values to those in the database because it appears that everything gets reset when I generate a new object of this class
 	public synchronized void getPrior(){
 		defBase = new Parameter(UpdatingDailyRandomValuerGenerator.P_DEF_BUYER);
 		location = paramholder.getDouble(defBase.push(UpdatingDailyRandomValuerGenerator.P_LOC),
-				defBase.push(UpdatingDailyRandomValuerGenerator.P_LOC), 100.0);
+				defBase.push(UpdatingDailyRandomValuerGenerator.P_LOC), 75.0);
 		precision = paramholder.getDouble(defBase.push(UpdatingDailyRandomValuerGenerator.P_PRES),
 				defBase.push(UpdatingDailyRandomValuerGenerator.P_PRES), 0.12);
 		scale = paramholder.getDouble(defBase.push(UpdatingDailyRandomValuerGenerator.P_SCALE),
 				defBase.push(UpdatingDailyRandomValuerGenerator.P_SCALE), 0.1);
 		shape = paramholder.getDouble(defBase.push(UpdatingDailyRandomValuerGenerator.P_SHAPE),
 				defBase.push(UpdatingDailyRandomValuerGenerator.P_SHAPE), 1.0);
-		maxValue = paramholder.getDouble(defBase.push(UpdatingDailyRandomValuerGenerator.P_SCALE),
-				defBase.push(UpdatingDailyRandomValuerGenerator.P_SCALE), 0.1);
-		minValue = paramholder.getDouble(defBase.push(UpdatingDailyRandomValuerGenerator.P_SHAPE),
-				defBase.push(UpdatingDailyRandomValuerGenerator.P_SHAPE), 1.0);
+		maxValue = paramholder.getDouble(defBase.push(UpdatingDailyRandomValuerGenerator.P_MAXVALUE),
+				defBase.push(UpdatingDailyRandomValuerGenerator.P_MAXVALUE), 0.1);
+		minValue = paramholder.getDouble(defBase.push(UpdatingDailyRandomValuerGenerator.P_MINVALUE),
+				defBase.push(UpdatingDailyRandomValuerGenerator.P_MINVALUE), 1.0);
+		distribution = paramholder.getInstanceForParameterEq(defBase.push(UpdatingDailyRandomValuerGenerator.P_DISTRIBUTION), 
+				defBase.push(UpdatingDailyRandomValuerGenerator.P_DISTRIBUTION),
+				AbstractDistribution.class);
+		UpdatingDailyRandomValuerGenerator.logger
+		.info("Prior grabbed from database: location "
+					+ location
+					+ ", precision "
+					+ precision
+					+ ", scale "
+					+ scale
+					+ ", shape " 
+					+ shape
+					+ ", maxValue "
+					+ maxValue
+					+ ", minValue "
+					+ minValue
+					+ ", distribution " 
+					+ distribution
+				);
 	}
 	
 	public synchronized void getPosterior(){
@@ -305,6 +358,12 @@ public class UpdatingDailyRandomValuerGenerator extends
 				defBaseNorm.push(UpdatingDailyRandomValuerGenerator.P_MEAN), Normal.DEFAULT_MEAN);
 		stdev = paramholder.getDoubleWithDefault(defBase.push(UpdatingDailyRandomValuerGenerator.P_STDEV),
 				defBaseNorm.push(UpdatingDailyRandomValuerGenerator.P_STDEV), Normal.DEFAULT_STDEV);
+		UpdatingDailyRandomValuerGenerator.logger
+		.info("Posterior grabbed from database: mean "
+					+ mean
+					+ ", stdev "
+					+ stdev
+				);
 	}
 
 	// Extended from RandomValuerGenerator

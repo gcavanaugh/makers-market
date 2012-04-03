@@ -245,7 +245,7 @@ public class NormalInverseGammaDistribution
     public void setPrecision(
         double precision)
     {
-        if( precision <= 0.0 )
+        if( precision <= 1.0E-10 )
         {
             throw new IllegalArgumentException( "Precision is "+ precision +". Precision must be > 0.0" );
         }

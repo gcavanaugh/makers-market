@@ -12,13 +12,13 @@
 	<classpathentry kind="lib" path="lib/trove-1.1b4/lib/trove.jar"/>
 	<classpathentry kind="lib" path="lib/cognitive-foundry/gov-sandia-cognition-common-core.jar"/>
 	<classpathentry kind="lib" path="lib/cognitive-foundry/gov-sandia-cognition-learning-core.jar"/>
-	<classpathentry kind="lib" path="lib/cognitive-foundry/mtj-0.9.14.jar"/>
-	<classpathentry kind="lib" path="lib/cognitive-foundry/netlib-java-0.9.3.jar"/>
-	<classpathentry kind="lib" path="lib/cognitive-foundry/porter-stemmer-1.4.jar"/>
-	<classpathentry kind="lib" path="lib/cognitive-foundry/xpp3_min-1.1.4c.jar"/>
-	<classpathentry kind="lib" path="lib/cognitive-foundry/xstream-1.3.1.jar"/>
-	<classpathentry kind="lib" path="lib/cognitive-foundry/arpack-combo-0.1.jar"/>
 	<classpathentry kind="lib" path="jcat.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/Users/grantcavanaugh/Desktop/Makers Market/jcat/lib/cognitive-foundry/Dependencies/mtj-0.9.14/mtj-0.9.14.jar"/>
+	<classpathentry kind="lib" path="/Users/grantcavanaugh/Desktop/Makers Market/jcat/lib/cognitive-foundry/Dependencies/netlib-java-0.9.3/arpack-combo-0.1.jar"/>
+	<classpathentry kind="lib" path="/Users/grantcavanaugh/Desktop/Makers Market/jcat/lib/cognitive-foundry/Dependencies/netlib-java-0.9.3/netlib-java-0.9.3.jar"/>
+	<classpathentry kind="lib" path="/Users/grantcavanaugh/Desktop/Makers Market/jcat/lib/cognitive-foundry/Dependencies/porter-stemmer-1.4/porter-stemmer-1.4.jar"/>
+	<classpathentry kind="lib" path="/Users/grantcavanaugh/Desktop/Makers Market/jcat/lib/cognitive-foundry/Dependencies/xstream-1.3.1/xpp3_min-1.1.4c.jar"/>
+	<classpathentry kind="lib" path="/Users/grantcavanaugh/Desktop/Makers Market/jcat/lib/cognitive-foundry/Dependencies/xstream-1.3.1/xstream-1.3.1.jar"/>
 	<classpathentry kind="output" path="classes"/>
 </classpath>
