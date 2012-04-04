@@ -68,7 +68,7 @@ game,day,CDA.ask.accepted.quantity,CDA.bid.accepted.quantity,CDA.ask.accepted.pr
 0,66,+0.000,+0.000,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,+0.000,NaN,NaN,NaN,NaN
 0,67,+0.000,+0.000,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,+0.000,NaN,NaN,NaN,NaN
 0,68,+0.000,+0.000,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,+0.000,NaN,NaN,NaN,NaN
-0,69,+0.000,+0.000,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,+0.000,NaN,NaN,NaN,NaN
+0,69,+3.000,+3.000,+95.160,+95.209,+95.160,+95.209,+95.160,+95.209,+0.000,+0.000,+3.000,+95.184,+95.184,+95.184,+0.000
 0,70,+0.000,+0.000,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,+0.000,NaN,NaN,NaN,NaN
 0,71,+0.000,+0.000,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,+0.000,NaN,NaN,NaN,NaN
 0,72,+0.000,+0.000,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,+0.000,NaN,NaN,NaN,NaN
@@ -109,7 +109,7 @@ game,day,CDA.ask.accepted.quantity,CDA.bid.accepted.quantity,CDA.ask.accepted.pr
 0,107,+0.000,+0.000,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,+0.000,NaN,NaN,NaN,NaN
 0,108,+0.000,+0.000,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,+0.000,NaN,NaN,NaN,NaN
 0,109,+0.000,+0.000,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,+0.000,NaN,NaN,NaN,NaN
-0,110,+0.000,+0.000,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,+0.000,NaN,NaN,NaN,NaN
+0,110,+1.000,+1.000,+95.954,+96.709,+95.954,+96.709,+95.954,+96.709,+0.000,+0.000,+1.000,+96.332,+96.332,+96.332,+0.000
 0,111,+0.000,+0.000,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,+0.000,NaN,NaN,NaN,NaN
 0,112,+0.000,+0.000,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,+0.000,NaN,NaN,NaN,NaN
 0,113,+0.000,+0.000,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,+0.000,NaN,NaN,NaN,NaN

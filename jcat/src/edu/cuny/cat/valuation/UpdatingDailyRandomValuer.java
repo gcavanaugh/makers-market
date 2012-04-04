@@ -153,7 +153,7 @@ public class UpdatingDailyRandomValuer extends DailyRandomValuer {
 	}
 	
 	private boolean compareToTheshold(double draw) {
-		final double threshold = 0.05;
+		final double threshold = 0.2;
 		return draw < threshold;
 	}
 }
