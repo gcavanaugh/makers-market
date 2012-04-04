@@ -3,8 +3,8 @@
 ###############################################################
 
 parent.0 = modules/telnetconsole.params
-# parent.0 = modules/noconsole.params
-parent.0 = modules/guiconsole.params
+parent.0 = modules/noconsole.params
+# parent.0 = modules/guiconsole.params
 print-params = true
 
 cat.server.gc = true
@@ -210,7 +210,7 @@ cat.server.clockcontroller = edu.cuny.cat.server.EventBasedClockController
 
 cat.server.iterations = 1
 
-cat.server.gamelen = 40
+cat.server.gamelen = 20
 cat.server.daylen = 10
 cat.server.roundlen = 500
 
@@ -246,8 +246,8 @@ cat.server.valuation.buyer.mean = 75
 cat.server.valuation.buyer.stdev = 25
 
 cat.server.valuation.seller = edu.cuny.cat.valuation.DailyRandomValuerGenerator
-cat.server.valuation.seller.minvalue = 50
-cat.server.valuation.seller.maxvalue = 150
+cat.server.valuation.seller.minvalue = 95
+cat.server.valuation.seller.maxvalue = 105
 
 # infrastructure
 
