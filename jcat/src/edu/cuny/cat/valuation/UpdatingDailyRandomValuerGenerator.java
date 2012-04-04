@@ -89,6 +89,8 @@ public class UpdatingDailyRandomValuerGenerator extends
 	public double scale;
 
 	public double shape;
+	
+	public double threshold;
 
 	// need this for house keeping
 	public static final String P_DEF_NORM = "normal";
@@ -110,6 +112,8 @@ public class UpdatingDailyRandomValuerGenerator extends
 	public static final String P_MEAN = "mean";
 	
 	public static final String P_STDEV = "stdev";
+	
+	public static final String P_THRES = "threshold";
 
 	// Added in a static variable to hold the parameter database I'm gonna feed
 	// in
@@ -174,11 +178,13 @@ public class UpdatingDailyRandomValuerGenerator extends
 				defBase.push(UpdatingDailyRandomValuerGenerator.P_LOC), 100.0);
 		precision = parameters.getDoubleWithDefault(
 				base.push(UpdatingDailyRandomValuerGenerator.P_PRES),
-				defBase.push(UpdatingDailyRandomValuerGenerator.P_PRES), 0.12);
+				defBase.push(UpdatingDailyRandomValuerGenerator.P_PRES), 0.004);
 		scale = parameters.getDoubleWithDefault(base.push(UpdatingDailyRandomValuerGenerator.P_SCALE),
-				defBase.push(UpdatingDailyRandomValuerGenerator.P_SCALE), 0.1);
+				defBase.push(UpdatingDailyRandomValuerGenerator.P_SCALE), 0.001);
 		shape = parameters.getDoubleWithDefault(base.push(UpdatingDailyRandomValuerGenerator.P_SHAPE),
 				defBase.push(UpdatingDailyRandomValuerGenerator.P_SHAPE), 1.0);
+		threshold = parameters.getDoubleWithDefault(base.push(UpdatingDailyRandomValuerGenerator.P_THRES),
+				defBase.push(UpdatingDailyRandomValuerGenerator.P_THRES), 0.0);
 		UpdatingDailyRandomValuerGenerator.logger
 				.info("Through UpdatingDailyRandomValuerGenerator location set to "
 						+ location
@@ -187,7 +193,8 @@ public class UpdatingDailyRandomValuerGenerator extends
 						+ ", scale set to "
 						+ scale
 						+ ", and shape set to "
-						+ shape + ".");
+						+ shape
+						);
 
 		try {
 			distribution = parameters.getInstanceForParameterEq(base
@@ -264,10 +271,10 @@ public class UpdatingDailyRandomValuerGenerator extends
 		paramholder.set(defBaseNorm.push(UpdatingDailyRandomValuerGenerator.P_STDEV), sstdev);
 		paramholder.set(defBase.push(UpdatingDailyRandomValuerGenerator.P_MEAN), smean);
 		paramholder.set(defBase.push(UpdatingDailyRandomValuerGenerator.P_STDEV), sstdev);
-		double checkmean = paramholder.getDoubleWithDefault(defBase.push(UpdatingDailyRandomValuerGenerator.P_MEAN),
-				defBaseNorm.push(UpdatingDailyRandomValuerGenerator.P_MEAN), Normal.DEFAULT_MEAN);
-		double checkstdev = paramholder.getDoubleWithDefault(defBase.push(UpdatingDailyRandomValuerGenerator.P_STDEV),
-				defBaseNorm.push(UpdatingDailyRandomValuerGenerator.P_STDEV), Normal.DEFAULT_STDEV);
+		double checkmean = paramholder.getDouble(defBase.push(UpdatingDailyRandomValuerGenerator.P_MEAN),
+				defBaseNorm.push(UpdatingDailyRandomValuerGenerator.P_MEAN), 0);
+		double checkstdev = paramholder.getDouble(defBase.push(UpdatingDailyRandomValuerGenerator.P_STDEV),
+				defBaseNorm.push(UpdatingDailyRandomValuerGenerator.P_STDEV), 0);
 		// I want to print something out here just so I can see the updating
 		UpdatingDailyRandomValuerGenerator.logger
 				.info("Bayesian update - posterior params in database now: mean "
@@ -299,13 +306,13 @@ public class UpdatingDailyRandomValuerGenerator extends
 		paramholder.set(defBase.push(UpdatingDailyRandomValuerGenerator.P_SCALE), sscale);
 		paramholder.set(defBase.push(UpdatingDailyRandomValuerGenerator.P_SHAPE), sshape);
 		double checklocation = paramholder.getDouble(defBase.push(UpdatingDailyRandomValuerGenerator.P_LOC),
-				defBase.push(UpdatingDailyRandomValuerGenerator.P_LOC), 75.0);
+				defBase.push(UpdatingDailyRandomValuerGenerator.P_LOC), 0);
 		double checkprecision = paramholder.getDouble(defBase.push(UpdatingDailyRandomValuerGenerator.P_PRES),
-				defBase.push(UpdatingDailyRandomValuerGenerator.P_PRES), 0.12);
+				defBase.push(UpdatingDailyRandomValuerGenerator.P_PRES), 0);
 		double checkscale = paramholder.getDouble(defBase.push(UpdatingDailyRandomValuerGenerator.P_SCALE),
-				defBase.push(UpdatingDailyRandomValuerGenerator.P_SCALE), 0.1);
+				defBase.push(UpdatingDailyRandomValuerGenerator.P_SCALE), 0);
 		double checkshape = paramholder.getDouble(defBase.push(UpdatingDailyRandomValuerGenerator.P_SHAPE),
-				defBase.push(UpdatingDailyRandomValuerGenerator.P_SHAPE), 1.0);
+				defBase.push(UpdatingDailyRandomValuerGenerator.P_SHAPE), 0);
 		UpdatingDailyRandomValuerGenerator.logger
 		.info("Bayesian update - prior params in database now: location "
 					+ checklocation
@@ -320,17 +327,17 @@ public class UpdatingDailyRandomValuerGenerator extends
 	public synchronized void getPrior(){
 		defBase = new Parameter(UpdatingDailyRandomValuerGenerator.P_DEF_BUYER);
 		location = paramholder.getDouble(defBase.push(UpdatingDailyRandomValuerGenerator.P_LOC),
-				defBase.push(UpdatingDailyRandomValuerGenerator.P_LOC), 75.0);
+				defBase.push(UpdatingDailyRandomValuerGenerator.P_LOC), 0);
 		precision = paramholder.getDouble(defBase.push(UpdatingDailyRandomValuerGenerator.P_PRES),
-				defBase.push(UpdatingDailyRandomValuerGenerator.P_PRES), 0.12);
+				defBase.push(UpdatingDailyRandomValuerGenerator.P_PRES), 0);
 		scale = paramholder.getDouble(defBase.push(UpdatingDailyRandomValuerGenerator.P_SCALE),
-				defBase.push(UpdatingDailyRandomValuerGenerator.P_SCALE), 0.1);
+				defBase.push(UpdatingDailyRandomValuerGenerator.P_SCALE), 0);
 		shape = paramholder.getDouble(defBase.push(UpdatingDailyRandomValuerGenerator.P_SHAPE),
-				defBase.push(UpdatingDailyRandomValuerGenerator.P_SHAPE), 1.0);
+				defBase.push(UpdatingDailyRandomValuerGenerator.P_SHAPE), 0);
 		maxValue = paramholder.getDouble(defBase.push(UpdatingDailyRandomValuerGenerator.P_MAXVALUE),
-				defBase.push(UpdatingDailyRandomValuerGenerator.P_MAXVALUE), 0.1);
+				defBase.push(UpdatingDailyRandomValuerGenerator.P_MAXVALUE), 0);
 		minValue = paramholder.getDouble(defBase.push(UpdatingDailyRandomValuerGenerator.P_MINVALUE),
-				defBase.push(UpdatingDailyRandomValuerGenerator.P_MINVALUE), 1.0);
+				defBase.push(UpdatingDailyRandomValuerGenerator.P_MINVALUE), 0);
 		distribution = paramholder.getInstanceForParameterEq(defBase.push(UpdatingDailyRandomValuerGenerator.P_DISTRIBUTION), 
 				defBase.push(UpdatingDailyRandomValuerGenerator.P_DISTRIBUTION),
 				AbstractDistribution.class);
@@ -354,10 +361,10 @@ public class UpdatingDailyRandomValuerGenerator extends
 	
 	public synchronized void getPosterior(){
 		defBaseNorm = new Parameter(UpdatingDailyRandomValuerGenerator.P_DEF_DISTRO);
-		mean = paramholder.getDoubleWithDefault(defBase.push(UpdatingDailyRandomValuerGenerator.P_MEAN),
-				defBaseNorm.push(UpdatingDailyRandomValuerGenerator.P_MEAN), Normal.DEFAULT_MEAN);
-		stdev = paramholder.getDoubleWithDefault(defBase.push(UpdatingDailyRandomValuerGenerator.P_STDEV),
-				defBaseNorm.push(UpdatingDailyRandomValuerGenerator.P_STDEV), Normal.DEFAULT_STDEV);
+		mean = paramholder.getDouble(defBase.push(UpdatingDailyRandomValuerGenerator.P_MEAN),
+				defBaseNorm.push(UpdatingDailyRandomValuerGenerator.P_MEAN), 0);
+		stdev = paramholder.getDouble(defBase.push(UpdatingDailyRandomValuerGenerator.P_STDEV),
+				defBaseNorm.push(UpdatingDailyRandomValuerGenerator.P_STDEV), 0);
 		UpdatingDailyRandomValuerGenerator.logger
 		.info("Posterior grabbed from database: mean "
 					+ mean

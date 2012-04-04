@@ -239,9 +239,9 @@ cat.server.valuation.buyer.distribution.stdev = 25
 cat.server.valuation.buyer.minvalue = 0
 cat.server.valuation.buyer.maxvalue = 10000
 cat.server.valuation.buyer.location = 75
-cat.server.valuation.buyer.precision = 0.10
+cat.server.valuation.buyer.precision = 0.004
 cat.server.valuation.buyer.shape = 1.0
-cat.server.valuation.buyer.scale = 0.1
+cat.server.valuation.buyer.scale = 0.001
 cat.server.valuation.buyer.mean = 75
 cat.server.valuation.buyer.stdev = 25
 

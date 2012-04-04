@@ -38,9 +38,14 @@ package edu.cuny.cat.valuation;
 
 import org.apache.log4j.Logger;
 
+import cern.jet.random.Uniform;
+import cern.jet.random.engine.RandomEngine;
+
 import edu.cuny.cat.event.AuctionEvent;
 import edu.cuny.cat.event.DayClosedEvent;
 import edu.cuny.cat.event.TransactionPostedEvent;
+import edu.cuny.prng.GlobalPRNG;
+import edu.cuny.util.Galaxy;
 import gov.sandia.cognition.statistics.bayesian.conjugate.UnivariateGaussianMeanVarianceBayesianEstimator;
 import gov.sandia.cognition.statistics.distribution.NormalInverseGammaDistribution;
 import gov.sandia.cognition.statistics.distribution.StudentTDistribution;
@@ -84,82 +89,71 @@ public class UpdatingDailyRandomValuer extends DailyRandomValuer {
 	public void eventOccurred(final AuctionEvent event) {
 		super.eventOccurred(event);
 		if (event instanceof TransactionPostedEvent) {
-			// trying to verify that the distribution being used is of type
-			// normal
-			// TODO: Need a check to make sure we're working with a NORMAL
-			// initialize an inverse normal gamma distribution with those
-			// values (transformed)
-			// now we have mean and stdev so we need to initialize priors
-			// that correspond to those
-			//
-			// ERROR TRACING
-			// possible that I'm getting nullpointer error here because
-			// the generator has null values for its parameters
-			// Below is my attempt to fix it - the jar file will not compile
-			// with this code included
-			//
-			// if (Double.compare(dloc, Double.NaN) == 0
-			// && Double.compare(dpres, Double.NaN) == 0
-			// && Double.compare(dscale, Double.NaN) == 0
-			// && Double.compare(dshape, Double.NaN) == 0) {
-			// NormalInverseGammaDistribution prior = new
-			// NormalInverseGammaDistribution(
-			// generator.location, generator.precision,
-			// generator.shape, generator.scale);
-			// } else {
-			// generator.setup(generator.paramholder, generator.defBase);
-			// NormalInverseGammaDistribution prior = new
-			// NormalInverseGammaDistribution(
-			// generator.location, generator.precision,
-			// generator.shape, generator.scale);
-			// }
-			generator.getPrior();
-			generator.getPosterior();
-			NormalInverseGammaDistribution prior = new NormalInverseGammaDistribution(
-					generator.location, generator.precision, generator.shape,
-					generator.scale);
-			UpdatingDailyRandomValuer.logger
-			.info("Normal inverse gamma given: location "
-					+ generator.location
-					+ ", precision "
-					+ generator.precision
-					+ ", scale "
-					+ generator.shape
-					+ ", shape " + generator.scale);
-			UpdatingDailyRandomValuer.logger
-			.info("Bayesian prior created by UpdatingDailyRandomValuer: location "
-					+ prior.getLocation()
-					+" based on location value in database of "
-					+ generator.location
-					+ ", precision "
-					+ prior.getPrecision()
-					+ ", scale "
-					+ prior.getScale()
-					+ ", shape " + prior.getShape());
-			// call up a normal estimator with that prior and use it and the
-			// transaction price to update
-			UnivariateGaussianMeanVarianceBayesianEstimator estimator = new UnivariateGaussianMeanVarianceBayesianEstimator(
-					prior);
-			// after the update, the prior has been transformed
-			estimator.update(prior, ((TransactionPostedEvent) event)
-					.getTransaction().getPrice());
-			generator.updatePrior(prior.getLocation(), prior.getPrecision(),
-					prior.getScale(), prior.getShape());
-			// save the predictive distribution
-			StudentTDistribution predictive = estimator
-					.createPredictiveDistribution(prior);
-			// use the predictive to update the underlying mean and stdev
-			// for the Normal
-			UpdatingDailyRandomValuer.logger
-			.info("Bayesian posterior created by UpdatingDailyRandomValuer: mean "
-					+ predictive.getMean()
-					+ "and stdev "
-					+ Math.sqrt(1 / predictive.getPrecision()));
-			generator.updateMeanSD(predictive.getMean(),
-					Math.sqrt(1 / predictive.getPrecision()));
+			final double d = drawVal();
+			if (compareToTheshold(d)) {
+				generator.getPrior();
+				generator.getPosterior();
+				NormalInverseGammaDistribution prior = new NormalInverseGammaDistribution(
+						generator.location, generator.precision, generator.shape,
+						generator.scale);
+				UpdatingDailyRandomValuer.logger
+				.info("Normal inverse gamma given: location "
+						+ generator.location
+						+ ", precision "
+						+ generator.precision
+						+ ", scale "
+						+ generator.scale
+						+ ", shape " 
+						+ generator.shape
+						);
+				UpdatingDailyRandomValuer.logger
+				.info("Bayesian prior created by UpdatingDailyRandomValuer: location "
+						+ prior.getLocation()
+						+ ", precision "
+						+ prior.getPrecision()
+						+ ", scale "
+						+ prior.getScale()
+						+ ", shape " 
+						+ prior.getShape()
+						);
+				// call up a normal estimator with that prior and use it and the
+				// transaction price to update
+				UnivariateGaussianMeanVarianceBayesianEstimator estimator = new UnivariateGaussianMeanVarianceBayesianEstimator(
+						prior);
+				// after the update, the prior has been transformed
+				estimator.update(prior, ((TransactionPostedEvent) event)
+						.getTransaction().getPrice());
+				generator.updatePrior(prior.getLocation(), prior.getPrecision(),
+						prior.getScale(), prior.getShape());
+				// save the predictive distribution
+				StudentTDistribution predictive = estimator
+						.createPredictiveDistribution(prior);
+				// use the predictive to update the underlying mean and stdev
+				// for the Normal
+				UpdatingDailyRandomValuer.logger
+				.info("Bayesian posterior created by UpdatingDailyRandomValuer: mean "
+						+ predictive.getMean()
+						+ "and stdev "
+						+ Math.sqrt(1 / predictive.getPrecision()));
+				generator.updateMeanSD(predictive.getMean(),
+						Math.sqrt(1 / predictive.getPrecision()));
+			}
 
 		} else if (event instanceof DayClosedEvent) {
 			drawRandomValue();
 		}
+	}
+
+	private double drawVal() {
+		final RandomEngine prng = Galaxy.getInstance().getDefaultTyped(
+				GlobalPRNG.class).getEngine();
+		Uniform uniformDistribution = new Uniform(0, 1, prng);
+		final double d = uniformDistribution.nextDouble();
+		return d;
+	}
+	
+	private boolean compareToTheshold(double draw) {
+		final double threshold = 0.05;
+		return draw < threshold;
 	}
 }
