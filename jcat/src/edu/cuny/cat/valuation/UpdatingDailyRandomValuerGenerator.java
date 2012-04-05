@@ -382,14 +382,8 @@ public class UpdatingDailyRandomValuerGenerator extends
 		/**
 		 * Updating param values in internal database
 		 * 
-		 * TODO: get rid of the pair of updators that I don't actually need
+		 * 
 		 */
-		paramholder.set(
-				defBaseNorm.push(UpdatingDailyRandomValuerGenerator.P_MEAN),
-				smean);
-		paramholder.set(
-				defBaseNorm.push(UpdatingDailyRandomValuerGenerator.P_STDEV),
-				sstdev);
 		paramholder.set(
 				defBase.push(UpdatingDailyRandomValuerGenerator.P_MEAN), smean);
 		paramholder.set(
