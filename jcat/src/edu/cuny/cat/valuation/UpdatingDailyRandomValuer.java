@@ -36,8 +36,6 @@
 
 package edu.cuny.cat.valuation;
 
-import org.apache.log4j.Logger;
-
 import cern.jet.random.Uniform;
 import cern.jet.random.engine.RandomEngine;
 
@@ -51,10 +49,14 @@ import gov.sandia.cognition.statistics.distribution.NormalInverseGammaDistributi
 import gov.sandia.cognition.statistics.distribution.StudentTDistribution;
 
 /**
- * A valuation policy in which we are allocated a new random valuation at the
- * end of each day. When using a normal distribution for that valuation we also
- * update the underlying distribution using Bayes' rule based on the occurrence
- * of transactions.
+ * A valuation policy in which players are allocated a new random valuation at
+ * the end of each day according to a distribution that updates based on new
+ * transactions. Right now, this pair of related classes
+ * (UpadtingDailyRandomValuerGenerator and UpadtingDailyRandomValuer) only works
+ * for buyers assigned a normal distribution.
+ * 
+ * TODO:extend the class to work generically with buyers and sellers TODO:extend
+ * the class to work other private value distributions
  * 
  * If, for example, the market clearing price is somewhere around 2 and private
  * values are initially coming from a Normal(0,1), then as relatively high draws
@@ -67,91 +69,186 @@ import gov.sandia.cognition.statistics.distribution.StudentTDistribution;
  * appropriate conjugate prior is a normal inverse gamma distribution. The
  * classes for that distribution and its updator come from the Cognitive
  * Foundry, a code library put together by US goverment's Sandia National
- * Laboratories.
+ * Laboratories. (http://foundry.sandia.gov/)
+ * 
+ * Many thanks to Kevin Dixon of Sandia who helped greatly getting the updators
+ * he wrote hooked up to this class
+ * 
+ * 
  * 
  * @author Grant Cavanaugh
- * @version $Revision: 1.11 $
+ * @version $Beta 0.1$
  */
 
 public class UpdatingDailyRandomValuer extends DailyRandomValuer {
-
+	/**
+	 * As with RandomValuer, I need to be able to hold a generator. I will call
+	 * getters and setter for parameter values from that Generator
+	 * 
+	 */
 	protected UpdatingDailyRandomValuerGenerator generator = new UpdatingDailyRandomValuerGenerator();
-	
 
-//	Double dloc = new Double(generator.location);
-//	Double dpres = new Double(generator.precision);
-//	Double dscale = new Double(generator.scale);
-//	Double dshape = new Double(generator.shape);
-
-	public static final String P_DEF_BASE = "normal";
+	/**
+	 * When a transaction occurs in the game I want to take the transaction
+	 * price and use it to update the underlying private value distribution.
+	 * 
+	 * Do do so I will: 1) listen for transactions
+	 * 
+	 * 2) Draw a random value from a uniform distribution to see if that
+	 * transaction will be given to the updator
+	 * 
+	 * TODO: currently the threshold for updating is built into this class. In
+	 * the future, I'd like to bring it in from the param file.
+	 * 
+	 * 3) initialize a NormalInverseGammaDistribution with the current parameter
+	 * values
+	 * 
+	 * 4) Feed that NormalInverseGammaDistribution and the transaction price to
+	 * the updator of class, UnivariateGaussianMeanVarianceBayesianEstimator
+	 * 
+	 * 5) Call the update method on my
+	 * UnivariateGaussianMeanVarianceBayesianEstimator
+	 * 
+	 * 6) Extract the updated parameter values for the prior and use the setter
+	 * to put them into the database
+	 * 
+	 * 7) Extract the parameter values for the posterior distribution and put
+	 * those into the database
+	 * 
+	 */
 
 	@Override
 	public void eventOccurred(final AuctionEvent event) {
+		/**
+		 * Listen for transaction
+		 */
 		super.eventOccurred(event);
 		if (event instanceof TransactionPostedEvent) {
+			/**
+			 * Check if we are going to update based on a given transaction by
+			 * pulling a random value and seeing if it below our updating
+			 * threshold.
+			 * 
+			 * TODO: I plan to calibrate the threshold (and maybe assign the
+			 * threshold itself a distribution) using real data once the class
+			 * is up and running
+			 */
 			final double d = drawVal();
 			if (compareToTheshold(d)) {
+				/**
+				 * Make sure that the Generator has the most recent parameter
+				 * values
+				 * 
+				 */
 				generator.getPrior();
 				generator.getPosterior();
+				/**
+				 * initialize a NormalInverseGammaDistribution with the current
+				 * parameter values
+				 * 
+				 * These classes come from the Sandia's Cognitive Foundry
+				 * (http://foundry.sandia.gov/)
+				 */
 				NormalInverseGammaDistribution prior = new NormalInverseGammaDistribution(
-						generator.location, generator.precision, generator.shape,
-						generator.scale);
+						generator.location, generator.precision,
+						generator.shape, generator.scale);
+				/**
+				 * Print statement to show the values used to initialize the
+				 * prior
+				 */
 				UpdatingDailyRandomValuer.logger
-				.info("Normal inverse gamma given: location "
-						+ generator.location
-						+ ", precision "
-						+ generator.precision
-						+ ", scale "
-						+ generator.scale
-						+ ", shape " 
-						+ generator.shape
-						);
+						.info("Normal inverse gamma given: location "
+								+ generator.location + ", precision "
+								+ generator.precision + ", scale "
+								+ generator.scale + ", shape "
+								+ generator.shape);
+				/**
+				 * Print statement to show the parameter values that actually
+				 * were initialized when we created our prior
+				 */
 				UpdatingDailyRandomValuer.logger
-				.info("Bayesian prior created by UpdatingDailyRandomValuer: location "
-						+ prior.getLocation()
-						+ ", precision "
-						+ prior.getPrecision()
-						+ ", scale "
-						+ prior.getScale()
-						+ ", shape " 
-						+ prior.getShape()
-						);
-				// call up a normal estimator with that prior and use it and the
-				// transaction price to update
+						.info("Bayesian prior created by UpdatingDailyRandomValuer: location "
+								+ prior.getLocation()
+								+ ", precision "
+								+ prior.getPrecision()
+								+ ", scale "
+								+ prior.getScale()
+								+ ", shape "
+								+ prior.getShape());
+				/**
+				 * Now that we have a prior, we also need a
+				 * UnivariateGaussianMeanVarianceBayesianEstimator, an instance
+				 * of the class that will actually do the updating
+				 */
 				UnivariateGaussianMeanVarianceBayesianEstimator estimator = new UnivariateGaussianMeanVarianceBayesianEstimator(
 						prior);
-				// after the update, the prior has been transformed
+				/**
+				 * Tell the UnivariateGaussianMeanVarianceBayesianEstimator to
+				 * use both our prior and our transaction value to update
+				 */
 				estimator.update(prior, ((TransactionPostedEvent) event)
 						.getTransaction().getPrice());
-				generator.updatePrior(prior.getLocation(), prior.getPrecision(),
-						prior.getScale(), prior.getShape());
-				// save the predictive distribution
+				/**
+				 * Take the resulting parameter values and give them to our
+				 * Generator to be entered into the database (we are calling our
+				 * setter).
+				 * 
+				 */
+				generator.updatePrior(prior.getLocation(),
+						prior.getPrecision(), prior.getScale(),
+						prior.getShape());
+				/**
+				 * Now we need a posterior predictive distribution that we can
+				 * use to extract our mean and standard deviation values
+				 * 
+				 */
 				StudentTDistribution predictive = estimator
 						.createPredictiveDistribution(prior);
-				// use the predictive to update the underlying mean and stdev
-				// for the Normal
+				/**
+				 * Print out the mean and stdev that we get from our posterior
+				 * predictive distribution. Note that the posterior uses
+				 * precision not stdev.
+				 */
 				UpdatingDailyRandomValuer.logger
-				.info("Bayesian posterior created by UpdatingDailyRandomValuer: mean "
-						+ predictive.getMean()
-						+ "and stdev "
-						+ Math.sqrt(1 / predictive.getPrecision()));
+						.info("Bayesian posterior created by UpdatingDailyRandomValuer: mean "
+								+ predictive.getMean()
+								+ "and stdev "
+								+ Math.sqrt(1 / predictive.getPrecision()));
+				/**
+				 * Finally, copy the mean and st dev back into our database
+				 * using the setter in our generator class
+				 */
 				generator.updateMeanSD(predictive.getMean(),
 						Math.sqrt(1 / predictive.getPrecision()));
 			}
-
+			/**
+			 * The rest of this method is copied from DailyRandomValuer
+			 */
 		} else if (event instanceof DayClosedEvent) {
 			drawRandomValue();
 		}
 	}
 
+	/**
+	 * Method used to return a randomly generated value from a uniform
+	 * distribution that will be used to determine if updating occurs
+	 * 
+	 * @return
+	 */
 	private double drawVal() {
-		final RandomEngine prng = Galaxy.getInstance().getDefaultTyped(
-				GlobalPRNG.class).getEngine();
+		final RandomEngine prng = Galaxy.getInstance()
+				.getDefaultTyped(GlobalPRNG.class).getEngine();
 		Uniform uniformDistribution = new Uniform(0, 1, prng);
 		final double d = uniformDistribution.nextDouble();
 		return d;
 	}
-	
+
+	/**
+	 * Method used to determine if updating occurs by comparing randomly
+	 * generated value to a threshold
+	 * 
+	 * @return
+	 */
 	private boolean compareToTheshold(double draw) {
 		final double threshold = 0.2;
 		return draw < threshold;
