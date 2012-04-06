@@ -149,22 +149,6 @@ public class RandomValuerGenerator implements ValuerGenerator {
 		maxValue = parameters.getDouble(
 				base.push(RandomValuerGenerator.P_MAXVALUE), defBase
 						.push(RandomValuerGenerator.P_MAXVALUE), minValue);
-//// Added code starts here
-//		
-//		location = parameters.getDouble(
-//				base.push(RandomValuerGenerator.P_LOC), defBase
-//						.push(RandomValuerGenerator.P_LOC), mean);
-//		precision = parameters.getDouble(
-//				base.push(RandomValuerGenerator.P_PRES), defBase
-//						.push(RandomValuerGenerator.P_PRES), 1/(stdev*stdev));
-//		scale = parameters.getDouble(
-//				base.push(RandomValuerGenerator.P_SCALE), defBase
-//						.push(RandomValuerGenerator.P_SCALE), .0001);
-//		shape = parameters.getDouble(
-//				base.push(RandomValuerGenerator.P_SHAPE), defBase
-//						.push(RandomValuerGenerator.P_SHAPE), 1);
-//	
-////Added code ends here
 
 		try {
 			distribution = parameters.getInstanceForParameterEq(base

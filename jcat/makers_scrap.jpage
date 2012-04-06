@@ -1,1 +1,0 @@
-double precision = 0.0016;return(precision <= 0.0);(boolean) false

@@ -36,6 +36,8 @@
 
 package edu.cuny.cat.valuation;
 
+import org.apache.log4j.Logger;
+
 import cern.jet.random.Uniform;
 import cern.jet.random.engine.RandomEngine;
 
@@ -116,6 +118,9 @@ public class UpdatingDailyRandomValuer extends DailyRandomValuer {
 	 * those into the database
 	 * 
 	 */
+	
+	static Logger logger = Logger
+			.getLogger(UpdatingDailyRandomValuer.class);
 
 	@Override
 	public void eventOccurred(final AuctionEvent event) {
@@ -189,6 +194,13 @@ public class UpdatingDailyRandomValuer extends DailyRandomValuer {
 				estimator.update(prior, ((TransactionPostedEvent) event)
 						.getTransaction().getPrice());
 				/**
+				 * Print statement for transaction value that will be used to update
+				 */
+				UpdatingDailyRandomValuer.logger
+				.info("Bayesian updator given transaction value: " +
+						((TransactionPostedEvent) event)
+						.getTransaction().getPrice());
+				/**
 				 * Take the resulting parameter values and give them to our
 				 * Generator to be entered into the database (we are calling our
 				 * setter).
@@ -250,7 +262,7 @@ public class UpdatingDailyRandomValuer extends DailyRandomValuer {
 	 * @return
 	 */
 	private boolean compareToTheshold(double draw) {
-		final double threshold = 0.2;
+		final double threshold = 0.01;
 		return draw < threshold;
 	}
 }

@@ -67,7 +67,7 @@ import edu.cuny.util.Utils;
  * @version $Beta 0.1$
  */
 public class UpdatingDailyRandomValuerGenerator extends
-		DailyRandomValuerGenerator {
+		RandomValuerGenerator {
 
 	/**
 	 * Double to store the mean value Note: currently, the class only works with
@@ -99,18 +99,6 @@ public class UpdatingDailyRandomValuerGenerator extends
 	public double scale;
 
 	public double shape;
-
-	/**
-	 * Hold the underlying AbstractDistribution object that generally will give
-	 * both the distribution used and its key params
-	 * 
-	 * I am having trouble interfacing with distribution objects at the moment
-	 * 
-	 * TODO: Figure out how AbstractDistribution are written and retrieved from
-	 * the internal database
-	 */
-
-	AbstractDistribution distribution = null;
 
 	/**
 	 * Just some strings I'll need for some of my storage and retrieval to/from
@@ -206,7 +194,7 @@ public class UpdatingDailyRandomValuerGenerator extends
 				minValue);
 		/**
 		 * TODO: Add in code to check if the distribution you're dealing with is
-		 * normal as in: if (distribution instanceof Normal){
+		 * normal as in: if (distribution instance of Normal){
 		 * 
 		 */
 
@@ -338,8 +326,6 @@ public class UpdatingDailyRandomValuerGenerator extends
 	public synchronized ValuationPolicy createValuer() {
 		final RandomValuer valuer = new UpdatingDailyRandomValuer();
 		valuer.setGenerator(this);
-		// This next line is the weird one in my mind, it sets the distribution
-		// to default, which I guess is uniform
 		valuer.setDistribution(createDistribution());
 		valuer.drawRandomValue();
 		return valuer;
@@ -388,6 +374,12 @@ public class UpdatingDailyRandomValuerGenerator extends
 				defBase.push(UpdatingDailyRandomValuerGenerator.P_MEAN), smean);
 		paramholder.set(
 				defBase.push(UpdatingDailyRandomValuerGenerator.P_STDEV),
+				sstdev);
+		// do i need these?
+		paramholder.set(
+				defBaseNorm.push(UpdatingDailyRandomValuerGenerator.P_MEAN), smean);
+		paramholder.set(
+				defBaseNorm.push(UpdatingDailyRandomValuerGenerator.P_STDEV),
 				sstdev);
 		/**
 		 * Pull out the parameters I just stored so I can print them
@@ -569,8 +561,10 @@ public class UpdatingDailyRandomValuerGenerator extends
 				.info("Posterior grabbed from database: mean " + mean
 						+ ", stdev " + stdev);
 	}
-
-	// Extended from RandomValuerGenerator
+	
+	/**
+	 * Extended from RandomValuerGenerator
+	 */
 	@Override
 	public String toString() {
 		String s = getClass().getSimpleName();
