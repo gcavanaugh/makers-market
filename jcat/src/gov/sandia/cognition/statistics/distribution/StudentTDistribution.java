@@ -14,6 +14,7 @@
 
 package gov.sandia.cognition.statistics.distribution;
 
+import edu.cuny.cat.valuation.UpdatingDailyRandomValuerGenerator;
 import gov.sandia.cognition.annotation.PublicationReference;
 import gov.sandia.cognition.annotation.PublicationReferences;
 import gov.sandia.cognition.annotation.PublicationType;
@@ -199,7 +200,9 @@ public class StudentTDistribution
         }
         else
         {
-            return Double.POSITIVE_INFINITY;
+        	UpdatingDailyRandomValuerGenerator stdevgetter = new UpdatingDailyRandomValuerGenerator();
+        	stdevgetter.getPosterior();
+            return stdevgetter.stdev*stdevgetter.stdev;
         }
     }
 

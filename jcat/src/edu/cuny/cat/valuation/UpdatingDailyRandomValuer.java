@@ -187,6 +187,17 @@ public class UpdatingDailyRandomValuer extends RandomValuer {
 				 */
 				UnivariateGaussianMeanVarianceBayesianEstimator estimator = new UnivariateGaussianMeanVarianceBayesianEstimator(
 						prior);
+				
+				UpdatingDailyRandomValuer.logger
+				.info("The equivalent sample size for this prior is: " +
+						estimator.computeEquivalentSampleSize(prior));
+				StudentTDistribution predictive = estimator
+						.createPredictiveDistribution(prior);
+				UpdatingDailyRandomValuer.logger
+				.info("Before updating the posterior predictive from UpdatingDailyRandomValuer gives: mean "
+						+ predictive.getMean()
+						+ "and stdev "
+						+ Math.sqrt(predictive.getVariance()));
 				/**
 				 * Tell the UnivariateGaussianMeanVarianceBayesianEstimator to
 				 * use both our prior and our transaction value to update
@@ -214,7 +225,7 @@ public class UpdatingDailyRandomValuer extends RandomValuer {
 				 * use to extract our mean and standard deviation values
 				 * 
 				 */
-				StudentTDistribution predictive = estimator
+				predictive = estimator
 						.createPredictiveDistribution(prior);
 				/**
 				 * Print out the mean and stdev that we get from our posterior
@@ -225,13 +236,13 @@ public class UpdatingDailyRandomValuer extends RandomValuer {
 						.info("Bayesian posterior created by UpdatingDailyRandomValuer: mean "
 								+ predictive.getMean()
 								+ "and stdev "
-								+ Math.sqrt(1 / predictive.getPrecision()));
+								+ Math.sqrt(predictive.getVariance()));
 				/**
 				 * Finally, copy the mean and st dev back into our database
 				 * using the setter in our generator class
 				 */
 				generator.updateMeanSD(predictive.getMean(),
-						Math.sqrt(1 / predictive.getPrecision()));
+						Math.sqrt(predictive.getVariance()));
 			}
 			/**
 			 * The rest of this method is copied from DailyRandomValuer
@@ -264,7 +275,7 @@ public class UpdatingDailyRandomValuer extends RandomValuer {
 	 * @return
 	 */
 	private boolean compareToTheshold(double draw) {
-		final double threshold = 0.01;
+		final double threshold = 0.05;
 		return draw < threshold;
 	}
 }

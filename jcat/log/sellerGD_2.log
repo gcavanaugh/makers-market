@@ -1,550 +1,3914 @@
 **************************************************************
 checked in
 **** Day 0 [[[[[[[[[[[[[[[[[
-private value: 147.40528736729175
+private value: 104.74052873672917
 ------ Round 0 -----------
-attempt to ask at 165.40528736729175
-ASK_0  +124.858  sellerGD_4
+attempt to ask at 139.74052873672917
+ASK_0  +134.986  sellerGD_4
 BID_0  +0.000  buyerZIC_3
-ASK_1  +153.228  sellerZIP_3
+ASK_1  +118.675  sellerZIP_3
 BID_1  +37.000  buyerGD_0
-ASK_2  +121.418  sellerRE_2
-BID_2  +10.000  buyerGD_3
-BID_3  +24.400  buyerZIC_4
-ASK_6  +110.823  sellerZIP_4
+BID_2  +14.000  buyerGD_3
+ASK_3  +126.864  sellerZIP_0
+BID_3  +21.809  buyerZIC_4
 BID_4  +32.000  buyerGD_1
-ASK_7  +108.265  sellerGD_3
-ASK_10  +77.015  sellerZIP_2
-ASK_11  +81.955  sellerZIC_0
-BID_6  +54.000  buyerGD_4
-BID_7  +37.540  buyerZIP_1
-BID_8  +58.830  buyerZIP_2
-BID_11  +68.289  buyerZIP_3
-ASK_16  +61.867  sellerZIC_2
-BID_16  +42.353  buyerZIP_0
-BID_18  +71.938  buyerZIP_4
-TRANSACTION_0  +66.902  {buyerZIP_4.BID_18: +71.938, sellerZIC_2.ASK_16: +61.867)
+ASK_10  +112.140  sellerZIP_2
+ASK_11  +109.884  sellerZIC_0
+BID_6  +51.000  buyerGD_4
+BID_7  +37.096  buyerZIP_1
+BID_8  +55.485  buyerZIP_2
+BID_11  +62.624  buyerZIP_3
+ASK_16  +96.769  sellerZIC_2
+BID_16  +40.762  buyerZIP_0
+BID_18  +66.831  buyerZIP_4
 ------ Round 1 -----------
-BID_11  +68.289  buyerZIP_3
-ASK_7  +71.938  sellerGD_3
-BID_4  +46.353  buyerGD_1
-ASK_21  +81.019  sellerGD_1
-ASK_10  +67.189  sellerZIP_2
-BID_6  +77.289  buyerGD_4
-BID_23  +71.938  buyerZIP_4
-TRANSACTION_1  +69.563  {buyerZIP_4.BID_23: +71.938, sellerZIP_2.ASK_10: +67.189)
+attempt to ask at 106.74052873672917
+ASK_21  +95.723  sellerGD_3
+BID_18  +66.831  buyerZIP_4
+ASK_24  +106.741  sellerGD_2
+BID_11  +62.624  buyerZIP_3
+ASK_31  +102.039  sellerGD_1
+BID_6  +72.624  buyerGD_4
 ------ Round 2 -----------
-BID_4  +47.681  buyerGD_1
-BID_6  +80.273  buyerGD_4
-BID_34  +71.938  buyerZIP_4
-ASK_21  +80.644  sellerGD_1
-ASK_11  +75.336  sellerZIC_0
-TRANSACTION_2  +77.804  {buyerGD_4.BID_6: +80.273, sellerZIC_0.ASK_11: +75.336)
-ASK_41  +69.502  sellerZIP_1
-ASK_7  +68.139  sellerGD_3
-TRANSACTION_3  +68.820  {buyerZIP_4.BID_34: +71.938, sellerGD_3.ASK_7: +68.139)
+ASK_31  +99.639  sellerGD_1
+BID_6  +76.624  buyerGD_4
+BID_18  +66.831  buyerZIP_4
+ASK_21  +95.305  sellerGD_3
 ------ Round 3 -----------
-BID_7  +51.198  buyerZIP_1
-ASK_45  +69.170  sellerZIC_1
-ASK_46  +68.139  sellerGD_3
-BID_42  +80.273  buyerGD_4
-BID_16  +62.121  buyerZIP_0
-ASK_21  +80.495  sellerGD_1
+ASK_31  +98.679  sellerGD_1
+BID_18  +66.831  buyerZIP_4
+ASK_21  +95.138  sellerGD_3
+BID_6  +77.878  buyerGD_4
 ------ Round 4 -----------
-BID_16  +62.121  buyerZIP_0
-BID_42  +80.495  buyerGD_4
-TRANSACTION_4  +80.495  {buyerGD_4.BID_42: +80.495, sellerGD_1.ASK_21: +80.495)
-ASK_46  +67.189  sellerGD_3
-BID_11  +76.858  buyerZIP_3
+BID_6  +78.380  buyerGD_4
+ASK_21  +95.071  sellerGD_3
+ASK_31  +98.295  sellerGD_1
+BID_18  +66.831  buyerZIP_4
 ------ Round 5 -----------
-ASK_6  +97.388  sellerZIP_4
-ASK_69  +95.411  sellerZIC_0
-BID_11  +76.858  buyerZIP_3
-ASK_70  +80.435  sellerGD_1
-ASK_46  +67.189  sellerGD_3
-BID_16  +62.121  buyerZIP_0
-BID_62  +80.495  buyerGD_4
-TRANSACTION_5  +80.465  {buyerGD_4.BID_62: +80.495, sellerGD_1.ASK_70: +80.435)
+BID_6  +78.580  buyerGD_4
+ASK_31  +98.142  sellerGD_1
+ASK_21  +95.046  sellerGD_3
+BID_18  +66.831  buyerZIP_4
+BID_11  +83.188  buyerZIP_3
 ------ Round 6 -----------
-ASK_46  +64.121  sellerGD_3
-ASK_81  +80.435  sellerGD_1
-BID_11  +76.858  buyerZIP_3
-BID_16  +62.121  buyerZIP_0
+BID_18  +66.831  buyerZIP_4
+ASK_31  +98.080  sellerGD_1
+ASK_21  +95.036  sellerGD_3
+BID_11  +83.188  buyerZIP_3
 ------ Round 7 -----------
-ASK_46  +62.521  sellerGD_3
-BID_11  +76.858  buyerZIP_3
-ASK_69  +74.140  sellerZIC_0
-TRANSACTION_6  +75.499  {buyerZIP_3.BID_11: +76.858, sellerZIC_0.ASK_69: +74.140)
-BID_16  +62.121  buyerZIP_0
-BID_8  +72.387  buyerZIP_2
-ASK_81  +80.435  sellerGD_1
+ASK_31  +98.049  sellerGD_1
+BID_18  +66.831  buyerZIP_4
+BID_11  +83.188  buyerZIP_3
 ------ Round 8 -----------
-BID_16  +62.121  buyerZIP_0
-ASK_81  +80.435  sellerGD_1
-ASK_46  +62.121  sellerGD_3
-BID_8  +72.387  buyerZIP_2
-BID_86  +75.729  buyerZIP_3
-TRANSACTION_7  +62.121  {buyerZIP_0.BID_16: +62.121, sellerGD_3.ASK_46: +62.121)
+BID_18  +66.831  buyerZIP_4
+BID_11  +83.188  buyerZIP_3
 ------ Round 9 -----------
-ASK_104  +62.121  sellerGD_3
-BID_7  +51.198  buyerZIP_1
-BID_89  +62.121  buyerZIP_0
-BID_86  +75.729  buyerZIP_3
-ASK_81  +80.435  sellerGD_1
-TRANSACTION_8  +62.121  {buyerZIP_0.BID_89: +62.121, sellerGD_3.ASK_104: +62.121)
+BID_18  +66.831  buyerZIP_4
+BID_11  +83.188  buyerZIP_3
 **** Day 0 ]]]]]]]]]]]]]]]]]
 **** Day 1 [[[[[[[[[[[[[[[[[
-private value: 142.62279449030757
+private value: 96.23905147193
 ------ Round 0 -----------
-BID_98  +6.422  buyerRE_1
-ASK_115  +186.171  sellerRE_1
-ASK_116  +169.105  sellerZIC_3
-BID_99  +34.466  buyerZIC_1
-BID_100  +59.684  buyerZIC_3
-BID_101  +72.387  buyerZIP_2
-ASK_117  +137.846  sellerRE_0
-BID_103  +79.984  buyerRE_4
-ASK_118  +135.983  sellerZIC_1
-ASK_119  +123.938  sellerGD_0
-BID_110  +62.521  buyerGD_1
-ASK_122  +75.473  sellerZIC_4
-ASK_123  +62.121  sellerGD_3
-BID_111  +62.521  buyerGD_3
-TRANSACTION_9  +76.185  {buyerRE_4.BID_103: +79.984, sellerGD_3.ASK_123: +62.121)
+attempt to ask at 96.96322936918213
+ASK_113  +131.917  sellerZIC_0
+BID_92  +45.828  buyerZIP_4
+BID_94  +89.188  buyerGD_4
+ASK_114  +167.267  sellerRE_2
+ASK_115  +127.261  sellerZIC_2
+ASK_116  +112.629  sellerRE_3
+ASK_117  +103.652  sellerZIP_2
+ASK_119  +103.134  sellerZIP_1
+ASK_122  +96.963  sellerGD_2
+BID_95  +104.461  buyerZIC_3
+TRANSACTION_0  +103.798  {buyerZIC_3.BID_95: +104.461, sellerZIP_1.ASK_119: +103.134)
+BID_96  +84.208  buyerGD_0
+BID_97  +89.495  buyerRE_4
+ASK_124  +96.671  sellerGD_1
 ------ Round 1 -----------
-ASK_128  +98.013  sellerZIC_2
-BID_120  +79.984  buyerRE_4
-BID_111  +62.521  buyerGD_3
-ASK_130  +66.328  sellerZIC_0
-ASK_133  +62.121  sellerGD_3
-BID_110  +62.521  buyerGD_1
-TRANSACTION_10  +76.185  {buyerRE_4.BID_120: +79.984, sellerGD_3.ASK_133: +62.121)
+attempt to ask at 96.41171891355737
+ASK_124  +96.119  sellerGD_1
+BID_96  +84.616  buyerGD_0
+ASK_132  +103.134  sellerGD_4
+BID_94  +91.124  buyerGD_4
 ------ Round 2 -----------
-BID_126  +79.984  buyerRE_4
-BID_110  +64.121  buyerGD_1
-ASK_122  +58.178  sellerZIC_4
-TRANSACTION_11  +61.150  {buyerGD_1.BID_110: +64.121, sellerZIC_4.ASK_122: +58.178)
-BID_127  +63.060  buyerZIP_1
-ASK_117  +89.846  sellerRE_0
-BID_111  +64.121  buyerGD_3
-ASK_139  +62.121  sellerGD_3
-TRANSACTION_12  +76.185  {buyerRE_4.BID_126: +79.984, sellerGD_3.ASK_139: +62.121)
+ASK_124  +95.899  sellerGD_1
+BID_94  +91.776  buyerGD_4
+ASK_132  +103.134  sellerGD_4
+BID_96  +84.780  buyerGD_0
+BID_120  +104.986  buyerZIC_3
+TRANSACTION_1  +104.060  {buyerZIC_3.BID_120: +104.986, sellerGD_4.ASK_132: +103.134)
 ------ Round 3 -----------
-BID_111  +65.886  buyerGD_3
+BID_126  +92.118  buyerZIC_3
+ASK_147  +99.633  sellerZIC_1
+BID_94  +92.037  buyerGD_4
+ASK_124  +95.810  sellerGD_1
 ------ Round 4 -----------
-BID_150  +66.328  buyerGD_1
-TRANSACTION_13  +66.328  {buyerGD_1.BID_150: +66.328, sellerZIC_0.ASK_130: +66.328)
-BID_111  +66.328  buyerGD_3
+BID_94  +92.141  buyerGD_4
+ASK_124  +95.775  sellerGD_1
+BID_126  +102.638  buyerZIC_3
+TRANSACTION_2  +101.136  {buyerZIC_3.BID_126: +102.638, sellerZIC_1.ASK_147: +99.633)
 ------ Round 5 -----------
-ASK_119  +66.672  sellerGD_0
-ASK_128  +84.400  sellerZIC_2
-BID_159  +67.017  buyerGD_1
-TRANSACTION_14  +66.844  {buyerGD_1.BID_159: +67.017, sellerGD_0.ASK_119: +66.672)
-BID_111  +67.189  buyerGD_3
-ASK_152  +102.337  sellerRE_3
-ASK_153  +79.704  sellerZIC_0
+BID_94  +92.183  buyerGD_4
+ASK_124  +95.762  sellerGD_1
+ASK_173  +102.738  sellerGD_4
 ------ Round 6 -----------
-ASK_157  +66.672  sellerGD_0
-TRANSACTION_15  +66.930  {buyerGD_3.BID_111: +67.189, sellerGD_0.ASK_157: +66.672)
-BID_173  +63.108  buyerZIP_3
+BID_94  +92.203  buyerGD_4
+ASK_176  +98.679  sellerZIC_1
 ------ Round 7 -----------
-ASK_162  +61.523  sellerZIC_4
-TRANSACTION_16  +62.315  {buyerZIP_3.BID_173: +63.108, sellerZIC_4.ASK_162: +61.523)
-BID_184  +67.189  buyerGD_3
-ASK_165  +66.672  sellerGD_0
-TRANSACTION_17  +66.930  {buyerGD_3.BID_184: +67.189, sellerGD_0.ASK_165: +66.672)
+BID_94  +92.203  buyerGD_4
 ------ Round 8 -----------
-ASK_153  +77.005  sellerZIC_0
-ASK_167  +52.456  sellerZIC_4
-TRANSACTION_18  +57.758  {buyerZIP_1.BID_127: +63.060, sellerZIC_4.ASK_167: +52.456)
-BID_193  +67.189  buyerGD_3
+BID_94  +92.203  buyerGD_4
 ------ Round 9 -----------
-ASK_153  +74.115  sellerZIC_0
-BID_193  +67.189  buyerGD_3
+ASK_176  +98.147  sellerZIC_1
+BID_94  +92.203  buyerGD_4
 **** Day 1 ]]]]]]]]]]]]]]]]]
 **** Day 2 [[[[[[[[[[[[[[[[[
-private value: 140.70555029902607
+private value: 95.18294364213943
 ------ Round 0 -----------
-ASK_173  +115.210  sellerZIC_2
-BID_205  +0.000  buyerRE_1
-ASK_174  +137.329  sellerRE_0
-ASK_175  +69.523  sellerZIP_2
-BID_206  +0.000  buyerRE_4
-BID_207  +26.832  buyerZIC_4
-BID_208  +0.000  buyerRE_3
-BID_210  +26.599  buyerZIC_3
-ASK_177  +100.007  sellerZIC_4
-ASK_179  +89.777  sellerZIC_1
-BID_213  +33.000  buyerGD_2
-BID_214  +52.329  buyerZIP_4
-BID_215  +57.127  buyerZIP_1
+attempt to ask at 95.41438057859986
+ASK_209  +106.236  sellerZIC_1
+ASK_211  +102.638  sellerGD_4
+BID_190  +51.381  buyerZIC_3
+BID_192  +19.246  buyerZIC_0
+ASK_212  +102.638  sellerGD_0
+ASK_214  +103.837  sellerZIP_1
+BID_195  +20.344  buyerRE_0
+BID_200  +91.795  buyerRE_1
+ASK_219  +95.414  sellerGD_2
 ------ Round 1 -----------
-BID_222  +52.456  buyerGD_0
-ASK_175  +69.523  sellerZIP_2
-BID_208  +56.759  buyerRE_3
-BID_215  +57.127  buyerZIP_1
+attempt to ask at 95.2755184167236
+ASK_211  +102.638  sellerGD_4
+ASK_212  +102.638  sellerGD_0
+ASK_219  +95.276  sellerGD_2
 ------ Round 2 -----------
-BID_215  +57.127  buyerZIP_1
-ASK_177  +75.353  sellerZIC_4
-ASK_175  +69.523  sellerZIP_2
+attempt to ask at 95.21997355197311
+ASK_219  +95.220  sellerGD_2
+ASK_211  +102.638  sellerGD_4
+ASK_212  +102.638  sellerGD_0
+ASK_249  +100.667  sellerZIP_0
 ------ Round 3 -----------
-ASK_206  +60.599  sellerZIC_3
-BID_215  +57.127  buyerZIP_1
-ASK_175  +69.523  sellerZIP_2
+attempt to ask at 95.19294364213944
+BID_226  +55.627  buyerRE_3
+ASK_219  +95.193  sellerGD_2
+ASK_249  +100.667  sellerZIP_0
 ------ Round 4 -----------
-BID_246  +57.642  buyerRE_0
-ASK_175  +69.523  sellerZIP_2
+ASK_249  +100.667  sellerZIP_0
+BID_236  +77.893  buyerZIP_4
 ------ Round 5 -----------
-ASK_175  +69.523  sellerZIP_2
+ASK_249  +100.667  sellerZIP_0
+BID_236  +77.893  buyerZIP_4
 ------ Round 6 -----------
-ASK_175  +69.523  sellerZIP_2
-BID_208  +57.759  buyerRE_3
+ASK_249  +100.667  sellerZIP_0
+BID_236  +77.893  buyerZIP_4
 ------ Round 7 -----------
-ASK_175  +69.523  sellerZIP_2
+BID_236  +77.893  buyerZIP_4
+ASK_249  +100.667  sellerZIP_0
 ------ Round 8 -----------
-ASK_175  +69.523  sellerZIP_2
+ASK_249  +100.667  sellerZIP_0
+ASK_209  +97.044  sellerZIC_1
+BID_236  +77.893  buyerZIP_4
 ------ Round 9 -----------
-ASK_175  +69.523  sellerZIP_2
+BID_236  +77.893  buyerZIP_4
 **** Day 2 ]]]]]]]]]]]]]]]]]
 **** Day 3 [[[[[[[[[[[[[[[[[
-private value: 149.68279239255935
+private value: 99.21964846784249
 ------ Round 0 -----------
-BID_280  +52.329  buyerZIP_4
-BID_281  +52.456  buyerGD_0
-ASK_262  +111.497  sellerZIC_1
-BID_282  +57.127  buyerZIP_1
-ASK_263  +72.754  sellerRE_1
-ASK_264  +68.189  sellerGD_4
-BID_283  +30.339  buyerZIC_1
-ASK_268  +59.890  sellerRE_4
-BID_289  +55.649  buyerRE_4
+BID_273  +35.366  buyerRE_1
+ASK_337  +129.337  sellerZIC_3
+ASK_340  +116.471  sellerZIC_4
+BID_275  +2.413  buyerZIC_1
+BID_276  +38.844  buyerRE_4
+ASK_342  +99.840  sellerGD_0
+BID_278  +63.277  buyerZIP_4
+BID_281  +60.271  buyerZIC_3
+ASK_345  +103.837  sellerZIP_1
+BID_282  +64.584  buyerZIC_4
+ASK_349  +100.667  sellerZIP_0
+BID_284  +78.524  buyerZIC_0
 ------ Round 1 -----------
-ASK_264  +67.189  sellerGD_4
-BID_282  +57.127  buyerZIP_1
-BID_280  +57.252  buyerZIP_4
+BID_278  +63.277  buyerZIP_4
+ASK_349  +100.667  sellerZIP_0
+ASK_342  +99.633  sellerGD_0
 ------ Round 2 -----------
-BID_280  +57.252  buyerZIP_4
-BID_289  +57.649  buyerRE_4
-ASK_264  +66.672  sellerGD_4
+BID_278  +63.277  buyerZIP_4
+ASK_349  +100.667  sellerZIP_0
+ASK_342  +99.633  sellerGD_0
 ------ Round 3 -----------
-BID_280  +57.252  buyerZIP_4
-ASK_264  +66.672  sellerGD_4
+BID_278  +63.277  buyerZIP_4
+ASK_342  +99.633  sellerGD_0
+ASK_349  +100.667  sellerZIP_0
+BID_284  +87.674  buyerZIC_0
 ------ Round 4 -----------
-BID_280  +57.252  buyerZIP_4
-ASK_264  +66.672  sellerGD_4
+BID_278  +63.277  buyerZIP_4
+ASK_342  +99.633  sellerGD_0
+ASK_349  +100.667  sellerZIP_0
 ------ Round 5 -----------
-ASK_264  +66.672  sellerGD_4
-BID_280  +57.252  buyerZIP_4
-ASK_319  +66.103  sellerZIC_0
+ASK_342  +99.633  sellerGD_0
+ASK_349  +100.667  sellerZIP_0
+BID_278  +63.277  buyerZIP_4
 ------ Round 6 -----------
-BID_282  +57.743  buyerZIP_1
-ASK_264  +66.103  sellerGD_4
+ASK_349  +100.667  sellerZIP_0
+ASK_342  +99.633  sellerGD_0
+BID_278  +63.277  buyerZIP_4
 ------ Round 7 -----------
-ASK_264  +66.103  sellerGD_4
-BID_282  +57.743  buyerZIP_1
+ASK_345  +97.914  sellerZIP_1
+BID_278  +63.277  buyerZIP_4
+ASK_342  +99.061  sellerGD_0
 ------ Round 8 -----------
-BID_282  +57.743  buyerZIP_1
-ASK_264  +66.103  sellerGD_4
+BID_278  +63.277  buyerZIP_4
+ASK_342  +99.061  sellerGD_0
+ASK_345  +97.914  sellerZIP_1
 ------ Round 9 -----------
-BID_282  +57.743  buyerZIP_1
-ASK_264  +66.103  sellerGD_4
+ASK_345  +97.914  sellerZIP_1
+ASK_342  +99.061  sellerGD_0
+BID_278  +63.277  buyerZIP_4
 **** Day 3 ]]]]]]]]]]]]]]]]]
 **** Day 4 [[[[[[[[[[[[[[[[[
-private value: 88.36634922772646
+private value: 97.62328022858128
 ------ Round 0 -----------
-BID_395  +8.803  buyerZIC_3
-BID_396  +0.000  buyerRE_1
-ASK_362  +157.882  sellerZIC_2
-BID_397  +57.252  buyerZIP_4
-ASK_363  +142.965  sellerRE_3
-BID_399  +57.940  buyerZIP_1
-ASK_364  +88.241  sellerZIP_3
-ASK_365  +71.995  sellerZIP_1
-ASK_367  +60.040  sellerZIC_1
+ASK_442  +109.395  sellerZIC_0
+ASK_443  +103.059  sellerZIP_4
+BID_330  +32.514  buyerRE_2
+BID_331  +93.493  buyerGD_0
+ASK_445  +112.775  sellerZIC_3
+BID_333  +12.414  buyerZIC_4
+BID_335  +25.379  buyerZIC_3
+ASK_450  +103.853  sellerZIP_1
+BID_339  +61.126  buyerZIC_1
+ASK_453  +102.638  sellerGD_4
+ASK_456  +101.677  sellerZIP_2
+ASK_457  +100.667  sellerZIP_0
 ------ Round 1 -----------
-BID_399  +57.940  buyerZIP_1
-BID_397  +57.252  buyerZIP_4
-ASK_365  +71.995  sellerZIP_1
+ASK_457  +100.667  sellerZIP_0
+ASK_453  +99.840  sellerGD_4
+ASK_456  +101.677  sellerZIP_2
+BID_331  +94.044  buyerGD_0
 ------ Round 2 -----------
-BID_399  +57.940  buyerZIP_1
-BID_397  +57.252  buyerZIP_4
-ASK_365  +71.995  sellerZIP_1
+ASK_469  +96.943  sellerZIP_3
+BID_331  +94.264  buyerGD_0
+ASK_453  +99.675  sellerGD_4
 ------ Round 3 -----------
-BID_399  +57.940  buyerZIP_1
-BID_397  +57.252  buyerZIP_4
-ASK_365  +71.995  sellerZIP_1
+ASK_453  +99.675  sellerGD_4
+BID_331  +94.352  buyerGD_0
+ASK_469  +96.943  sellerZIP_3
 ------ Round 4 -----------
-BID_399  +57.940  buyerZIP_1
-BID_397  +57.252  buyerZIP_4
-ASK_365  +71.995  sellerZIP_1
+ASK_469  +96.943  sellerZIP_3
+ASK_453  +99.633  sellerGD_4
+BID_331  +94.387  buyerGD_0
 ------ Round 5 -----------
-BID_397  +57.252  buyerZIP_4
-ASK_365  +71.995  sellerZIP_1
-BID_399  +57.940  buyerZIP_1
+BID_331  +94.407  buyerGD_0
+ASK_453  +99.633  sellerGD_4
+ASK_469  +96.943  sellerZIP_3
 ------ Round 6 -----------
-ASK_365  +71.995  sellerZIP_1
-BID_474  +57.712  buyerZIC_2
-BID_399  +57.940  buyerZIP_1
+ASK_453  +99.633  sellerGD_4
+BID_331  +94.407  buyerGD_0
+ASK_469  +96.943  sellerZIP_3
 ------ Round 7 -----------
-BID_399  +57.940  buyerZIP_1
-ASK_365  +71.995  sellerZIP_1
+BID_331  +94.407  buyerGD_0
+ASK_453  +99.633  sellerGD_4
+ASK_469  +96.943  sellerZIP_3
 ------ Round 8 -----------
-BID_399  +57.940  buyerZIP_1
-ASK_365  +71.995  sellerZIP_1
+ASK_469  +96.943  sellerZIP_3
+ASK_453  +99.633  sellerGD_4
+BID_331  +94.407  buyerGD_0
 ------ Round 9 -----------
-BID_399  +57.940  buyerZIP_1
-ASK_365  +71.995  sellerZIP_1
+ASK_469  +96.943  sellerZIP_3
+ASK_453  +99.633  sellerGD_4
+BID_331  +94.407  buyerGD_0
 **** Day 4 ]]]]]]]]]]]]]]]]]
 **** Day 5 [[[[[[[[[[[[[[[[[
-private value: 115.6322960741818
+private value: 95.94693372724578
 ------ Round 0 -----------
-ASK_457  +139.409  sellerRE_3
-BID_516  +14.601  buyerRE_1
-ASK_458  +176.276  sellerRE_2
-BID_517  +9.626  buyerRE_2
-ASK_459  +95.463  sellerZIC_2
-BID_519  +28.660  buyerZIC_0
-ASK_460  +66.672  sellerGD_0
-BID_520  +45.656  buyerZIC_2
-BID_521  +32.518  buyerZIC_3
-BID_522  +52.405  buyerZIP_2
-BID_523  +57.573  buyerZIP_1
-BID_525  +57.252  buyerZIP_4
-ASK_466  +90.875  sellerRE_0
+BID_425  +21.234  buyerZIC_2
+BID_426  +87.090  buyerRE_4
+ASK_532  +139.669  sellerZIC_0
+ASK_534  +97.804  sellerZIC_3
+BID_429  +12.983  buyerZIP_3
+ASK_538  +104.404  sellerRE_4
+BID_432  +19.759  buyerZIP_4
 ------ Round 1 -----------
-BID_525  +57.252  buyerZIP_4
-ASK_460  +66.672  sellerGD_0
-BID_523  +57.573  buyerZIP_1
-ASK_459  +88.535  sellerZIC_2
+BID_432  +19.759  buyerZIP_4
 ------ Round 2 -----------
-BID_523  +57.573  buyerZIP_1
-ASK_460  +66.672  sellerGD_0
-BID_525  +57.252  buyerZIP_4
+BID_432  +19.759  buyerZIP_4
 ------ Round 3 -----------
-BID_525  +57.252  buyerZIP_4
-BID_523  +57.573  buyerZIP_1
-ASK_460  +66.672  sellerGD_0
-ASK_459  +80.450  sellerZIC_2
-ASK_490  +63.941  sellerGD_3
+BID_432  +19.759  buyerZIP_4
+ASK_564  +98.696  sellerZIC_4
 ------ Round 4 -----------
-BID_523  +57.573  buyerZIP_1
-ASK_490  +63.941  sellerGD_3
-BID_525  +57.252  buyerZIP_4
+BID_432  +19.759  buyerZIP_4
 ------ Round 5 -----------
-BID_523  +57.573  buyerZIP_1
-BID_525  +57.252  buyerZIP_4
-ASK_505  +63.901  sellerZIP_3
-ASK_490  +62.485  sellerGD_3
+BID_432  +19.759  buyerZIP_4
 ------ Round 6 -----------
-BID_523  +57.573  buyerZIP_1
-ASK_466  +75.875  sellerRE_0
-ASK_490  +62.121  sellerGD_3
-BID_525  +57.252  buyerZIP_4
+BID_432  +19.759  buyerZIP_4
 ------ Round 7 -----------
-ASK_466  +66.875  sellerRE_0
-BID_525  +57.252  buyerZIP_4
-BID_523  +57.573  buyerZIP_1
-ASK_490  +62.121  sellerGD_3
+BID_429  +21.422  buyerZIP_3
 ------ Round 8 -----------
-BID_525  +57.252  buyerZIP_4
-BID_523  +57.573  buyerZIP_1
-ASK_490  +62.121  sellerGD_3
+ASK_606  +97.085  sellerRE_2
+BID_429  +21.422  buyerZIP_3
 ------ Round 9 -----------
-BID_523  +57.573  buyerZIP_1
-BID_525  +57.252  buyerZIP_4
-ASK_490  +62.121  sellerGD_3
+BID_426  +89.090  buyerRE_4
+BID_429  +21.422  buyerZIP_3
 **** Day 5 ]]]]]]]]]]]]]]]]]
 **** Day 6 [[[[[[[[[[[[[[[[[
-private value: 84.99782623257488
+private value: 95.81466920441017
 ------ Round 0 -----------
-ASK_532  +159.021  sellerRE_4
-ASK_533  +145.321  sellerZIC_4
-ASK_534  +72.387  sellerGD_1
-ASK_535  +66.672  sellerGD_0
-BID_604  +34.084  buyerZIC_2
-ASK_537  +104.097  sellerRE_2
-BID_605  +52.456  buyerGD_1
-BID_606  +52.456  buyerGD_0
-BID_607  +46.000  buyerGD_2
-BID_608  +57.252  buyerZIP_4
-BID_616  +57.973  buyerZIP_1
+ASK_618  +115.213  sellerRE_0
+ASK_619  +150.207  sellerZIC_0
+ASK_620  +128.780  sellerZIC_3
+BID_519  +41.194  buyerZIP_3
+BID_520  +54.727  buyerRE_2
+BID_522  +66.779  buyerZIC_2
+ASK_624  +101.677  sellerZIP_2
+ASK_625  +100.667  sellerZIP_0
+BID_526  +80.832  buyerZIC_0
+BID_528  +87.417  buyerRE_4
 ------ Round 1 -----------
-ASK_535  +66.672  sellerGD_0
-BID_606  +52.456  buyerGD_0
-ASK_537  +102.097  sellerRE_2
-BID_616  +57.973  buyerZIP_1
-ASK_549  +58.828  sellerZIC_2
-BID_605  +52.456  buyerGD_1
+ASK_625  +100.667  sellerZIP_0
+BID_528  +89.417  buyerRE_4
+ASK_624  +101.677  sellerZIP_2
 ------ Round 2 -----------
-BID_606  +52.456  buyerGD_0
-ASK_556  +88.317  sellerRE_0
-BID_616  +57.973  buyerZIP_1
-BID_605  +52.456  buyerGD_1
+ASK_625  +100.667  sellerZIP_0
+ASK_624  +101.677  sellerZIP_2
 ------ Round 3 -----------
-BID_606  +52.456  buyerGD_0
-BID_605  +52.456  buyerGD_1
-BID_616  +57.973  buyerZIP_1
+ASK_624  +101.677  sellerZIP_2
+ASK_625  +100.667  sellerZIP_0
+ASK_662  +95.450  sellerZIP_1
 ------ Round 4 -----------
-ASK_556  +81.317  sellerRE_0
-BID_605  +52.456  buyerGD_1
-BID_606  +52.456  buyerGD_0
-BID_616  +57.973  buyerZIP_1
+ASK_624  +101.677  sellerZIP_2
+ASK_671  +96.855  sellerZIP_3
+ASK_662  +95.450  sellerZIP_1
 ------ Round 5 -----------
-BID_616  +57.973  buyerZIP_1
-BID_605  +52.456  buyerGD_1
-BID_606  +52.456  buyerGD_0
-BID_668  +54.421  buyerRE_1
+ASK_671  +96.855  sellerZIP_3
+ASK_662  +95.450  sellerZIP_1
+BID_528  +98.417  buyerRE_4
+TRANSACTION_3  +97.636  {buyerRE_4.BID_528: +98.417, sellerZIP_3.ASK_671: +96.855)
 ------ Round 6 -----------
-BID_616  +57.973  buyerZIP_1
+BID_572  +98.417  buyerRE_4
+ASK_680  +100.589  sellerZIP_3
+ASK_662  +95.450  sellerZIP_1
 ------ Round 7 -----------
-BID_616  +57.973  buyerZIP_1
+ASK_662  +95.450  sellerZIP_1
+ASK_680  +100.378  sellerZIP_3
+BID_572  +98.417  buyerRE_4
 ------ Round 8 -----------
-BID_616  +57.973  buyerZIP_1
+ASK_680  +100.378  sellerZIP_3
+ASK_662  +95.450  sellerZIP_1
+BID_572  +98.417  buyerRE_4
+ASK_624  +96.268  sellerZIP_2
+TRANSACTION_4  +97.343  {buyerRE_4.BID_572: +98.417, sellerZIP_2.ASK_624: +96.268)
 ------ Round 9 -----------
-BID_616  +57.973  buyerZIP_1
-ASK_532  +72.021  sellerRE_4
+BID_597  +87.183  buyerRE_1
+BID_600  +77.664  buyerRE_3
+ASK_680  +100.378  sellerZIP_3
+ASK_662  +95.450  sellerZIP_1
+BID_602  +98.417  buyerRE_4
+ASK_713  +96.268  sellerZIP_2
+TRANSACTION_5  +97.343  {buyerRE_4.BID_602: +98.417, sellerZIP_2.ASK_713: +96.268)
 **** Day 6 ]]]]]]]]]]]]]]]]]
 **** Day 7 [[[[[[[[[[[[[[[[[
-private value: 127.33174425084144
+private value: 102.65866083558649
 ------ Round 0 -----------
-BID_706  +52.456  buyerGD_1
-ASK_602  +108.141  sellerZIC_2
-BID_708  +51.000  buyerGD_2
-BID_709  +57.598  buyerZIP_1
-ASK_604  +123.170  sellerRE_2
-ASK_608  +63.266  sellerGD_0
-BID_716  +57.252  buyerZIP_4
-ASK_611  +86.661  sellerRE_0
+ASK_714  +99.183  sellerZIP_1
+BID_606  +58.072  buyerZIC_2
+BID_607  +95.046  buyerGD_2
+BID_608  +0.000  buyerRE_0
+ASK_717  +110.125  sellerRE_4
+BID_611  +56.389  buyerZIP_1
+ASK_724  +100.667  sellerZIP_0
+BID_616  +56.951  buyerZIC_3
 ------ Round 1 -----------
-ASK_608  +61.643  sellerGD_0
-ASK_617  +52.141  sellerZIP_4
-ASK_611  +67.661  sellerRE_0
-BID_709  +57.598  buyerZIP_1
-BID_708  +52.456  buyerGD_2
-BID_716  +57.252  buyerZIP_4
-TRANSACTION_19  +54.854  {buyerZIP_4.BID_716: +57.252, sellerZIP_4.ASK_617: +52.141)
+BID_607  +95.066  buyerGD_2
+ASK_714  +99.183  sellerZIP_1
+ASK_724  +100.667  sellerZIP_0
 ------ Round 2 -----------
-BID_708  +52.456  buyerGD_2
-BID_739  +57.252  buyerZIP_4
-ASK_627  +56.264  sellerZIP_4
-BID_709  +57.598  buyerZIP_1
-TRANSACTION_20  +56.758  {buyerZIP_4.BID_739: +57.252, sellerZIP_4.ASK_627: +56.264)
+BID_607  +95.071  buyerGD_2
+ASK_714  +99.183  sellerZIP_1
+BID_616  +71.648  buyerZIC_3
+ASK_724  +100.667  sellerZIP_0
 ------ Round 3 -----------
-ASK_635  +59.806  sellerZIP_4
-BID_751  +57.218  buyerZIP_4
-BID_709  +57.598  buyerZIP_1
+ASK_724  +100.667  sellerZIP_0
+BID_607  +95.138  buyerGD_2
+ASK_714  +99.183  sellerZIP_1
+BID_647  +72.412  buyerRE_2
 ------ Round 4 -----------
-BID_709  +57.598  buyerZIP_1
-ASK_635  +59.806  sellerZIP_4
+ASK_714  +99.183  sellerZIP_1
+ASK_724  +100.667  sellerZIP_0
+BID_607  +95.305  buyerGD_2
 ------ Round 5 -----------
-ASK_635  +59.806  sellerZIP_4
-BID_709  +57.598  buyerZIP_1
+ASK_714  +99.183  sellerZIP_1
+BID_607  +95.450  buyerGD_2
+ASK_724  +100.667  sellerZIP_0
 ------ Round 6 -----------
-BID_709  +57.598  buyerZIP_1
-ASK_611  +66.661  sellerRE_0
-ASK_635  +59.806  sellerZIP_4
+BID_607  +95.450  buyerGD_2
+ASK_724  +100.667  sellerZIP_0
+ASK_714  +99.183  sellerZIP_1
 ------ Round 7 -----------
-BID_709  +57.598  buyerZIP_1
-ASK_635  +59.806  sellerZIP_4
+BID_607  +95.669  buyerGD_2
+ASK_724  +100.667  sellerZIP_0
+ASK_714  +99.183  sellerZIP_1
 ------ Round 8 -----------
-ASK_635  +59.806  sellerZIP_4
-BID_709  +57.598  buyerZIP_1
+BID_607  +95.723  buyerGD_2
+ASK_724  +100.667  sellerZIP_0
+ASK_714  +99.183  sellerZIP_1
 ------ Round 9 -----------
-BID_709  +57.598  buyerZIP_1
-ASK_635  +59.806  sellerZIP_4
+BID_607  +95.723  buyerGD_2
+ASK_724  +100.667  sellerZIP_0
+ASK_714  +99.183  sellerZIP_1
 **** Day 7 ]]]]]]]]]]]]]]]]]
 **** Day 8 [[[[[[[[[[[[[[[[[
-private value: 105.84556022658944
+private value: 97.41809828439727
 ------ Round 0 -----------
-BID_832  +57.974  buyerZIP_1
-ASK_690  +91.804  sellerRE_4
-ASK_691  +74.112  sellerZIC_4
-ASK_692  +71.995  sellerZIP_1
-BID_837  +33.645  buyerRE_0
-ASK_695  +71.284  sellerRE_3
-BID_840  +53.384  buyerZIP_4
-ASK_696  +69.523  sellerZIP_2
-ASK_702  +63.901  sellerZIP_3
+BID_705  +11.798  buyerZIP_1
+BID_706  +29.007  buyerRE_0
+ASK_827  +128.166  sellerZIC_1
+ASK_828  +98.755  sellerGD_0
+ASK_830  +98.195  sellerZIP_4
+BID_711  +67.449  buyerZIC_1
+BID_712  +82.407  buyerZIC_0
+ASK_839  +96.395  sellerZIP_1
 ------ Round 1 -----------
-ASK_696  +69.523  sellerZIP_2
-BID_832  +57.974  buyerZIP_1
-ASK_702  +63.901  sellerZIP_3
-BID_840  +53.384  buyerZIP_4
-ASK_695  +63.284  sellerRE_3
+ASK_839  +96.395  sellerZIP_1
+ASK_828  +98.694  sellerGD_0
+BID_711  +86.589  buyerZIC_1
 ------ Round 2 -----------
-BID_840  +53.384  buyerZIP_4
-BID_832  +57.974  buyerZIP_1
-ASK_696  +69.523  sellerZIP_2
+ASK_828  +98.572  sellerGD_0
+ASK_839  +96.395  sellerZIP_1
+BID_735  +53.964  buyerRE_1
 ------ Round 3 -----------
-BID_840  +53.384  buyerZIP_4
-BID_832  +57.974  buyerZIP_1
-ASK_696  +69.523  sellerZIP_2
+ASK_839  +96.395  sellerZIP_1
+ASK_828  +98.572  sellerGD_0
 ------ Round 4 -----------
-ASK_696  +69.523  sellerZIP_2
-BID_840  +53.384  buyerZIP_4
-ASK_695  +63.284  sellerRE_3
-BID_832  +57.974  buyerZIP_1
+ASK_828  +98.572  sellerGD_0
+ASK_839  +96.395  sellerZIP_1
 ------ Round 5 -----------
-ASK_692  +69.167  sellerZIP_1
-BID_840  +53.384  buyerZIP_4
-BID_832  +57.974  buyerZIP_1
+BID_706  +63.007  buyerRE_0
+ASK_828  +98.572  sellerGD_0
+ASK_839  +96.395  sellerZIP_1
 ------ Round 6 -----------
-ASK_692  +69.167  sellerZIP_1
-BID_840  +53.384  buyerZIP_4
-BID_832  +57.974  buyerZIP_1
+ASK_839  +96.395  sellerZIP_1
+ASK_828  +98.232  sellerGD_0
+BID_711  +88.958  buyerZIC_1
 ------ Round 7 -----------
-BID_832  +57.974  buyerZIP_1
-ASK_692  +69.167  sellerZIP_1
-BID_840  +53.384  buyerZIP_4
+ASK_839  +96.395  sellerZIP_1
+ASK_828  +98.232  sellerGD_0
 ------ Round 8 -----------
-BID_832  +57.974  buyerZIP_1
-BID_840  +53.384  buyerZIP_4
-ASK_692  +69.167  sellerZIP_1
+ASK_839  +96.395  sellerZIP_1
+ASK_828  +98.147  sellerGD_0
 ------ Round 9 -----------
-BID_837  +55.645  buyerRE_0
-ASK_696  +68.603  sellerZIP_2
-BID_832  +57.974  buyerZIP_1
+ASK_828  +98.147  sellerGD_0
+ASK_839  +96.395  sellerZIP_1
 **** Day 8 ]]]]]]]]]]]]]]]]]
 **** Day 9 [[[[[[[[[[[[[[[[[
-private value: 142.0016560703516
+private value: 99.01316595263779
 ------ Round 0 -----------
-ASK_776  +83.669  sellerZIP_1
-ASK_777  +77.291  sellerRE_1
-BID_975  +47.265  buyerZIC_4
-ASK_780  +118.985  sellerRE_4
-BID_976  +13.436  buyerZIC_1
-ASK_782  +71.209  sellerRE_0
-BID_977  +42.690  buyerRE_0
-BID_978  +52.456  buyerGD_0
-BID_979  +57.804  buyerZIP_1
-BID_980  +52.456  buyerGD_1
-ASK_784  +74.243  sellerZIC_1
-BID_985  +52.456  buyerGD_2
-BID_987  +55.641  buyerZIC_2
+BID_792  +76.187  buyerZIC_3
+ASK_931  +140.907  sellerRE_0
+ASK_932  +106.325  sellerZIC_2
+ASK_933  +99.633  sellerGD_4
+ASK_936  +100.557  sellerZIP_1
+BID_795  +41.194  buyerZIP_3
+ASK_941  +98.195  sellerZIP_4
+BID_800  +43.791  buyerRE_2
+ASK_943  +100.503  sellerRE_1
+ASK_945  +95.733  sellerGD_1
 ------ Round 1 -----------
-BID_997  +57.144  buyerZIP_2
-BID_979  +57.804  buyerZIP_1
+ASK_945  +95.720  sellerGD_1
+ASK_941  +98.195  sellerZIP_4
 ------ Round 2 -----------
-ASK_797  +53.710  sellerRE_2
-TRANSACTION_21  +55.427  {buyerZIP_2.BID_997: +57.144, sellerRE_2.ASK_797: +53.710)
-BID_979  +57.804  buyerZIP_1
+ASK_941  +98.195  sellerZIP_4
+ASK_945  +95.720  sellerGD_1
 ------ Round 3 -----------
-BID_979  +57.804  buyerZIP_1
+ASK_941  +98.195  sellerZIP_4
+ASK_945  +95.720  sellerGD_1
 ------ Round 4 -----------
-BID_979  +57.804  buyerZIP_1
+ASK_945  +95.720  sellerGD_1
+BID_837  +65.895  buyerRE_3
+BID_839  +76.375  buyerRE_1
+ASK_941  +98.195  sellerZIP_4
 ------ Round 5 -----------
-BID_979  +57.804  buyerZIP_1
-ASK_784  +72.976  sellerZIC_1
+ASK_945  +95.720  sellerGD_1
+ASK_941  +98.195  sellerZIP_4
+BID_792  +76.965  buyerZIC_3
 ------ Round 6 -----------
-BID_979  +57.804  buyerZIP_1
-BID_975  +56.535  buyerZIC_4
+ASK_945  +95.720  sellerGD_1
+ASK_941  +98.195  sellerZIP_4
 ------ Round 7 -----------
-BID_979  +57.804  buyerZIP_1
+ASK_945  +95.720  sellerGD_1
+ASK_941  +98.195  sellerZIP_4
 ------ Round 8 -----------
-ASK_849  +53.710  sellerRE_2
-TRANSACTION_22  +55.122  {buyerZIC_4.BID_975: +56.535, sellerRE_2.ASK_849: +53.710)
-BID_979  +57.804  buyerZIP_1
+ASK_941  +98.195  sellerZIP_4
+ASK_945  +95.720  sellerGD_1
 ------ Round 9 -----------
-BID_1069  +55.732  buyerZIP_0
-BID_979  +57.804  buyerZIP_1
+ASK_945  +95.720  sellerGD_1
+ASK_941  +98.195  sellerZIP_4
 **** Day 9 ]]]]]]]]]]]]]]]]]
+**** Day 10 [[[[[[[[[[[[[[[[[
+private value: 98.11699240468442
+------ Round 0 -----------
+ASK_1028  +103.777  sellerRE_1
+ASK_1029  +100.557  sellerZIP_1
+BID_885  +41.194  buyerZIP_3
+ASK_1031  +124.377  sellerZIC_2
+BID_886  +0.000  buyerZIC_3
+BID_887  +9.189  buyerZIC_2
+BID_888  +26.709  buyerZIP_0
+ASK_1032  +101.261  sellerZIP_3
+BID_893  +72.239  buyerZIP_1
+ASK_1037  +97.826  sellerGD_4
+------ Round 1 -----------
+ASK_1042  +99.962  sellerRE_0
+BID_885  +41.194  buyerZIP_3
+BID_893  +72.239  buyerZIP_1
+ASK_1037  +97.804  sellerGD_4
+------ Round 2 -----------
+BID_913  +78.708  buyerZIC_0
+ASK_1037  +97.804  sellerGD_4
+BID_885  +41.194  buyerZIP_3
+------ Round 3 -----------
+ASK_1037  +97.804  sellerGD_4
+BID_919  +54.564  buyerRE_2
+------ Round 4 -----------
+BID_919  +61.564  buyerRE_2
+ASK_1037  +97.804  sellerGD_4
+------ Round 5 -----------
+BID_885  +70.824  buyerZIP_3
+ASK_1037  +97.804  sellerGD_4
+------ Round 6 -----------
+ASK_1037  +97.804  sellerGD_4
+ASK_1088  +97.026  sellerRE_4
+BID_885  +70.824  buyerZIP_3
+------ Round 7 -----------
+BID_885  +70.824  buyerZIP_3
+------ Round 8 -----------
+BID_885  +70.824  buyerZIP_3
+------ Round 9 -----------
+BID_885  +70.824  buyerZIP_3
+**** Day 10 ]]]]]]]]]]]]]]]]]
+**** Day 11 [[[[[[[[[[[[[[[[[
+private value: 97.83167433692142
+------ Round 0 -----------
+BID_967  +2.266  buyerRE_2
+ASK_1112  +106.638  sellerRE_2
+BID_969  +26.709  buyerZIP_0
+ASK_1113  +101.261  sellerZIP_3
+ASK_1114  +143.981  sellerZIC_4
+BID_971  +36.981  buyerZIP_4
+ASK_1117  +100.667  sellerZIP_0
+BID_974  +8.876  buyerZIP_3
+BID_975  +47.393  buyerRE_4
+BID_979  +37.236  buyerZIC_3
+ASK_1121  +100.557  sellerZIP_1
+------ Round 1 -----------
+BID_969  +46.785  buyerZIP_0
+BID_967  +75.266  buyerRE_2
+BID_975  +47.393  buyerRE_4
+ASK_1121  +100.557  sellerZIP_1
+ASK_1113  +101.261  sellerZIP_3
+------ Round 2 -----------
+ASK_1113  +101.261  sellerZIP_3
+BID_975  +47.393  buyerRE_4
+ASK_1121  +100.557  sellerZIP_1
+------ Round 3 -----------
+ASK_1113  +101.261  sellerZIP_3
+ASK_1121  +100.557  sellerZIP_1
+------ Round 4 -----------
+ASK_1113  +101.261  sellerZIP_3
+BID_975  +47.393  buyerRE_4
+ASK_1121  +100.557  sellerZIP_1
+ASK_1117  +98.809  sellerZIP_0
+------ Round 5 -----------
+BID_1013  +91.981  buyerRE_1
+ASK_1113  +101.261  sellerZIP_3
+ASK_1114  +98.638  sellerZIC_4
+ASK_1164  +98.138  sellerRE_1
+BID_975  +47.393  buyerRE_4
+------ Round 6 -----------
+ASK_1117  +97.873  sellerZIP_0
+ASK_1113  +101.261  sellerZIP_3
+BID_975  +47.393  buyerRE_4
+------ Round 7 -----------
+ASK_1113  +101.261  sellerZIP_3
+BID_975  +47.393  buyerRE_4
+ASK_1117  +97.873  sellerZIP_0
+------ Round 8 -----------
+BID_975  +47.393  buyerRE_4
+ASK_1113  +101.261  sellerZIP_3
+ASK_1117  +97.873  sellerZIP_0
+------ Round 9 -----------
+ASK_1113  +101.261  sellerZIP_3
+BID_975  +47.393  buyerRE_4
+ASK_1117  +97.873  sellerZIP_0
+ASK_1112  +98.638  sellerRE_2
+**** Day 11 ]]]]]]]]]]]]]]]]]
+**** Day 12 [[[[[[[[[[[[[[[[[
+private value: 100.83676451118663
+------ Round 0 -----------
+ASK_1193  +113.957  sellerZIC_1
+BID_1049  +27.481  buyerZIP_4
+ASK_1194  +109.287  sellerZIC_3
+ASK_1195  +103.024  sellerZIP_2
+BID_1050  +46.785  buyerZIP_0
+BID_1051  +40.265  buyerZIC_1
+ASK_1198  +97.583  sellerZIP_0
+ASK_1200  +97.373  sellerGD_0
+ASK_1205  +101.261  sellerZIP_3
+BID_1053  +85.110  buyerRE_4
+------ Round 1 -----------
+BID_1063  +42.481  buyerZIC_4
+BID_1053  +85.110  buyerRE_4
+ASK_1200  +97.373  sellerGD_0
+ASK_1205  +101.261  sellerZIP_3
+------ Round 2 -----------
+ASK_1200  +97.373  sellerGD_0
+ASK_1205  +101.261  sellerZIP_3
+BID_1053  +85.110  buyerRE_4
+BID_1080  +44.440  buyerZIC_0
+------ Round 3 -----------
+ASK_1205  +101.261  sellerZIP_3
+ASK_1200  +97.373  sellerGD_0
+------ Round 4 -----------
+ASK_1205  +101.261  sellerZIP_3
+BID_1053  +85.110  buyerRE_4
+BID_1049  +49.568  buyerZIP_4
+BID_1050  +90.387  buyerZIP_0
+ASK_1200  +96.974  sellerGD_0
+------ Round 5 -----------
+BID_1050  +90.387  buyerZIP_0
+BID_1049  +49.568  buyerZIP_4
+ASK_1205  +101.261  sellerZIP_3
+ASK_1200  +96.974  sellerGD_0
+------ Round 6 -----------
+ASK_1205  +101.261  sellerZIP_3
+BID_1050  +90.387  buyerZIP_0
+BID_1049  +49.568  buyerZIP_4
+ASK_1200  +96.974  sellerGD_0
+------ Round 7 -----------
+BID_1050  +90.387  buyerZIP_0
+ASK_1205  +101.261  sellerZIP_3
+BID_1051  +49.809  buyerZIC_1
+ASK_1200  +96.810  sellerGD_0
+------ Round 8 -----------
+ASK_1200  +96.769  sellerGD_0
+BID_1050  +90.387  buyerZIP_0
+ASK_1205  +101.261  sellerZIP_3
+ASK_1278  +99.866  sellerZIC_2
+------ Round 9 -----------
+ASK_1200  +96.769  sellerGD_0
+BID_1050  +90.387  buyerZIP_0
+**** Day 12 ]]]]]]]]]]]]]]]]]
+**** Day 13 [[[[[[[[[[[[[[[[[
+private value: 102.81617441680282
+------ Round 0 -----------
+ASK_1288  +124.674  sellerZIC_3
+BID_1138  +9.248  buyerZIC_2
+BID_1139  +0.000  buyerRE_4
+BID_1140  +51.214  buyerZIC_4
+ASK_1289  +131.068  sellerRE_2
+BID_1142  +59.019  buyerZIC_1
+ASK_1290  +103.024  sellerZIP_2
+ASK_1291  +101.261  sellerZIP_3
+ASK_1292  +96.779  sellerGD_4
+------ Round 1 -----------
+BID_1140  +55.754  buyerZIC_4
+BID_1154  +88.116  buyerZIP_3
+ASK_1291  +101.261  sellerZIP_3
+ASK_1292  +96.779  sellerGD_4
+ASK_1289  +101.068  sellerRE_2
+------ Round 2 -----------
+ASK_1292  +96.779  sellerGD_4
+BID_1154  +88.116  buyerZIP_3
+------ Round 3 -----------
+ASK_1292  +96.779  sellerGD_4
+BID_1174  +78.022  buyerRE_3
+BID_1154  +88.116  buyerZIP_3
+------ Round 4 -----------
+ASK_1289  +100.068  sellerRE_2
+BID_1154  +88.116  buyerZIP_3
+BID_1142  +88.366  buyerZIC_1
+ASK_1292  +96.779  sellerGD_4
+------ Round 5 -----------
+BID_1174  +96.022  buyerRE_3
+ASK_1292  +96.779  sellerGD_4
+------ Round 6 -----------
+ASK_1292  +96.779  sellerGD_4
+------ Round 7 -----------
+ASK_1292  +96.779  sellerGD_4
+------ Round 8 -----------
+ASK_1292  +96.779  sellerGD_4
+------ Round 9 -----------
+ASK_1292  +96.779  sellerGD_4
+**** Day 13 ]]]]]]]]]]]]]]]]]
+**** Day 14 [[[[[[[[[[[[[[[[[
+private value: 98.0132144736126
+------ Round 0 -----------
+BID_1228  +40.986  buyerZIP_3
+ASK_1383  +104.473  sellerRE_3
+BID_1230  +5.654  buyerZIC_4
+ASK_1384  +114.800  sellerZIC_4
+ASK_1387  +101.261  sellerZIP_3
+BID_1232  +45.353  buyerZIP_0
+BID_1234  +45.475  buyerZIC_0
+BID_1238  +72.230  buyerZIC_3
+BID_1239  +74.225  buyerRE_4
+------ Round 1 -----------
+BID_1234  +80.241  buyerZIC_0
+BID_1239  +74.225  buyerRE_4
+ASK_1387  +101.261  sellerZIP_3
+------ Round 2 -----------
+ASK_1404  +111.972  sellerZIC_3
+ASK_1387  +101.261  sellerZIP_3
+------ Round 3 -----------
+BID_1239  +74.225  buyerRE_4
+ASK_1387  +101.261  sellerZIP_3
+ASK_1404  +111.930  sellerZIC_3
+ASK_1420  +100.382  sellerZIC_2
+------ Round 4 -----------
+BID_1239  +74.225  buyerRE_4
+------ Round 5 -----------
+BID_1239  +74.225  buyerRE_4
+ASK_1420  +96.934  sellerZIC_2
+------ Round 6 -----------
+BID_1239  +74.225  buyerRE_4
+------ Round 7 -----------
+ASK_1404  +109.347  sellerZIC_3
+BID_1239  +74.225  buyerRE_4
+------ Round 8 -----------
+BID_1234  +90.370  buyerZIC_0
+BID_1239  +74.225  buyerRE_4
+------ Round 9 -----------
+BID_1239  +74.225  buyerRE_4
+ASK_1384  +103.409  sellerZIC_4
+**** Day 14 ]]]]]]]]]]]]]]]]]
+**** Day 15 [[[[[[[[[[[[[[[[[
+private value: 95.3481808421202
+------ Round 0 -----------
+attempt to ask at 95.19294364213944
+ASK_1463  +100.557  sellerZIP_1
+BID_1304  +8.942  buyerZIC_2
+ASK_1464  +107.987  sellerZIC_2
+BID_1306  +20.635  buyerZIC_3
+BID_1308  +56.504  buyerZIP_3
+ASK_1468  +104.230  sellerRE_1
+ASK_1469  +103.024  sellerZIP_2
+BID_1310  +63.665  buyerZIC_0
+ASK_1472  +102.721  sellerZIC_0
+------ Round 1 -----------
+ASK_1477  +95.265  sellerZIP_3
+BID_1308  +56.504  buyerZIP_3
+------ Round 2 -----------
+BID_1308  +56.504  buyerZIP_3
+ASK_1477  +95.265  sellerZIP_3
+------ Round 3 -----------
+ASK_1477  +95.265  sellerZIP_3
+BID_1308  +56.504  buyerZIP_3
+BID_1347  +57.105  buyerZIP_0
+BID_1310  +66.048  buyerZIC_0
+------ Round 4 -----------
+BID_1347  +57.105  buyerZIP_0
+ASK_1477  +95.265  sellerZIP_3
+------ Round 5 -----------
+BID_1310  +66.510  buyerZIC_0
+ASK_1477  +95.265  sellerZIP_3
+BID_1347  +57.105  buyerZIP_0
+------ Round 6 -----------
+BID_1371  +61.094  buyerZIP_1
+ASK_1477  +95.265  sellerZIP_3
+------ Round 7 -----------
+BID_1371  +61.094  buyerZIP_1
+ASK_1477  +95.265  sellerZIP_3
+------ Round 8 -----------
+ASK_1477  +95.265  sellerZIP_3
+BID_1371  +61.094  buyerZIP_1
+------ Round 9 -----------
+BID_1371  +61.094  buyerZIP_1
+ASK_1477  +95.265  sellerZIP_3
+**** Day 15 ]]]]]]]]]]]]]]]]]
+**** Day 16 [[[[[[[[[[[[[[[[[
+private value: 98.76675496110693
+------ Round 0 -----------
+BID_1399  +0.000  buyerRE_0
+BID_1400  +0.000  buyerZIC_2
+ASK_1540  +98.092  sellerZIC_3
+BID_1401  +0.000  buyerRE_1
+BID_1402  +5.109  buyerRE_4
+BID_1403  +65.383  buyerZIC_1
+ASK_1545  +140.574  sellerZIC_4
+BID_1405  +53.119  buyerZIP_1
+ASK_1546  +96.209  sellerZIC_2
+ASK_1549  +97.583  sellerZIP_0
+BID_1410  +57.969  buyerZIP_3
+------ Round 1 -----------
+BID_1412  +67.419  buyerZIP_0
+ASK_1549  +97.583  sellerZIP_0
+BID_1410  +57.969  buyerZIP_3
+------ Round 2 -----------
+BID_1403  +67.552  buyerZIC_1
+BID_1410  +57.969  buyerZIP_3
+ASK_1549  +97.583  sellerZIP_0
+BID_1405  +60.113  buyerZIP_1
+------ Round 3 -----------
+BID_1423  +65.371  buyerRE_2
+BID_1403  +72.545  buyerZIC_1
+ASK_1549  +97.583  sellerZIP_0
+BID_1401  +78.013  buyerRE_1
+------ Round 4 -----------
+BID_1403  +74.477  buyerZIC_1
+ASK_1549  +97.583  sellerZIP_0
+------ Round 5 -----------
+ASK_1549  +97.583  sellerZIP_0
+------ Round 6 -----------
+ASK_1549  +97.583  sellerZIP_0
+------ Round 7 -----------
+ASK_1549  +97.583  sellerZIP_0
+BID_1403  +78.355  buyerZIC_1
+------ Round 8 -----------
+ASK_1549  +97.583  sellerZIP_0
+------ Round 9 -----------
+ASK_1549  +97.583  sellerZIP_0
+**** Day 16 ]]]]]]]]]]]]]]]]]
+**** Day 17 [[[[[[[[[[[[[[[[[
+private value: 101.31000563502312
+------ Round 0 -----------
+ASK_1624  +187.522  sellerRE_0
+ASK_1625  +100.858  sellerZIP_3
+BID_1452  +51.717  buyerZIC_1
+ASK_1626  +138.530  sellerRE_2
+ASK_1629  +103.024  sellerZIP_2
+BID_1455  +83.704  buyerZIP_3
+ASK_1632  +97.583  sellerZIP_0
+BID_1459  +73.048  buyerZIC_3
+ASK_1634  +96.533  sellerRE_3
+------ Round 1 -----------
+ASK_1632  +97.583  sellerZIP_0
+BID_1455  +83.704  buyerZIP_3
+------ Round 2 -----------
+ASK_1632  +97.583  sellerZIP_0
+BID_1455  +83.704  buyerZIP_3
+------ Round 3 -----------
+BID_1455  +83.704  buyerZIP_3
+ASK_1632  +97.583  sellerZIP_0
+------ Round 4 -----------
+ASK_1632  +97.583  sellerZIP_0
+BID_1455  +83.704  buyerZIP_3
+------ Round 5 -----------
+ASK_1632  +97.583  sellerZIP_0
+BID_1455  +83.704  buyerZIP_3
+------ Round 6 -----------
+BID_1455  +83.704  buyerZIP_3
+ASK_1632  +97.583  sellerZIP_0
+------ Round 7 -----------
+BID_1455  +83.704  buyerZIP_3
+ASK_1632  +97.583  sellerZIP_0
+------ Round 8 -----------
+BID_1455  +83.704  buyerZIP_3
+ASK_1632  +97.583  sellerZIP_0
+------ Round 9 -----------
+BID_1455  +83.704  buyerZIP_3
+ASK_1632  +97.583  sellerZIP_0
+**** Day 17 ]]]]]]]]]]]]]]]]]
+**** Day 18 [[[[[[[[[[[[[[[[[
+private value: 95.54314425680786
+------ Round 0 -----------
+attempt to ask at 95.19294364213944
+BID_1535  +60.113  buyerZIP_1
+ASK_1700  +126.012  sellerZIC_0
+ASK_1703  +130.303  sellerZIC_3
+ASK_1705  +99.327  sellerRE_2
+BID_1539  +68.639  buyerZIP_3
+BID_1541  +28.922  buyerZIC_2
+ASK_1707  +100.557  sellerZIP_1
+BID_1547  +54.215  buyerZIP_2
+------ Round 1 -----------
+BID_1551  +68.449  buyerRE_1
+ASK_1707  +100.557  sellerZIP_1
+BID_1539  +68.639  buyerZIP_3
+------ Round 2 -----------
+ASK_1707  +100.557  sellerZIP_1
+BID_1539  +68.639  buyerZIP_3
+------ Round 3 -----------
+BID_1539  +68.639  buyerZIP_3
+ASK_1707  +100.557  sellerZIP_1
+------ Round 4 -----------
+BID_1539  +68.639  buyerZIP_3
+ASK_1707  +100.557  sellerZIP_1
+------ Round 5 -----------
+ASK_1707  +100.557  sellerZIP_1
+BID_1539  +68.639  buyerZIP_3
+ASK_1749  +97.276  sellerRE_3
+------ Round 6 -----------
+ASK_1749  +97.276  sellerRE_3
+BID_1539  +68.639  buyerZIP_3
+ASK_1707  +100.557  sellerZIP_1
+------ Round 7 -----------
+ASK_1707  +100.557  sellerZIP_1
+BID_1539  +68.639  buyerZIP_3
+BID_1609  +69.045  buyerZIP_4
+------ Round 8 -----------
+BID_1609  +69.045  buyerZIP_4
+ASK_1707  +100.557  sellerZIP_1
+------ Round 9 -----------
+BID_1539  +71.656  buyerZIP_3
+ASK_1707  +100.557  sellerZIP_1
+**** Day 18 ]]]]]]]]]]]]]]]]]
+**** Day 19 [[[[[[[[[[[[[[[[[
+private value: 95.84402380976826
+------ Round 0 -----------
+attempt to ask at 95.19294364213944
+ASK_1780  +128.146  sellerRE_3
+ASK_1781  +127.155  sellerZIC_0
+ASK_1782  +199.356  sellerRE_0
+BID_1629  +32.414  buyerRE_2
+ASK_1783  +118.974  sellerZIC_4
+BID_1630  +20.015  buyerZIP_3
+ASK_1785  +103.024  sellerZIP_2
+ASK_1786  +138.589  sellerZIC_3
+ASK_1787  +100.557  sellerZIP_1
+BID_1636  +31.305  buyerZIC_3
+BID_1639  +37.338  buyerZIC_2
+BID_1640  +60.113  buyerZIP_1
+------ Round 1 -----------
+BID_1639  +61.994  buyerZIC_2
+ASK_1785  +103.024  sellerZIP_2
+BID_1640  +60.113  buyerZIP_1
+ASK_1787  +100.557  sellerZIP_1
+------ Round 2 -----------
+ASK_1787  +100.557  sellerZIP_1
+ASK_1785  +103.024  sellerZIP_2
+BID_1640  +60.113  buyerZIP_1
+------ Round 3 -----------
+BID_1640  +60.113  buyerZIP_1
+ASK_1787  +100.557  sellerZIP_1
+BID_1639  +69.551  buyerZIC_2
+ASK_1785  +103.024  sellerZIP_2
+------ Round 4 -----------
+ASK_1787  +100.557  sellerZIP_1
+ASK_1785  +103.024  sellerZIP_2
+BID_1640  +60.113  buyerZIP_1
+------ Round 5 -----------
+ASK_1787  +100.557  sellerZIP_1
+BID_1640  +60.113  buyerZIP_1
+ASK_1785  +103.024  sellerZIP_2
+------ Round 6 -----------
+BID_1640  +60.113  buyerZIP_1
+ASK_1787  +100.557  sellerZIP_1
+ASK_1785  +103.024  sellerZIP_2
+BID_1636  +67.451  buyerZIC_3
+------ Round 7 -----------
+ASK_1785  +103.024  sellerZIP_2
+BID_1639  +69.641  buyerZIC_2
+ASK_1787  +100.557  sellerZIP_1
+BID_1689  +67.944  buyerRE_4
+------ Round 8 -----------
+BID_1636  +71.431  buyerZIC_3
+ASK_1785  +103.024  sellerZIP_2
+ASK_1787  +100.557  sellerZIP_1
+------ Round 9 -----------
+ASK_1783  +100.698  sellerZIC_4
+ASK_1787  +100.557  sellerZIP_1
+BID_1629  +70.414  buyerRE_2
+**** Day 19 ]]]]]]]]]]]]]]]]]
+**** Day 20 [[[[[[[[[[[[[[[[[
+private value: 102.93845082167536
+------ Round 0 -----------
+ASK_1837  +131.627  sellerZIC_1
+BID_1702  +60.113  buyerZIP_1
+ASK_1838  +115.559  sellerRE_2
+BID_1703  +0.000  buyerRE_1
+BID_1704  +40.288  buyerZIC_1
+BID_1705  +46.472  buyerZIC_0
+ASK_1840  +100.557  sellerZIP_1
+ASK_1841  +103.024  sellerZIP_2
+BID_1709  +54.579  buyerRE_0
+ASK_1846  +100.193  sellerRE_0
+------ Round 1 -----------
+BID_1705  +76.691  buyerZIC_0
+BID_1714  +77.788  buyerRE_3
+ASK_1840  +100.557  sellerZIP_1
+BID_1702  +60.113  buyerZIP_1
+BID_1716  +88.077  buyerRE_2
+------ Round 2 -----------
+ASK_1840  +100.557  sellerZIP_1
+------ Round 3 -----------
+ASK_1840  +100.557  sellerZIP_1
+------ Round 4 -----------
+ASK_1840  +100.557  sellerZIP_1
+------ Round 5 -----------
+ASK_1840  +100.557  sellerZIP_1
+ASK_1878  +98.042  sellerZIC_4
+BID_1716  +98.077  buyerRE_2
+------ Round 6 -----------
+------ Round 7 -----------
+------ Round 8 -----------
+------ Round 9 -----------
+ASK_1878  +97.543  sellerZIC_4
+**** Day 20 ]]]]]]]]]]]]]]]]]
+**** Day 21 [[[[[[[[[[[[[[[[[
+private value: 104.30470332503319
+------ Round 0 -----------
+ASK_1908  +117.397  sellerRE_4
+BID_1751  +0.000  buyerRE_1
+BID_1752  +3.363  buyerZIC_0
+BID_1753  +54.215  buyerZIP_2
+BID_1754  +67.419  buyerZIP_0
+BID_1755  +89.012  buyerZIC_3
+ASK_1912  +161.288  sellerRE_3
+ASK_1913  +99.690  sellerZIC_1
+ASK_1917  +113.921  sellerZIC_3
+ASK_1918  +98.195  sellerZIP_4
+------ Round 1 -----------
+BID_1754  +67.419  buyerZIP_0
+ASK_1918  +98.195  sellerZIP_4
+------ Round 2 -----------
+ASK_1932  +98.543  sellerZIC_0
+ASK_1918  +98.195  sellerZIP_4
+BID_1754  +67.419  buyerZIP_0
+ASK_1939  +96.849  sellerRE_2
+------ Round 3 -----------
+ASK_1918  +98.195  sellerZIP_4
+BID_1754  +67.419  buyerZIP_0
+BID_1787  +67.561  buyerZIC_2
+------ Round 4 -----------
+ASK_1918  +98.195  sellerZIP_4
+BID_1787  +77.954  buyerZIC_2
+------ Round 5 -----------
+ASK_1918  +98.195  sellerZIP_4
+------ Round 6 -----------
+ASK_1918  +98.195  sellerZIP_4
+------ Round 7 -----------
+ASK_1918  +98.195  sellerZIP_4
+BID_1787  +88.716  buyerZIC_2
+------ Round 8 -----------
+ASK_1918  +98.195  sellerZIP_4
+------ Round 9 -----------
+ASK_1918  +98.195  sellerZIP_4
+**** Day 21 ]]]]]]]]]]]]]]]]]
+**** Day 22 [[[[[[[[[[[[[[[[[
+private value: 104.30245511466637
+------ Round 0 -----------
+ASK_1989  +96.769  sellerGD_4
+BID_1830  +0.000  buyerRE_3
+BID_1831  +11.506  buyerRE_1
+ASK_1992  +123.169  sellerRE_4
+BID_1832  +95.962  buyerGD_2
+BID_1835  +16.480  buyerZIC_4
+BID_1837  +49.743  buyerZIP_0
+ASK_1998  +103.024  sellerZIP_2
+ASK_2002  +95.669  sellerGD_1
+------ Round 1 -----------
+ASK_2002  +95.669  sellerGD_1
+BID_1837  +64.251  buyerZIP_0
+BID_1832  +96.022  buyerGD_2
+ASK_1989  +96.769  sellerGD_4
+------ Round 2 -----------
+BID_1837  +64.251  buyerZIP_0
+ASK_1989  +96.769  sellerGD_4
+ASK_2002  +95.669  sellerGD_1
+BID_1832  +96.022  buyerGD_2
+------ Round 3 -----------
+ASK_2002  +95.669  sellerGD_1
+ASK_1989  +96.769  sellerGD_4
+BID_1837  +64.251  buyerZIP_0
+BID_1832  +96.022  buyerGD_2
+------ Round 4 -----------
+ASK_1989  +96.321  sellerGD_4
+BID_1837  +64.251  buyerZIP_0
+BID_1832  +96.022  buyerGD_2
+ASK_2002  +95.669  sellerGD_1
+------ Round 5 -----------
+ASK_1989  +96.082  sellerGD_4
+BID_1832  +96.261  buyerGD_2
+TRANSACTION_6  +96.171  {buyerGD_2.BID_1832: +96.261, sellerGD_4.ASK_1989: +96.082)
+BID_1888  +0.000  buyerRE_0
+BID_1889  +22.248  buyerZIC_2
+ASK_2046  +141.587  sellerZIC_0
+ASK_2047  +113.249  sellerZIC_1
+BID_1890  +33.347  buyerZIP_2
+ASK_2049  +98.195  sellerZIP_4
+BID_1837  +64.251  buyerZIP_0
+ASK_2002  +95.669  sellerGD_1
+------ Round 6 -----------
+BID_1897  +96.261  buyerGD_2
+ASK_2058  +95.986  sellerGD_4
+TRANSACTION_7  +96.124  {buyerGD_2.BID_1897: +96.261, sellerGD_4.ASK_2058: +95.986)
+BID_1899  +57.442  buyerZIP_4
+BID_1837  +64.251  buyerZIP_0
+ASK_2049  +98.195  sellerZIP_4
+ASK_2002  +95.444  sellerGD_1
+------ Round 7 -----------
+ASK_2064  +95.962  sellerGD_4
+BID_1837  +64.251  buyerZIP_0
+ASK_2002  +95.444  sellerGD_1
+BID_1899  +74.474  buyerZIP_4
+BID_1908  +96.261  buyerGD_2
+TRANSACTION_8  +96.112  {buyerGD_2.BID_1908: +96.261, sellerGD_4.ASK_2064: +95.962)
+ASK_2049  +98.195  sellerZIP_4
+------ Round 8 -----------
+ASK_2002  +95.444  sellerGD_1
+BID_1899  +74.474  buyerZIP_4
+BID_1837  +64.251  buyerZIP_0
+ASK_2049  +98.195  sellerZIP_4
+------ Round 9 -----------
+BID_1899  +74.474  buyerZIP_4
+ASK_2002  +95.444  sellerGD_1
+ASK_2049  +98.195  sellerZIP_4
+BID_1831  +72.506  buyerRE_1
+**** Day 22 ]]]]]]]]]]]]]]]]]
+**** Day 23 [[[[[[[[[[[[[[[[[
+private value: 100.06461202166975
+------ Round 0 -----------
+ASK_2083  +120.985  sellerZIC_2
+BID_1922  +96.395  buyerGD_0
+BID_1923  +78.446  buyerRE_1
+BID_1925  +101.348  buyerZIC_0
+ASK_2085  +106.514  sellerZIC_0
+ASK_2086  +98.195  sellerZIP_4
+ASK_2088  +100.557  sellerZIP_1
+BID_1931  +124.483  buyerZIC_3
+TRANSACTION_9  +112.520  {buyerZIC_3.BID_1931: +124.483, sellerZIP_1.ASK_2088: +100.557)
+ASK_2089  +100.858  sellerZIP_3
+BID_1933  +110.610  buyerZIC_4
+TRANSACTION_10  +105.734  {buyerZIC_4.BID_1933: +110.610, sellerZIP_3.ASK_2089: +100.858)
+ASK_2091  +97.583  sellerZIP_0
+TRANSACTION_11  +99.771  {buyerZIC_0.BID_1925: +101.348, sellerZIP_4.ASK_2086: +98.195)
+------ Round 1 -----------
+attempt to ask at 95.19294364213944
+BID_1940  +96.769  buyerGD_1
+BID_1945  +123.858  buyerZIC_3
+TRANSACTION_12  +110.721  {buyerZIC_3.BID_1945: +123.858, sellerZIP_0.ASK_2091: +97.583)
+BID_1946  +105.239  buyerZIP_0
+BID_1950  +82.446  buyerGD_3
+ASK_2102  +156.352  sellerRE_3
+ASK_2104  +98.195  sellerZIP_4
+ASK_2105  +103.024  sellerZIP_2
+ASK_2107  +109.174  sellerZIC_3
+ASK_2108  +105.055  sellerZIP_1
+TRANSACTION_13  +100.610  {buyerZIP_0.BID_1946: +105.239, sellerZIP_4.ASK_2104: +98.195)
+------ Round 2 -----------
+BID_1922  +96.849  buyerGD_0
+BID_1957  +85.048  buyerZIP_1
+BID_1958  +96.145  buyerZIP_4
+BID_1961  +112.429  buyerRE_3
+TRANSACTION_14  +108.742  {buyerRE_3.BID_1961: +112.429, sellerZIP_1.ASK_2108: +105.055)
+BID_1940  +98.195  buyerGD_1
+BID_1962  +113.262  buyerZIC_3
+TRANSACTION_15  +111.218  {buyerZIC_3.BID_1962: +113.262, sellerZIC_3.ASK_2107: +109.174)
+ASK_2105  +103.024  sellerZIP_2
+BID_1966  +105.888  buyerZIC_4
+ASK_2113  +117.417  sellerZIP_3
+ASK_2115  +98.195  sellerZIP_4
+------ Round 3 -----------
+BID_1972  +105.015  buyerZIP_2
+BID_1940  +98.195  buyerGD_1
+BID_1973  +112.429  buyerRE_3
+ASK_2113  +114.803  sellerZIP_3
+ASK_2102  +103.352  sellerRE_3
+TRANSACTION_16  +107.891  {buyerRE_3.BID_1973: +112.429, sellerRE_3.ASK_2102: +103.352)
+ASK_2115  +98.195  sellerZIP_4
+ASK_2126  +110.964  sellerZIP_1
+ASK_2127  +105.052  sellerRE_0
+TRANSACTION_17  +105.470  {buyerZIC_4.BID_1966: +105.888, sellerRE_0.ASK_2127: +105.052)
+BID_1982  +101.804  buyerZIP_0
+TRANSACTION_18  +102.414  {buyerZIP_2.BID_1972: +105.015, sellerZIP_4.ASK_2115: +98.195)
+------ Round 4 -----------
+BID_1982  +110.716  buyerZIP_0
+ASK_2129  +108.574  sellerZIP_0
+BID_1957  +106.985  buyerZIP_1
+BID_1983  +105.015  buyerZIP_2
+ASK_2132  +107.751  sellerRE_4
+ASK_2133  +103.253  sellerZIC_3
+TRANSACTION_19  +105.119  {buyerZIP_1.BID_1957: +106.985, sellerZIC_3.ASK_2133: +103.253)
+BID_1958  +101.506  buyerZIP_4
+BID_1986  +112.429  buyerRE_3
+TRANSACTION_20  +110.090  {buyerRE_3.BID_1986: +112.429, sellerRE_4.ASK_2132: +107.751)
+ASK_2136  +103.352  sellerRE_3
+ASK_2105  +103.024  sellerZIP_2
+TRANSACTION_21  +105.764  {buyerZIP_0.BID_1982: +110.716, sellerZIP_2.ASK_2105: +103.024)
+------ Round 5 -----------
+ASK_2085  +98.149  sellerZIC_0
+BID_1995  +102.539  buyerZIP_1
+BID_1997  +109.563  buyerZIP_0
+ASK_2140  +103.024  sellerZIP_2
+ASK_2136  +103.352  sellerRE_3
+BID_1940  +105.239  buyerGD_1
+BID_1983  +105.015  buyerZIP_2
+BID_2004  +115.521  buyerZIC_0
+TRANSACTION_22  +107.401  {buyerZIP_0.BID_1997: +109.563, sellerZIP_2.ASK_2140: +103.024)
+TRANSACTION_23  +107.401  {buyerZIC_0.BID_2004: +115.521, sellerZIC_0.ASK_2085: +98.149)
+------ Round 6 -----------
+BID_2005  +111.888  buyerZIC_0
+ASK_2083  +107.893  sellerZIC_2
+ASK_2147  +107.411  sellerZIP_2
+ASK_2136  +103.352  sellerRE_3
+BID_1940  +108.698  buyerGD_1
+BID_1995  +102.539  buyerZIP_1
+TRANSACTION_24  +108.295  {buyerGD_1.BID_1940: +108.698, sellerZIC_2.ASK_2083: +107.893)
+TRANSACTION_25  +108.295  {buyerZIC_0.BID_2005: +111.888, sellerZIP_2.ASK_2147: +107.411)
+------ Round 7 -----------
+BID_2014  +108.698  buyerGD_1
+ASK_2136  +103.352  sellerRE_3
+ASK_2154  +129.183  sellerZIC_0
+ASK_2126  +99.099  sellerZIP_1
+TRANSACTION_26  +100.819  {buyerZIP_1.BID_1995: +102.539, sellerZIP_1.ASK_2126: +99.099)
+ASK_2159  +124.565  sellerZIC_4
+ASK_2113  +102.770  sellerZIP_3
+ASK_2162  +107.977  sellerZIC_1
+TRANSACTION_27  +108.337  {buyerGD_1.BID_2014: +108.698, sellerZIC_1.ASK_2162: +107.977)
+------ Round 8 -----------
+ASK_2113  +102.770  sellerZIP_3
+BID_1983  +106.239  buyerZIP_2
+BID_2031  +108.698  buyerGD_1
+------ Round 9 -----------
+ASK_2175  +121.821  sellerZIC_2
+ASK_2113  +102.770  sellerZIP_3
+BID_2031  +111.250  buyerGD_1
+**** Day 23 ]]]]]]]]]]]]]]]]]
+**** Day 24 [[[[[[[[[[[[[[[[[
+private value: 99.81513226637617
+------ Round 0 -----------
+attempt to ask at 95.19294364213944
+ASK_2177  +151.046  sellerRE_1
+ASK_2178  +101.658  sellerRE_4
+BID_2042  +75.773  buyerZIC_0
+BID_2043  +91.453  buyerZIC_4
+BID_2045  +108.554  buyerGD_0
+TRANSACTION_28  +105.106  {buyerGD_0.BID_2045: +108.554, sellerRE_4.ASK_2178: +101.658)
+BID_2046  +118.404  buyerRE_1
+ASK_2181  +110.591  sellerZIP_3
+ASK_2182  +114.517  sellerZIP_2
+ASK_2184  +102.935  sellerZIP_0
+BID_2056  +105.484  buyerZIP_4
+TRANSACTION_29  +104.209  {buyerZIP_4.BID_2056: +105.484, sellerZIP_0.ASK_2184: +102.935)
+BID_2057  +96.082  buyerGD_2
+BID_2058  +101.844  buyerRE_3
+TRANSACTION_30  +116.460  {buyerRE_1.BID_2046: +118.404, sellerZIP_2.ASK_2182: +114.517)
+------ Round 1 -----------
+ASK_2192  +101.658  sellerRE_4
+TRANSACTION_31  +101.751  {buyerRE_3.BID_2058: +101.844, sellerRE_4.ASK_2192: +101.658)
+ASK_2193  +103.009  sellerRE_3
+BID_2059  +105.484  buyerZIP_4
+TRANSACTION_32  +104.246  {buyerZIP_4.BID_2059: +105.484, sellerRE_3.ASK_2193: +103.009)
+ASK_2195  +138.942  sellerZIC_1
+BID_2062  +83.768  buyerGD_3
+ASK_2181  +110.591  sellerZIP_3
+BID_2057  +102.770  buyerGD_2
+ASK_2196  +105.020  sellerZIC_4
+ASK_2197  +105.583  sellerZIP_0
+ASK_2199  +102.846  sellerZIC_3
+BID_2064  +118.404  buyerRE_1
+ASK_2177  +106.046  sellerRE_1
+BID_2071  +108.554  buyerGD_0
+TRANSACTION_33  +105.700  {buyerGD_0.BID_2071: +108.554, sellerZIC_3.ASK_2199: +102.846)
+TRANSACTION_34  +105.533  {buyerRE_1.BID_2064: +118.404, sellerZIC_4.ASK_2196: +105.020)
+------ Round 2 -----------
+BID_2072  +118.404  buyerRE_1
+BID_2076  +103.772  buyerZIP_1
+ASK_2205  +104.557  sellerZIC_2
+ASK_2206  +101.658  sellerRE_4
+TRANSACTION_35  +102.715  {buyerZIP_1.BID_2076: +103.772, sellerRE_4.ASK_2206: +101.658)
+ASK_2207  +104.979  sellerZIP_1
+BID_2080  +108.554  buyerGD_0
+TRANSACTION_36  +106.766  {buyerGD_0.BID_2080: +108.554, sellerZIP_1.ASK_2207: +104.979)
+ASK_2197  +104.755  sellerZIP_0
+ASK_2211  +103.009  sellerRE_3
+ASK_2212  +103.871  sellerZIP_2
+TRANSACTION_37  +104.214  {buyerRE_1.BID_2072: +118.404, sellerZIP_2.ASK_2212: +103.871)
+------ Round 3 -----------
+BID_2086  +99.001  buyerZIP_0
+ASK_2211  +103.009  sellerRE_3
+BID_2057  +102.846  buyerGD_2
+BID_2088  +110.844  buyerRE_3
+TRANSACTION_38  +106.926  {buyerRE_3.BID_2088: +110.844, sellerRE_3.ASK_2211: +103.009)
+ASK_2221  +103.129  sellerZIP_1
+ASK_2223  +103.871  sellerZIP_2
+------ Round 4 -----------
+ASK_2224  +103.009  sellerRE_3
+BID_2099  +103.251  buyerZIP_1
+TRANSACTION_39  +103.130  {buyerZIP_1.BID_2099: +103.251, sellerRE_3.ASK_2224: +103.009)
+BID_2062  +99.099  buyerGD_3
+ASK_2223  +103.871  sellerZIP_2
+BID_2057  +102.846  buyerGD_2
+------ Round 5 -----------
+ASK_2223  +103.871  sellerZIP_2
+BID_2042  +110.205  buyerZIC_0
+TRANSACTION_40  +106.667  {buyerZIC_0.BID_2042: +110.205, sellerZIP_1.ASK_2221: +103.129)
+BID_2086  +106.545  buyerZIP_0
+BID_2109  +103.251  buyerZIP_1
+TRANSACTION_41  +104.214  {buyerZIP_0.BID_2086: +106.545, sellerZIP_2.ASK_2223: +103.871)
+------ Round 6 -----------
+BID_2062  +99.964  buyerGD_3
+BID_2118  +106.545  buyerZIP_0
+BID_2109  +103.251  buyerZIP_1
+BID_2057  +103.251  buyerGD_2
+BID_2125  +104.683  buyerZIP_4
+TRANSACTION_42  +105.301  {buyerZIP_0.BID_2118: +106.545, sellerZIC_2.ASK_2205: +104.557)
+------ Round 7 -----------
+ASK_2195  +96.451  sellerZIC_1
+BID_2057  +104.755  buyerGD_2
+TRANSACTION_43  +104.755  {buyerGD_2.BID_2057: +104.755, sellerZIP_0.ASK_2197: +104.755)
+BID_2062  +100.310  buyerGD_3
+BID_2125  +104.683  buyerZIP_4
+BID_2129  +106.545  buyerZIP_0
+BID_2109  +105.766  buyerZIP_1
+TRANSACTION_44  +103.178  {buyerZIP_0.BID_2129: +106.545, sellerZIC_1.ASK_2195: +96.451)
+------ Round 8 -----------
+ASK_2252  +107.303  sellerZIC_3
+BID_2062  +100.310  buyerGD_3
+ASK_2256  +105.777  sellerZIP_1
+ASK_2260  +104.750  sellerZIP_4
+------ Round 9 -----------
+BID_2062  +100.310  buyerGD_3
+BID_2125  +108.591  buyerZIP_4
+TRANSACTION_45  +107.184  {buyerZIP_4.BID_2125: +108.591, sellerZIP_1.ASK_2256: +105.777)
+**** Day 24 ]]]]]]]]]]]]]]]]]
+**** Day 25 [[[[[[[[[[[[[[[[[
+private value: 103.05724418489262
+------ Round 0 -----------
+attempt to ask at 95.19294364213944
+BID_2157  +98.117  buyerZIP_1
+ASK_2269  +108.621  sellerRE_4
+BID_2158  +105.711  buyerZIP_4
+BID_2159  +97.775  buyerRE_2
+ASK_2270  +122.132  sellerZIC_0
+ASK_2271  +103.238  sellerRE_3
+TRANSACTION_46  +104.474  {buyerZIP_4.BID_2158: +105.711, sellerRE_3.ASK_2271: +103.238)
+ASK_2272  +101.779  sellerZIP_1
+BID_2163  +108.088  buyerRE_1
+ASK_2274  +117.253  sellerZIC_1
+BID_2165  +100.310  buyerGD_3
+ASK_2276  +97.067  sellerZIC_4
+BID_2172  +101.693  buyerZIC_1
+TRANSACTION_47  +102.931  {buyerRE_1.BID_2163: +108.088, sellerZIC_4.ASK_2276: +97.067)
+------ Round 1 -----------
+BID_2175  +108.088  buyerRE_1
+BID_2177  +104.963  buyerZIP_4
+TRANSACTION_48  +103.371  {buyerZIP_4.BID_2177: +104.963, sellerZIP_1.ASK_2272: +101.779)
+ASK_2287  +110.812  sellerZIP_4
+BID_2179  +107.502  buyerZIP_3
+ASK_2289  +104.319  sellerZIP_3
+TRANSACTION_49  +105.910  {buyerZIP_3.BID_2179: +107.502, sellerZIP_3.ASK_2289: +104.319)
+ASK_2291  +108.681  sellerZIP_2
+ASK_2292  +103.238  sellerRE_3
+------ Round 2 -----------
+ASK_2292  +103.238  sellerRE_3
+ASK_2291  +108.681  sellerZIP_2
+BID_2192  +107.245  buyerZIP_3
+TRANSACTION_50  +105.241  {buyerZIP_3.BID_2192: +107.245, sellerRE_3.ASK_2292: +103.238)
+BID_2194  +104.419  buyerZIP_4
+ASK_2301  +103.142  sellerZIP_1
+TRANSACTION_51  +103.781  {buyerZIP_4.BID_2194: +104.419, sellerZIP_1.ASK_2301: +103.142)
+BID_2175  +108.088  buyerRE_1
+ASK_2302  +103.405  sellerRE_1
+ASK_2303  +104.237  sellerZIC_3
+TRANSACTION_52  +105.746  {buyerRE_1.BID_2175: +108.088, sellerRE_1.ASK_2302: +103.405)
+------ Round 3 -----------
+BID_2165  +101.779  buyerGD_3
+ASK_2287  +108.094  sellerZIP_4
+ASK_2306  +103.405  sellerRE_1
+BID_2203  +101.134  buyerZIP_2
+ASK_2310  +103.238  sellerRE_3
+BID_2205  +103.770  buyerRE_0
+TRANSACTION_53  +103.504  {buyerRE_0.BID_2205: +103.770, sellerRE_3.ASK_2310: +103.238)
+------ Round 4 -----------
+BID_2207  +102.457  buyerZIP_3
+BID_2208  +108.088  buyerRE_1
+BID_2165  +102.869  buyerGD_3
+ASK_2287  +103.679  sellerZIP_4
+ASK_2315  +103.296  sellerZIP_0
+ASK_2316  +99.247  sellerZIP_3
+TRANSACTION_54  +101.058  {buyerGD_3.BID_2165: +102.869, sellerZIP_3.ASK_2316: +99.247)
+ASK_2317  +102.805  sellerZIP_1
+ASK_2291  +102.696  sellerZIP_2
+ASK_2306  +103.405  sellerRE_1
+TRANSACTION_55  +103.051  {buyerRE_1.BID_2208: +108.088, sellerZIP_2.ASK_2291: +102.696)
+------ Round 5 -----------
+BID_2217  +102.869  buyerGD_3
+TRANSACTION_56  +102.837  {buyerGD_3.BID_2217: +102.869, sellerZIP_1.ASK_2317: +102.805)
+ASK_2274  +100.501  sellerZIC_1
+BID_2203  +101.134  buyerZIP_2
+ASK_2324  +100.733  sellerZIP_3
+TRANSACTION_57  +101.595  {buyerZIP_3.BID_2207: +102.457, sellerZIP_3.ASK_2324: +100.733)
+TRANSACTION_58  +100.818  {buyerZIP_2.BID_2203: +101.134, sellerZIC_1.ASK_2274: +100.501)
+------ Round 6 -----------
+BID_2226  +102.869  buyerGD_3
+ASK_2315  +103.075  sellerZIP_0
+ASK_2306  +103.405  sellerRE_1
+ASK_2327  +102.696  sellerZIP_2
+BID_2234  +101.134  buyerZIP_2
+------ Round 7 -----------
+ASK_2333  +100.501  sellerZIC_1
+BID_2226  +102.869  buyerGD_3
+BID_2234  +101.134  buyerZIP_2
+ASK_2315  +103.075  sellerZIP_0
+TRANSACTION_59  +100.818  {buyerZIP_2.BID_2234: +101.134, sellerZIC_1.ASK_2333: +100.501)
+------ Round 8 -----------
+ASK_2327  +102.696  sellerZIP_2
+ASK_2315  +103.075  sellerZIP_0
+BID_2245  +103.620  buyerZIC_3
+TRANSACTION_60  +103.347  {buyerZIC_3.BID_2245: +103.620, sellerZIP_0.ASK_2315: +103.075)
+BID_2226  +102.869  buyerGD_3
+BID_2250  +101.134  buyerZIP_2
+------ Round 9 -----------
+BID_2226  +102.869  buyerGD_3
+ASK_2343  +100.382  sellerZIC_4
+BID_2250  +101.134  buyerZIP_2
+TRANSACTION_61  +100.758  {buyerZIP_2.BID_2250: +101.134, sellerZIC_4.ASK_2343: +100.382)
+**** Day 25 ]]]]]]]]]]]]]]]]]
+**** Day 26 [[[[[[[[[[[[[[[[[
+private value: 99.4549088133499
+------ Round 0 -----------
+attempt to ask at 95.19294364213944
+ASK_2348  +99.729  sellerRE_3
+BID_2261  +94.885  buyerZIP_4
+ASK_2349  +103.718  sellerRE_1
+ASK_2350  +102.696  sellerZIP_2
+BID_2262  +65.506  buyerRE_2
+BID_2263  +97.839  buyerRE_0
+BID_2265  +102.869  buyerGD_3
+TRANSACTION_62  +101.299  {buyerGD_3.BID_2265: +102.869, sellerRE_3.ASK_2348: +99.729)
+ASK_2356  +108.965  sellerZIP_0
+BID_2268  +99.712  buyerRE_3
+ASK_2359  +106.183  sellerRE_4
+ASK_2360  +104.072  sellerZIP_3
+------ Round 1 -----------
+BID_2277  +103.291  buyerRE_1
+BID_2261  +101.500  buyerZIP_4
+ASK_2366  +102.747  sellerZIC_3
+BID_2279  +102.847  buyerZIP_3
+TRANSACTION_63  +102.797  {buyerZIP_3.BID_2279: +102.847, sellerZIC_3.ASK_2366: +102.747)
+ASK_2350  +102.696  sellerZIP_2
+BID_2282  +108.595  buyerZIC_0
+BID_2284  +102.869  buyerGD_3
+ASK_2370  +99.729  sellerRE_3
+TRANSACTION_64  +101.299  {buyerGD_3.BID_2284: +102.869, sellerRE_3.ASK_2370: +99.729)
+ASK_2349  +103.718  sellerRE_1
+TRANSACTION_65  +103.505  {buyerZIC_0.BID_2282: +108.595, sellerZIP_2.ASK_2350: +102.696)
+------ Round 2 -----------
+BID_2261  +104.246  buyerZIP_4
+TRANSACTION_66  +104.159  {buyerZIP_4.BID_2261: +104.246, sellerZIP_3.ASK_2360: +104.072)
+ASK_2373  +103.193  sellerZIC_0
+BID_2291  +100.242  buyerZIP_1
+BID_2293  +104.010  buyerZIP_3
+BID_2277  +103.291  buyerRE_1
+ASK_2377  +102.696  sellerZIP_2
+ASK_2379  +104.374  sellerZIP_1
+ASK_2382  +99.729  sellerRE_3
+TRANSACTION_67  +101.869  {buyerZIP_3.BID_2293: +104.010, sellerRE_3.ASK_2382: +99.729)
+TRANSACTION_68  +102.945  {buyerRE_1.BID_2277: +103.291, sellerZIP_2.ASK_2377: +102.696)
+------ Round 3 -----------
+ASK_2385  +103.359  sellerZIC_3
+ASK_2387  +102.696  sellerZIP_2
+BID_2300  +102.869  buyerGD_3
+BID_2301  +98.623  buyerZIC_2
+BID_2268  +108.712  buyerRE_3
+TRANSACTION_69  +106.036  {buyerRE_3.BID_2268: +108.712, sellerZIC_3.ASK_2385: +103.359)
+ASK_2391  +101.133  sellerZIP_3
+TRANSACTION_70  +102.001  {buyerGD_3.BID_2300: +102.869, sellerZIP_3.ASK_2391: +101.133)
+BID_2306  +103.291  buyerRE_1
+TRANSACTION_71  +102.945  {buyerRE_1.BID_2306: +103.291, sellerZIP_2.ASK_2387: +102.696)
+------ Round 4 -----------
+BID_2308  +103.291  buyerRE_1
+BID_2310  +101.973  buyerZIP_3
+BID_2313  +103.809  buyerZIP_4
+BID_2291  +104.231  buyerZIP_1
+BID_2314  +108.712  buyerRE_3
+TRANSACTION_72  +106.543  {buyerRE_3.BID_2314: +108.712, sellerZIP_1.ASK_2379: +104.374)
+TRANSACTION_73  +103.242  {buyerRE_1.BID_2308: +103.291, sellerZIC_0.ASK_2373: +103.193)
+------ Round 5 -----------
+BID_2313  +105.474  buyerZIP_4
+BID_2301  +106.727  buyerZIC_2
+ASK_2401  +103.679  sellerZIP_4
+ASK_2349  +103.718  sellerRE_1
+TRANSACTION_74  +103.698  {buyerZIC_2.BID_2301: +106.727, sellerZIP_4.ASK_2401: +103.679)
+------ Round 6 -----------
+ASK_2413  +105.741  sellerZIP_1
+BID_2325  +103.021  buyerZIP_0
+ASK_2414  +103.679  sellerZIP_4
+BID_2329  +107.335  buyerZIC_0
+BID_2330  +108.712  buyerRE_3
+TRANSACTION_75  +107.226  {buyerRE_3.BID_2330: +108.712, sellerZIP_1.ASK_2413: +105.741)
+ASK_2356  +104.649  sellerZIP_0
+TRANSACTION_76  +105.062  {buyerZIP_4.BID_2313: +105.474, sellerZIP_0.ASK_2356: +104.649)
+BID_2310  +104.769  buyerZIP_3
+TRANSACTION_77  +103.698  {buyerZIC_0.BID_2329: +107.335, sellerZIP_4.ASK_2414: +103.679)
+------ Round 7 -----------
+BID_2333  +104.794  buyerZIP_4
+ASK_2429  +102.731  sellerZIC_0
+BID_2325  +103.021  buyerZIP_0
+TRANSACTION_78  +102.876  {buyerZIP_0.BID_2325: +103.021, sellerZIC_0.ASK_2429: +102.731)
+------ Round 8 -----------
+BID_2343  +103.021  buyerZIP_0
+ASK_2349  +103.718  sellerRE_1
+ASK_2438  +100.937  sellerZIC_3
+TRANSACTION_79  +102.865  {buyerZIP_4.BID_2333: +104.794, sellerZIC_3.ASK_2438: +100.937)
+ASK_2440  +101.663  sellerZIP_4
+TRANSACTION_80  +102.342  {buyerZIP_0.BID_2343: +103.021, sellerZIP_4.ASK_2440: +101.663)
+------ Round 9 -----------
+BID_2348  +97.987  buyerZIC_0
+BID_2291  +105.069  buyerZIP_1
+BID_2351  +102.836  buyerZIP_0
+**** Day 26 ]]]]]]]]]]]]]]]]]
+**** Day 27 [[[[[[[[[[[[[[[[[
+private value: 100.14634384773672
+------ Round 0 -----------
+attempt to ask at 95.19294364213944
+BID_2354  +100.426  buyerZIC_0
+BID_2355  +96.278  buyerZIP_1
+BID_2356  +105.439  buyerRE_3
+ASK_2452  +163.245  sellerRE_0
+ASK_2453  +116.833  sellerZIP_3
+ASK_2454  +111.533  sellerZIC_2
+ASK_2455  +108.445  sellerZIC_0
+ASK_2456  +101.288  sellerRE_4
+TRANSACTION_81  +103.364  {buyerRE_3.BID_2356: +105.439, sellerRE_4.ASK_2456: +101.288)
+BID_2363  +104.755  buyerGD_0
+BID_2364  +101.134  buyerZIP_2
+ASK_2458  +104.019  sellerZIP_2
+ASK_2459  +100.493  sellerRE_1
+ASK_2460  +112.487  sellerZIP_1
+ASK_2461  +100.670  sellerZIP_4
+ASK_2462  +96.769  sellerGD_0
+BID_2368  +100.520  buyerZIP_0
+ASK_2465  +96.782  sellerRE_3
+TRANSACTION_82  +100.769  {buyerGD_0.BID_2363: +104.755, sellerRE_3.ASK_2465: +96.782)
+BID_2370  +100.910  buyerZIC_4
+ASK_2467  +100.367  sellerZIP_0
+TRANSACTION_83  +100.639  {buyerZIC_4.BID_2370: +100.910, sellerZIP_0.ASK_2467: +100.367)
+TRANSACTION_84  +100.506  {buyerZIP_0.BID_2368: +100.520, sellerRE_1.ASK_2459: +100.493)
+TRANSACTION_85  +100.506  {buyerZIP_2.BID_2364: +101.134, sellerGD_0.ASK_2462: +96.769)
+------ Round 1 -----------
+ASK_2468  +101.729  sellerZIP_0
+BID_2371  +100.450  buyerZIP_4
+BID_2355  +101.561  buyerZIP_1
+BID_2372  +105.439  buyerRE_3
+TRANSACTION_86  +103.584  {buyerRE_3.BID_2372: +105.439, sellerZIP_0.ASK_2468: +101.729)
+ASK_2470  +96.782  sellerRE_3
+TRANSACTION_87  +99.172  {buyerZIP_1.BID_2355: +101.561, sellerRE_3.ASK_2470: +96.782)
+ASK_2471  +96.769  sellerGD_0
+BID_2379  +104.755  buyerGD_0
+BID_2380  +100.075  buyerRE_1
+ASK_2460  +112.487  sellerZIP_1
+BID_2381  +101.134  buyerZIP_2
+BID_2384  +102.970  buyerZIP_0
+ASK_2461  +100.670  sellerZIP_4
+ASK_2473  +100.493  sellerRE_1
+TRANSACTION_88  +100.581  {buyerZIP_2.BID_2381: +101.134, sellerRE_1.ASK_2473: +100.493)
+TRANSACTION_89  +100.581  {buyerZIP_0.BID_2384: +102.970, sellerGD_0.ASK_2471: +96.769)
+------ Round 2 -----------
+ASK_2461  +100.670  sellerZIP_4
+ASK_2477  +101.288  sellerRE_4
+TRANSACTION_90  +103.022  {buyerGD_0.BID_2379: +104.755, sellerRE_4.ASK_2477: +101.288)
+ASK_2478  +106.406  sellerZIP_0
+ASK_2479  +96.782  sellerRE_3
+TRANSACTION_91  +98.616  {buyerZIP_4.BID_2371: +100.450, sellerRE_3.ASK_2479: +96.782)
+BID_2387  +13.908  buyerRE_0
+BID_2388  +101.519  buyerZIP_0
+ASK_2481  +96.769  sellerGD_0
+BID_2389  +85.671  buyerZIC_1
+BID_2391  +99.257  buyerZIP_1
+ASK_2483  +100.403  sellerZIC_4
+BID_2394  +105.439  buyerRE_3
+ASK_2453  +104.855  sellerZIP_3
+TRANSACTION_92  +105.147  {buyerRE_3.BID_2394: +105.439, sellerZIP_3.ASK_2453: +104.855)
+ASK_2460  +103.657  sellerZIP_1
+TRANSACTION_93  +100.414  {buyerZIC_0.BID_2354: +100.426, sellerZIC_4.ASK_2483: +100.403)
+TRANSACTION_94  +100.414  {buyerZIP_0.BID_2388: +101.519, sellerGD_0.ASK_2481: +96.769)
+------ Round 3 -----------
+BID_2400  +102.294  buyerZIP_4
+ASK_2487  +100.493  sellerRE_1
+BID_2409  +104.755  buyerGD_0
+TRANSACTION_95  +104.206  {buyerGD_0.BID_2409: +104.755, sellerZIP_1.ASK_2460: +103.657)
+------ Round 4 -----------
+ASK_2493  +104.855  sellerZIP_3
+BID_2380  +100.075  buyerRE_1
+BID_2400  +102.294  buyerZIP_4
+------ Round 5 -----------
+BID_2400  +102.294  buyerZIP_4
+ASK_2493  +104.855  sellerZIP_3
+BID_2380  +100.075  buyerRE_1
+BID_2421  +103.820  buyerZIC_4
+ASK_2478  +103.267  sellerZIP_0
+TRANSACTION_96  +103.543  {buyerZIC_4.BID_2421: +103.820, sellerZIP_0.ASK_2478: +103.267)
+ASK_2502  +103.313  sellerZIP_1
+ASK_2487  +100.493  sellerRE_1
+------ Round 6 -----------
+ASK_2454  +99.222  sellerZIC_2
+ASK_2502  +103.313  sellerZIP_1
+BID_2400  +102.294  buyerZIP_4
+ASK_2509  +101.288  sellerRE_4
+TRANSACTION_97  +101.791  {buyerZIP_4.BID_2400: +102.294, sellerRE_4.ASK_2509: +101.288)
+BID_2380  +100.075  buyerRE_1
+TRANSACTION_98  +99.648  {buyerRE_1.BID_2380: +100.075, sellerZIC_2.ASK_2454: +99.222)
+------ Round 7 -----------
+BID_2437  +100.075  buyerRE_1
+ASK_2511  +98.756  sellerZIC_1
+BID_2439  +99.195  buyerZIP_2
+BID_2440  +100.336  buyerZIP_4
+ASK_2458  +95.750  sellerZIP_2
+ASK_2502  +103.313  sellerZIP_1
+TRANSACTION_99  +98.976  {buyerZIP_2.BID_2439: +99.195, sellerZIC_1.ASK_2511: +98.756)
+TRANSACTION_100  +98.976  {buyerRE_1.BID_2437: +100.075, sellerZIP_2.ASK_2458: +95.750)
+------ Round 8 -----------
+ASK_2518  +99.274  sellerZIP_2
+BID_2391  +104.448  buyerZIP_1
+TRANSACTION_101  +103.881  {buyerZIP_1.BID_2391: +104.448, sellerZIP_1.ASK_2502: +103.313)
+BID_2448  +56.194  buyerZIC_2
+BID_2452  +100.366  buyerGD_3
+ASK_2493  +104.855  sellerZIP_3
+BID_2454  +100.075  buyerRE_1
+TRANSACTION_102  +99.674  {buyerRE_1.BID_2454: +100.075, sellerZIP_2.ASK_2518: +99.274)
+------ Round 9 -----------
+ASK_2487  +100.493  sellerRE_1
+BID_2448  +73.947  buyerZIC_2
+BID_2460  +104.448  buyerZIP_1
+ASK_2493  +104.855  sellerZIP_3
+ASK_2528  +100.323  sellerZIP_2
+**** Day 27 ]]]]]]]]]]]]]]]]]
+**** Day 28 [[[[[[[[[[[[[[[[[
+private value: 102.86075261654332
+------ Round 0 -----------
+attempt to ask at 95.19294364213944
+ASK_2529  +100.670  sellerZIP_4
+BID_2464  +92.508  buyerZIP_0
+BID_2465  +100.022  buyerRE_1
+BID_2466  +101.174  buyerZIP_2
+ASK_2530  +124.456  sellerRE_0
+BID_2467  +102.878  buyerGD_3
+ASK_2531  +97.220  sellerZIP_1
+TRANSACTION_103  +100.049  {buyerGD_3.BID_2467: +102.878, sellerZIP_1.ASK_2531: +97.220)
+ASK_2532  +106.101  sellerZIP_0
+ASK_2533  +96.265  sellerRE_3
+BID_2468  +89.606  buyerRE_3
+ASK_2537  +100.075  sellerGD_0
+BID_2470  +103.394  buyerZIP_1
+TRANSACTION_104  +99.830  {buyerZIP_1.BID_2470: +103.394, sellerRE_3.ASK_2533: +96.265)
+ASK_2539  +104.855  sellerZIP_3
+BID_2473  +101.872  buyerZIC_3
+BID_2474  +103.313  buyerGD_0
+TRANSACTION_105  +100.372  {buyerZIP_2.BID_2466: +101.174, sellerGD_0.ASK_2537: +100.075)
+------ Round 1 -----------
+ASK_2530  +103.456  sellerRE_0
+BID_2473  +103.450  buyerZIC_3
+BID_2464  +102.615  buyerZIP_0
+ASK_2551  +96.265  sellerRE_3
+TRANSACTION_106  +99.857  {buyerZIC_3.BID_2473: +103.450, sellerRE_3.ASK_2551: +96.265)
+ASK_2552  +100.075  sellerGD_0
+ASK_2529  +100.670  sellerZIP_4
+TRANSACTION_107  +100.372  {buyerZIP_0.BID_2464: +102.615, sellerGD_0.ASK_2552: +100.075)
+------ Round 2 -----------
+BID_2492  +104.169  buyerZIC_1
+TRANSACTION_108  +103.813  {buyerZIC_1.BID_2492: +104.169, sellerRE_0.ASK_2530: +103.456)
+BID_2474  +103.313  buyerGD_0
+ASK_2559  +100.075  sellerGD_0
+ASK_2561  +102.746  sellerZIP_1
+TRANSACTION_109  +103.029  {buyerGD_0.BID_2474: +103.313, sellerZIP_1.ASK_2561: +102.746)
+BID_2465  +100.022  buyerRE_1
+BID_2496  +97.346  buyerZIP_3
+BID_2498  +102.371  buyerZIP_2
+ASK_2539  +104.855  sellerZIP_3
+ASK_2532  +103.521  sellerZIP_0
+BID_2468  +98.606  buyerRE_3
+BID_2502  +102.819  buyerZIP_1
+TRANSACTION_110  +100.372  {buyerZIP_2.BID_2498: +102.371, sellerGD_0.ASK_2559: +100.075)
+------ Round 3 -----------
+BID_2465  +100.022  buyerRE_1
+BID_2507  +101.802  buyerZIC_2
+BID_2508  +103.655  buyerRE_4
+TRANSACTION_111  +103.588  {buyerRE_4.BID_2508: +103.655, sellerZIP_0.ASK_2532: +103.521)
+BID_2509  +103.313  buyerGD_0
+ASK_2529  +100.885  sellerZIP_4
+ASK_2578  +96.265  sellerRE_3
+TRANSACTION_112  +99.789  {buyerGD_0.BID_2509: +103.313, sellerRE_3.ASK_2578: +96.265)
+BID_2514  +102.878  buyerGD_3
+BID_2515  +102.371  buyerZIP_2
+ASK_2580  +100.977  sellerZIP_1
+TRANSACTION_113  +101.927  {buyerGD_3.BID_2514: +102.878, sellerZIP_1.ASK_2580: +100.977)
+TRANSACTION_114  +102.087  {buyerZIP_2.BID_2515: +102.371, sellerZIP_4.ASK_2529: +100.885)
+------ Round 4 -----------
+ASK_2539  +104.855  sellerZIP_3
+ASK_2582  +121.281  sellerZIC_4
+ASK_2586  +102.232  sellerZIP_0
+TRANSACTION_115  +102.526  {buyerZIP_1.BID_2502: +102.819, sellerZIP_0.ASK_2586: +102.232)
+BID_2517  +103.655  buyerRE_4
+ASK_2589  +104.849  sellerZIP_4
+------ Round 5 -----------
+ASK_2589  +101.904  sellerZIP_4
+ASK_2598  +102.232  sellerZIP_0
+TRANSACTION_116  +102.943  {buyerRE_4.BID_2517: +103.655, sellerZIP_0.ASK_2598: +102.232)
+ASK_2539  +104.855  sellerZIP_3
+BID_2532  +102.878  buyerGD_3
+------ Round 6 -----------
+ASK_2539  +104.855  sellerZIP_3
+BID_2532  +102.878  buyerGD_3
+ASK_2589  +101.904  sellerZIP_4
+BID_2541  +103.313  buyerGD_0
+BID_2545  +103.655  buyerRE_4
+------ Round 7 -----------
+ASK_2539  +104.855  sellerZIP_3
+ASK_2589  +101.904  sellerZIP_4
+BID_2550  +105.655  buyerZIC_1
+TRANSACTION_117  +105.255  {buyerZIC_1.BID_2550: +105.655, sellerZIP_3.ASK_2539: +104.855)
+ASK_2617  +132.742  sellerZIC_3
+BID_2545  +103.655  buyerRE_4
+ASK_2618  +105.896  sellerZIP_2
+------ Round 8 -----------
+BID_2545  +103.655  buyerRE_4
+ASK_2618  +105.896  sellerZIP_2
+ASK_2589  +101.904  sellerZIP_4
+------ Round 9 -----------
+ASK_2589  +101.904  sellerZIP_4
+BID_2545  +103.655  buyerRE_4
+ASK_2618  +105.896  sellerZIP_2
+ASK_2617  +102.512  sellerZIC_3
+TRANSACTION_118  +103.083  {buyerRE_4.BID_2545: +103.655, sellerZIC_3.ASK_2617: +102.512)
+**** Day 28 ]]]]]]]]]]]]]]]]]
+**** Day 29 [[[[[[[[[[[[[[[[[
+private value: 95.88339211884886
+------ Round 0 -----------
+attempt to ask at 95.19294364213944
+ASK_2637  +131.604  sellerZIC_2
+BID_2570  +69.468  buyerZIC_2
+BID_2571  +99.952  buyerZIP_1
+ASK_2638  +100.728  sellerZIP_4
+BID_2575  +100.154  buyerZIP_3
+ASK_2642  +97.648  sellerZIP_3
+TRANSACTION_119  +98.901  {buyerZIP_3.BID_2575: +100.154, sellerZIP_3.ASK_2642: +97.648)
+ASK_2644  +192.258  sellerRE_0
+BID_2577  +102.878  buyerGD_3
+ASK_2645  +106.442  sellerZIP_1
+BID_2581  +94.621  buyerZIP_2
+ASK_2647  +106.029  sellerRE_4
+BID_2582  +103.717  buyerRE_1
+ASK_2648  +100.075  sellerGD_0
+ASK_2650  +98.473  sellerRE_3
+TRANSACTION_120  +100.675  {buyerGD_3.BID_2577: +102.878, sellerRE_3.ASK_2650: +98.473)
+TRANSACTION_121  +100.402  {buyerRE_1.BID_2582: +103.717, sellerGD_0.ASK_2648: +100.075)
+------ Round 1 -----------
+ASK_2653  +100.248  sellerZIP_3
+BID_2571  +100.133  buyerZIP_1
+BID_2581  +94.621  buyerZIP_2
+BID_2586  +103.717  buyerRE_1
+BID_2590  +102.878  buyerGD_3
+TRANSACTION_122  +101.563  {buyerGD_3.BID_2590: +102.878, sellerZIP_3.ASK_2653: +100.248)
+ASK_2662  +105.228  sellerZIP_0
+ASK_2663  +100.075  sellerGD_0
+ASK_2638  +100.728  sellerZIP_4
+TRANSACTION_123  +100.402  {buyerRE_1.BID_2586: +103.717, sellerGD_0.ASK_2663: +100.075)
+------ Round 2 -----------
+ASK_2665  +100.075  sellerGD_0
+ASK_2662  +105.228  sellerZIP_0
+BID_2601  +101.446  buyerZIP_4
+ASK_2668  +98.473  sellerRE_3
+TRANSACTION_124  +99.959  {buyerZIP_4.BID_2601: +101.446, sellerRE_3.ASK_2668: +98.473)
+BID_2602  +102.878  buyerGD_3
+BID_2581  +94.621  buyerZIP_2
+BID_2606  +103.717  buyerRE_1
+ASK_2672  +104.250  sellerZIP_3
+TRANSACTION_125  +100.402  {buyerRE_1.BID_2606: +103.717, sellerGD_0.ASK_2665: +100.075)
+------ Round 3 -----------
+BID_2581  +94.621  buyerZIP_2
+ASK_2672  +104.250  sellerZIP_3
+BID_2602  +102.878  buyerGD_3
+ASK_2638  +100.157  sellerZIP_4
+ASK_2647  +100.029  sellerRE_4
+TRANSACTION_126  +101.454  {buyerGD_3.BID_2602: +102.878, sellerRE_4.ASK_2647: +100.029)
+ASK_2645  +102.526  sellerZIP_1
+BID_2612  +104.605  buyerZIP_4
+TRANSACTION_127  +103.566  {buyerZIP_4.BID_2612: +104.605, sellerZIP_1.ASK_2645: +102.526)
+------ Round 4 -----------
+ASK_2672  +102.543  sellerZIP_3
+BID_2581  +94.621  buyerZIP_2
+ASK_2687  +98.473  sellerRE_3
+TRANSACTION_128  +99.303  {buyerZIP_1.BID_2571: +100.133, sellerRE_3.ASK_2687: +98.473)
+ASK_2689  +100.029  sellerRE_4
+BID_2624  +89.936  buyerZIC_3
+BID_2625  +95.942  buyerZIC_1
+ASK_2691  +98.736  sellerZIP_2
+BID_2570  +100.390  buyerZIC_2
+TRANSACTION_129  +99.447  {buyerZIC_2.BID_2570: +100.390, sellerZIP_2.ASK_2691: +98.736)
+------ Round 5 -----------
+ASK_2693  +99.194  sellerZIP_1
+BID_2633  +97.249  buyerZIC_4
+BID_2634  +99.434  buyerRE_4
+TRANSACTION_130  +99.314  {buyerRE_4.BID_2634: +99.434, sellerZIP_1.ASK_2693: +99.194)
+BID_2636  +100.146  buyerZIP_4
+TRANSACTION_131  +100.087  {buyerZIP_4.BID_2636: +100.146, sellerRE_4.ASK_2689: +100.029)
+BID_2581  +94.621  buyerZIP_2
+------ Round 6 -----------
+BID_2640  +99.643  buyerZIP_1
+ASK_2702  +100.029  sellerRE_4
+BID_2581  +94.621  buyerZIP_2
+ASK_2706  +98.903  sellerZIP_1
+TRANSACTION_132  +99.273  {buyerZIP_1.BID_2640: +99.643, sellerZIP_1.ASK_2706: +98.903)
+BID_2644  +103.622  buyerRE_0
+TRANSACTION_133  +101.825  {buyerRE_0.BID_2644: +103.622, sellerRE_4.ASK_2702: +100.029)
+BID_2645  +99.434  buyerRE_4
+------ Round 7 -----------
+BID_2581  +94.621  buyerZIP_2
+BID_2650  +103.622  buyerRE_0
+TRANSACTION_134  +103.082  {buyerRE_0.BID_2650: +103.622, sellerZIP_3.ASK_2672: +102.543)
+BID_2645  +99.434  buyerRE_4
+------ Round 8 -----------
+BID_2657  +103.622  buyerRE_0
+BID_2581  +94.621  buyerZIP_2
+ASK_2662  +103.650  sellerZIP_0
+BID_2660  +97.630  buyerZIC_2
+------ Round 9 -----------
+BID_2657  +103.622  buyerRE_0
+ASK_2662  +103.650  sellerZIP_0
+**** Day 29 ]]]]]]]]]]]]]]]]]
+**** Day 30 [[[[[[[[[[[[[[[[[
+private value: 103.00243120873347
+------ Round 0 -----------
+attempt to ask at 95.19294364213944
+BID_2666  +97.172  buyerZIP_3
+BID_2667  +103.389  buyerZIC_3
+BID_2668  +100.562  buyerZIP_0
+ASK_2730  +103.046  sellerZIP_4
+ASK_2731  +105.586  sellerRE_4
+ASK_2732  +99.601  sellerRE_1
+ASK_2737  +102.738  sellerZIP_0
+TRANSACTION_135  +103.063  {buyerZIC_3.BID_2667: +103.389, sellerZIP_0.ASK_2737: +102.738)
+ASK_2740  +104.989  sellerRE_3
+BID_2676  +97.372  buyerRE_4
+ASK_2742  +104.154  sellerZIC_0
+BID_2679  +103.650  buyerGD_3
+TRANSACTION_136  +100.081  {buyerZIP_0.BID_2668: +100.562, sellerRE_1.ASK_2732: +99.601)
+------ Round 1 -----------
+BID_2681  +106.001  buyerRE_1
+ASK_2746  +99.601  sellerRE_1
+ASK_2747  +103.860  sellerZIP_3
+BID_2679  +104.053  buyerGD_3
+TRANSACTION_137  +103.956  {buyerGD_3.BID_2679: +104.053, sellerZIP_3.ASK_2747: +103.860)
+BID_2685  +100.899  buyerZIP_0
+BID_2676  +97.372  buyerRE_4
+ASK_2730  +103.046  sellerZIP_4
+ASK_2755  +102.738  sellerZIP_0
+TRANSACTION_138  +101.973  {buyerRE_1.BID_2681: +106.001, sellerRE_1.ASK_2746: +99.601)
+------ Round 2 -----------
+BID_2694  +102.591  buyerZIP_2
+BID_2695  +99.730  buyerZIC_4
+ASK_2760  +99.601  sellerRE_1
+BID_2703  +104.053  buyerGD_3
+TRANSACTION_139  +103.395  {buyerGD_3.BID_2703: +104.053, sellerZIP_0.ASK_2755: +102.738)
+TRANSACTION_140  +101.745  {buyerZIP_2.BID_2694: +102.591, sellerRE_1.ASK_2760: +99.601)
+------ Round 3 -----------
+BID_2706  +104.053  buyerGD_3
+ASK_2770  +103.728  sellerZIP_3
+TRANSACTION_141  +103.891  {buyerGD_3.BID_2706: +104.053, sellerZIP_3.ASK_2770: +103.728)
+BID_2707  +101.344  buyerZIP_2
+BID_2710  +102.930  buyerRE_0
+ASK_2730  +103.046  sellerZIP_4
+------ Round 4 -----------
+BID_2710  +102.930  buyerRE_0
+BID_2719  +101.601  buyerZIC_0
+ASK_2730  +103.046  sellerZIP_4
+------ Round 5 -----------
+BID_2710  +102.930  buyerRE_0
+ASK_2742  +100.063  sellerZIC_0
+TRANSACTION_142  +101.497  {buyerRE_0.BID_2710: +102.930, sellerZIC_0.ASK_2742: +100.063)
+BID_2685  +104.897  buyerZIP_0
+ASK_2740  +104.989  sellerRE_3
+ASK_2791  +104.133  sellerZIP_2
+ASK_2792  +104.451  sellerZIP_0
+ASK_2730  +103.046  sellerZIP_4
+BID_2729  +103.117  buyerRE_3
+TRANSACTION_143  +103.590  {buyerZIP_0.BID_2685: +104.897, sellerZIP_4.ASK_2730: +103.046)
+------ Round 6 -----------
+ASK_2796  +103.046  sellerZIP_4
+BID_2729  +103.117  buyerRE_3
+ASK_2799  +102.778  sellerZIP_3
+TRANSACTION_144  +102.947  {buyerRE_3.BID_2729: +103.117, sellerZIP_3.ASK_2799: +102.778)
+BID_2707  +103.137  buyerZIP_2
+BID_2732  +106.001  buyerRE_1
+BID_2733  +106.439  buyerZIP_0
+ASK_2792  +104.451  sellerZIP_0
+TRANSACTION_145  +105.067  {buyerRE_1.BID_2732: +106.001, sellerZIP_2.ASK_2791: +104.133)
+TRANSACTION_146  +105.067  {buyerZIP_0.BID_2733: +106.439, sellerZIP_4.ASK_2796: +103.046)
+------ Round 7 -----------
+ASK_2806  +148.844  sellerZIC_1
+ASK_2792  +104.451  sellerZIP_0
+BID_2707  +103.228  buyerZIP_2
+ASK_2808  +99.184  sellerZIP_4
+ASK_2809  +100.047  sellerZIC_2
+ASK_2813  +98.844  sellerZIC_3
+TRANSACTION_147  +99.287  {buyerZIC_4.BID_2695: +99.730, sellerZIC_3.ASK_2813: +98.844)
+TRANSACTION_148  +100.824  {buyerZIC_0.BID_2719: +101.601, sellerZIC_2.ASK_2809: +100.047)
+TRANSACTION_149  +100.824  {buyerZIP_2.BID_2707: +103.228, sellerZIP_4.ASK_2808: +99.184)
+------ Round 8 -----------
+BID_2747  +103.228  buyerZIP_2
+ASK_2816  +112.895  sellerZIC_2
+ASK_2792  +104.451  sellerZIP_0
+ASK_2820  +98.942  sellerZIP_1
+ASK_2823  +105.523  sellerZIP_2
+------ Round 9 -----------
+BID_2747  +103.228  buyerZIP_2
+ASK_2823  +105.523  sellerZIP_2
+BID_2676  +97.372  buyerRE_4
+ASK_2820  +98.942  sellerZIP_1
+**** Day 30 ]]]]]]]]]]]]]]]]]
+**** Day 31 [[[[[[[[[[[[[[[[[
+private value: 95.63895441358909
+------ Round 0 -----------
+attempt to ask at 95.19294364213944
+ASK_2829  +100.075  sellerGD_0
+ASK_2830  +99.657  sellerZIC_0
+BID_2768  +96.470  buyerZIP_4
+BID_2769  +102.441  buyerZIP_1
+ASK_2833  +96.800  sellerRE_3
+BID_2772  +98.942  buyerGD_3
+TRANSACTION_150  +97.871  {buyerGD_3.BID_2772: +98.942, sellerRE_3.ASK_2833: +96.800)
+BID_2774  +103.203  buyerRE_0
+TRANSACTION_151  +101.430  {buyerRE_0.BID_2774: +103.203, sellerZIC_0.ASK_2830: +99.657)
+ASK_2835  +98.020  sellerRE_1
+ASK_2836  +105.215  sellerRE_4
+ASK_2839  +101.968  sellerZIC_3
+BID_2778  +97.172  buyerZIP_3
+ASK_2842  +99.538  sellerZIP_0
+BID_2782  +104.755  buyerGD_2
+TRANSACTION_152  +102.147  {buyerGD_2.BID_2782: +104.755, sellerZIP_0.ASK_2842: +99.538)
+BID_2783  +100.746  buyerZIP_0
+TRANSACTION_153  +100.410  {buyerZIP_0.BID_2783: +100.746, sellerGD_0.ASK_2829: +100.075)
+TRANSACTION_154  +100.410  {buyerZIP_1.BID_2769: +102.441, sellerRE_1.ASK_2835: +98.020)
+------ Round 1 -----------
+ASK_2846  +100.075  sellerGD_0
+BID_2784  +82.075  buyerZIC_4
+BID_2785  +97.388  buyerRE_3
+ASK_2852  +98.020  sellerRE_1
+BID_2787  +98.942  buyerGD_3
+BID_2788  +104.755  buyerGD_2
+TRANSACTION_155  +103.362  {buyerGD_2.BID_2788: +104.755, sellerZIC_3.ASK_2839: +101.968)
+BID_2768  +100.768  buyerZIP_4
+BID_2791  +98.129  buyerZIP_1
+BID_2796  +100.736  buyerZIP_0
+TRANSACTION_156  +99.102  {buyerZIP_0.BID_2796: +100.736, sellerRE_1.ASK_2852: +98.020)
+------ Round 2 -----------
+BID_2798  +106.764  buyerRE_1
+ASK_2862  +98.020  sellerRE_1
+ASK_2846  +100.075  sellerGD_0
+BID_2791  +101.773  buyerZIP_1
+BID_2803  +100.736  buyerZIP_0
+ASK_2868  +105.205  sellerZIP_3
+ASK_2869  +99.711  sellerZIC_4
+BID_2806  +104.755  buyerGD_2
+TRANSACTION_157  +100.406  {buyerZIP_0.BID_2803: +100.736, sellerGD_0.ASK_2846: +100.075)
+TRANSACTION_158  +100.406  {buyerZIP_1.BID_2791: +101.773, sellerZIC_4.ASK_2869: +99.711)
+TRANSACTION_159  +100.406  {buyerRE_1.BID_2798: +106.764, sellerRE_1.ASK_2862: +98.020)
+------ Round 3 -----------
+ASK_2868  +105.205  sellerZIP_3
+ASK_2873  +114.325  sellerRE_2
+ASK_2874  +100.075  sellerGD_0
+BID_2810  +106.764  buyerRE_1
+ASK_2877  +102.569  sellerZIP_0
+TRANSACTION_160  +103.662  {buyerGD_2.BID_2806: +104.755, sellerZIP_0.ASK_2877: +102.569)
+BID_2811  +103.203  buyerRE_0
+ASK_2879  +96.800  sellerRE_3
+TRANSACTION_161  +100.001  {buyerRE_0.BID_2811: +103.203, sellerRE_3.ASK_2879: +96.800)
+ASK_2881  +104.464  sellerZIP_1
+ASK_2883  +105.289  sellerZIP_4
+TRANSACTION_162  +102.682  {buyerRE_1.BID_2810: +106.764, sellerGD_0.ASK_2874: +100.075)
+------ Round 4 -----------
+BID_2818  +99.958  buyerZIP_1
+ASK_2883  +105.289  sellerZIP_4
+ASK_2889  +98.371  sellerZIC_3
+TRANSACTION_163  +99.569  {buyerZIP_4.BID_2768: +100.768, sellerZIC_3.ASK_2889: +98.371)
+ASK_2891  +102.569  sellerZIP_0
+------ Round 5 -----------
+BID_2818  +99.958  buyerZIP_1
+BID_2785  +106.388  buyerRE_3
+TRANSACTION_164  +104.479  {buyerRE_3.BID_2785: +106.388, sellerZIP_0.ASK_2891: +102.569)
+ASK_2883  +105.289  sellerZIP_4
+ASK_2868  +100.762  sellerZIP_3
+BID_2787  +99.633  buyerGD_3
+ASK_2901  +102.302  sellerZIP_2
+------ Round 6 -----------
+ASK_2907  +96.800  sellerRE_3
+TRANSACTION_165  +98.217  {buyerGD_3.BID_2787: +99.633, sellerRE_3.ASK_2907: +96.800)
+BID_2818  +99.958  buyerZIP_1
+BID_2839  +103.203  buyerRE_0
+TRANSACTION_166  +101.982  {buyerRE_0.BID_2839: +103.203, sellerZIP_3.ASK_2868: +100.762)
+BID_2842  +97.793  buyerZIP_4
+ASK_2901  +102.302  sellerZIP_2
+------ Round 7 -----------
+ASK_2910  +98.270  sellerZIC_4
+BID_2818  +99.958  buyerZIP_1
+BID_2846  +106.764  buyerRE_1
+ASK_2913  +102.489  sellerZIP_3
+BID_2849  +99.633  buyerGD_3
+TRANSACTION_167  +101.130  {buyerRE_1.BID_2846: +106.764, sellerZIC_4.ASK_2910: +98.270)
+------ Round 8 -----------
+BID_2849  +99.633  buyerGD_3
+ASK_2913  +102.489  sellerZIP_3
+ASK_2919  +101.769  sellerZIC_0
+BID_2818  +99.958  buyerZIP_1
+------ Round 9 -----------
+ASK_2925  +99.739  sellerZIC_3
+BID_2866  +103.236  buyerZIC_0
+BID_2849  +99.633  buyerGD_3
+BID_2842  +101.137  buyerZIP_4
+TRANSACTION_168  +100.438  {buyerZIP_4.BID_2842: +101.137, sellerZIC_3.ASK_2925: +99.739)
+TRANSACTION_169  +102.769  {buyerZIC_0.BID_2866: +103.236, sellerZIP_2.ASK_2901: +102.302)
+**** Day 31 ]]]]]]]]]]]]]]]]]
+**** Day 32 [[[[[[[[[[[[[[[[[
+private value: 97.71129530156031
+------ Round 0 -----------
+attempt to ask at 95.19294364213944
+BID_2868  +60.000  buyerGD_2
+ASK_2928  +114.658  sellerRE_3
+BID_2869  +99.958  buyerZIP_1
+ASK_2929  +107.573  sellerZIC_2
+ASK_2931  +102.489  sellerZIP_3
+BID_2870  +103.160  buyerZIP_4
+TRANSACTION_170  +102.824  {buyerZIP_4.BID_2870: +103.160, sellerZIP_3.ASK_2931: +102.489)
+ASK_2933  +97.015  sellerRE_1
+BID_2874  +26.750  buyerRE_2
+BID_2876  +100.679  buyerRE_4
+BID_2877  +103.313  buyerGD_0
+ASK_2937  +101.596  sellerRE_4
+TRANSACTION_171  +102.455  {buyerGD_0.BID_2877: +103.313, sellerRE_4.ASK_2937: +101.596)
+BID_2879  +73.998  buyerZIC_0
+BID_2880  +102.936  buyerRE_0
+ASK_2940  +106.945  sellerZIP_1
+BID_2882  +95.988  buyerZIP_0
+------ Round 1 -----------
+ASK_2944  +105.654  sellerZIP_3
+ASK_2945  +101.716  sellerZIC_3
+TRANSACTION_172  +102.326  {buyerRE_0.BID_2880: +102.936, sellerZIC_3.ASK_2945: +101.716)
+ASK_2933  +97.015  sellerRE_1
+ASK_2928  +98.658  sellerRE_3
+TRANSACTION_173  +99.669  {buyerRE_4.BID_2876: +100.679, sellerRE_3.ASK_2928: +98.658)
+BID_2893  +103.313  buyerGD_0
+BID_2882  +95.988  buyerZIP_0
+BID_2869  +106.487  buyerZIP_1
+TRANSACTION_174  +106.071  {buyerZIP_1.BID_2869: +106.487, sellerZIP_3.ASK_2944: +105.654)
+------ Round 2 -----------
+ASK_2955  +101.596  sellerRE_4
+TRANSACTION_175  +102.455  {buyerGD_0.BID_2893: +103.313, sellerRE_4.ASK_2955: +101.596)
+BID_2898  +62.503  buyerZIC_4
+BID_2899  +71.679  buyerRE_4
+BID_2900  +105.977  buyerRE_1
+ASK_2959  +97.808  sellerZIP_4
+BID_2868  +101.735  buyerGD_2
+BID_2906  +105.897  buyerZIP_1
+ASK_2940  +106.945  sellerZIP_1
+TRANSACTION_176  +97.412  {buyerRE_1.BID_2900: +105.977, sellerRE_1.ASK_2933: +97.015)
+------ Round 3 -----------
+ASK_2959  +97.808  sellerZIP_4
+BID_2879  +100.822  buyerZIC_0
+ASK_2970  +102.672  sellerZIP_0
+TRANSACTION_177  +104.285  {buyerZIP_1.BID_2906: +105.897, sellerZIP_0.ASK_2970: +102.672)
+ASK_2971  +100.038  sellerZIP_2
+BID_2868  +101.735  buyerGD_2
+ASK_2973  +97.015  sellerRE_1
+BID_2914  +103.313  buyerGD_0
+ASK_2975  +98.658  sellerRE_3
+TRANSACTION_178  +100.986  {buyerGD_0.BID_2914: +103.313, sellerRE_3.ASK_2975: +98.658)
+ASK_2940  +106.945  sellerZIP_1
+TRANSACTION_179  +97.412  {buyerZIC_0.BID_2879: +100.822, sellerRE_1.ASK_2973: +97.015)
+------ Round 4 -----------
+BID_2868  +101.735  buyerGD_2
+ASK_2980  +102.672  sellerZIP_0
+BID_2920  +101.735  buyerGD_3
+BID_2921  +105.977  buyerRE_1
+ASK_2959  +97.808  sellerZIP_4
+ASK_2986  +97.015  sellerRE_1
+TRANSACTION_180  +97.412  {buyerRE_1.BID_2921: +105.977, sellerRE_1.ASK_2986: +97.015)
+------ Round 5 -----------
+BID_2868  +102.672  buyerGD_2
+TRANSACTION_181  +102.672  {buyerGD_2.BID_2868: +102.672, sellerZIP_0.ASK_2980: +102.672)
+ASK_2989  +98.658  sellerRE_3
+TRANSACTION_182  +100.197  {buyerGD_3.BID_2920: +101.735, sellerRE_3.ASK_2989: +98.658)
+BID_2899  +71.679  buyerRE_4
+ASK_2959  +97.808  sellerZIP_4
+ASK_2990  +100.201  sellerZIP_3
+BID_2898  +80.777  buyerZIC_4
+BID_2933  +99.205  buyerZIC_0
+BID_2934  +95.095  buyerZIP_3
+BID_2936  +96.464  buyerRE_3
+BID_2937  +100.953  buyerZIP_1
+TRANSACTION_183  +100.577  {buyerZIP_1.BID_2937: +100.953, sellerZIP_3.ASK_2990: +100.201)
+TRANSACTION_184  +98.506  {buyerZIC_0.BID_2933: +99.205, sellerZIP_4.ASK_2959: +97.808)
+------ Round 6 -----------
+BID_2938  +97.695  buyerZIP_4
+ASK_2940  +106.945  sellerZIP_1
+BID_2940  +102.672  buyerGD_3
+BID_2941  +102.672  buyerGD_2
+ASK_3001  +97.808  sellerZIP_4
+ASK_3003  +104.425  sellerZIP_0
+BID_2882  +95.988  buyerZIP_0
+------ Round 7 -----------
+BID_2940  +103.185  buyerGD_3
+ASK_3003  +104.425  sellerZIP_0
+BID_2938  +103.906  buyerZIP_4
+BID_2882  +95.988  buyerZIP_0
+------ Round 8 -----------
+BID_2938  +103.906  buyerZIP_4
+BID_2882  +95.988  buyerZIP_0
+ASK_3003  +104.425  sellerZIP_0
+------ Round 9 -----------
+BID_2938  +103.906  buyerZIP_4
+ASK_3003  +104.425  sellerZIP_0
+BID_2882  +95.988  buyerZIP_0
+**** Day 32 ]]]]]]]]]]]]]]]]]
+**** Day 33 [[[[[[[[[[[[[[[[[
+private value: 101.9195223483257
+------ Round 0 -----------
+attempt to ask at 95.19294364213944
+BID_2965  +104.321  buyerGD_3
+BID_2966  +100.327  buyerZIC_3
+ASK_3028  +104.425  sellerZIP_0
+ASK_3029  +100.521  sellerGD_0
+BID_2976  +101.856  buyerZIP_4
+BID_2977  +103.313  buyerGD_2
+ASK_3038  +102.165  sellerRE_1
+ASK_3040  +102.137  sellerRE_3
+TRANSACTION_185  +102.739  {buyerGD_2.BID_2977: +103.313, sellerRE_1.ASK_3038: +102.165)
+TRANSACTION_186  +102.739  {buyerGD_3.BID_2965: +104.321, sellerGD_0.ASK_3029: +100.521)
+------ Round 1 -----------
+BID_2981  +72.484  buyerZIC_1
+BID_2982  +103.313  buyerGD_2
+ASK_3044  +100.521  sellerGD_0
+BID_2983  +104.321  buyerGD_3
+ASK_3046  +101.596  sellerZIP_3
+TRANSACTION_187  +101.726  {buyerZIP_4.BID_2976: +101.856, sellerZIP_3.ASK_3046: +101.596)
+BID_2986  +100.873  buyerZIC_4
+ASK_3047  +97.445  sellerZIP_1
+TRANSACTION_188  +99.159  {buyerZIC_4.BID_2986: +100.873, sellerZIP_1.ASK_3047: +97.445)
+TRANSACTION_189  +103.817  {buyerGD_3.BID_2983: +104.321, sellerGD_0.ASK_3044: +100.521)
+------ Round 2 -----------
+ASK_3057  +111.590  sellerZIC_0
+BID_2996  +101.796  buyerZIP_4
+ASK_3059  +108.808  sellerZIC_4
+ASK_3060  +102.165  sellerRE_1
+BID_2982  +103.313  buyerGD_2
+BID_3005  +104.321  buyerGD_3
+ASK_3064  +100.521  sellerGD_0
+ASK_3065  +101.596  sellerZIP_3
+TRANSACTION_190  +101.696  {buyerZIP_4.BID_2996: +101.796, sellerZIP_3.ASK_3065: +101.596)
+TRANSACTION_191  +102.739  {buyerGD_2.BID_2982: +103.313, sellerRE_1.ASK_3060: +102.165)
+TRANSACTION_192  +102.739  {buyerGD_3.BID_3005: +104.321, sellerGD_0.ASK_3064: +100.521)
+------ Round 3 -----------
+ASK_3069  +101.596  sellerZIP_3
+BID_3008  +93.182  buyerZIC_2
+BID_3009  +100.267  buyerZIP_2
+ASK_3073  +105.471  sellerZIP_4
+BID_3015  +100.811  buyerZIC_0
+ASK_3076  +105.380  sellerRE_2
+ASK_3077  +102.165  sellerRE_1
+BID_3018  +103.313  buyerGD_2
+TRANSACTION_193  +102.739  {buyerGD_2.BID_3018: +103.313, sellerRE_1.ASK_3077: +102.165)
+------ Round 4 -----------
+ASK_3069  +101.596  sellerZIP_3
+BID_3021  +101.579  buyerRE_0
+BID_3009  +103.308  buyerZIP_2
+------ Round 5 -----------
+ASK_3087  +100.652  sellerZIP_1
+TRANSACTION_194  +101.116  {buyerRE_0.BID_3021: +101.579, sellerZIP_1.ASK_3087: +100.652)
+ASK_3059  +101.980  sellerZIC_4
+BID_3009  +103.308  buyerZIP_2
+ASK_3069  +101.596  sellerZIP_3
+BID_3033  +101.184  buyerZIP_4
+ASK_3028  +97.312  sellerZIP_0
+TRANSACTION_195  +99.248  {buyerZIP_4.BID_3033: +101.184, sellerZIP_0.ASK_3028: +97.312)
+ASK_3076  +97.380  sellerRE_2
+TRANSACTION_196  +101.396  {buyerZIP_2.BID_3009: +103.308, sellerRE_2.ASK_3076: +97.380)
+------ Round 6 -----------
+ASK_3091  +100.652  sellerZIP_1
+BID_3040  +101.579  buyerRE_0
+TRANSACTION_197  +101.116  {buyerRE_0.BID_3040: +101.579, sellerZIP_1.ASK_3091: +100.652)
+ASK_3096  +97.380  sellerRE_2
+ASK_3069  +101.596  sellerZIP_3
+TRANSACTION_198  +99.095  {buyerZIC_0.BID_3015: +100.811, sellerRE_2.ASK_3096: +97.380)
+------ Round 7 -----------
+BID_3047  +100.639  buyerZIC_4
+ASK_3100  +101.380  sellerRE_2
+BID_3048  +107.266  buyerRE_3
+TRANSACTION_199  +104.431  {buyerRE_3.BID_3048: +107.266, sellerZIP_3.ASK_3069: +101.596)
+BID_3053  +96.780  buyerZIP_2
+BID_3056  +103.238  buyerZIP_0
+TRANSACTION_200  +101.680  {buyerZIP_0.BID_3056: +103.238, sellerRE_2.ASK_3100: +101.380)
+------ Round 8 -----------
+BID_3058  +100.447  buyerZIC_0
+BID_3060  +102.106  buyerRE_1
+TRANSACTION_201  +102.043  {buyerRE_1.BID_3060: +102.106, sellerZIC_4.ASK_3059: +101.980)
+------ Round 9 -----------
+BID_3066  +103.129  buyerRE_2
+ASK_3073  +105.471  sellerZIP_4
+**** Day 33 ]]]]]]]]]]]]]]]]]
+**** Day 34 [[[[[[[[[[[[[[[[[
+private value: 97.58344190893695
+------ Round 0 -----------
+attempt to ask at 95.19294364213944
+BID_3072  +74.724  buyerRE_4
+ASK_3119  +100.130  sellerRE_2
+BID_3073  +13.799  buyerRE_2
+BID_3074  +97.726  buyerZIP_0
+ASK_3122  +113.400  sellerZIP_3
+BID_3075  +94.259  buyerZIP_1
+BID_3076  +95.519  buyerZIP_4
+BID_3077  +106.421  buyerZIP_2
+BID_3078  +97.380  buyerGD_3
+BID_3080  +100.249  buyerZIC_0
+ASK_3127  +108.787  sellerZIP_1
+ASK_3128  +103.308  sellerGD_0
+BID_3084  +97.380  buyerGD_2
+ASK_3132  +104.488  sellerZIP_2
+TRANSACTION_202  +101.778  {buyerZIP_2.BID_3077: +106.421, sellerRE_2.ASK_3119: +100.130)
+------ Round 1 -----------
+BID_3090  +104.361  buyerRE_0
+ASK_3137  +100.130  sellerRE_2
+ASK_3132  +104.488  sellerZIP_2
+BID_3092  +105.560  buyerRE_1
+BID_3093  +106.421  buyerZIP_2
+ASK_3128  +103.308  sellerGD_0
+ASK_3146  +104.516  sellerRE_1
+TRANSACTION_203  +103.912  {buyerRE_1.BID_3092: +105.560, sellerGD_0.ASK_3128: +103.308)
+TRANSACTION_204  +103.912  {buyerZIP_2.BID_3093: +106.421, sellerRE_2.ASK_3137: +100.130)
+------ Round 2 -----------
+ASK_3151  +98.868  sellerZIP_4
+ASK_3122  +103.836  sellerZIP_3
+TRANSACTION_205  +104.098  {buyerRE_0.BID_3090: +104.361, sellerZIP_3.ASK_3122: +103.836)
+ASK_3153  +100.130  sellerRE_2
+BID_3103  +106.421  buyerZIP_2
+BID_3105  +105.560  buyerRE_1
+ASK_3156  +103.308  sellerGD_0
+BID_3078  +97.380  buyerGD_3
+ASK_3132  +104.488  sellerZIP_2
+TRANSACTION_206  +101.778  {buyerRE_1.BID_3105: +105.560, sellerRE_2.ASK_3153: +100.130)
+TRANSACTION_207  +101.778  {buyerZIP_2.BID_3103: +106.421, sellerZIP_4.ASK_3151: +98.868)
+------ Round 3 -----------
+BID_3106  +101.165  buyerZIP_3
+ASK_3156  +103.308  sellerGD_0
+BID_3108  +100.560  buyerRE_1
+BID_3076  +103.776  buyerZIP_4
+ASK_3162  +98.868  sellerZIP_4
+ASK_3132  +104.488  sellerZIP_2
+ASK_3166  +102.742  sellerRE_3
+TRANSACTION_208  +103.259  {buyerZIP_4.BID_3076: +103.776, sellerRE_3.ASK_3166: +102.742)
+BID_3080  +103.767  buyerZIC_0
+ASK_3168  +103.836  sellerZIP_3
+BID_3084  +102.106  buyerGD_2
+TRANSACTION_209  +101.934  {buyerZIC_0.BID_3080: +103.767, sellerZIP_4.ASK_3162: +98.868)
+------ Round 4 -----------
+ASK_3175  +102.742  sellerRE_3
+BID_3119  +103.779  buyerZIC_4
+TRANSACTION_210  +103.260  {buyerZIC_4.BID_3119: +103.779, sellerRE_3.ASK_3175: +102.742)
+BID_3084  +103.238  buyerGD_2
+ASK_3156  +103.308  sellerGD_0
+------ Round 5 -----------
+ASK_3156  +103.308  sellerGD_0
+ASK_3168  +103.836  sellerZIP_3
+BID_3084  +103.668  buyerGD_2
+------ Round 6 -----------
+ASK_3156  +103.308  sellerGD_0
+ASK_3191  +102.742  sellerRE_3
+TRANSACTION_211  +103.205  {buyerGD_2.BID_3084: +103.668, sellerRE_3.ASK_3191: +102.742)
+BID_3072  +103.724  buyerRE_4
+ASK_3168  +103.836  sellerZIP_3
+------ Round 7 -----------
+ASK_3156  +103.308  sellerGD_0
+ASK_3205  +101.460  sellerZIP_4
+ASK_3168  +103.836  sellerZIP_3
+BID_3145  +103.776  buyerGD_2
+------ Round 8 -----------
+BID_3145  +103.779  buyerGD_2
+BID_3108  +105.560  buyerRE_1
+ASK_3127  +100.144  sellerZIP_1
+TRANSACTION_212  +101.962  {buyerGD_2.BID_3145: +103.779, sellerZIP_1.ASK_3127: +100.144)
+BID_3151  +104.196  buyerZIC_0
+ASK_3205  +101.460  sellerZIP_4
+ASK_3168  +103.836  sellerZIP_3
+ASK_3132  +102.832  sellerZIP_2
+TRANSACTION_213  +103.278  {buyerRE_4.BID_3072: +103.724, sellerZIP_2.ASK_3132: +102.832)
+ASK_3156  +103.308  sellerGD_0
+TRANSACTION_214  +103.752  {buyerZIC_0.BID_3151: +104.196, sellerGD_0.ASK_3156: +103.308)
+TRANSACTION_215  +103.752  {buyerRE_1.BID_3108: +105.560, sellerZIP_4.ASK_3205: +101.460)
+------ Round 9 -----------
+ASK_3220  +102.944  sellerZIP_1
+ASK_3223  +103.308  sellerGD_0
+BID_3161  +105.418  buyerZIC_2
+BID_3162  +103.779  buyerGD_2
+TRANSACTION_216  +103.362  {buyerGD_2.BID_3162: +103.779, sellerZIP_1.ASK_3220: +102.944)
+ASK_3168  +103.836  sellerZIP_3
+ASK_3227  +102.832  sellerZIP_2
+TRANSACTION_217  +103.912  {buyerZIC_2.BID_3161: +105.418, sellerGD_0.ASK_3223: +103.308)
+**** Day 34 ]]]]]]]]]]]]]]]]]
+**** Day 35 [[[[[[[[[[[[[[[[[
+private value: 103.54951915098354
+------ Round 0 -----------
+attempt to ask at 95.19294364213944
+ASK_3228  +104.901  sellerZIC_1
+BID_3165  +97.380  buyerGD_3
+BID_3167  +99.892  buyerGD_0
+BID_3170  +103.015  buyerZIP_2
+ASK_3229  +138.600  sellerRE_0
+ASK_3230  +108.318  sellerZIP_2
+ASK_3231  +103.836  sellerZIP_3
+ASK_3233  +101.071  sellerZIP_1
+ASK_3234  +103.308  sellerGD_0
+ASK_3238  +95.962  sellerGD_4
+TRANSACTION_218  +97.927  {buyerGD_0.BID_3167: +99.892, sellerGD_4.ASK_3238: +95.962)
+BID_3179  +103.779  buyerGD_2
+TRANSACTION_219  +102.425  {buyerGD_2.BID_3179: +103.779, sellerZIP_1.ASK_3233: +101.071)
+BID_3180  +98.038  buyerZIP_1
+BID_3181  +99.281  buyerZIC_1
+ASK_3239  +97.118  sellerZIP_0
+TRANSACTION_220  +98.200  {buyerZIC_1.BID_3181: +99.281, sellerZIP_0.ASK_3239: +97.118)
+ASK_3240  +96.509  sellerRE_2
+TRANSACTION_221  +100.197  {buyerZIP_2.BID_3170: +103.015, sellerRE_2.ASK_3240: +96.509)
+------ Round 1 -----------
+BID_3184  +104.959  buyerRE_1
+BID_3186  +103.779  buyerGD_2
+ASK_3247  +101.782  sellerZIC_0
+TRANSACTION_222  +102.780  {buyerGD_2.BID_3186: +103.779, sellerZIC_0.ASK_3247: +101.782)
+ASK_3248  +101.447  sellerZIP_4
+ASK_3251  +96.509  sellerRE_2
+ASK_3252  +95.962  sellerGD_4
+TRANSACTION_223  +97.000  {buyerZIP_1.BID_3180: +98.038, sellerGD_4.ASK_3252: +95.962)
+BID_3196  +102.275  buyerZIP_3
+BID_3165  +97.380  buyerGD_3
+BID_3197  +101.263  buyerZIP_0
+TRANSACTION_224  +101.355  {buyerRE_1.BID_3184: +104.959, sellerRE_2.ASK_3251: +96.509)
+------ Round 2 -----------
+ASK_3257  +96.509  sellerRE_2
+BID_3200  +103.779  buyerGD_2
+BID_3165  +97.380  buyerGD_3
+ASK_3260  +95.962  sellerGD_4
+TRANSACTION_225  +99.871  {buyerGD_2.BID_3200: +103.779, sellerGD_4.ASK_3260: +95.962)
+BID_3197  +100.040  buyerZIP_0
+BID_3207  +99.015  buyerZIC_4
+BID_3210  +107.004  buyerZIP_2
+TRANSACTION_226  +100.744  {buyerZIP_2.BID_3210: +107.004, sellerRE_2.ASK_3257: +96.509)
+------ Round 3 -----------
+BID_3197  +100.040  buyerZIP_0
+BID_3220  +104.959  buyerRE_1
+ASK_3248  +101.447  sellerZIP_4
+BID_3226  +107.004  buyerZIP_2
+TRANSACTION_227  +104.104  {buyerRE_1.BID_3220: +104.959, sellerGD_0.ASK_3234: +103.308)
+TRANSACTION_228  +104.104  {buyerZIP_2.BID_3226: +107.004, sellerZIP_4.ASK_3248: +101.447)
+------ Round 4 -----------
+ASK_3277  +97.869  sellerZIC_0
+TRANSACTION_229  +100.072  {buyerZIP_3.BID_3196: +102.275, sellerZIC_0.ASK_3277: +97.869)
+BID_3229  +100.449  buyerZIP_1
+ASK_3279  +95.274  sellerRE_3
+TRANSACTION_230  +97.861  {buyerZIP_1.BID_3229: +100.449, sellerRE_3.ASK_3279: +95.274)
+BID_3197  +100.040  buyerZIP_0
+BID_3231  +0.000  buyerRE_4
+BID_3232  +96.264  buyerZIP_4
+BID_3233  +99.221  buyerRE_0
+BID_3234  +99.597  buyerZIC_3
+BID_3236  +99.892  buyerGD_0
+ASK_3285  +103.015  sellerGD_0
+------ Round 5 -----------
+ASK_3285  +103.015  sellerGD_0
+BID_3243  +101.943  buyerZIP_3
+BID_3197  +100.040  buyerZIP_0
+------ Round 6 -----------
+ASK_3300  +98.304  sellerZIC_4
+BID_3197  +100.040  buyerZIP_0
+BID_3243  +101.943  buyerZIP_3
+TRANSACTION_231  +99.528  {buyerZIP_0.BID_3197: +100.040, sellerZIC_4.ASK_3300: +98.304)
+------ Round 7 -----------
+ASK_3285  +103.015  sellerGD_0
+ASK_3315  +95.274  sellerRE_3
+TRANSACTION_232  +98.609  {buyerZIP_3.BID_3243: +101.943, sellerRE_3.ASK_3315: +95.274)
+BID_3259  +99.959  buyerRE_1
+BID_3261  +100.040  buyerZIP_0
+------ Round 8 -----------
+BID_3259  +104.959  buyerRE_1
+ASK_3285  +103.015  sellerGD_0
+BID_3236  +99.892  buyerGD_0
+BID_3267  +101.870  buyerZIP_1
+ASK_3326  +104.806  sellerZIP_4
+TRANSACTION_233  +103.911  {buyerRE_1.BID_3259: +104.959, sellerGD_0.ASK_3285: +103.015)
+------ Round 9 -----------
+ASK_3331  +103.015  sellerGD_0
+BID_3261  +100.040  buyerZIP_0
+ASK_3334  +102.276  sellerZIC_0
+**** Day 35 ]]]]]]]]]]]]]]]]]
+**** Day 36 [[[[[[[[[[[[[[[[[
+private value: 99.21309273224324
+------ Round 0 -----------
+attempt to ask at 95.19294364213944
+ASK_3338  +107.578  sellerZIP_3
+BID_3275  +102.278  buyerZIP_4
+ASK_3339  +103.941  sellerZIC_2
+BID_3276  +92.729  buyerZIP_2
+ASK_3343  +103.015  sellerGD_0
+ASK_3345  +102.811  sellerRE_2
+ASK_3346  +100.725  sellerRE_4
+TRANSACTION_234  +101.501  {buyerZIP_4.BID_3275: +102.278, sellerRE_4.ASK_3346: +100.725)
+BID_3281  +93.554  buyerZIP_1
+BID_3282  +99.892  buyerGD_0
+BID_3284  +100.040  buyerZIP_0
+ASK_3350  +105.896  sellerZIP_1
+BID_3291  +97.380  buyerGD_3
+------ Round 1 -----------
+ASK_3338  +102.731  sellerZIP_3
+BID_3284  +100.040  buyerZIP_0
+BID_3295  +97.773  buyerZIP_4
+BID_3276  +101.272  buyerZIP_2
+ASK_3350  +100.922  sellerZIP_1
+ASK_3359  +100.988  sellerZIP_2
+ASK_3360  +98.750  sellerRE_3
+BID_3282  +102.275  buyerGD_0
+ASK_3339  +100.076  sellerZIC_2
+BID_3281  +100.075  buyerZIP_1
+TRANSACTION_235  +99.413  {buyerZIP_1.BID_3281: +100.075, sellerRE_3.ASK_3360: +98.750)
+BID_3291  +100.451  buyerGD_3
+TRANSACTION_236  +101.130  {buyerZIP_2.BID_3276: +101.272, sellerZIP_2.ASK_3359: +100.988)
+TRANSACTION_237  +101.130  {buyerGD_0.BID_3282: +102.275, sellerZIC_2.ASK_3339: +100.076)
+------ Round 2 -----------
+ASK_3345  +102.811  sellerRE_2
+ASK_3370  +98.750  sellerRE_3
+TRANSACTION_238  +99.600  {buyerGD_3.BID_3291: +100.451, sellerRE_3.ASK_3370: +98.750)
+BID_3309  +100.075  buyerZIP_1
+BID_3311  +102.275  buyerGD_0
+BID_3284  +105.203  buyerZIP_0
+BID_3314  +102.158  buyerZIC_4
+TRANSACTION_239  +101.540  {buyerZIC_4.BID_3314: +102.158, sellerZIP_1.ASK_3350: +100.922)
+ASK_3343  +103.015  sellerGD_0
+ASK_3379  +100.988  sellerZIP_2
+TRANSACTION_240  +102.543  {buyerZIP_0.BID_3284: +105.203, sellerZIP_2.ASK_3379: +100.988)
+------ Round 3 -----------
+ASK_3338  +102.731  sellerZIP_3
+ASK_3345  +102.811  sellerRE_2
+ASK_3382  +101.688  sellerZIP_1
+BID_3295  +101.721  buyerZIP_4
+TRANSACTION_241  +101.704  {buyerZIP_4.BID_3295: +101.721, sellerZIP_1.ASK_3382: +101.688)
+ASK_3385  +101.884  sellerGD_4
+ASK_3387  +100.988  sellerZIP_2
+BID_3332  +102.162  buyerRE_1
+BID_3311  +102.276  buyerGD_0
+ASK_3393  +98.750  sellerRE_3
+TRANSACTION_242  +99.413  {buyerZIP_1.BID_3309: +100.075, sellerRE_3.ASK_3393: +98.750)
+BID_3334  +100.451  buyerGD_3
+TRANSACTION_243  +102.219  {buyerGD_0.BID_3311: +102.276, sellerZIP_2.ASK_3387: +100.988)
+------ Round 4 -----------
+ASK_3396  +99.725  sellerRE_4
+TRANSACTION_244  +100.088  {buyerGD_3.BID_3334: +100.451, sellerRE_4.ASK_3396: +99.725)
+BID_3338  +97.859  buyerZIP_1
+ASK_3399  +99.727  sellerZIP_1
+BID_3341  +100.910  buyerZIC_4
+TRANSACTION_245  +100.318  {buyerZIC_4.BID_3341: +100.910, sellerZIP_1.ASK_3399: +99.727)
+BID_3343  +98.906  buyerZIC_3
+ASK_3345  +102.811  sellerRE_2
+ASK_3385  +101.721  sellerGD_4
+BID_3346  +102.276  buyerGD_0
+BID_3347  +102.642  buyerZIP_0
+------ Round 5 -----------
+BID_3351  +99.070  buyerZIP_4
+BID_3355  +103.445  buyerZIC_4
+TRANSACTION_246  +102.583  {buyerZIC_4.BID_3355: +103.445, sellerGD_4.ASK_3385: +101.721)
+BID_3356  +100.451  buyerGD_3
+BID_3346  +102.811  buyerGD_0
+ASK_3345  +102.811  sellerRE_2
+BID_3347  +103.079  buyerZIP_0
+ASK_3414  +100.725  sellerRE_4
+TRANSACTION_247  +102.913  {buyerZIP_0.BID_3347: +103.079, sellerRE_2.ASK_3345: +102.811)
+------ Round 6 -----------
+ASK_3343  +103.015  sellerGD_0
+BID_3366  +103.079  buyerZIP_0
+BID_3367  +100.725  buyerRE_3
+TRANSACTION_248  +100.725  {buyerRE_3.BID_3367: +100.725, sellerRE_4.ASK_3414: +100.725)
+ASK_3417  +102.811  sellerRE_2
+BID_3346  +102.811  buyerGD_0
+ASK_3422  +101.688  sellerGD_4
+BID_3356  +100.451  buyerGD_3
+BID_3338  +100.476  buyerZIP_1
+TRANSACTION_249  +102.913  {buyerZIP_0.BID_3366: +103.079, sellerRE_2.ASK_3417: +102.811)
+------ Round 7 -----------
+BID_3338  +100.476  buyerZIP_1
+ASK_3426  +102.811  sellerRE_2
+ASK_3422  +101.688  sellerGD_4
+BID_3374  +100.725  buyerRE_3
+BID_3346  +102.811  buyerGD_0
+TRANSACTION_250  +102.811  {buyerGD_0.BID_3346: +102.811, sellerRE_2.ASK_3426: +102.811)
+------ Round 8 -----------
+ASK_3422  +101.688  sellerGD_4
+ASK_3437  +98.712  sellerZIC_2
+BID_3386  +100.912  buyerZIP_2
+BID_3374  +100.725  buyerRE_3
+TRANSACTION_251  +101.537  {buyerRE_1.BID_3332: +102.162, sellerZIC_2.ASK_3437: +98.712)
+------ Round 9 -----------
+ASK_3422  +101.688  sellerGD_4
+ASK_3343  +103.015  sellerGD_0
+BID_3386  +100.912  buyerZIP_2
+BID_3374  +100.725  buyerRE_3
+BID_3396  +102.162  buyerRE_1
+**** Day 36 ]]]]]]]]]]]]]]]]]
+**** Day 37 [[[[[[[[[[[[[[[[[
+private value: 95.06491187727079
+------ Round 0 -----------
+attempt to ask at 95.19294364213944
+BID_3398  +60.673  buyerZIC_2
+ASK_3454  +141.490  sellerZIC_1
+BID_3399  +93.526  buyerZIP_0
+ASK_3455  +116.725  sellerZIC_0
+ASK_3457  +101.688  sellerGD_4
+ASK_3458  +97.352  sellerRE_2
+BID_3400  +99.725  buyerGD_2
+ASK_3460  +95.193  sellerGD_2
+TRANSACTION_252  +97.459  {buyerGD_2.BID_3400: +99.725, sellerGD_2.ASK_3460: +95.193)
+BID_3402  +99.070  buyerZIP_4
+BID_3404  +96.741  buyerZIP_3
+BID_3408  +100.910  buyerGD_3
+------ Round 1 -----------
+attempt to ask at 95.19294364213944
+ASK_3475  +95.193  sellerGD_2
+TRANSACTION_253  +98.051  {buyerGD_3.BID_3408: +100.910, sellerGD_2.ASK_3475: +95.193)
+BID_3399  +97.993  buyerZIP_0
+ASK_3457  +100.910  sellerGD_4
+ASK_3458  +97.352  sellerRE_2
+ASK_3483  +97.049  sellerRE_3
+TRANSACTION_254  +98.059  {buyerZIP_4.BID_3402: +99.070, sellerRE_3.ASK_3483: +97.049)
+TRANSACTION_255  +97.673  {buyerZIP_0.BID_3399: +97.993, sellerRE_2.ASK_3458: +97.352)
+------ Round 2 -----------
+attempt to ask at 95.19294364213944
+BID_3425  +68.480  buyerRE_4
+BID_3426  +97.321  buyerZIP_4
+BID_3404  +96.741  buyerZIP_3
+ASK_3457  +100.725  sellerGD_4
+ASK_3491  +102.642  sellerGD_0
+BID_3431  +99.725  buyerGD_2
+ASK_3494  +97.352  sellerRE_2
+ASK_3498  +99.344  sellerZIP_1
+TRANSACTION_256  +99.534  {buyerGD_2.BID_3431: +99.725, sellerZIP_1.ASK_3498: +99.344)
+BID_3435  +101.989  buyerRE_3
+TRANSACTION_257  +101.357  {buyerRE_3.BID_3435: +101.989, sellerGD_4.ASK_3457: +100.725)
+ASK_3500  +95.193  sellerGD_2
+TRANSACTION_258  +96.257  {buyerZIP_4.BID_3426: +97.321, sellerGD_2.ASK_3500: +95.193)
+BID_3437  +100.910  buyerGD_3
+------ Round 3 -----------
+BID_3439  +101.989  buyerRE_3
+ASK_3502  +106.465  sellerZIP_3
+ASK_3504  +103.346  sellerZIP_1
+ASK_3494  +97.352  sellerRE_2
+BID_3444  +98.399  buyerZIP_0
+BID_3447  +105.325  buyerRE_1
+ASK_3510  +100.725  sellerGD_4
+TRANSACTION_259  +101.357  {buyerRE_3.BID_3439: +101.989, sellerGD_4.ASK_3510: +100.725)
+TRANSACTION_260  +100.520  {buyerRE_1.BID_3447: +105.325, sellerRE_2.ASK_3494: +97.352)
+------ Round 4 -----------
+BID_3444  +98.399  buyerZIP_0
+BID_3451  +101.989  buyerRE_3
+ASK_3491  +102.162  sellerGD_0
+ASK_3504  +103.346  sellerZIP_1
+BID_3459  +105.325  buyerRE_1
+ASK_3523  +100.725  sellerGD_4
+TRANSACTION_261  +101.357  {buyerRE_3.BID_3451: +101.989, sellerGD_4.ASK_3523: +100.725)
+ASK_3524  +104.304  sellerRE_1
+ASK_3525  +97.352  sellerRE_2
+TRANSACTION_262  +100.280  {buyerRE_1.BID_3459: +105.325, sellerRE_2.ASK_3525: +97.352)
+------ Round 5 -----------
+BID_3468  +105.325  buyerRE_1
+ASK_3504  +103.346  sellerZIP_1
+BID_3470  +102.557  buyerZIP_4
+ASK_3491  +102.162  sellerGD_0
+TRANSACTION_263  +103.233  {buyerRE_1.BID_3468: +105.325, sellerGD_0.ASK_3491: +102.162)
+------ Round 6 -----------
+ASK_3538  +102.162  sellerGD_0
+ASK_3504  +103.346  sellerZIP_1
+ASK_3540  +99.047  sellerZIP_2
+TRANSACTION_264  +100.802  {buyerZIP_4.BID_3470: +102.557, sellerZIP_2.ASK_3540: +99.047)
+ASK_3543  +97.049  sellerRE_3
+TRANSACTION_265  +98.979  {buyerGD_3.BID_3437: +100.910, sellerRE_3.ASK_3543: +97.049)
+BID_3444  +99.590  buyerZIP_0
+------ Round 7 -----------
+BID_3480  +96.417  buyerZIP_1
+ASK_3538  +102.162  sellerGD_0
+BID_3482  +99.581  buyerZIC_4
+BID_3444  +99.590  buyerZIP_0
+ASK_3551  +99.047  sellerZIP_2
+TRANSACTION_266  +99.314  {buyerZIC_4.BID_3482: +99.581, sellerZIP_2.ASK_3551: +99.047)
+ASK_3504  +103.346  sellerZIP_1
+BID_3486  +99.725  buyerGD_2
+BID_3488  +100.910  buyerGD_3
+------ Round 8 -----------
+BID_3488  +100.910  buyerGD_3
+ASK_3504  +103.346  sellerZIP_1
+BID_3444  +99.590  buyerZIP_0
+ASK_3538  +102.162  sellerGD_0
+ASK_3560  +99.047  sellerZIP_2
+TRANSACTION_267  +99.978  {buyerGD_3.BID_3488: +100.910, sellerZIP_2.ASK_3560: +99.047)
+------ Round 9 -----------
+BID_3496  +100.730  buyerZIC_4
+BID_3444  +99.590  buyerZIP_0
+ASK_3504  +103.346  sellerZIP_1
+ASK_3567  +97.049  sellerRE_3
+TRANSACTION_268  +98.889  {buyerZIC_4.BID_3496: +100.730, sellerRE_3.ASK_3567: +97.049)
+BID_3425  +101.480  buyerRE_4
+ASK_3538  +102.162  sellerGD_0
+**** Day 37 ]]]]]]]]]]]]]]]]]
+**** Day 38 [[[[[[[[[[[[[[[[[
+private value: 101.12827142933384
+------ Round 0 -----------
+attempt to ask at 102.2263446755473
+BID_3501  +97.840  buyerRE_3
+BID_3502  +96.519  buyerZIP_2
+BID_3503  +100.649  buyerZIP_1
+BID_3504  +99.590  buyerZIP_0
+ASK_3571  +126.745  sellerZIC_0
+ASK_3572  +107.387  sellerZIP_1
+ASK_3573  +100.556  sellerZIP_2
+TRANSACTION_269  +100.602  {buyerZIP_1.BID_3503: +100.649, sellerZIP_2.ASK_3573: +100.556)
+ASK_3575  +106.465  sellerZIP_3
+ASK_3576  +104.273  sellerZIP_0
+ASK_3577  +124.824  sellerZIC_2
+ASK_3578  +102.162  sellerGD_0
+ASK_3579  +102.226  sellerGD_2
+ASK_3580  +101.853  sellerGD_4
+BID_3513  +102.593  buyerZIC_3
+ASK_3584  +100.881  sellerRE_3
+BID_3515  +103.767  buyerRE_0
+TRANSACTION_270  +102.324  {buyerRE_0.BID_3515: +103.767, sellerRE_3.ASK_3584: +100.881)
+TRANSACTION_271  +102.378  {buyerZIC_3.BID_3513: +102.593, sellerGD_0.ASK_3578: +102.162)
+------ Round 1 -----------
+attempt to ask at 102.2263446755473
+ASK_3577  +108.774  sellerZIC_2
+BID_3519  +99.725  buyerGD_2
+ASK_3580  +101.480  sellerGD_4
+ASK_3589  +104.845  sellerRE_2
+BID_3524  +103.767  buyerRE_0
+TRANSACTION_272  +102.623  {buyerRE_0.BID_3524: +103.767, sellerGD_4.ASK_3580: +101.480)
+ASK_3591  +100.881  sellerRE_3
+BID_3504  +99.590  buyerZIP_0
+ASK_3596  +102.162  sellerGD_0
+------ Round 2 -----------
+attempt to ask at 102.2263446755473
+ASK_3596  +102.162  sellerGD_0
+BID_3519  +99.725  buyerGD_2
+BID_3502  +101.910  buyerZIP_2
+BID_3540  +103.767  buyerRE_0
+TRANSACTION_273  +102.324  {buyerRE_0.BID_3540: +103.767, sellerRE_3.ASK_3591: +100.881)
+------ Round 3 -----------
+attempt to ask at 102.2263446755473
+ASK_3606  +101.480  sellerGD_4
+ASK_3610  +100.881  sellerRE_3
+BID_3548  +103.082  buyerZIP_1
+TRANSACTION_274  +101.981  {buyerZIP_1.BID_3548: +103.082, sellerRE_3.ASK_3610: +100.881)
+BID_3502  +101.910  buyerZIP_2
+ASK_3596  +102.162  sellerGD_0
+BID_3519  +100.881  buyerGD_2
+------ Round 4 -----------
+attempt to ask at 102.2263446755473
+BID_3502  +101.910  buyerZIP_2
+BID_3555  +103.082  buyerZIP_1
+TRANSACTION_275  +102.281  {buyerZIP_1.BID_3555: +103.082, sellerGD_4.ASK_3606: +101.480)
+ASK_3579  +102.226  sellerGD_2
+BID_3519  +100.881  buyerGD_2
+ASK_3596  +102.162  sellerGD_0
+------ Round 5 -----------
+attempt to ask at 102.2263446755473
+ASK_3579  +102.226  sellerGD_2
+ASK_3572  +101.874  sellerZIP_1
+BID_3519  +101.360  buyerGD_2
+ASK_3596  +102.162  sellerGD_0
+BID_3502  +101.910  buyerZIP_2
+ASK_3628  +100.600  sellerZIP_2
+TRANSACTION_276  +100.980  {buyerGD_2.BID_3519: +101.360, sellerZIP_2.ASK_3628: +100.600)
+ASK_3629  +101.480  sellerGD_4
+------ Round 6 -----------
+attempt to ask at 102.2263446755473
+ASK_3632  +100.600  sellerZIP_2
+BID_3578  +101.360  buyerGD_2
+TRANSACTION_277  +100.980  {buyerGD_2.BID_3578: +101.360, sellerZIP_2.ASK_3632: +100.600)
+BID_3502  +101.910  buyerZIP_2
+ASK_3629  +101.480  sellerGD_4
+ASK_3596  +102.162  sellerGD_0
+BID_3501  +97.840  buyerRE_3
+------ Round 7 -----------
+attempt to ask at 102.2263446755473
+BID_3502  +101.910  buyerZIP_2
+BID_3501  +97.840  buyerRE_3
+ASK_3629  +101.480  sellerGD_4
+ASK_3596  +102.162  sellerGD_0
+BID_3589  +101.360  buyerGD_2
+------ Round 8 -----------
+attempt to ask at 102.2263446755473
+ASK_3629  +101.480  sellerGD_4
+BID_3502  +101.910  buyerZIP_2
+BID_3589  +101.480  buyerGD_2
+TRANSACTION_278  +101.480  {buyerGD_2.BID_3589: +101.480, sellerGD_4.ASK_3629: +101.480)
+ASK_3596  +102.162  sellerGD_0
+------ Round 9 -----------
+attempt to ask at 102.2263446755473
+BID_3502  +101.910  buyerZIP_2
+ASK_3572  +101.874  sellerZIP_1
+ASK_3596  +102.162  sellerGD_0
+BID_3610  +98.615  buyerZIC_0
+**** Day 38 ]]]]]]]]]]]]]]]]]
+**** Day 39 [[[[[[[[[[[[[[[[[
+private value: 103.12855662312359
+------ Round 0 -----------
+attempt to ask at 102.2263446755473
+BID_3616  +7.970  buyerRE_1
+ASK_3655  +104.509  sellerZIP_4
+ASK_3656  +99.634  sellerZIC_4
+BID_3617  +56.313  buyerRE_4
+ASK_3658  +191.816  sellerRE_0
+ASK_3659  +103.987  sellerRE_4
+BID_3618  +96.741  buyerZIP_3
+BID_3620  +101.480  buyerGD_2
+ASK_3661  +101.173  sellerZIP_2
+TRANSACTION_279  +101.326  {buyerGD_2.BID_3620: +101.480, sellerZIP_2.ASK_3661: +101.173)
+BID_3622  +105.588  buyerZIP_2
+ASK_3664  +97.530  sellerRE_1
+ASK_3665  +99.223  sellerRE_3
+BID_3628  +101.105  buyerRE_3
+TRANSACTION_280  +100.164  {buyerRE_3.BID_3628: +101.105, sellerRE_3.ASK_3665: +99.223)
+BID_3630  +99.590  buyerZIP_0
+BID_3631  +101.480  buyerGD_3
+BID_3632  +99.155  buyerRE_0
+TRANSACTION_281  +100.557  {buyerGD_3.BID_3631: +101.480, sellerZIC_4.ASK_3656: +99.634)
+TRANSACTION_282  +100.557  {buyerZIP_2.BID_3622: +105.588, sellerRE_1.ASK_3664: +97.530)
+------ Round 1 -----------
+BID_3630  +99.590  buyerZIP_0
+ASK_3655  +104.509  sellerZIP_4
+BID_3636  +101.105  buyerRE_3
+ASK_3674  +102.286  sellerZIP_3
+ASK_3675  +101.360  sellerGD_4
+BID_3640  +101.977  buyerZIP_2
+BID_3641  +101.480  buyerGD_2
+TRANSACTION_283  +101.420  {buyerGD_2.BID_3641: +101.480, sellerGD_4.ASK_3675: +101.360)
+ASK_3659  +102.987  sellerRE_4
+ASK_3680  +100.942  sellerZIP_2
+TRANSACTION_284  +101.023  {buyerRE_3.BID_3636: +101.105, sellerZIP_2.ASK_3680: +100.942)
+------ Round 2 -----------
+ASK_3682  +102.235  sellerRE_2
+ASK_3686  +101.360  sellerGD_4
+BID_3640  +101.977  buyerZIP_2
+BID_3651  +101.105  buyerRE_3
+BID_3630  +106.430  buyerZIP_0
+ASK_3688  +101.060  sellerZIP_2
+TRANSACTION_285  +101.082  {buyerRE_3.BID_3651: +101.105, sellerZIP_2.ASK_3688: +101.060)
+BID_3632  +99.155  buyerRE_0
+ASK_3674  +102.286  sellerZIP_3
+BID_3655  +101.480  buyerGD_2
+TRANSACTION_286  +101.420  {buyerGD_2.BID_3655: +101.480, sellerGD_4.ASK_3686: +101.360)
+TRANSACTION_287  +102.261  {buyerZIP_0.BID_3630: +106.430, sellerRE_2.ASK_3682: +102.235)
+------ Round 3 -----------
+ASK_3693  +99.223  sellerRE_3
+ASK_3696  +97.530  sellerRE_1
+BID_3616  +98.970  buyerRE_1
+BID_3658  +101.480  buyerGD_3
+BID_3664  +106.430  buyerZIP_0
+BID_3640  +105.864  buyerZIP_2
+TRANSACTION_288  +103.398  {buyerZIP_2.BID_3640: +105.864, sellerZIP_3.ASK_3674: +102.286)
+TRANSACTION_289  +103.398  {buyerZIP_0.BID_3664: +106.430, sellerRE_1.ASK_3696: +97.530)
+------ Round 4 -----------
+ASK_3703  +102.235  sellerRE_2
+BID_3658  +101.480  buyerGD_3
+ASK_3705  +101.777  sellerZIP_3
+BID_3632  +99.155  buyerRE_0
+BID_3668  +104.318  buyerZIP_0
+BID_3669  +105.864  buyerZIP_2
+BID_3674  +102.734  buyerZIC_0
+TRANSACTION_290  +100.979  {buyerZIC_0.BID_3674: +102.734, sellerRE_3.ASK_3693: +99.223)
+TRANSACTION_291  +103.277  {buyerZIP_0.BID_3668: +104.318, sellerRE_2.ASK_3703: +102.235)
+TRANSACTION_292  +103.277  {buyerZIP_2.BID_3669: +105.864, sellerZIP_3.ASK_3705: +101.777)
+------ Round 5 -----------
+BID_3632  +99.155  buyerRE_0
+ASK_3717  +104.398  sellerZIC_4
+ASK_3718  +97.217  sellerZIC_3
+TRANSACTION_293  +98.186  {buyerRE_0.BID_3632: +99.155, sellerZIC_3.ASK_3718: +97.217)
+ASK_3719  +102.235  sellerRE_2
+ASK_3720  +101.360  sellerGD_4
+BID_3658  +101.480  buyerGD_3
+------ Round 6 -----------
+ASK_3726  +99.945  sellerZIC_3
+ASK_3727  +98.937  sellerZIP_3
+BID_3618  +96.741  buyerZIP_3
+BID_3658  +101.480  buyerGD_3
+BID_3616  +98.970  buyerRE_1
+TRANSACTION_294  +100.225  {buyerGD_3.BID_3658: +101.480, sellerZIP_3.ASK_3727: +98.937)
+------ Round 7 -----------
+BID_3693  +101.480  buyerGD_3
+BID_3618  +96.741  buyerZIP_3
+BID_3702  +106.040  buyerZIC_3
+TRANSACTION_295  +103.317  {buyerZIC_3.BID_3702: +106.040, sellerRE_2.ASK_3719: +102.235)
+------ Round 8 -----------
+ASK_3655  +103.496  sellerZIP_4
+BID_3703  +99.155  buyerRE_0
+BID_3705  +103.409  buyerZIP_4
+------ Round 9 -----------
+BID_3705  +103.409  buyerZIP_4
+ASK_3717  +99.800  sellerZIC_4
+TRANSACTION_296  +102.444  {buyerZIP_4.BID_3705: +103.409, sellerZIC_4.ASK_3717: +99.800)
+**** Day 39 ]]]]]]]]]]]]]]]]]
+**** Day 40 [[[[[[[[[[[[[[[[[
+private value: 100.6192504055798
+------ Round 0 -----------
+attempt to ask at 102.2263446755473
+ASK_3750  +193.453  sellerRE_0
+BID_3719  +99.223  buyerGD_2
+ASK_3751  +126.985  sellerZIC_4
+BID_3720  +103.066  buyerRE_1
+ASK_3753  +175.245  sellerRE_3
+ASK_3754  +117.877  sellerZIC_1
+ASK_3756  +97.350  sellerRE_2
+ASK_3758  +106.390  sellerZIP_2
+ASK_3760  +102.712  sellerZIC_3
+ASK_3763  +102.226  sellerGD_2
+BID_3730  +103.376  buyerRE_3
+TRANSACTION_297  +102.801  {buyerRE_3.BID_3730: +103.376, sellerGD_2.ASK_3763: +102.226)
+BID_3731  +101.480  buyerGD_3
+BID_3732  +103.015  buyerGD_0
+BID_3733  +102.258  buyerRE_0
+BID_3736  +102.451  buyerZIP_4
+TRANSACTION_298  +103.041  {buyerRE_1.BID_3720: +103.066, sellerRE_2.ASK_3756: +97.350)
+------ Round 1 -----------
+attempt to ask at 102.2263446755473
+ASK_3766  +98.410  sellerZIP_1
+TRANSACTION_299  +100.430  {buyerZIP_4.BID_3736: +102.451, sellerZIP_1.ASK_3766: +98.410)
+ASK_3768  +105.575  sellerZIP_3
+ASK_3770  +101.957  sellerZIP_4
+ASK_3771  +102.226  sellerGD_2
+TRANSACTION_300  +102.242  {buyerRE_0.BID_3733: +102.258, sellerGD_2.ASK_3771: +102.226)
+BID_3741  +103.376  buyerRE_3
+TRANSACTION_301  +103.044  {buyerRE_3.BID_3741: +103.376, sellerZIC_3.ASK_3760: +102.712)
+ASK_3773  +100.111  sellerRE_4
+BID_3732  +103.015  buyerGD_0
+BID_3719  +99.945  buyerGD_2
+TRANSACTION_302  +102.486  {buyerGD_0.BID_3732: +103.015, sellerZIP_4.ASK_3770: +101.957)
+------ Round 2 -----------
+attempt to ask at 102.2263446755473
+BID_3719  +100.111  buyerGD_2
+ASK_3768  +102.407  sellerZIP_3
+ASK_3751  +101.458  sellerZIC_4
+BID_3752  +103.015  buyerGD_0
+BID_3753  +103.376  buyerRE_3
+TRANSACTION_303  +101.744  {buyerRE_3.BID_3753: +103.376, sellerRE_4.ASK_3773: +100.111)
+BID_3731  +101.480  buyerGD_3
+ASK_3783  +102.226  sellerGD_2
+ASK_3784  +98.673  sellerZIP_1
+TRANSACTION_304  +99.392  {buyerGD_2.BID_3719: +100.111, sellerZIP_1.ASK_3784: +98.673)
+BID_3764  +102.441  buyerZIP_4
+TRANSACTION_305  +102.334  {buyerZIP_4.BID_3764: +102.441, sellerGD_2.ASK_3783: +102.226)
+BID_3765  +103.422  buyerZIP_3
+TRANSACTION_306  +101.943  {buyerGD_0.BID_3752: +103.015, sellerZIC_4.ASK_3751: +101.458)
+------ Round 3 -----------
+ASK_3788  +102.511  sellerZIP_1
+TRANSACTION_307  +102.966  {buyerZIP_3.BID_3765: +103.422, sellerZIP_1.ASK_3788: +102.511)
+BID_3767  +99.759  buyerZIP_4
+BID_3770  +103.015  buyerGD_0
+ASK_3791  +97.350  sellerRE_2
+BID_3772  +103.066  buyerRE_1
+ASK_3768  +102.523  sellerZIP_3
+ASK_3792  +104.273  sellerZIP_0
+BID_3776  +100.111  buyerGD_2
+BID_3779  +102.258  buyerRE_0
+ASK_3758  +102.369  sellerZIP_2
+TRANSACTION_308  +102.769  {buyerGD_0.BID_3770: +103.015, sellerZIP_3.ASK_3768: +102.523)
+TRANSACTION_309  +102.769  {buyerRE_1.BID_3772: +103.066, sellerRE_2.ASK_3791: +97.350)
+------ Round 4 -----------
+BID_3782  +102.375  buyerZIP_3
+TRANSACTION_310  +102.372  {buyerZIP_3.BID_3782: +102.375, sellerZIP_2.ASK_3758: +102.369)
+ASK_3796  +108.552  sellerZIC_4
+ASK_3797  +97.350  sellerRE_2
+BID_3789  +100.039  buyerZIP_0
+BID_3790  +101.359  buyerZIP_2
+ASK_3754  +103.076  sellerZIC_1
+BID_3731  +101.480  buyerGD_3
+BID_3792  +103.066  buyerRE_1
+ASK_3753  +97.245  sellerRE_3
+TRANSACTION_311  +99.751  {buyerRE_0.BID_3779: +102.258, sellerRE_3.ASK_3753: +97.245)
+BID_3767  +102.463  buyerZIP_4
+ASK_3802  +102.523  sellerZIP_3
+ASK_3803  +101.787  sellerZIC_2
+TRANSACTION_312  +101.633  {buyerRE_1.BID_3792: +103.066, sellerRE_2.ASK_3797: +97.350)
+------ Round 5 -----------
+BID_3731  +101.480  buyerGD_3
+------ Round 6 -----------
+ASK_3812  +97.245  sellerRE_3
+TRANSACTION_313  +99.854  {buyerZIP_4.BID_3767: +102.463, sellerRE_3.ASK_3812: +97.245)
+BID_3731  +101.480  buyerGD_3
+ASK_3813  +102.346  sellerZIC_3
+ASK_3803  +101.497  sellerZIC_2
+BID_3776  +100.111  buyerGD_2
+------ Round 7 -----------
+ASK_3819  +97.245  sellerRE_3
+TRANSACTION_314  +98.678  {buyerGD_2.BID_3776: +100.111, sellerRE_3.ASK_3819: +97.245)
+BID_3815  +98.857  buyerZIP_3
+BID_3816  +101.845  buyerZIC_3
+TRANSACTION_315  +101.671  {buyerZIC_3.BID_3816: +101.845, sellerZIC_2.ASK_3803: +101.497)
+------ Round 8 -----------
+BID_3824  +100.111  buyerGD_2
+BID_3731  +101.480  buyerGD_3
+BID_3829  +100.259  buyerZIC_0
+ASK_3802  +102.523  sellerZIP_3
+------ Round 9 -----------
+ASK_3802  +102.523  sellerZIP_3
+BID_3731  +101.480  buyerGD_3
+**** Day 40 ]]]]]]]]]]]]]]]]]
+**** Day 41 [[[[[[[[[[[[[[[[[
+private value: 98.1006249669008
+------ Round 0 -----------
+attempt to ask at 102.25774778086011
+ASK_3836  +101.555  sellerGD_0
+BID_3841  +100.111  buyerGD_2
+BID_3842  +101.703  buyerRE_3
+ASK_3837  +101.366  sellerRE_2
+BID_3843  +47.876  buyerRE_0
+BID_3846  +101.480  buyerGD_3
+BID_3848  +102.178  buyerRE_1
+ASK_3842  +104.273  sellerZIP_0
+ASK_3844  +100.633  sellerZIP_2
+TRANSACTION_316  +101.168  {buyerRE_3.BID_3842: +101.703, sellerZIP_2.ASK_3844: +100.633)
+ASK_3846  +101.360  sellerGD_4
+TRANSACTION_317  +101.517  {buyerRE_1.BID_3848: +102.178, sellerRE_2.ASK_3837: +101.366)
+------ Round 1 -----------
+attempt to ask at 100.77871039202087
+BID_3846  +101.480  buyerGD_3
+ASK_3846  +100.633  sellerGD_4
+BID_3862  +101.497  buyerGD_0
+BID_3863  +101.703  buyerRE_3
+TRANSACTION_318  +101.168  {buyerRE_3.BID_3863: +101.703, sellerGD_4.ASK_3846: +100.633)
+ASK_3842  +104.273  sellerZIP_0
+ASK_3865  +100.633  sellerZIP_2
+ASK_3836  +101.497  sellerGD_0
+BID_3841  +100.111  buyerGD_2
+TRANSACTION_319  +101.497  {buyerGD_0.BID_3862: +101.497, sellerGD_0.ASK_3836: +101.497)
+------ Round 2 -----------
+attempt to ask at 100.33427101440017
+BID_3872  +101.703  buyerRE_3
+TRANSACTION_320  +101.168  {buyerRE_3.BID_3872: +101.703, sellerZIP_2.ASK_3865: +100.633)
+BID_3873  +101.497  buyerGD_0
+ASK_3842  +104.273  sellerZIP_0
+BID_3875  +102.178  buyerRE_1
+ASK_3868  +101.497  sellerGD_0
+ASK_3869  +100.656  sellerZIP_1
+ASK_3872  +100.259  sellerGD_4
+BID_3841  +100.111  buyerGD_2
+TRANSACTION_321  +101.837  {buyerRE_1.BID_3875: +102.178, sellerGD_0.ASK_3868: +101.497)
+------ Round 3 -----------
+attempt to ask at 100.33427101440017
+ASK_3883  +164.856  sellerRE_1
+ASK_3872  +100.111  sellerGD_4
+TRANSACTION_322  +100.111  {buyerGD_2.BID_3841: +100.111, sellerGD_4.ASK_3872: +100.111)
+ASK_3885  +141.100  sellerZIC_0
+BID_3890  +59.713  buyerZIC_0
+ASK_3887  +101.497  sellerGD_0
+ASK_3891  +100.334  sellerGD_2
+BID_3894  +99.968  buyerZIP_3
+ASK_3894  +101.366  sellerRE_2
+BID_3873  +101.497  buyerGD_0
+TRANSACTION_323  +101.488  {buyerGD_0.BID_3873: +101.497, sellerRE_2.ASK_3894: +101.366)
+------ Round 4 -----------
+attempt to ask at 100.14107983043054
+BID_3901  +101.497  buyerGD_0
+ASK_3900  +100.451  sellerZIP_4
+BID_3894  +99.968  buyerZIP_3
+BID_3904  +100.633  buyerGD_2
+TRANSACTION_324  +100.484  {buyerGD_2.BID_3904: +100.633, sellerGD_2.ASK_3891: +100.334)
+BID_3846  +101.480  buyerGD_3
+BID_3909  +102.178  buyerRE_1
+ASK_3905  +100.111  sellerGD_4
+ASK_3887  +101.457  sellerGD_0
+TRANSACTION_325  +101.488  {buyerGD_0.BID_3901: +101.497, sellerGD_0.ASK_3887: +101.457)
+TRANSACTION_326  +101.488  {buyerRE_1.BID_3909: +102.178, sellerZIP_4.ASK_3900: +100.451)
+------ Round 5 -----------
+attempt to ask at 99.99654202077603
+ASK_3907  +136.066  sellerZIC_1
+BID_3846  +101.480  buyerGD_3
+ASK_3905  +99.968  sellerGD_4
+TRANSACTION_327  +99.968  {buyerZIP_3.BID_3894: +99.968, sellerGD_4.ASK_3905: +99.968)
+BID_3890  +86.779  buyerZIC_0
+ASK_3912  +99.997  sellerGD_2
+ASK_3913  +100.583  sellerZIP_4
+BID_3917  +100.633  buyerGD_2
+TRANSACTION_328  +100.315  {buyerGD_2.BID_3917: +100.633, sellerGD_2.ASK_3912: +99.997)
+BID_3919  +97.049  buyerZIP_4
+ASK_3916  +101.366  sellerRE_2
+TRANSACTION_329  +100.974  {buyerGD_3.BID_3846: +101.480, sellerZIP_4.ASK_3913: +100.583)
+------ Round 6 -----------
+attempt to ask at 99.99654202077603
+BID_3919  +97.049  buyerZIP_4
+BID_3921  +100.039  buyerZIP_0
+ASK_3922  +97.917  sellerZIP_2
+ASK_3924  +100.583  sellerZIP_4
+BID_3928  +101.480  buyerGD_3
+BID_3929  +105.199  buyerZIC_2
+TRANSACTION_330  +101.423  {buyerGD_3.BID_3928: +101.480, sellerRE_2.ASK_3916: +101.366)
+TRANSACTION_331  +101.423  {buyerZIC_2.BID_3929: +105.199, sellerZIP_4.ASK_3924: +100.583)
+------ Round 7 -----------
+attempt to ask at 99.9878079980434
+ASK_3927  +134.821  sellerZIC_4
+ASK_3907  +113.172  sellerZIC_1
+BID_3921  +104.948  buyerZIP_0
+ASK_3922  +97.917  sellerZIP_2
+ASK_3885  +108.411  sellerZIC_0
+BID_3919  +97.049  buyerZIP_4
+ASK_3933  +96.357  sellerRE_3
+TRANSACTION_332  +96.703  {buyerZIP_4.BID_3919: +97.049, sellerRE_3.ASK_3933: +96.357)
+------ Round 8 -----------
+attempt to ask at 99.9878079980434
+BID_3921  +104.948  buyerZIP_0
+BID_3944  +98.534  buyerZIP_3
+TRANSACTION_333  +98.226  {buyerZIP_3.BID_3944: +98.534, sellerZIP_2.ASK_3922: +97.917)
+ASK_3938  +96.357  sellerRE_3
+ASK_3927  +103.465  sellerZIC_4
+BID_3947  +101.162  buyerZIP_4
+TRANSACTION_334  +98.760  {buyerZIP_4.BID_3947: +101.162, sellerRE_3.ASK_3938: +96.357)
+BID_3948  +96.145  buyerZIP_1
+TRANSACTION_335  +104.207  {buyerZIP_0.BID_3921: +104.948, sellerZIC_4.ASK_3927: +103.465)
+------ Round 9 -----------
+attempt to ask at 99.9878079980434
+BID_3949  +64.510  buyerZIC_2
+BID_3950  +71.384  buyerRE_4
+ASK_3942  +96.357  sellerRE_3
+BID_3953  +101.391  buyerZIP_0
+BID_3948  +96.145  buyerZIP_1
+BID_3955  +101.480  buyerGD_3
+**** Day 41 ]]]]]]]]]]]]]]]]]
+**** Day 42 [[[[[[[[[[[[[[[[[
+private value: 101.97874548379332
+------ Round 0 -----------
+attempt to ask at 99.9878079980434
+BID_3959  +96.145  buyerZIP_1
+ASK_3947  +140.162  sellerGD_4
+ASK_3948  +104.677  sellerRE_3
+BID_3961  +61.032  buyerRE_4
+ASK_3951  +104.138  sellerRE_2
+BID_3962  +101.480  buyerGD_0
+BID_3964  +107.947  buyerRE_1
+ASK_3954  +104.273  sellerZIP_0
+BID_3968  +96.272  buyerZIP_4
+BID_3971  +103.510  buyerRE_3
+ASK_3957  +98.143  sellerZIC_4
+TRANSACTION_336  +102.809  {buyerRE_1.BID_3964: +107.947, sellerZIC_4.ASK_3957: +98.143)
+------ Round 1 -----------
+ASK_3964  +103.657  sellerZIC_1
+BID_3977  +103.380  buyerZIP_0
+ASK_3965  +101.045  sellerZIC_4
+BID_3962  +101.480  buyerGD_0
+BID_3985  +102.538  buyerZIP_2
+BID_3989  +107.947  buyerRE_1
+ASK_3951  +97.138  sellerRE_2
+TRANSACTION_337  +102.959  {buyerZIP_0.BID_3977: +103.380, sellerZIC_4.ASK_3965: +101.045)
+TRANSACTION_338  +102.959  {buyerRE_1.BID_3989: +107.947, sellerRE_2.ASK_3951: +97.138)
+------ Round 2 -----------
+BID_3985  +102.985  buyerZIP_2
+ASK_3954  +97.599  sellerZIP_0
+BID_3971  +103.510  buyerRE_3
+ASK_3947  +103.510  sellerGD_4
+TRANSACTION_339  +103.510  {buyerRE_3.BID_3971: +103.510, sellerGD_4.ASK_3947: +103.510)
+BID_3997  +101.684  buyerZIP_0
+ASK_3980  +97.138  sellerRE_2
+BID_3998  +97.917  buyerGD_2
+ASK_3982  +103.533  sellerZIC_3
+BID_3962  +101.480  buyerGD_0
+TRANSACTION_340  +101.582  {buyerZIP_0.BID_3997: +101.684, sellerZIP_0.ASK_3954: +97.599)
+TRANSACTION_341  +101.582  {buyerZIP_2.BID_3985: +102.985, sellerRE_2.ASK_3980: +97.138)
+------ Round 3 -----------
+ASK_3987  +117.693  sellerZIC_4
+ASK_3988  +103.693  sellerZIP_4
+BID_4002  +103.136  buyerZIP_0
+BID_3998  +98.411  buyerGD_2
+ASK_3991  +97.138  sellerRE_2
+BID_4006  +101.480  buyerGD_3
+ASK_3995  +97.599  sellerZIP_0
+BID_3962  +101.480  buyerGD_0
+ASK_3964  +101.708  sellerZIC_1
+ASK_3997  +101.443  sellerRE_4
+TRANSACTION_342  +101.461  {buyerGD_3.BID_4006: +101.480, sellerRE_4.ASK_3997: +101.443)
+BID_4013  +103.244  buyerZIP_2
+BID_4014  +103.510  buyerRE_3
+TRANSACTION_343  +102.609  {buyerRE_3.BID_4014: +103.510, sellerZIC_1.ASK_3964: +101.708)
+ASK_3998  +103.301  sellerGD_4
+TRANSACTION_344  +102.308  {buyerZIP_0.BID_4002: +103.136, sellerZIP_0.ASK_3995: +97.599)
+TRANSACTION_345  +102.308  {buyerZIP_2.BID_4013: +103.244, sellerRE_2.ASK_3991: +97.138)
+------ Round 4 -----------
+BID_4016  +107.947  buyerRE_1
+BID_3998  +98.411  buyerGD_2
+BID_4018  +101.708  buyerGD_3
+ASK_4000  +104.869  sellerZIP_3
+ASK_3998  +103.301  sellerGD_4
+ASK_4001  +97.016  sellerZIP_0
+ASK_3988  +103.693  sellerZIP_4
+ASK_4003  +103.334  sellerGD_0
+BID_3962  +101.480  buyerGD_0
+BID_4020  +103.244  buyerZIP_2
+BID_4022  +103.510  buyerRE_3
+TRANSACTION_346  +103.405  {buyerRE_3.BID_4022: +103.510, sellerGD_4.ASK_3998: +103.301)
+ASK_4006  +101.443  sellerRE_4
+TRANSACTION_347  +101.576  {buyerGD_3.BID_4018: +101.708, sellerRE_4.ASK_4006: +101.443)
+ASK_4007  +101.622  sellerZIC_0
+BID_3968  +101.401  buyerZIP_4
+TRANSACTION_348  +103.289  {buyerRE_1.BID_4016: +107.947, sellerZIP_0.ASK_4001: +97.016)
+------ Round 5 -----------
+BID_4028  +101.708  buyerGD_3
+TRANSACTION_349  +101.665  {buyerGD_3.BID_4028: +101.708, sellerZIC_0.ASK_4007: +101.622)
+BID_3968  +101.401  buyerZIP_4
+BID_4020  +103.244  buyerZIP_2
+ASK_4012  +103.301  sellerGD_4
+ASK_4003  +103.334  sellerGD_0
+ASK_4014  +101.590  sellerZIC_2
+BID_3998  +101.443  buyerGD_2
+TRANSACTION_350  +102.417  {buyerZIP_2.BID_4020: +103.244, sellerZIC_2.ASK_4014: +101.590)
+------ Round 6 -----------
+ASK_4012  +103.301  sellerGD_4
+BID_3962  +101.480  buyerGD_0
+ASK_4003  +103.334  sellerGD_0
+BID_3998  +101.622  buyerGD_2
+ASK_4020  +100.493  sellerZIC_1
+TRANSACTION_351  +101.058  {buyerGD_2.BID_3998: +101.622, sellerZIC_1.ASK_4020: +100.493)
+BID_3968  +101.401  buyerZIP_4
+ASK_4023  +101.443  sellerRE_4
+------ Round 7 -----------
+ASK_3982  +99.222  sellerZIC_3
+TRANSACTION_352  +100.312  {buyerZIP_4.BID_3968: +101.401, sellerZIC_3.ASK_3982: +99.222)
+ASK_4003  +103.334  sellerGD_0
+BID_4050  +101.622  buyerGD_2
+TRANSACTION_353  +101.532  {buyerGD_2.BID_4050: +101.622, sellerRE_4.ASK_4023: +101.443)
+BID_4051  +98.540  buyerZIP_3
+BID_3962  +101.480  buyerGD_0
+------ Round 8 -----------
+BID_4054  +101.622  buyerGD_2
+BID_3962  +101.480  buyerGD_0
+ASK_4012  +102.799  sellerGD_4
+ASK_4003  +103.334  sellerGD_0
+------ Round 9 -----------
+BID_3962  +101.480  buyerGD_0
+ASK_4003  +103.334  sellerGD_0
+BID_4054  +101.691  buyerGD_2
+ASK_4012  +102.599  sellerGD_4
+**** Day 42 ]]]]]]]]]]]]]]]]]
+**** Day 43 [[[[[[[[[[[[[[[[[
+private value: 102.35073613002896
+------ Round 0 -----------
+attempt to ask at 99.9878079980434
+ASK_4044  +104.869  sellerZIP_3
+ASK_4045  +126.030  sellerRE_0
+BID_4070  +67.093  buyerRE_4
+ASK_4046  +101.708  sellerGD_4
+BID_4071  +102.480  buyerZIP_2
+BID_4072  +48.645  buyerRE_0
+BID_4073  +101.880  buyerRE_3
+TRANSACTION_354  +101.794  {buyerRE_3.BID_4073: +101.880, sellerGD_4.ASK_4046: +101.708)
+BID_4075  +96.162  buyerZIC_1
+ASK_4048  +111.487  sellerZIC_3
+BID_4078  +98.540  buyerZIP_3
+ASK_4050  +99.408  sellerRE_4
+BID_4080  +99.941  buyerZIP_4
+TRANSACTION_355  +99.674  {buyerZIP_4.BID_4080: +99.941, sellerRE_4.ASK_4050: +99.408)
+ASK_4052  +103.693  sellerZIP_4
+ASK_4054  +101.655  sellerZIP_0
+ASK_4056  +109.390  sellerZIP_2
+TRANSACTION_356  +102.067  {buyerZIP_2.BID_4071: +102.480, sellerZIP_0.ASK_4054: +101.655)
+------ Round 1 -----------
+BID_4086  +99.941  buyerZIP_4
+BID_4087  +99.381  buyerZIP_0
+ASK_4060  +99.408  sellerRE_4
+TRANSACTION_357  +99.674  {buyerZIP_4.BID_4086: +99.941, sellerRE_4.ASK_4060: +99.408)
+BID_4091  +101.480  buyerGD_0
+ASK_4056  +100.187  sellerZIP_2
+ASK_4066  +101.655  sellerZIP_0
+BID_4096  +101.880  buyerRE_3
+TRANSACTION_358  +101.033  {buyerRE_3.BID_4096: +101.880, sellerZIP_2.ASK_4056: +100.187)
+BID_4097  +102.435  buyerRE_1
+TRANSACTION_359  +102.045  {buyerRE_1.BID_4097: +102.435, sellerZIP_0.ASK_4066: +101.655)
+------ Round 2 -----------
+BID_4099  +102.758  buyerZIP_2
+ASK_4070  +101.708  sellerGD_4
+ASK_4071  +103.084  sellerZIP_0
+BID_4102  +101.880  buyerRE_3
+TRANSACTION_360  +101.794  {buyerRE_3.BID_4102: +101.880, sellerGD_4.ASK_4070: +101.708)
+ASK_4072  +99.873  sellerRE_3
+ASK_4073  +99.408  sellerRE_4
+ASK_4052  +102.543  sellerZIP_4
+BID_4078  +98.540  buyerZIP_3
+TRANSACTION_361  +102.650  {buyerZIP_2.BID_4099: +102.758, sellerZIP_4.ASK_4052: +102.543)
+------ Round 3 -----------
+ASK_4080  +98.699  sellerZIP_2
+ASK_4081  +100.411  sellerZIP_4
+BID_4091  +101.655  buyerGD_0
+BID_4114  +100.978  buyerZIP_2
+BID_4115  +102.435  buyerRE_1
+BID_4078  +98.540  buyerZIP_3
+TRANSACTION_362  +102.045  {buyerRE_1.BID_4115: +102.435, sellerZIP_4.ASK_4081: +100.411)
+------ Round 4 -----------
+BID_4118  +101.934  buyerZIC_2
+ASK_4080  +98.699  sellerZIP_2
+ASK_4071  +99.568  sellerZIP_0
+BID_4091  +101.655  buyerGD_0
+BID_4078  +98.540  buyerZIP_3
+BID_4114  +102.706  buyerZIP_2
+ASK_4096  +102.018  sellerZIC_4
+TRANSACTION_363  +101.976  {buyerZIP_2.BID_4114: +102.706, sellerZIP_0.ASK_4071: +99.568)
+------ Round 5 -----------
+BID_4125  +106.036  buyerRE_2
+BID_4126  +100.611  buyerZIP_4
+TRANSACTION_364  +99.655  {buyerZIP_4.BID_4126: +100.611, sellerZIP_2.ASK_4080: +98.699)
+BID_4091  +102.018  buyerGD_0
+ASK_4099  +98.685  sellerZIP_4
+BID_4128  +102.435  buyerRE_1
+BID_4072  +99.645  buyerRE_0
+TRANSACTION_365  +99.527  {buyerRE_0.BID_4072: +99.645, sellerRE_4.ASK_4073: +99.408)
+ASK_4096  +96.673  sellerZIC_4
+BID_4078  +98.540  buyerZIP_3
+TRANSACTION_366  +102.227  {buyerRE_1.BID_4128: +102.435, sellerZIP_4.ASK_4099: +98.685)
+TRANSACTION_367  +102.227  {buyerRE_2.BID_4125: +106.036, sellerZIC_4.ASK_4096: +96.673)
+------ Round 6 -----------
+BID_4078  +98.540  buyerZIP_3
+BID_4091  +102.018  buyerGD_0
+ASK_4110  +97.748  sellerZIP_2
+TRANSACTION_368  +98.144  {buyerZIP_3.BID_4078: +98.540, sellerZIP_2.ASK_4110: +97.748)
+BID_4075  +103.547  buyerZIC_1
+TRANSACTION_369  +101.710  {buyerZIC_1.BID_4075: +103.547, sellerRE_3.ASK_4072: +99.873)
+BID_4136  +6.645  buyerRE_0
+ASK_4111  +104.124  sellerRE_2
+BID_4137  +106.036  buyerRE_2
+ASK_4044  +104.869  sellerZIP_3
+TRANSACTION_370  +104.497  {buyerRE_2.BID_4137: +106.036, sellerRE_2.ASK_4111: +104.124)
+------ Round 7 -----------
+BID_4138  +70.288  buyerZIC_1
+ASK_4113  +101.256  sellerZIC_4
+BID_4139  +94.446  buyerZIP_3
+BID_4143  +106.036  buyerRE_2
+ASK_4044  +104.869  sellerZIP_3
+ASK_4118  +101.708  sellerGD_4
+BID_4091  +102.018  buyerGD_0
+TRANSACTION_371  +103.444  {buyerRE_2.BID_4143: +106.036, sellerZIC_4.ASK_4113: +101.256)
+------ Round 8 -----------
+BID_4139  +94.446  buyerZIP_3
+ASK_4044  +104.869  sellerZIP_3
+ASK_4121  +100.880  sellerZIC_1
+BID_4091  +102.018  buyerGD_0
+ASK_4124  +104.124  sellerRE_2
+BID_4136  +99.645  buyerRE_0
+------ Round 9 -----------
+ASK_4124  +104.124  sellerRE_2
+BID_4151  +103.809  buyerZIC_0
+TRANSACTION_372  +102.345  {buyerZIC_0.BID_4151: +103.809, sellerZIC_1.ASK_4121: +100.880)
+BID_4091  +102.018  buyerGD_0
+ASK_4118  +101.708  sellerGD_4
+**** Day 43 ]]]]]]]]]]]]]]]]]
+**** Day 44 [[[[[[[[[[[[[[[[[
+private value: 96.67927213246003
+------ Round 0 -----------
+attempt to ask at 99.9878079980434
+BID_4153  +96.145  buyerZIP_1
+ASK_4132  +103.334  sellerGD_0
+ASK_4133  +140.557  sellerZIC_1
+ASK_4134  +122.227  sellerRE_4
+BID_4155  +73.979  buyerRE_4
+BID_4156  +98.822  buyerRE_0
+BID_4158  +102.018  buyerGD_0
+BID_4163  +101.357  buyerRE_3
+ASK_4142  +101.593  sellerZIP_4
+ASK_4146  +101.134  sellerZIC_0
+TRANSACTION_373  +101.245  {buyerRE_3.BID_4163: +101.357, sellerZIC_0.ASK_4146: +101.134)
+ASK_4147  +99.988  sellerGD_2
+------ Round 1 -----------
+attempt to ask at 99.9878079980434
+ASK_4149  +101.795  sellerZIC_4
+BID_4171  +101.357  buyerRE_3
+TRANSACTION_374  +100.672  {buyerRE_3.BID_4171: +101.357, sellerGD_2.ASK_4147: +99.988)
+BID_4176  +99.695  buyerZIP_3
+BID_4179  +103.332  buyerRE_1
+ASK_4142  +101.593  sellerZIP_4
+ASK_4158  +102.285  sellerRE_2
+BID_4158  +102.018  buyerGD_0
+TRANSACTION_375  +102.151  {buyerRE_1.BID_4179: +103.332, sellerZIC_4.ASK_4149: +101.795)
+------ Round 2 -----------
+attempt to ask at 99.9878079980434
+ASK_4158  +102.285  sellerRE_2
+BID_4158  +102.285  buyerGD_0
+ASK_4163  +100.869  sellerZIP_1
+BID_4183  +101.357  buyerRE_3
+TRANSACTION_376  +101.113  {buyerRE_3.BID_4183: +101.357, sellerZIP_1.ASK_4163: +100.869)
+BID_4176  +99.695  buyerZIP_3
+ASK_4142  +101.593  sellerZIP_4
+BID_4187  +105.000  buyerZIP_2
+ASK_4169  +102.821  sellerZIP_0
+ASK_4172  +99.988  sellerGD_2
+TRANSACTION_377  +102.553  {buyerZIP_2.BID_4187: +105.000, sellerRE_2.ASK_4158: +102.285)
+------ Round 3 -----------
+attempt to ask at 99.9878079980434
+BID_4176  +99.695  buyerZIP_3
+ASK_4175  +100.158  sellerZIC_4
+ASK_4177  +102.285  sellerRE_2
+BID_4199  +105.000  buyerZIP_2
+BID_4158  +102.285  buyerGD_0
+ASK_4172  +99.988  sellerGD_2
+TRANSACTION_378  +102.285  {buyerGD_0.BID_4158: +102.285, sellerRE_2.ASK_4177: +102.285)
+TRANSACTION_379  +102.285  {buyerZIP_2.BID_4199: +105.000, sellerZIC_4.ASK_4175: +100.158)
+------ Round 4 -----------
+attempt to ask at 99.9878079980434
+BID_4153  +96.145  buyerZIP_1
+ASK_4184  +102.285  sellerRE_2
+ASK_4172  +99.988  sellerGD_2
+BID_4205  +102.285  buyerGD_0
+ASK_4190  +96.444  sellerRE_3
+TRANSACTION_380  +98.069  {buyerZIP_3.BID_4176: +99.695, sellerRE_3.ASK_4190: +96.444)
+BID_4208  +99.106  buyerZIP_4
+ASK_4192  +97.149  sellerZIP_1
+TRANSACTION_381  +98.128  {buyerZIP_4.BID_4208: +99.106, sellerZIP_1.ASK_4192: +97.149)
+BID_4211  +103.649  buyerZIP_2
+TRANSACTION_382  +102.553  {buyerZIP_2.BID_4211: +103.649, sellerRE_2.ASK_4184: +102.285)
+------ Round 5 -----------
+attempt to ask at 99.69516838612002
+BID_4215  +99.390  buyerZIP_3
+ASK_4200  +97.149  sellerZIP_1
+TRANSACTION_383  +98.270  {buyerZIP_3.BID_4215: +99.390, sellerZIP_1.ASK_4200: +97.149)
+ASK_4172  +99.695  sellerGD_2
+BID_4217  +103.332  buyerRE_1
+BID_4220  +102.992  buyerZIP_0
+BID_4156  +98.822  buyerRE_0
+ASK_4204  +97.291  sellerZIP_2
+TRANSACTION_384  +98.056  {buyerRE_0.BID_4156: +98.822, sellerZIP_2.ASK_4204: +97.291)
+BID_4155  +73.979  buyerRE_4
+TRANSACTION_385  +103.162  {buyerRE_1.BID_4217: +103.332, sellerZIP_0.ASK_4169: +102.821)
+------ Round 6 -----------
+attempt to ask at 99.39006530677705
+BID_4224  +98.822  buyerRE_0
+BID_4220  +103.369  buyerZIP_0
+ASK_4172  +99.390  sellerGD_2
+ASK_4207  +97.723  sellerZIC_4
+BID_4229  +100.851  buyerZIP_4
+TRANSACTION_386  +100.121  {buyerZIP_4.BID_4229: +100.851, sellerGD_2.ASK_4172: +99.390)
+ASK_4210  +97.291  sellerZIP_2
+TRANSACTION_387  +98.056  {buyerRE_0.BID_4224: +98.822, sellerZIP_2.ASK_4210: +97.291)
+BID_4155  +81.979  buyerRE_4
+BID_4232  +83.169  buyerZIC_1
+BID_4205  +102.285  buyerGD_0
+ASK_4132  +103.334  sellerGD_0
+TRANSACTION_388  +102.809  {buyerZIP_0.BID_4220: +103.369, sellerZIC_4.ASK_4207: +97.723)
+------ Round 7 -----------
+attempt to ask at 99.39006530677705
+BID_4233  +103.369  buyerZIP_0
+BID_4234  +94.488  buyerZIP_3
+BID_4235  +96.705  buyerZIP_4
+ASK_4216  +99.390  sellerGD_2
+ASK_4132  +103.334  sellerGD_0
+ASK_4221  +102.204  sellerZIP_0
+BID_4240  +98.822  buyerRE_0
+TRANSACTION_389  +102.809  {buyerZIP_0.BID_4233: +103.369, sellerZIP_0.ASK_4221: +102.204)
+------ Round 8 -----------
+attempt to ask at 99.39006530677705
+BID_4240  +98.822  buyerRE_0
+ASK_4227  +102.204  sellerZIP_0
+ASK_4216  +99.390  sellerGD_2
+BID_4205  +102.285  buyerGD_0
+TRANSACTION_390  +102.244  {buyerGD_0.BID_4205: +102.285, sellerZIP_0.ASK_4227: +102.204)
+------ Round 9 -----------
+attempt to ask at 99.39006530677705
+BID_4235  +99.934  buyerZIP_4
+TRANSACTION_391  +99.662  {buyerZIP_4.BID_4235: +99.934, sellerGD_2.ASK_4216: +99.390)
+ASK_4132  +103.334  sellerGD_0
+BID_4251  +102.285  buyerGD_0
+ASK_4142  +101.593  sellerZIP_4
+BID_4234  +101.741  buyerZIP_3
+TRANSACTION_392  +101.667  {buyerZIP_3.BID_4234: +101.741, sellerZIP_4.ASK_4142: +101.593)
+BID_4253  +102.428  buyerZIP_0
+ASK_4240  +102.630  sellerZIP_2
+**** Day 44 ]]]]]]]]]]]]]]]]]
+**** Day 45 [[[[[[[[[[[[[[[[[
+private value: 98.1289833271876
+------ Round 0 -----------
+attempt to ask at 99.39006530677705
+ASK_4242  +149.492  sellerRE_3
+ASK_4243  +143.575  sellerRE_1
+BID_4258  +101.691  buyerGD_2
+BID_4260  +63.969  buyerZIC_3
+ASK_4244  +107.602  sellerZIP_1
+ASK_4245  +99.638  sellerRE_4
+TRANSACTION_393  +100.664  {buyerGD_2.BID_4258: +101.691, sellerRE_4.ASK_4245: +99.638)
+ASK_4246  +106.326  sellerZIC_1
+ASK_4247  +105.226  sellerZIP_3
+BID_4262  +70.391  buyerRE_4
+BID_4263  +80.309  buyerRE_1
+BID_4264  +102.583  buyerZIP_0
+ASK_4250  +103.334  sellerGD_0
+BID_4269  +100.310  buyerZIP_4
+ASK_4253  +102.656  sellerRE_2
+ASK_4254  +101.593  sellerGD_4
+ASK_4257  +100.879  sellerZIP_0
+ASK_4258  +99.390  sellerGD_2
+TRANSACTION_394  +99.850  {buyerZIP_4.BID_4269: +100.310, sellerGD_2.ASK_4258: +99.390)
+TRANSACTION_395  +101.731  {buyerZIP_0.BID_4264: +102.583, sellerZIP_0.ASK_4257: +100.879)
+------ Round 1 -----------
+attempt to ask at 99.39006530677705
+ASK_4242  +101.492  sellerRE_3
+BID_4274  +99.366  buyerRE_2
+ASK_4260  +99.638  sellerRE_4
+BID_4276  +101.691  buyerGD_2
+TRANSACTION_396  +100.664  {buyerGD_2.BID_4276: +101.691, sellerRE_4.ASK_4260: +99.638)
+ASK_4253  +102.656  sellerRE_2
+BID_4279  +100.741  buyerZIP_0
+ASK_4265  +100.879  sellerZIP_0
+BID_4280  +98.222  buyerZIP_3
+BID_4283  +100.163  buyerRE_3
+ASK_4268  +99.390  sellerGD_2
+TRANSACTION_397  +99.777  {buyerRE_3.BID_4283: +100.163, sellerGD_2.ASK_4268: +99.390)
+------ Round 2 -----------
+attempt to ask at 99.39006530677705
+BID_4279  +103.154  buyerZIP_0
+ASK_4253  +95.656  sellerRE_2
+ASK_4271  +99.390  sellerGD_2
+BID_4274  +99.366  buyerRE_2
+BID_4280  +98.222  buyerZIP_3
+BID_4290  +100.163  buyerRE_3
+TRANSACTION_398  +99.777  {buyerRE_3.BID_4290: +100.163, sellerGD_2.ASK_4271: +99.390)
+BID_4293  +101.691  buyerGD_2
+TRANSACTION_399  +101.592  {buyerGD_2.BID_4293: +101.691, sellerRE_3.ASK_4242: +101.492)
+BID_4295  +100.388  buyerZIP_4
+ASK_4277  +99.638  sellerRE_4
+TRANSACTION_400  +100.013  {buyerZIP_4.BID_4295: +100.388, sellerRE_4.ASK_4277: +99.638)
+ASK_4265  +100.879  sellerZIP_0
+BID_4262  +99.391  buyerRE_4
+TRANSACTION_401  +100.123  {buyerZIP_0.BID_4279: +103.154, sellerRE_2.ASK_4253: +95.656)
+------ Round 3 -----------
+BID_4297  +100.163  buyerRE_3
+BID_4274  +99.366  buyerRE_2
+BID_4301  +103.154  buyerZIP_0
+ASK_4281  +95.656  sellerRE_2
+ASK_4254  +100.546  sellerGD_4
+ASK_4265  +98.058  sellerZIP_0
+BID_4305  +101.547  buyerRE_0
+TRANSACTION_402  +101.047  {buyerRE_0.BID_4305: +101.547, sellerGD_4.ASK_4254: +100.546)
+TRANSACTION_403  +98.712  {buyerRE_2.BID_4274: +99.366, sellerZIP_0.ASK_4265: +98.058)
+TRANSACTION_404  +98.712  {buyerZIP_0.BID_4301: +103.154, sellerRE_2.ASK_4281: +95.656)
+------ Round 4 -----------
+ASK_4288  +98.058  sellerZIP_0
+ASK_4244  +103.187  sellerZIP_1
+BID_4308  +96.145  buyerZIP_1
+BID_4297  +100.163  buyerRE_3
+ASK_4293  +95.656  sellerRE_2
+ASK_4294  +100.546  sellerGD_4
+BID_4310  +99.022  buyerZIP_2
+BID_4312  +100.483  buyerZIC_4
+BID_4314  +99.366  buyerRE_2
+BID_4315  +102.549  buyerZIP_4
+TRANSACTION_405  +101.547  {buyerZIP_4.BID_4315: +102.549, sellerGD_4.ASK_4294: +100.546)
+TRANSACTION_406  +98.540  {buyerZIP_2.BID_4310: +99.022, sellerZIP_0.ASK_4288: +98.058)
+TRANSACTION_407  +98.540  {buyerRE_2.BID_4314: +99.366, sellerRE_2.ASK_4293: +95.656)
+------ Round 5 -----------
+BID_4308  +96.145  buyerZIP_1
+ASK_4250  +102.583  sellerGD_0
+BID_4319  +99.092  buyerZIP_2
+ASK_4244  +103.187  sellerZIP_1
+ASK_4303  +100.546  sellerGD_4
+------ Round 6 -----------
+BID_4323  +99.366  buyerRE_2
+ASK_4303  +100.546  sellerGD_4
+ASK_4250  +102.583  sellerGD_0
+BID_4263  +101.309  buyerRE_1
+------ Round 7 -----------
+ASK_4250  +102.583  sellerGD_0
+ASK_4322  +96.537  sellerZIC_3
+TRANSACTION_408  +98.510  {buyerZIC_4.BID_4312: +100.483, sellerZIC_3.ASK_4322: +96.537)
+ASK_4303  +100.483  sellerGD_4
+BID_4329  +101.547  buyerRE_0
+TRANSACTION_409  +101.015  {buyerRE_0.BID_4329: +101.547, sellerGD_4.ASK_4303: +100.483)
+------ Round 8 -----------
+ASK_4250  +102.583  sellerGD_0
+ASK_4244  +103.187  sellerZIP_1
+------ Round 9 -----------
+ASK_4244  +103.187  sellerZIP_1
+ASK_4250  +102.583  sellerGD_0
+**** Day 45 ]]]]]]]]]]]]]]]]]
+**** Day 46 [[[[[[[[[[[[[[[[[
+private value: 97.23331761080772
+------ Round 0 -----------
+attempt to ask at 100.48341288092618
+BID_4341  +91.929  buyerZIC_2
+ASK_4340  +103.628  sellerRE_4
+BID_4342  +87.923  buyerZIC_1
+BID_4344  +99.092  buyerZIP_2
+ASK_4342  +102.694  sellerZIC_2
+BID_4347  +100.380  buyerRE_2
+ASK_4344  +101.473  sellerZIC_4
+BID_4349  +100.542  buyerRE_3
+ASK_4345  +103.187  sellerZIP_1
+ASK_4346  +99.031  sellerRE_1
+TRANSACTION_410  +99.786  {buyerRE_3.BID_4349: +100.542, sellerRE_1.ASK_4346: +99.031)
+BID_4351  +96.440  buyerZIP_3
+ASK_4347  +100.483  sellerGD_4
+ASK_4352  +100.483  sellerGD_2
+BID_4352  +97.932  buyerZIC_4
+------ Round 1 -----------
+attempt to ask at 100.38032403663901
+ASK_4352  +100.380  sellerGD_2
+ASK_4357  +97.668  sellerZIP_3
+BID_4360  +107.133  buyerRE_0
+TRANSACTION_411  +103.808  {buyerRE_0.BID_4360: +107.133, sellerGD_4.ASK_4347: +100.483)
+ASK_4359  +99.031  sellerRE_1
+BID_4362  +98.811  buyerGD_2
+BID_4344  +99.092  buyerZIP_2
+BID_4363  +100.898  buyerZIP_4
+TRANSACTION_412  +99.965  {buyerZIP_4.BID_4363: +100.898, sellerRE_1.ASK_4359: +99.031)
+ASK_4361  +95.760  sellerZIP_4
+ASK_4345  +103.187  sellerZIP_1
+ASK_4364  +102.803  sellerZIP_0
+ASK_4366  +99.565  sellerZIP_2
+BID_4347  +100.380  buyerRE_2
+BID_4351  +99.633  buyerZIP_3
+TRANSACTION_413  +99.599  {buyerZIP_3.BID_4351: +99.633, sellerZIP_2.ASK_4366: +99.565)
+TRANSACTION_414  +98.380  {buyerZIP_2.BID_4344: +99.092, sellerZIP_3.ASK_4357: +97.668)
+TRANSACTION_415  +98.380  {buyerRE_2.BID_4347: +100.380, sellerZIP_4.ASK_4361: +95.760)
+------ Round 2 -----------
+attempt to ask at 100.38032403663901
+BID_4367  +96.145  buyerZIP_1
+ASK_4368  +100.483  sellerGD_4
+ASK_4370  +96.139  sellerRE_3
+TRANSACTION_416  +97.475  {buyerGD_2.BID_4362: +98.811, sellerRE_3.ASK_4370: +96.139)
+BID_4370  +100.380  buyerRE_2
+ASK_4375  +97.989  sellerZIP_3
+BID_4376  +99.633  buyerZIP_3
+ASK_4352  +100.380  sellerGD_2
+TRANSACTION_417  +99.185  {buyerRE_2.BID_4370: +100.380, sellerZIP_3.ASK_4375: +97.989)
+------ Round 3 -----------
+attempt to ask at 100.38032403663901
+BID_4382  +100.380  buyerRE_2
+BID_4383  +107.133  buyerRE_0
+TRANSACTION_418  +103.808  {buyerRE_0.BID_4383: +107.133, sellerGD_4.ASK_4368: +100.483)
+ASK_4345  +102.628  sellerZIP_1
+ASK_4382  +99.031  sellerRE_1
+TRANSACTION_419  +99.332  {buyerZIP_3.BID_4376: +99.633, sellerRE_1.ASK_4382: +99.031)
+BID_4386  +98.115  buyerZIP_4
+BID_4388  +100.542  buyerRE_3
+ASK_4364  +100.956  sellerZIP_0
+ASK_4386  +97.517  sellerZIP_2
+TRANSACTION_420  +99.029  {buyerRE_3.BID_4388: +100.542, sellerZIP_2.ASK_4386: +97.517)
+ASK_4352  +100.380  sellerGD_2
+ASK_4388  +98.331  sellerZIP_4
+TRANSACTION_421  +99.355  {buyerRE_2.BID_4382: +100.380, sellerZIP_4.ASK_4388: +98.331)
+------ Round 4 -----------
+attempt to ask at 99.34972441833615
+BID_4386  +99.158  buyerZIP_4
+ASK_4392  +100.314  sellerZIP_3
+ASK_4394  +98.331  sellerZIP_4
+BID_4367  +96.145  buyerZIP_1
+BID_4394  +101.667  buyerZIP_2
+ASK_4352  +99.350  sellerGD_2
+BID_4395  +100.542  buyerRE_3
+ASK_4395  +100.483  sellerGD_4
+TRANSACTION_422  +100.513  {buyerRE_3.BID_4395: +100.542, sellerGD_4.ASK_4395: +100.483)
+BID_4397  +100.494  buyerZIP_3
+TRANSACTION_423  +98.840  {buyerZIP_2.BID_4394: +101.667, sellerZIP_4.ASK_4394: +98.331)
+------ Round 5 -----------
+attempt to ask at 99.34972441833615
+BID_4386  +102.171  buyerZIP_4
+TRANSACTION_424  +101.563  {buyerZIP_4.BID_4386: +102.171, sellerZIP_0.ASK_4364: +100.956)
+ASK_4352  +99.350  sellerGD_2
+BID_4397  +100.858  buyerZIP_3
+BID_4402  +107.133  buyerRE_0
+TRANSACTION_425  +104.880  {buyerRE_0.BID_4402: +107.133, sellerZIP_1.ASK_4345: +102.628)
+BID_4367  +96.145  buyerZIP_1
+------ Round 6 -----------
+attempt to ask at 99.34972441833615
+ASK_4406  +103.113  sellerZIP_2
+BID_4367  +96.145  buyerZIP_1
+ASK_4352  +99.350  sellerGD_2
+BID_4412  +104.547  buyerRE_1
+TRANSACTION_426  +103.830  {buyerRE_1.BID_4412: +104.547, sellerZIP_2.ASK_4406: +103.113)
+BID_4397  +100.858  buyerZIP_3
+BID_4414  +102.171  buyerZIP_4
+ASK_4340  +103.628  sellerRE_4
+------ Round 7 -----------
+attempt to ask at 99.34972441833615
+BID_4418  +98.528  buyerZIP_2
+ASK_4416  +103.064  sellerZIC_0
+BID_4419  +99.828  buyerZIP_0
+ASK_4352  +99.350  sellerGD_2
+BID_4414  +102.171  buyerZIP_4
+ASK_4418  +102.380  sellerZIP_1
+TRANSACTION_427  +99.589  {buyerZIP_0.BID_4419: +99.828, sellerGD_2.ASK_4352: +99.350)
+------ Round 8 -----------
+attempt to ask at 99.34972441833615
+ASK_4392  +100.314  sellerZIP_3
+ASK_4424  +101.650  sellerZIP_0
+TRANSACTION_428  +101.910  {buyerZIP_4.BID_4414: +102.171, sellerZIP_0.ASK_4424: +101.650)
+BID_4397  +100.858  buyerZIP_3
+ASK_4418  +102.380  sellerZIP_1
+BID_4418  +100.690  buyerZIP_2
+ASK_4428  +99.350  sellerGD_2
+BID_4427  +104.547  buyerRE_1
+TRANSACTION_429  +103.464  {buyerRE_1.BID_4427: +104.547, sellerZIP_1.ASK_4418: +102.380)
+TRANSACTION_430  +99.832  {buyerZIP_2.BID_4418: +100.690, sellerGD_2.ASK_4428: +99.350)
+------ Round 9 -----------
+attempt to ask at 99.34972441833615
+ASK_4392  +100.314  sellerZIP_3
+BID_4367  +96.145  buyerZIP_1
+BID_4429  +104.547  buyerRE_1
+TRANSACTION_431  +103.805  {buyerRE_1.BID_4429: +104.547, sellerZIC_0.ASK_4416: +103.064)
+BID_4431  +101.491  buyerGD_2
+ASK_4340  +103.628  sellerRE_4
+BID_4341  +99.352  buyerZIC_2
+ASK_4435  +99.350  sellerGD_2
+BID_4434  +100.709  buyerZIP_0
+TRANSACTION_432  +99.833  {buyerZIP_0.BID_4434: +100.709, sellerGD_2.ASK_4435: +99.350)
+**** Day 46 ]]]]]]]]]]]]]]]]]
+**** Day 47 [[[[[[[[[[[[[[[[[
+private value: 98.46961314789951
+------ Round 0 -----------
+attempt to ask at 99.34972441833615
+BID_4435  +97.829  buyerZIP_2
+ASK_4438  +141.547  sellerGD_4
+BID_4436  +68.574  buyerZIC_0
+BID_4437  +70.858  buyerRE_4
+ASK_4439  +103.762  sellerRE_4
+BID_4438  +104.114  buyerRE_2
+ASK_4440  +126.952  sellerZIC_4
+ASK_4441  +99.350  sellerGD_2
+BID_4441  +96.145  buyerZIP_1
+BID_4443  +99.623  buyerRE_3
+TRANSACTION_433  +99.486  {buyerRE_3.BID_4443: +99.623, sellerGD_2.ASK_4441: +99.350)
+ASK_4442  +107.556  sellerZIP_3
+ASK_4443  +95.070  sellerRE_2
+ASK_4445  +103.001  sellerZIC_3
+BID_4444  +101.618  buyerGD_2
+ASK_4448  +101.062  sellerRE_1
+TRANSACTION_434  +101.340  {buyerGD_2.BID_4444: +101.618, sellerRE_1.ASK_4448: +101.062)
+ASK_4450  +103.599  sellerZIP_0
+BID_4448  +103.368  buyerZIP_4
+TRANSACTION_435  +103.185  {buyerZIP_4.BID_4448: +103.368, sellerZIC_3.ASK_4445: +103.001)
+ASK_4451  +101.796  sellerZIC_2
+ASK_4454  +101.125  sellerZIP_1
+TRANSACTION_436  +99.812  {buyerRE_2.BID_4438: +104.114, sellerRE_2.ASK_4443: +95.070)
+------ Round 1 -----------
+attempt to ask at 99.34972441833615
+BID_4451  +98.714  buyerZIP_4
+BID_4435  +101.224  buyerZIP_2
+BID_4452  +101.618  buyerGD_2
+TRANSACTION_437  +101.371  {buyerGD_2.BID_4452: +101.618, sellerZIP_1.ASK_4454: +101.125)
+ASK_4458  +95.070  sellerRE_2
+ASK_4459  +99.350  sellerGD_2
+BID_4458  +103.491  buyerRE_1
+BID_4460  +102.678  buyerRE_0
+TRANSACTION_438  +101.014  {buyerRE_0.BID_4460: +102.678, sellerGD_2.ASK_4459: +99.350)
+TRANSACTION_439  +101.510  {buyerRE_1.BID_4458: +103.491, sellerRE_2.ASK_4458: +95.070)
+------ Round 2 -----------
+attempt to ask at 99.34972441833615
+ASK_4438  +103.075  sellerGD_4
+BID_4463  +101.618  buyerGD_2
+ASK_4466  +99.350  sellerGD_2
+TRANSACTION_440  +100.484  {buyerGD_2.BID_4463: +101.618, sellerGD_2.ASK_4466: +99.350)
+BID_4466  +99.623  buyerRE_3
+ASK_4469  +99.690  sellerZIP_1
+BID_4467  +104.114  buyerRE_2
+ASK_4473  +102.070  sellerRE_2
+BID_4470  +103.491  buyerRE_1
+TRANSACTION_441  +102.780  {buyerRE_1.BID_4470: +103.491, sellerRE_2.ASK_4473: +102.070)
+TRANSACTION_442  +102.780  {buyerRE_2.BID_4467: +104.114, sellerZIC_2.ASK_4451: +101.796)
+------ Round 3 -----------
+ASK_4450  +98.928  sellerZIP_0
+BID_4441  +99.690  buyerZIP_1
+TRANSACTION_443  +99.690  {buyerZIP_1.BID_4441: +99.690, sellerZIP_1.ASK_4469: +99.690)
+BID_4476  +102.678  buyerRE_0
+BID_4435  +101.224  buyerZIP_2
+ASK_4479  +98.376  sellerZIC_1
+TRANSACTION_444  +100.527  {buyerRE_0.BID_4476: +102.678, sellerZIC_1.ASK_4479: +98.376)
+BID_4478  +103.491  buyerRE_1
+ASK_4484  +101.062  sellerRE_1
+TRANSACTION_445  +102.357  {buyerRE_1.BID_4478: +103.491, sellerZIP_0.ASK_4450: +98.928)
+------ Round 4 -----------
+ASK_4485  +104.414  sellerZIP_0
+ASK_4487  +100.394  sellerZIP_2
+BID_4484  +102.678  buyerRE_0
+TRANSACTION_446  +101.536  {buyerRE_0.BID_4484: +102.678, sellerZIP_2.ASK_4487: +100.394)
+BID_4435  +101.224  buyerZIP_2
+ASK_4491  +103.819  sellerZIP_4
+BID_4486  +100.749  buyerZIC_4
+ASK_4484  +101.062  sellerRE_1
+------ Round 5 -----------
+BID_4435  +101.224  buyerZIP_2
+ASK_4484  +101.062  sellerRE_1
+ASK_4491  +103.819  sellerZIP_4
+ASK_4438  +100.749  sellerGD_4
+TRANSACTION_447  +100.749  {buyerZIC_4.BID_4486: +100.749, sellerGD_4.ASK_4438: +100.749)
+------ Round 6 -----------
+ASK_4503  +100.749  sellerGD_4
+ASK_4504  +99.981  sellerZIP_2
+BID_4435  +101.224  buyerZIP_2
+BID_4451  +100.275  buyerZIP_4
+TRANSACTION_448  +100.128  {buyerZIP_4.BID_4451: +100.275, sellerZIP_2.ASK_4504: +99.981)
+ASK_4485  +103.255  sellerZIP_0
+BID_4505  +102.758  buyerZIP_1
+TRANSACTION_449  +101.753  {buyerZIP_1.BID_4505: +102.758, sellerGD_4.ASK_4503: +100.749)
+------ Round 7 -----------
+BID_4435  +101.224  buyerZIP_2
+BID_4507  +103.342  buyerZIP_4
+TRANSACTION_450  +102.202  {buyerZIP_4.BID_4507: +103.342, sellerRE_1.ASK_4484: +101.062)
+ASK_4485  +103.255  sellerZIP_0
+ASK_4512  +100.749  sellerGD_4
+ASK_4514  +100.334  sellerZIP_1
+BID_4466  +99.623  buyerRE_3
+------ Round 8 -----------
+ASK_4485  +103.255  sellerZIP_0
+BID_4435  +101.224  buyerZIP_2
+------ Round 9 -----------
+ASK_4485  +103.255  sellerZIP_0
+BID_4435  +101.224  buyerZIP_2
+**** Day 47 ]]]]]]]]]]]]]]]]]
+**** Day 48 [[[[[[[[[[[[[[[[[
+private value: 101.19554254459217
+------ Round 0 -----------
+attempt to ask at 142.34245251907842
+BID_4532  +88.609  buyerZIC_2
+ASK_4537  +144.955  sellerZIC_1
+ASK_4539  +142.342  sellerGD_2
+BID_4533  +102.285  buyerGD_0
+BID_4534  +100.368  buyerRE_2
+BID_4535  +101.224  buyerZIP_2
+ASK_4541  +107.717  sellerZIP_0
+ASK_4542  +109.106  sellerZIC_3
+ASK_4545  +104.222  sellerZIP_3
+ASK_4546  +100.891  sellerRE_3
+TRANSACTION_451  +101.588  {buyerGD_0.BID_4533: +102.285, sellerRE_3.ASK_4546: +100.891)
+ASK_4547  +106.675  sellerRE_4
+BID_4542  +68.109  buyerRE_0
+ASK_4548  +103.819  sellerZIP_4
+ASK_4550  +102.583  sellerGD_0
+BID_4547  +94.014  buyerZIC_0
+BID_4548  +103.462  buyerRE_3
+TRANSACTION_452  +103.023  {buyerRE_3.BID_4548: +103.462, sellerGD_0.ASK_4550: +102.583)
+------ Round 1 -----------
+attempt to ask at 103.34245251907842
+ASK_4553  +105.070  sellerZIC_0
+ASK_4554  +104.999  sellerZIP_1
+ASK_4548  +103.819  sellerZIP_4
+BID_4549  +102.791  buyerZIP_4
+ASK_4559  +102.583  sellerGD_0
+TRANSACTION_453  +102.687  {buyerZIP_4.BID_4549: +102.791, sellerGD_0.ASK_4559: +102.583)
+BID_4553  +103.462  buyerRE_3
+ASK_4539  +103.342  sellerGD_2
+TRANSACTION_454  +103.402  {buyerRE_3.BID_4553: +103.462, sellerGD_2.ASK_4539: +103.342)
+BID_4535  +101.224  buyerZIP_2
+BID_4554  +102.285  buyerGD_0
+ASK_4560  +97.786  sellerRE_1
+TRANSACTION_455  +100.035  {buyerGD_0.BID_4554: +102.285, sellerRE_1.ASK_4560: +97.786)
+BID_4555  +102.285  buyerGD_3
+------ Round 2 -----------
+attempt to ask at 103.34245251907842
+BID_4562  +103.462  buyerRE_3
+ASK_4564  +102.583  sellerGD_0
+TRANSACTION_456  +103.023  {buyerRE_3.BID_4562: +103.462, sellerGD_0.ASK_4564: +102.583)
+ASK_4548  +103.819  sellerZIP_4
+ASK_4554  +104.999  sellerZIP_1
+ASK_4567  +103.342  sellerGD_2
+BID_4567  +102.285  buyerGD_2
+BID_4535  +101.224  buyerZIP_2
+ASK_4568  +97.786  sellerRE_1
+TRANSACTION_457  +100.035  {buyerGD_2.BID_4567: +102.285, sellerRE_1.ASK_4568: +97.786)
+BID_4569  +102.285  buyerGD_0
+BID_4542  +105.109  buyerRE_0
+TRANSACTION_458  +104.225  {buyerRE_0.BID_4542: +105.109, sellerGD_2.ASK_4567: +103.342)
+------ Round 3 -----------
+attempt to ask at 103.34245251907842
+ASK_4548  +103.819  sellerZIP_4
+BID_4535  +101.224  buyerZIP_2
+ASK_4554  +104.999  sellerZIP_1
+BID_4578  +102.285  buyerGD_2
+ASK_4573  +97.786  sellerRE_1
+TRANSACTION_459  +100.035  {buyerGD_0.BID_4569: +102.285, sellerRE_1.ASK_4573: +97.786)
+BID_4532  +102.265  buyerZIC_2
+ASK_4575  +103.342  sellerGD_2
+------ Round 4 -----------
+attempt to ask at 103.34245251907842
+BID_4578  +102.285  buyerGD_2
+BID_4585  +103.090  buyerZIP_0
+ASK_4537  +101.029  sellerZIC_1
+TRANSACTION_460  +101.657  {buyerGD_2.BID_4578: +102.285, sellerZIC_1.ASK_4537: +101.029)
+ASK_4548  +103.819  sellerZIP_4
+BID_4555  +102.285  buyerGD_3
+ASK_4575  +103.342  sellerGD_2
+------ Round 5 -----------
+attempt to ask at 103.34245251907842
+BID_4555  +102.285  buyerGD_3
+BID_4591  +105.109  buyerRE_0
+TRANSACTION_461  +104.225  {buyerRE_0.BID_4591: +105.109, sellerGD_2.ASK_4575: +103.342)
+ASK_4548  +103.819  sellerZIP_4
+BID_4597  +102.285  buyerGD_2
+BID_4585  +103.090  buyerZIP_0
+------ Round 6 -----------
+BID_4597  +102.285  buyerGD_2
+BID_4585  +103.090  buyerZIP_0
+ASK_4548  +103.819  sellerZIP_4
+ASK_4593  +103.103  sellerZIC_2
+------ Round 7 -----------
+BID_4585  +103.090  buyerZIP_0
+BID_4597  +102.285  buyerGD_2
+------ Round 8 -----------
+ASK_4600  +104.210  sellerZIC_1
+BID_4585  +103.090  buyerZIP_0
+BID_4597  +103.342  buyerGD_2
+------ Round 9 -----------
+BID_4624  +105.109  buyerRE_0
+TRANSACTION_462  +104.659  {buyerRE_0.BID_4624: +105.109, sellerZIC_1.ASK_4600: +104.210)
+BID_4585  +103.090  buyerZIP_0
+BID_4597  +103.342  buyerGD_2
+**** Day 48 ]]]]]]]]]]]]]]]]]
+**** Day 49 [[[[[[[[[[[[[[[[[
+private value: 100.40845342446119
+------ Round 0 -----------
+attempt to ask at 143.10851729453464
+ASK_4608  +105.247  sellerZIP_2
+BID_4632  +102.285  buyerGD_3
+ASK_4612  +98.580  sellerZIC_1
+BID_4633  +98.841  buyerZIP_4
+TRANSACTION_463  +98.711  {buyerZIP_4.BID_4633: +98.841, sellerZIC_1.ASK_4612: +98.580)
+BID_4634  +97.607  buyerZIC_4
+ASK_4613  +101.651  sellerZIC_2
+BID_4635  +103.342  buyerGD_2
+BID_4637  +103.231  buyerRE_1
+ASK_4619  +97.150  sellerRE_1
+TRANSACTION_464  +100.246  {buyerGD_2.BID_4635: +103.342, sellerRE_1.ASK_4619: +97.150)
+ASK_4622  +101.815  sellerRE_4
+TRANSACTION_465  +102.758  {buyerRE_1.BID_4637: +103.231, sellerZIC_2.ASK_4613: +101.651)
+------ Round 1 -----------
+attempt to ask at 105.10851729453464
+ASK_4625  +100.861  sellerZIP_1
+ASK_4627  +104.659  sellerZIP_0
+BID_4653  +103.231  buyerRE_1
+BID_4655  +103.342  buyerGD_2
+TRANSACTION_466  +102.101  {buyerGD_2.BID_4655: +103.342, sellerZIP_1.ASK_4625: +100.861)
+ASK_4633  +103.819  sellerZIP_4
+BID_4661  +100.738  buyerRE_0
+ASK_4634  +100.261  sellerRE_2
+ASK_4622  +101.815  sellerRE_4
+BID_4632  +102.285  buyerGD_3
+TRANSACTION_467  +102.758  {buyerRE_1.BID_4653: +103.231, sellerRE_2.ASK_4634: +100.261)
+------ Round 2 -----------
+attempt to ask at 103.51602194698054
+ASK_4622  +101.815  sellerRE_4
+BID_4632  +102.285  buyerGD_3
+ASK_4643  +100.916  sellerZIC_1
+BID_4672  +103.342  buyerGD_2
+TRANSACTION_468  +102.129  {buyerGD_2.BID_4672: +103.342, sellerZIC_1.ASK_4643: +100.916)
+ASK_4633  +103.819  sellerZIP_4
+ASK_4652  +100.261  sellerRE_2
+TRANSACTION_469  +101.273  {buyerGD_3.BID_4632: +102.285, sellerRE_2.ASK_4652: +100.261)
+------ Round 3 -----------
+attempt to ask at 103.51602194698054
+BID_4683  +93.073  buyerZIC_3
+BID_4686  +102.285  buyerGD_3
+ASK_4658  +100.049  sellerZIP_1
+TRANSACTION_470  +100.393  {buyerRE_0.BID_4661: +100.738, sellerZIP_1.ASK_4658: +100.049)
+ASK_4633  +103.819  sellerZIP_4
+ASK_4661  +100.261  sellerRE_2
+ASK_4622  +101.815  sellerRE_4
+ASK_4663  +100.916  sellerGD_0
+ASK_4664  +97.150  sellerRE_1
+TRANSACTION_471  +97.379  {buyerZIC_4.BID_4634: +97.607, sellerRE_1.ASK_4664: +97.150)
+BID_4691  +12.623  buyerRE_3
+BID_4692  +101.719  buyerZIP_2
+BID_4694  +60.000  buyerGD_0
+BID_4695  +93.980  buyerZIP_3
+TRANSACTION_472  +102.002  {buyerGD_3.BID_4686: +102.285, sellerRE_2.ASK_4661: +100.261)
+------ Round 4 -----------
+attempt to ask at 103.51602194698054
+ASK_4663  +100.916  sellerGD_0
+ASK_4670  +98.088  sellerZIP_1
+BID_4702  +100.738  buyerRE_0
+TRANSACTION_473  +99.413  {buyerRE_0.BID_4702: +100.738, sellerZIP_1.ASK_4670: +98.088)
+BID_4694  +96.516  buyerGD_0
+ASK_4633  +103.819  sellerZIP_4
+BID_4705  +102.285  buyerGD_3
+------ Round 5 -----------
+attempt to ask at 103.51602194698054
+BID_4705  +102.285  buyerGD_3
+BID_4694  +97.150  buyerGD_0
+ASK_4663  +100.916  sellerGD_0
+ASK_4683  +97.150  sellerRE_1
+TRANSACTION_474  +97.150  {buyerGD_0.BID_4694: +97.150, sellerRE_1.ASK_4683: +97.150)
+BID_4715  +95.857  buyerZIP_4
+ASK_4633  +103.819  sellerZIP_4
+BID_4691  +99.623  buyerRE_3
+------ Round 6 -----------
+attempt to ask at 100.73780093917448
+BID_4705  +103.042  buyerGD_3
+ASK_4663  +100.738  sellerGD_0
+ASK_4633  +103.819  sellerZIP_4
+BID_4692  +104.592  buyerZIP_2
+ASK_4690  +100.738  sellerGD_2
+ASK_4691  +97.249  sellerZIC_4
+BID_4728  +103.231  buyerRE_1
+ASK_4695  +99.574  sellerZIC_2
+TRANSACTION_475  +103.136  {buyerRE_1.BID_4728: +103.231, sellerZIC_2.ASK_4695: +99.574)
+TRANSACTION_476  +103.136  {buyerZIP_2.BID_4692: +104.592, sellerZIC_4.ASK_4691: +97.249)
+------ Round 7 -----------
+attempt to ask at 100.73780093917448
+ASK_4663  +100.049  sellerGD_0
+BID_4705  +103.042  buyerGD_3
+BID_4735  +100.738  buyerRE_0
+TRANSACTION_477  +100.393  {buyerRE_0.BID_4735: +100.738, sellerGD_0.ASK_4663: +100.049)
+BID_4715  +100.259  buyerZIP_4
+ASK_4633  +103.819  sellerZIP_4
+------ Round 8 -----------
+attempt to ask at 100.73780093917448
+ASK_4708  +100.049  sellerGD_0
+TRANSACTION_478  +100.154  {buyerZIP_4.BID_4715: +100.259, sellerGD_0.ASK_4708: +100.049)
+BID_4705  +103.042  buyerGD_3
+BID_4748  +103.227  buyerZIP_2
+ASK_4711  +98.546  sellerZIC_4
+ASK_4690  +100.738  sellerGD_2
+TRANSACTION_479  +103.134  {buyerZIP_2.BID_4748: +103.227, sellerZIC_4.ASK_4711: +98.546)
+------ Round 9 -----------
+attempt to ask at 100.73780093917448
+ASK_4690  +100.738  sellerGD_2
+ASK_4717  +100.049  sellerGD_0
+BID_4705  +103.227  buyerGD_3
+ASK_4633  +103.819  sellerZIP_4
+BID_4691  +99.623  buyerRE_3
+**** Day 49 ]]]]]]]]]]]]]]]]]
