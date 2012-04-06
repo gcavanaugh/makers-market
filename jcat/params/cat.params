@@ -3,8 +3,8 @@
 ###############################################################
 
 parent.0 = modules/telnetconsole.params
-# parent.0 = modules/noconsole.params
-parent.0 = modules/guiconsole.params
+parent.0 = modules/noconsole.params
+# parent.0 = modules/guiconsole.params
 print-params = true
 
 cat.server.gc = true
@@ -210,7 +210,7 @@ cat.server.clockcontroller = edu.cuny.cat.server.EventBasedClockController
 
 cat.server.iterations = 1
 
-cat.server.gamelen = 20
+cat.server.gamelen = 10
 cat.server.daylen = 10
 cat.server.roundlen = 500
 

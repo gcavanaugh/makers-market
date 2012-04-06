@@ -39,6 +39,7 @@ package edu.cuny.cat.valuation;
 import org.apache.log4j.Logger;
 
 import cern.jet.random.AbstractDistribution;
+import cern.jet.random.engine.RandomEngine;
 import edu.cuny.prng.GlobalPRNG;
 import edu.cuny.random.Normal;
 import edu.cuny.random.Uniform;
@@ -280,14 +281,21 @@ public class UpdatingDailyRandomValuerGenerator extends
 								defBaseNorm
 										.push(UpdatingDailyRandomValuerGenerator.P_STDEV),
 								Normal.DEFAULT_STDEV);
-
+				final RandomEngine prng = Galaxy.getInstance()
+						.getDefaultTyped(GlobalPRNG.class).getEngine();
+				/**
+				 * Add in updator for distribution
+				 */
+				distribution = new Normal(mean, stdev, prng);
+				
+				this.setDistribution(distribution);
 				/**
 				 * Use the logger just to let me know that everything was read
 				 * into the class correctly from the database
 				 */
 				UpdatingDailyRandomValuerGenerator.logger
 						.info("Through UpdatingDailyRandomValuerGenerator mean set to "
-								+ mean + " and stdev set to " + stdev);
+								+ mean + " stdev set to " + stdev + " with distribution " + distribution);
 
 			}
 		} catch (final ParamClassLoadException e) {
@@ -324,9 +332,10 @@ public class UpdatingDailyRandomValuerGenerator extends
 	 */
 	@Override
 	public synchronized ValuationPolicy createValuer() {
+		this.getPosterior();
 		final RandomValuer valuer = new UpdatingDailyRandomValuer();
 		valuer.setGenerator(this);
-		valuer.setDistribution(createDistribution());
+		valuer.setDistribution(this.distribution);
 		valuer.drawRandomValue();
 		return valuer;
 	}
@@ -393,12 +402,19 @@ public class UpdatingDailyRandomValuerGenerator extends
 						defBaseNorm
 								.push(UpdatingDailyRandomValuerGenerator.P_STDEV),
 						0);
+		final RandomEngine prng = Galaxy.getInstance()
+				.getDefaultTyped(GlobalPRNG.class).getEngine();
+		/**
+		 * Add in updator for distribution
+		 */
+		distribution = new Normal(checkmean, checkstdev, prng);
+		this.setDistribution(distribution);
 		/**
 		 * Print the parameters I just stored
 		 */
 		UpdatingDailyRandomValuerGenerator.logger
 				.info("Bayesian update - posterior params in database now: mean "
-						+ checkmean + ", stdev " + checkstdev);
+						+ checkmean + ", stdev " + checkstdev + ", distribution " + distribution);
 	}
 
 	/**
@@ -514,23 +530,12 @@ public class UpdatingDailyRandomValuerGenerator extends
 		 * TODO: figure out how to access distribution
 		 * 
 		 */
-		distribution = paramholder
-				.getInstanceForParameterEq(
-						defBase.push(UpdatingDailyRandomValuerGenerator.P_DISTRIBUTION),
-						defBase.push(RandomValuerGenerator.P_DISTRIBUTION),
-						AbstractDistribution.class);
-		/**
-		 * Print statement for the grabbed values
-		 * 
-		 * distribution pull is not working returns Normal with mean=0 and stdev=1
-		 * 
-		 */
+
 		UpdatingDailyRandomValuerGenerator.logger
 				.info("Prior grabbed from database: location " + location
 						+ ", precision " + precision + ", scale " + scale
 						+ ", shape " + shape + ", maxValue " + maxValue
-						+ ", minValue " + minValue + ", distribution "
-						+ distribution);
+						+ ", minValue " + minValue);
 	}
 	/**
 	 * This class is a getter for the underlying Normal distribution giving private values
@@ -557,9 +562,15 @@ public class UpdatingDailyRandomValuerGenerator extends
 		/**
 		 * Print out the results
 		 */
+		final RandomEngine prng = Galaxy.getInstance()
+				.getDefaultTyped(GlobalPRNG.class).getEngine();
+		/**
+		 * Add in updator for distribution
+		 */
+		distribution = new Normal(mean, stdev, prng);
 		UpdatingDailyRandomValuerGenerator.logger
 				.info("Posterior grabbed from database: mean " + mean
-						+ ", stdev " + stdev);
+						+ ", stdev " + stdev + ", distribution " + distribution);
 	}
 	
 	/**

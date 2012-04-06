@@ -82,7 +82,7 @@ import gov.sandia.cognition.statistics.distribution.StudentTDistribution;
  * @version $Beta 0.1$
  */
 
-public class UpdatingDailyRandomValuer extends DailyRandomValuer {
+public class UpdatingDailyRandomValuer extends RandomValuer {
 	/**
 	 * As with RandomValuer, I need to be able to hold a generator. I will call
 	 * getters and setter for parameter values from that Generator
@@ -237,6 +237,8 @@ public class UpdatingDailyRandomValuer extends DailyRandomValuer {
 			 * The rest of this method is copied from DailyRandomValuer
 			 */
 		} else if (event instanceof DayClosedEvent) {
+			generator.getPosterior();
+			setDistribution(generator.distribution);
 			drawRandomValue();
 		}
 	}
