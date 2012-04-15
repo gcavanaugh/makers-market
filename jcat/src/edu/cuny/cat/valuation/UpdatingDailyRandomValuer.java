@@ -254,6 +254,24 @@ public class UpdatingDailyRandomValuer extends RandomValuer {
 		}
 	}
 
+	public static String checkPosterior(double location,
+	        double precision,
+	        double shape,
+	        double scale) {
+		NormalInverseGammaDistribution prior = new NormalInverseGammaDistribution(location, precision,
+				shape, scale);
+		UnivariateGaussianMeanVarianceBayesianEstimator estimator = new UnivariateGaussianMeanVarianceBayesianEstimator(
+				prior);
+		estimator.computeEquivalentSampleSize(prior);
+		StudentTDistribution predictive = estimator
+				.createPredictiveDistribution(prior);
+		return "The equivalent sample size for this prior is: " +
+				estimator.computeEquivalentSampleSize(prior) + 
+				" and the posterior predictive from UpdatingDailyRandomValuer gives: mean " +
+				predictive.getMean() +
+				"and stdev " +
+				Math.sqrt(predictive.getVariance());
+	}
 	/**
 	 * Method used to return a randomly generated value from a uniform
 	 * distribution that will be used to determine if updating occurs
@@ -267,6 +285,8 @@ public class UpdatingDailyRandomValuer extends RandomValuer {
 		final double d = uniformDistribution.nextDouble();
 		return d;
 	}
+	
+	
 
 	/**
 	 * Method used to determine if updating occurs by comparing randomly

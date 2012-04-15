@@ -240,7 +240,8 @@ public class UpdatingDailyRandomValuerGenerator extends
 						+ scale
 						+ ", and shape set to "
 						+ shape);
-
+		UpdatingDailyRandomValuerGenerator.logger
+		.info(UpdatingDailyRandomValuer.checkPosterior(location,precision,shape,scale));
 		/**
 		 * Copied (more or less) from RandomValuerGenerator
 		 */
