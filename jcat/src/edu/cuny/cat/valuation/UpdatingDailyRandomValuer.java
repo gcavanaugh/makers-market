@@ -295,7 +295,8 @@ public class UpdatingDailyRandomValuer extends RandomValuer {
 	 * @return
 	 */
 	private boolean compareToTheshold(double draw) {
-		final double threshold = 0.05;
+		generator.getPrUpdate();
+		double threshold = generator.prupdate;
 		return draw < threshold;
 	}
 }

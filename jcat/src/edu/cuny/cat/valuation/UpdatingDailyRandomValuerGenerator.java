@@ -100,6 +100,8 @@ public class UpdatingDailyRandomValuerGenerator extends
 	public double scale;
 
 	public double shape;
+	
+	public double prupdate;
 
 	/**
 	 * Just some strings I'll need for some of my storage and retrieval to/from
@@ -130,13 +132,11 @@ public class UpdatingDailyRandomValuerGenerator extends
 	public static final String P_MEAN = "mean";
 
 	public static final String P_STDEV = "stdev";
+	
+	public static final String P_SAMPSIZE = "samplesize";
+	
+	public static final String P_PRUPDATE = "prupdate";
 
-	/**
-	 * TODO: Add in the capacity to set the liklihood that a given shout updates
-	 * the private value distribution in the initial params file. Will need a
-	 * threshold double when I do.
-	 */
-	// public static final String P_THRES = "threshold";
 
 	/**
 	 * Need a static variable to hold the ParameterDatabase I'm working with at
@@ -199,49 +199,7 @@ public class UpdatingDailyRandomValuerGenerator extends
 		 * 
 		 */
 
-		/**
-		 * Initialize the key parameters for the normal inverse gamma with
-		 * default values
-		 * 
-		 */
-		location = parameters.getDoubleWithDefault(
-				base.push(UpdatingDailyRandomValuerGenerator.P_LOC),
-				defBase.push(UpdatingDailyRandomValuerGenerator.P_LOC), 100.0);
-		precision = parameters.getDoubleWithDefault(
-				base.push(UpdatingDailyRandomValuerGenerator.P_PRES),
-				defBase.push(UpdatingDailyRandomValuerGenerator.P_PRES), 0.004);
-		scale = parameters
-				.getDoubleWithDefault(
-						base.push(UpdatingDailyRandomValuerGenerator.P_SCALE),
-						defBase.push(UpdatingDailyRandomValuerGenerator.P_SCALE),
-						0.001);
-		shape = parameters.getDoubleWithDefault(
-				base.push(UpdatingDailyRandomValuerGenerator.P_SHAPE),
-				defBase.push(UpdatingDailyRandomValuerGenerator.P_SHAPE), 1.0);
-
-		/**
-		 * TODO: add in threshold initialization threshold =
-		 * parameters.getDoubleWithDefault
-		 * (base.push(UpdatingDailyRandomValuerGenerator.P_THRES),
-		 * defBase.push(UpdatingDailyRandomValuerGenerator.P_THRES), 0.0);
-		 */
-
-		/**
-		 * Use the logger just to let me know that everything was read into the
-		 * class correctly from the database
-		 */
-
-		UpdatingDailyRandomValuerGenerator.logger
-				.info("Through UpdatingDailyRandomValuerGenerator location set to "
-						+ location
-						+ ", precision set to "
-						+ precision
-						+ ", scale set to "
-						+ scale
-						+ ", and shape set to "
-						+ shape);
-		UpdatingDailyRandomValuerGenerator.logger
-		.info(UpdatingDailyRandomValuer.checkPosterior(location,precision,shape,scale));
+		
 		/**
 		 * Copied (more or less) from RandomValuerGenerator
 		 */
@@ -303,7 +261,58 @@ public class UpdatingDailyRandomValuerGenerator extends
 			distribution = new Uniform(minValue, maxValue, Galaxy.getInstance()
 					.getDefaultTyped(GlobalPRNG.class).getEngine());
 		}
+		/**
+		 * Initialize the key parameters for the normal inverse gamma with
+		 * default values
+		 * 
+		 */
+		location = mean;
+		
+		precision = parameters.getDoubleWithDefault(
+				base.push(UpdatingDailyRandomValuerGenerator.P_SAMPSIZE),
+				defBase.push(UpdatingDailyRandomValuerGenerator.P_SAMPSIZE), 100);
+		
+		shape = parameters.getDoubleWithDefault(
+				base.push(UpdatingDailyRandomValuerGenerator.P_SHAPE),
+				defBase.push(UpdatingDailyRandomValuerGenerator.P_SHAPE), 1.0);
+		
+		/**
+		 *  double dofs = posterior.getPrecision();
+		 *  double precision = posterior.getShape() / posterior.getScale();
+		 *    public double getVariance() {
+		 *     final double v = this.getDegreesOfFreedom();
+		 *     if( v > 2.0 ){
+		 *     return v / (v - 2.0) / this.precision;
+		 */
+		double dofscale = precision/(precision-2);
+		
+		scale = (stdev*stdev*shape)/dofscale;
+		
+		updatePrior(location, precision, scale, shape);
+		
+		prupdate = parameters.getDoubleWithDefault(
+				base.push(UpdatingDailyRandomValuerGenerator.P_PRUPDATE),
+				defBase.push(UpdatingDailyRandomValuerGenerator.P_PRUPDATE), 0.01);
+		
+		/**
+		 * Use the logger just to let me know that everything was read into the
+		 * class correctly from the database
+		 */
 
+		UpdatingDailyRandomValuerGenerator.logger
+				.info("Through UpdatingDailyRandomValuerGenerator location set to "
+						+ location
+						+ ", precision set to "
+						+ precision
+						+ ", scale set to "
+						+ scale
+						+ ", shape set to "
+						+ shape
+						+ ", and updating has a probability of "
+						+ prupdate
+						);
+		UpdatingDailyRandomValuerGenerator.logger
+		.info(UpdatingDailyRandomValuer.checkPosterior(location,precision,shape,scale));
 		checkDistribution(distribution);
 
 	}
@@ -572,6 +581,20 @@ public class UpdatingDailyRandomValuerGenerator extends
 		UpdatingDailyRandomValuerGenerator.logger
 				.info("Posterior grabbed from database: mean " + mean
 						+ ", stdev " + stdev + ", distribution " + distribution);
+	}
+	
+	public synchronized void getPrUpdate() {
+		
+		defBase = new Parameter(UpdatingDailyRandomValuerGenerator.P_DEF_BUYER);
+		/**
+		 * pull the mean and stdev from the database
+		 */
+		prupdate = paramholder.getDouble(
+				defBase.push(UpdatingDailyRandomValuerGenerator.P_PRUPDATE),
+				defBaseNorm.push(UpdatingDailyRandomValuerGenerator.P_PRUPDATE), 0);
+
+		UpdatingDailyRandomValuerGenerator.logger
+				.info("Transactions update with probability: " + prupdate);
 	}
 	
 	/**
