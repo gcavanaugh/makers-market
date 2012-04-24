@@ -138,116 +138,19 @@ public class UpdatingDailyRandomValuer extends RandomValuer {
 			 * threshold itself a distribution) using real data once the class
 			 * is up and running
 			 */
-			final double d = drawVal();
-			if (compareToTheshold(d)) {
-				/**
-				 * Make sure that the Generator has the most recent parameter
-				 * values
-				 * 
-				 */
-				generator.getPrior();
-				generator.getPosterior();
-				/**
-				 * initialize a NormalInverseGammaDistribution with the current
-				 * parameter values
-				 * 
-				 * These classes come from the Sandia's Cognitive Foundry
-				 * (http://foundry.sandia.gov/)
-				 */
-				NormalInverseGammaDistribution prior = new NormalInverseGammaDistribution(
-						generator.location, generator.precision,
-						generator.shape, generator.scale);
-				/**
-				 * Print statement to show the values used to initialize the
-				 * prior
-				 */
-				UpdatingDailyRandomValuer.logger
-						.info("Normal inverse gamma given: location "
-								+ generator.location + ", precision "
-								+ generator.precision + ", scale "
-								+ generator.scale + ", shape "
-								+ generator.shape);
-				/**
-				 * Print statement to show the parameter values that actually
-				 * were initialized when we created our prior
-				 */
-				UpdatingDailyRandomValuer.logger
-						.info("Bayesian prior created by UpdatingDailyRandomValuer: location "
-								+ prior.getLocation()
-								+ ", precision "
-								+ prior.getPrecision()
-								+ ", scale "
-								+ prior.getScale()
-								+ ", shape "
-								+ prior.getShape());
-				/**
-				 * Now that we have a prior, we also need a
-				 * UnivariateGaussianMeanVarianceBayesianEstimator, an instance
-				 * of the class that will actually do the updating
-				 */
-				UnivariateGaussianMeanVarianceBayesianEstimator estimator = new UnivariateGaussianMeanVarianceBayesianEstimator(
-						prior);
-				
-				UpdatingDailyRandomValuer.logger
-				.info("The equivalent sample size for this prior is: " +
-						estimator.computeEquivalentSampleSize(prior));
-				StudentTDistribution predictive = estimator
-						.createPredictiveDistribution(prior);
-				UpdatingDailyRandomValuer.logger
-				.info("Before updating the posterior predictive from UpdatingDailyRandomValuer gives: mean "
-						+ predictive.getMean()
-						+ "and stdev "
-						+ Math.sqrt(predictive.getVariance()));
-				/**
-				 * Tell the UnivariateGaussianMeanVarianceBayesianEstimator to
-				 * use both our prior and our transaction value to update
-				 */
-				estimator.update(prior, ((TransactionPostedEvent) event)
+			double t = drawVal();
+			if (compareToThesholdTransact(t)) {
+				updateWithValue(generator, ((TransactionPostedEvent) event)
 						.getTransaction().getPrice());
-				/**
-				 * Print statement for transaction value that will be used to update
-				 */
-				UpdatingDailyRandomValuer.logger
-				.info("Bayesian updator given transaction value: " +
-						((TransactionPostedEvent) event)
-						.getTransaction().getPrice());
-				/**
-				 * Take the resulting parameter values and give them to our
-				 * Generator to be entered into the database (we are calling our
-				 * setter).
-				 * 
-				 */
-				generator.updatePrior(prior.getLocation(),
-						prior.getPrecision(), prior.getScale(),
-						prior.getShape());
-				/**
-				 * Now we need a posterior predictive distribution that we can
-				 * use to extract our mean and standard deviation values
-				 * 
-				 */
-				predictive = estimator
-						.createPredictiveDistribution(prior);
-				/**
-				 * Print out the mean and stdev that we get from our posterior
-				 * predictive distribution. Note that the posterior uses
-				 * precision not stdev.
-				 */
-				UpdatingDailyRandomValuer.logger
-						.info("Bayesian posterior created by UpdatingDailyRandomValuer: mean "
-								+ predictive.getMean()
-								+ "and stdev "
-								+ Math.sqrt(predictive.getVariance()));
-				/**
-				 * Finally, copy the mean and st dev back into our database
-				 * using the setter in our generator class
-				 */
-				generator.updateMeanSD(predictive.getMean(),
-						Math.sqrt(predictive.getVariance()));
 			}
 			/**
 			 * The rest of this method is copied from DailyRandomValuer
 			 */
 		} else if (event instanceof DayClosedEvent) {
+			double r = drawVal();
+			if (compareToThesholdRandom(r)) {
+				updateWithValue(generator, this.drawRandomUpdateValue());
+			}
 			generator.getPosterior();
 			setDistribution(generator.distribution);
 			drawRandomValue();
@@ -286,17 +189,142 @@ public class UpdatingDailyRandomValuer extends RandomValuer {
 		return d;
 	}
 	
+	private double drawRandomUpdateValue() {
+		final RandomEngine prng = Galaxy.getInstance()
+				.getDefaultTyped(GlobalPRNG.class).getEngine();
+		Uniform uniformDistribution = new Uniform(0, 200, prng);
+		final double d = uniformDistribution.nextDouble();
+		return d;
+	}
 	
 
 	/**
-	 * Method used to determine if updating occurs by comparing randomly
+	 * Method used to determine if transaction related updating occurs by comparing randomly
 	 * generated value to a threshold
 	 * 
 	 * @return
 	 */
-	private boolean compareToTheshold(double draw) {
+	private boolean compareToThesholdTransact(double draw) {
 		generator.getPrUpdate();
 		double threshold = generator.prupdate;
 		return draw < threshold;
 	}
+	
+	/**
+	 * Method used to determine if noise updating occurs by comparing randomly
+	 * generated value to a threshold
+	 * 
+	 * @return
+	 */
+	private boolean compareToThesholdRandom(double draw) {
+		generator.getRandUpdate();
+		double threshold = generator.randupdate;
+		return draw < threshold;
+	}
+	
+	private void updateWithValue(UpdatingDailyRandomValuerGenerator generator, double transactionPrice) {
+		/**
+		 * Make sure that the Generator has the most recent parameter
+		 * values
+		 * 
+		 */
+		generator.getPrior();
+		generator.getPosterior();
+		/**
+		 * initialize a NormalInverseGammaDistribution with the current
+		 * parameter values
+		 * 
+		 * These classes come from the Sandia's Cognitive Foundry
+		 * (http://foundry.sandia.gov/)
+		 */
+		NormalInverseGammaDistribution prior = new NormalInverseGammaDistribution(
+				generator.location, generator.precision,
+				generator.shape, generator.scale);
+		/**
+		 * Print statement to show the values used to initialize the
+		 * prior
+		 */
+		UpdatingDailyRandomValuer.logger
+				.info("Normal inverse gamma given: location "
+						+ generator.location + ", precision "
+						+ generator.precision + ", scale "
+						+ generator.scale + ", shape "
+						+ generator.shape);
+		/**
+		 * Print statement to show the parameter values that actually
+		 * were initialized when we created our prior
+		 */
+		UpdatingDailyRandomValuer.logger
+				.info("Bayesian prior created by UpdatingDailyRandomValuer: location "
+						+ prior.getLocation()
+						+ ", precision "
+						+ prior.getPrecision()
+						+ ", scale "
+						+ prior.getScale()
+						+ ", shape "
+						+ prior.getShape());
+		/**
+		 * Now that we have a prior, we also need a
+		 * UnivariateGaussianMeanVarianceBayesianEstimator, an instance
+		 * of the class that will actually do the updating
+		 */
+		UnivariateGaussianMeanVarianceBayesianEstimator estimator = new UnivariateGaussianMeanVarianceBayesianEstimator(
+				prior);
+		
+		UpdatingDailyRandomValuer.logger
+		.info("The equivalent sample size for this prior is: " +
+				estimator.computeEquivalentSampleSize(prior));
+		StudentTDistribution predictive = estimator
+				.createPredictiveDistribution(prior);
+		UpdatingDailyRandomValuer.logger
+		.info("Before updating the posterior predictive from UpdatingDailyRandomValuer gives: mean "
+				+ predictive.getMean()
+				+ "and stdev "
+				+ Math.sqrt(predictive.getVariance()));
+		/**
+		 * Tell the UnivariateGaussianMeanVarianceBayesianEstimator to
+		 * use both our prior and our transaction value to update
+		 */
+		estimator.update(prior, transactionPrice);
+		/**
+		 * Print statement for transaction value that will be used to update
+		 */
+		UpdatingDailyRandomValuer.logger
+		.info("Bayesian updator given transaction value: " +
+				transactionPrice);
+		/**
+		 * Take the resulting parameter values and give them to our
+		 * Generator to be entered into the database (we are calling our
+		 * setter).
+		 * 
+		 */
+		generator.updatePrior(prior.getLocation(),
+				prior.getPrecision(), prior.getScale(),
+				prior.getShape());
+		/**
+		 * Now we need a posterior predictive distribution that we can
+		 * use to extract our mean and standard deviation values
+		 * 
+		 */
+		predictive = estimator
+				.createPredictiveDistribution(prior);
+		/**
+		 * Print out the mean and stdev that we get from our posterior
+		 * predictive distribution. Note that the posterior uses
+		 * precision not stdev.
+		 */
+		UpdatingDailyRandomValuer.logger
+				.info("Bayesian posterior created by UpdatingDailyRandomValuer: mean "
+						+ predictive.getMean()
+						+ "and stdev "
+						+ Math.sqrt(predictive.getVariance()));
+		/**
+		 * Finally, copy the mean and st dev back into our database
+		 * using the setter in our generator class
+		 */
+		generator.updateMeanSD(predictive.getMean(),
+				Math.sqrt(predictive.getVariance()));
+	}
+		
+	
 }

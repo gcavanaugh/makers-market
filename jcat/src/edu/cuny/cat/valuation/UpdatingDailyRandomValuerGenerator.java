@@ -102,6 +102,8 @@ public class UpdatingDailyRandomValuerGenerator extends
 	public double shape;
 	
 	public double prupdate;
+	
+	public double randupdate;
 
 	/**
 	 * Just some strings I'll need for some of my storage and retrieval to/from
@@ -136,6 +138,8 @@ public class UpdatingDailyRandomValuerGenerator extends
 	public static final String P_SAMPSIZE = "samplesize";
 	
 	public static final String P_PRUPDATE = "prupdate";
+	
+	public static final String P_RANDUPDATE = "randupdate";
 
 
 	/**
@@ -294,6 +298,10 @@ public class UpdatingDailyRandomValuerGenerator extends
 				base.push(UpdatingDailyRandomValuerGenerator.P_PRUPDATE),
 				defBase.push(UpdatingDailyRandomValuerGenerator.P_PRUPDATE), 0.01);
 		
+		randupdate = parameters.getDoubleWithDefault(
+				base.push(UpdatingDailyRandomValuerGenerator.P_RANDUPDATE),
+				defBase.push(UpdatingDailyRandomValuerGenerator.P_RANDUPDATE), 0.01);
+		
 		/**
 		 * Use the logger just to let me know that everything was read into the
 		 * class correctly from the database
@@ -308,8 +316,10 @@ public class UpdatingDailyRandomValuerGenerator extends
 						+ scale
 						+ ", shape set to "
 						+ shape
-						+ ", and updating has a probability of "
+						+ ", tranaction updating has a probability of "
 						+ prupdate
+						+ " and random updating has a probability of "
+						+ randupdate
 						);
 		UpdatingDailyRandomValuerGenerator.logger
 		.info(UpdatingDailyRandomValuer.checkPosterior(location,precision,shape,scale));
@@ -595,6 +605,20 @@ public class UpdatingDailyRandomValuerGenerator extends
 
 		UpdatingDailyRandomValuerGenerator.logger
 				.info("Transactions update with probability: " + prupdate);
+	}
+	
+	public synchronized void getRandUpdate() {
+		
+		defBase = new Parameter(UpdatingDailyRandomValuerGenerator.P_DEF_BUYER);
+		/**
+		 * pull the mean and stdev from the database
+		 */
+		randupdate = paramholder.getDouble(
+				defBase.push(UpdatingDailyRandomValuerGenerator.P_RANDUPDATE),
+				defBaseNorm.push(UpdatingDailyRandomValuerGenerator.P_RANDUPDATE), 0);
+
+		UpdatingDailyRandomValuerGenerator.logger
+				.info("Random update with probability: " + randupdate);
 	}
 	
 	/**
