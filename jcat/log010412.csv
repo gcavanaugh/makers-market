@@ -1,6 +1,0 @@
-game,day,CDA.score,CH.score,CDA.score.marketshare,CH.score.marketshare,CDA.score.profit,CH.score.profit,CDA.score.transactionrate,CH.score.transactionrate,CDA.profit,CH.profit,CDA.trader,CH.trader,CDA.fee.registration,CDA.fee.information,CDA.fee.shout,CDA.fee.transaction,CDA.fee.profit,CH.fee.registration,CH.fee.information,CH.fee.shout,CH.fee.transaction,CH.fee.profit,CDA.transaction.price.min,CH.transaction.price.min,global.equilibrium.price
-0,0,+0.277,+0.389,+0.425,+0.575,+0.407,+0.593,+0.000,+0.000,+5.700,+8.300,NaN,NaN,+0.100,+0.200,+0.300,+0.400,+0.100,+0.100,+0.200,+0.300,+0.400,+0.100,NaN,NaN,+0.000
-0,1,+0.611,+0.517,+0.550,+0.450,+0.650,+0.350,+0.632,+0.750,+16.471,+8.869,NaN,NaN,+0.100,+0.200,+0.300,+0.400,+0.100,+0.100,+0.200,+0.300,+0.400,+0.100,+96.513,+97.602,+96.678
-0,2,+0.568,+0.641,+0.475,+0.525,+0.428,+0.572,+0.800,+0.828,+32.359,+43.215,NaN,NaN,+0.100,+0.200,+0.300,+0.400,+0.100,+0.100,+0.200,+0.300,+0.400,+0.100,+99.133,+102.371,+98.593
-0,3,+0.729,+0.398,+0.550,+0.450,+0.755,+0.245,+0.882,+0.500,+53.327,+17.347,NaN,NaN,+0.100,+0.200,+0.300,+0.400,+0.100,+0.100,+0.200,+0.300,+0.400,+0.100,+104.389,+114.855,+99.952
-0,4,+0.634,+0.606,+0.525,+0.475,+0.471,+0.529,+0.905,+0.815,+50.551,+56.691,NaN,NaN,+0.100,+0.200,+0.300,+0.400,+0.100,+0.100,+0.200,+0.300,+0.400,+0.100,+100.440,+100.989,+101.602
