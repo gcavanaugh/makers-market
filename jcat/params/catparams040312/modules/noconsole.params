@@ -1,6 +1,0 @@
-###############################################################
-#  configuration file for cat game running silently           #
-###############################################################
-
-
-cat.server.console = edu.cuny.cat.server.SilentConsole

@@ -1,4 +1,0 @@
-###############################################################
-# call-based infrastructure for catp
-
-cat.infrastructure = edu.cuny.cat.comm.CallBasedInfrastructureImpl

@@ -210,7 +210,7 @@ cat.server.clockcontroller = edu.cuny.cat.server.EventBasedClockController
 
 cat.server.iterations = 1
 
-cat.server.gamelen = 50
+cat.server.gamelen = 2500
 cat.server.daylen = 10
 cat.server.roundlen = 500
 
@@ -245,8 +245,9 @@ cat.server.valuation.buyer.distribution.stdev = 25
 cat.server.valuation.buyer.minvalue = 0
 cat.server.valuation.buyer.maxvalue = 10000
 cat.server.valuation.buyer.shape = 1.0
-cat.server.valuation.buyer.samplesize = 1000
-cat.server.valuation.buyer.prupdate = .1
+cat.server.valuation.buyer.samplesize = 100
+cat.server.valuation.buyer.prupdate = .0
+cat.server.valuation.buyer.randupdate = .9
 cat.server.valuation.buyer.mean = 50
 cat.server.valuation.buyer.stdev = 25
 
@@ -265,49 +266,31 @@ cat.infrastructure = edu.cuny.cat.comm.CallBasedInfrastructureImpl
 # game report
 
 cat.server.report = edu.cuny.cat.stat.CombiGameReport
-cat.server.report.n = 10
-cat.server.report.0 = edu.cuny.cat.stat.ProfitReport
-cat.server.report.1 = edu.cuny.cat.stat.ReportVariableWriterReport
-cat.server.report.1.filename = logTradersPrivateVals.csv 
-cat.server.report.1.separator = ,
-cat.server.report.1.var.n = 1
-cat.server.report.1.var.0 = <trader>.value
-cat.server.report.2 = edu.cuny.cat.stat.FeeReport
-cat.server.report.3 = edu.cuny.cat.stat.MarketMetricsReport
+cat.server.report.n = 6
+cat.server.report.0 = edu.cuny.cat.stat.ShoutReport
+cat.server.report.1 = edu.cuny.cat.stat.TraderReport
+cat.server.report.2 = edu.cuny.cat.stat.MarketMetricsReport
+cat.server.report.3 = edu.cuny.cat.stat.ScoreReport
+cat.server.report.3.condition = edu.cuny.cat.stat.AllScoreDaysCondition
 cat.server.report.4 = edu.cuny.cat.stat.ReportVariableWriterReport
-cat.server.report.4.filename = logTranactions.csv
+cat.server.report.4.filename = log041512/log041512Tranactions003.csv
 cat.server.report.4.separator = ,
-cat.server.report.4.var.n = 9
-cat.server.report.4.var.0 = <specialist>.transaction.quantity
-cat.server.report.4.var.1 = <specialist>.transaction.price.min
-cat.server.report.4.var.2 = <specialist>.transaction.price.max
-cat.server.report.4.var.3 = <specialist>.transaction.price.mean
-cat.server.report.4.var.4 = <specialist>.transaction.price.stdev
-cat.server.report.4.var.5 = <specialist>.<shout>.accepted.price.min
-cat.server.report.4.var.6 = <specialist>.<shout>.accepted.price.max
-cat.server.report.4.var.7 = <specialist>.<shout>.accepted.quantity
-cat.server.report.4.var.8 = <specialist>.<shout>.accepted.price.stdev
-cat.server.report.5 = edu.cuny.cat.stat.ScoreReport
-cat.server.report.5.condition = edu.cuny.cat.stat.DefaultScoreDaysCondition
-cat.server.report.5.condition.debug = true
-cat.server.report.5.condition.start = 0
-cat.server.report.5.condition.prob = 1
-cat.server.report.6 = edu.cuny.cat.stat.ReportVariableWriterReport
-cat.server.report.6.filename = log010412.csv
-cat.server.report.6.separator = ,
-cat.server.report.6.var.n = 9
-cat.server.report.6.var.0 = <specialist>.score
-cat.server.report.6.var.1 = <specialist>.score.marketshare
-cat.server.report.6.var.2 = <specialist>.score.profit
-cat.server.report.6.var.3 = <specialist>.score.transactionrate
-cat.server.report.6.var.4 = <specialist>.profit
-cat.server.report.6.var.5 = <specialist>.trader
-cat.server.report.6.var.6 = <specialist>.<fee>
-cat.server.report.6.var.7 = <specialist>.transaction.price.min
-cat.server.report.6.var.8 = global.equilibrium.price
-cat.server.report.7 = edu.cuny.cat.stat.ClientDynamicsReport
-cat.server.report.8 = edu.cuny.cat.stat.TraderReport
-cat.server.report.9 = edu.cuny.cat.stat.ShoutReport
+cat.server.report.4.var.n = 10
+cat.server.report.4.var.0 = <specialist>.<shout>.accepted.quantity
+cat.server.report.4.var.1 = <specialist>.<shout>.accepted.price.min
+cat.server.report.4.var.2 = <specialist>.<shout>.accepted.price.max
+cat.server.report.4.var.3 = <specialist>.<shout>.accepted.price.mean
+cat.server.report.4.var.4 = <specialist>.<shout>.accepted.price.stdev
+cat.server.report.4.var.5 = <specialist>.transaction.quantity
+cat.server.report.4.var.6 = <specialist>.transaction.price.min
+cat.server.report.4.var.7 = <specialist>.transaction.price.max
+cat.server.report.4.var.8 = <specialist>.transaction.price.mean
+cat.server.report.4.var.9 = <specialist>.transaction.price.stdev
+cat.server.report.5 = edu.cuny.cat.stat.ReportVariableWriterReport
+cat.server.report.5.filename = log041512/log041512PrivateVals003.csv
+cat.server.report.5.separator = ,
+cat.server.report.5.var.n = 1
+cat.server.report.5.var.0 = <trader>.value
 
 
 # gui logger
