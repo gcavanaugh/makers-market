@@ -1,40 +1,4 @@
 #!/bin/bash
-ant run -Dparams=params/catparams042412fullset/cat042312_prior10_infopt001_noisept001_mean60_stdev10.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior10_infopt001_noisept001_mean60_stdev10
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior10_infopt001_noisept001_mean60_stdev10
-ant run -Dparams=params/catparams042412fullset/cat042312_prior10_infopt001_noisept001_mean60_stdev30.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior10_infopt001_noisept001_mean60_stdev30
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior10_infopt001_noisept001_mean60_stdev30
-ant run -Dparams=params/catparams042412fullset/cat042312_prior10_infopt001_noisept001_mean60_stdev50.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior10_infopt001_noisept001_mean60_stdev50
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior10_infopt001_noisept001_mean60_stdev50
-ant run -Dparams=params/catparams042412fullset/cat042312_prior10_infopt001_noisept001_mean80_stdev10.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior10_infopt001_noisept001_mean80_stdev10
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior10_infopt001_noisept001_mean80_stdev10
-ant run -Dparams=params/catparams042412fullset/cat042312_prior10_infopt001_noisept001_mean80_stdev30.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior10_infopt001_noisept001_mean80_stdev30
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior10_infopt001_noisept001_mean80_stdev30
-ant run -Dparams=params/catparams042412fullset/cat042312_prior10_infopt001_noisept001_mean80_stdev50.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior10_infopt001_noisept001_mean80_stdev50
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior10_infopt001_noisept001_mean80_stdev50
-ant run -Dparams=params/catparams042412fullset/cat042312_prior10_infopt001_noisept001_mean100_stdev10.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior10_infopt001_noisept001_mean100_stdev10
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior10_infopt001_noisept001_mean100_stdev10
-ant run -Dparams=params/catparams042412fullset/cat042312_prior10_infopt001_noisept001_mean100_stdev30.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior10_infopt001_noisept001_mean100_stdev30
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior10_infopt001_noisept001_mean100_stdev30
-ant run -Dparams=params/catparams042412fullset/cat042312_prior10_infopt001_noisept001_mean100_stdev50.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior10_infopt001_noisept001_mean100_stdev50
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior10_infopt001_noisept001_mean100_stdev50
 ant run -Dparams=params/catparams042412fullset/cat042312_prior10_infopt001_noisept001_mean120_stdev10.params
 cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
 mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior10_infopt001_noisept001_mean120_stdev10
@@ -431,10 +395,6 @@ ant run -Dparams=params/catparams042412fullset/cat042312_prior10_infopt01_noisep
 cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
 mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior10_infopt01_noisept1_mean120_stdev50
 cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior10_infopt01_noisept1_mean120_stdev50
-ant run -Dparams=params/catparams042412fullset/cat042312_prior10_infopt01_noisept2_mean60_stdev10.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior10_infopt01_noisept2_mean60_stdev10
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior10_infopt01_noisept2_mean60_stdev10
 ant run -Dparams=params/catparams042412fullset/cat042312_prior10_infopt01_noisept2_mean60_stdev30.params
 cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
 mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior10_infopt01_noisept2_mean60_stdev30
@@ -863,26 +823,6 @@ ant run -Dparams=params/catparams042412fullset/cat042312_prior10_infopt1_noise1p
 cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
 mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior10_infopt1_noise1pt0_mean120_stdev50
 cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior10_infopt1_noise1pt0_mean120_stdev50
-ant run -Dparams=params/catparams042412fullset/cat042312_prior10_infopt2_noisept001_mean60_stdev10.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior10_infopt2_noisept001_mean60_stdev10
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior10_infopt2_noisept001_mean60_stdev10
-ant run -Dparams=params/catparams042412fullset/cat042312_prior10_infopt2_noisept001_mean60_stdev30.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior10_infopt2_noisept001_mean60_stdev30
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior10_infopt2_noisept001_mean60_stdev30
-ant run -Dparams=params/catparams042412fullset/cat042312_prior10_infopt2_noisept001_mean60_stdev50.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior10_infopt2_noisept001_mean60_stdev50
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior10_infopt2_noisept001_mean60_stdev50
-ant run -Dparams=params/catparams042412fullset/cat042312_prior10_infopt2_noisept001_mean80_stdev10.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior10_infopt2_noisept001_mean80_stdev10
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior10_infopt2_noisept001_mean80_stdev10
-ant run -Dparams=params/catparams042412fullset/cat042312_prior10_infopt2_noisept001_mean80_stdev30.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior10_infopt2_noisept001_mean80_stdev30
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior10_infopt2_noisept001_mean80_stdev30
 ant run -Dparams=params/catparams042412fullset/cat042312_prior10_infopt2_noisept001_mean80_stdev50.params
 cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
 mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior10_infopt2_noisept001_mean80_stdev50
@@ -1727,30 +1667,6 @@ ant run -Dparams=params/catparams042412fullset/cat042312_prior10_info1pt0_noise1
 cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
 mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior10_info1pt0_noise1pt0_mean120_stdev50
 cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior10_info1pt0_noise1pt0_mean120_stdev50
-ant run -Dparams=params/catparams042412fullset/cat042312_prior100_infopt001_noisept001_mean60_stdev10.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior100_infopt001_noisept001_mean60_stdev10
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior100_infopt001_noisept001_mean60_stdev10
-ant run -Dparams=params/catparams042412fullset/cat042312_prior100_infopt001_noisept001_mean60_stdev30.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior100_infopt001_noisept001_mean60_stdev30
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior100_infopt001_noisept001_mean60_stdev30
-ant run -Dparams=params/catparams042412fullset/cat042312_prior100_infopt001_noisept001_mean60_stdev50.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior100_infopt001_noisept001_mean60_stdev50
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior100_infopt001_noisept001_mean60_stdev50
-ant run -Dparams=params/catparams042412fullset/cat042312_prior100_infopt001_noisept001_mean80_stdev10.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior100_infopt001_noisept001_mean80_stdev10
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior100_infopt001_noisept001_mean80_stdev10
-ant run -Dparams=params/catparams042412fullset/cat042312_prior100_infopt001_noisept001_mean80_stdev30.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior100_infopt001_noisept001_mean80_stdev30
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior100_infopt001_noisept001_mean80_stdev30
-ant run -Dparams=params/catparams042412fullset/cat042312_prior100_infopt001_noisept001_mean80_stdev50.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior100_infopt001_noisept001_mean80_stdev50
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior100_infopt001_noisept001_mean80_stdev50
 ant run -Dparams=params/catparams042412fullset/cat042312_prior100_infopt001_noisept001_mean100_stdev10.params
 cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
 mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior100_infopt001_noisept001_mean100_stdev10
@@ -2159,26 +2075,6 @@ ant run -Dparams=params/catparams042412fullset/cat042312_prior100_infopt01_noise
 cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
 mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior100_infopt01_noisept1_mean120_stdev50
 cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior100_infopt01_noisept1_mean120_stdev50
-ant run -Dparams=params/catparams042412fullset/cat042312_prior100_infopt01_noisept2_mean60_stdev10.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior100_infopt01_noisept2_mean60_stdev10
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior100_infopt01_noisept2_mean60_stdev10
-ant run -Dparams=params/catparams042412fullset/cat042312_prior100_infopt01_noisept2_mean60_stdev30.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior100_infopt01_noisept2_mean60_stdev30
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior100_infopt01_noisept2_mean60_stdev30
-ant run -Dparams=params/catparams042412fullset/cat042312_prior100_infopt01_noisept2_mean60_stdev50.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior100_infopt01_noisept2_mean60_stdev50
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior100_infopt01_noisept2_mean60_stdev50
-ant run -Dparams=params/catparams042412fullset/cat042312_prior100_infopt01_noisept2_mean80_stdev10.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior100_infopt01_noisept2_mean80_stdev10
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior100_infopt01_noisept2_mean80_stdev10
-ant run -Dparams=params/catparams042412fullset/cat042312_prior100_infopt01_noisept2_mean80_stdev30.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior100_infopt01_noisept2_mean80_stdev30
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior100_infopt01_noisept2_mean80_stdev30
 ant run -Dparams=params/catparams042412fullset/cat042312_prior100_infopt01_noisept2_mean80_stdev50.params
 cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
 mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior100_infopt01_noisept2_mean80_stdev50
@@ -2591,22 +2487,6 @@ ant run -Dparams=params/catparams042412fullset/cat042312_prior100_infopt1_noise1
 cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
 mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior100_infopt1_noise1pt0_mean120_stdev50
 cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior100_infopt1_noise1pt0_mean120_stdev50
-ant run -Dparams=params/catparams042412fullset/cat042312_prior100_infopt2_noisept001_mean60_stdev10.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior100_infopt2_noisept001_mean60_stdev10
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior100_infopt2_noisept001_mean60_stdev10
-ant run -Dparams=params/catparams042412fullset/cat042312_prior100_infopt2_noisept001_mean60_stdev30.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior100_infopt2_noisept001_mean60_stdev30
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior100_infopt2_noisept001_mean60_stdev30
-ant run -Dparams=params/catparams042412fullset/cat042312_prior100_infopt2_noisept001_mean60_stdev50.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior100_infopt2_noisept001_mean60_stdev50
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior100_infopt2_noisept001_mean60_stdev50
-ant run -Dparams=params/catparams042412fullset/cat042312_prior100_infopt2_noisept001_mean80_stdev10.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior100_infopt2_noisept001_mean80_stdev10
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior100_infopt2_noisept001_mean80_stdev10
 ant run -Dparams=params/catparams042412fullset/cat042312_prior100_infopt2_noisept001_mean80_stdev30.params
 cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
 mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior100_infopt2_noisept001_mean80_stdev30
@@ -3455,30 +3335,6 @@ ant run -Dparams=params/catparams042412fullset/cat042312_prior100_info1pt0_noise
 cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
 mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior100_info1pt0_noise1pt0_mean120_stdev50
 cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior100_info1pt0_noise1pt0_mean120_stdev50
-ant run -Dparams=params/catparams042412fullset/cat042312_prior300_infopt001_noisept001_mean60_stdev10.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior300_infopt001_noisept001_mean60_stdev10
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior300_infopt001_noisept001_mean60_stdev10
-ant run -Dparams=params/catparams042412fullset/cat042312_prior300_infopt001_noisept001_mean60_stdev30.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior300_infopt001_noisept001_mean60_stdev30
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior300_infopt001_noisept001_mean60_stdev30
-ant run -Dparams=params/catparams042412fullset/cat042312_prior300_infopt001_noisept001_mean60_stdev50.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior300_infopt001_noisept001_mean60_stdev50
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior300_infopt001_noisept001_mean60_stdev50
-ant run -Dparams=params/catparams042412fullset/cat042312_prior300_infopt001_noisept001_mean80_stdev10.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior300_infopt001_noisept001_mean80_stdev10
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior300_infopt001_noisept001_mean80_stdev10
-ant run -Dparams=params/catparams042412fullset/cat042312_prior300_infopt001_noisept001_mean80_stdev30.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior300_infopt001_noisept001_mean80_stdev30
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior300_infopt001_noisept001_mean80_stdev30
-ant run -Dparams=params/catparams042412fullset/cat042312_prior300_infopt001_noisept001_mean80_stdev50.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior300_infopt001_noisept001_mean80_stdev50
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior300_infopt001_noisept001_mean80_stdev50
 ant run -Dparams=params/catparams042412fullset/cat042312_prior300_infopt001_noisept001_mean100_stdev10.params
 cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
 mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior300_infopt001_noisept001_mean100_stdev10
@@ -3887,10 +3743,6 @@ ant run -Dparams=params/catparams042412fullset/cat042312_prior300_infopt01_noise
 cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
 mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior300_infopt01_noisept1_mean120_stdev50
 cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior300_infopt01_noisept1_mean120_stdev50
-ant run -Dparams=params/catparams042412fullset/cat042312_prior300_infopt01_noisept2_mean60_stdev10.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior300_infopt01_noisept2_mean60_stdev10
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior300_infopt01_noisept2_mean60_stdev10
 ant run -Dparams=params/catparams042412fullset/cat042312_prior300_infopt01_noisept2_mean60_stdev30.params
 cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
 mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior300_infopt01_noisept2_mean60_stdev30
@@ -4319,42 +4171,6 @@ ant run -Dparams=params/catparams042412fullset/cat042312_prior300_infopt1_noise1
 cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
 mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior300_infopt1_noise1pt0_mean120_stdev50
 cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior300_infopt1_noise1pt0_mean120_stdev50
-ant run -Dparams=params/catparams042412fullset/cat042312_prior300_infopt2_noisept001_mean60_stdev10.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior300_infopt2_noisept001_mean60_stdev10
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior300_infopt2_noisept001_mean60_stdev10
-ant run -Dparams=params/catparams042412fullset/cat042312_prior300_infopt2_noisept001_mean60_stdev30.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior300_infopt2_noisept001_mean60_stdev30
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior300_infopt2_noisept001_mean60_stdev30
-ant run -Dparams=params/catparams042412fullset/cat042312_prior300_infopt2_noisept001_mean60_stdev50.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior300_infopt2_noisept001_mean60_stdev50
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior300_infopt2_noisept001_mean60_stdev50
-ant run -Dparams=params/catparams042412fullset/cat042312_prior300_infopt2_noisept001_mean80_stdev10.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior300_infopt2_noisept001_mean80_stdev10
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior300_infopt2_noisept001_mean80_stdev10
-ant run -Dparams=params/catparams042412fullset/cat042312_prior300_infopt2_noisept001_mean80_stdev30.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior300_infopt2_noisept001_mean80_stdev30
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior300_infopt2_noisept001_mean80_stdev30
-ant run -Dparams=params/catparams042412fullset/cat042312_prior300_infopt2_noisept001_mean80_stdev50.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior300_infopt2_noisept001_mean80_stdev50
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior300_infopt2_noisept001_mean80_stdev50
-ant run -Dparams=params/catparams042412fullset/cat042312_prior300_infopt2_noisept001_mean100_stdev10.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior300_infopt2_noisept001_mean100_stdev10
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior300_infopt2_noisept001_mean100_stdev10
-ant run -Dparams=params/catparams042412fullset/cat042312_prior300_infopt2_noisept001_mean100_stdev30.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior300_infopt2_noisept001_mean100_stdev30
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior300_infopt2_noisept001_mean100_stdev30
-ant run -Dparams=params/catparams042412fullset/cat042312_prior300_infopt2_noisept001_mean100_stdev50.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior300_infopt2_noisept001_mean100_stdev50
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior300_infopt2_noisept001_mean100_stdev50
 ant run -Dparams=params/catparams042412fullset/cat042312_prior300_infopt2_noisept001_mean120_stdev10.params
 cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
 mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior300_infopt2_noisept001_mean120_stdev10
@@ -5183,22 +4999,6 @@ ant run -Dparams=params/catparams042412fullset/cat042312_prior300_info1pt0_noise
 cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
 mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior300_info1pt0_noise1pt0_mean120_stdev50
 cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior300_info1pt0_noise1pt0_mean120_stdev50
-ant run -Dparams=params/catparams042412fullset/cat042312_prior600_infopt001_noisept001_mean60_stdev10.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior600_infopt001_noisept001_mean60_stdev10
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior600_infopt001_noisept001_mean60_stdev10
-ant run -Dparams=params/catparams042412fullset/cat042312_prior600_infopt001_noisept001_mean60_stdev30.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior600_infopt001_noisept001_mean60_stdev30
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior600_infopt001_noisept001_mean60_stdev30
-ant run -Dparams=params/catparams042412fullset/cat042312_prior600_infopt001_noisept001_mean60_stdev50.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior600_infopt001_noisept001_mean60_stdev50
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior600_infopt001_noisept001_mean60_stdev50
-ant run -Dparams=params/catparams042412fullset/cat042312_prior600_infopt001_noisept001_mean80_stdev10.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior600_infopt001_noisept001_mean80_stdev10
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior600_infopt001_noisept001_mean80_stdev10
 ant run -Dparams=params/catparams042412fullset/cat042312_prior600_infopt001_noisept001_mean80_stdev30.params
 cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
 mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior600_infopt001_noisept001_mean80_stdev30
@@ -6479,14 +6279,6 @@ ant run -Dparams=params/catparams042412fullset/cat042312_prior600_infopt5_noisep
 cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
 mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior600_infopt5_noisept1_mean120_stdev50
 cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior600_infopt5_noisept1_mean120_stdev50
-ant run -Dparams=params/catparams042412fullset/cat042312_prior600_infopt5_noisept2_mean60_stdev10.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior600_infopt5_noisept2_mean60_stdev10
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior600_infopt5_noisept2_mean60_stdev10
-ant run -Dparams=params/catparams042412fullset/cat042312_prior600_infopt5_noisept2_mean60_stdev30.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior600_infopt5_noisept2_mean60_stdev30
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior600_infopt5_noisept2_mean60_stdev30
 ant run -Dparams=params/catparams042412fullset/cat042312_prior600_infopt5_noisept2_mean60_stdev50.params
 cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
 mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior600_infopt5_noisept2_mean60_stdev50
@@ -6911,26 +6703,6 @@ ant run -Dparams=params/catparams042412fullset/cat042312_prior600_info1pt0_noise
 cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
 mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior600_info1pt0_noise1pt0_mean120_stdev50
 cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior600_info1pt0_noise1pt0_mean120_stdev50
-ant run -Dparams=params/catparams042412fullset/cat042312_prior1000_infopt001_noisept001_mean60_stdev10.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior1000_infopt001_noisept001_mean60_stdev10
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior1000_infopt001_noisept001_mean60_stdev10
-ant run -Dparams=params/catparams042412fullset/cat042312_prior1000_infopt001_noisept001_mean60_stdev30.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior1000_infopt001_noisept001_mean60_stdev30
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior1000_infopt001_noisept001_mean60_stdev30
-ant run -Dparams=params/catparams042412fullset/cat042312_prior1000_infopt001_noisept001_mean60_stdev50.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior1000_infopt001_noisept001_mean60_stdev50
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior1000_infopt001_noisept001_mean60_stdev50
-ant run -Dparams=params/catparams042412fullset/cat042312_prior1000_infopt001_noisept001_mean80_stdev10.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior1000_infopt001_noisept001_mean80_stdev10
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior1000_infopt001_noisept001_mean80_stdev10
-ant run -Dparams=params/catparams042412fullset/cat042312_prior1000_infopt001_noisept001_mean80_stdev30.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior1000_infopt001_noisept001_mean80_stdev30
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior1000_infopt001_noisept001_mean80_stdev30
 ant run -Dparams=params/catparams042412fullset/cat042312_prior1000_infopt001_noisept001_mean80_stdev50.params
 cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
 mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior1000_infopt001_noisept001_mean80_stdev50
@@ -7775,14 +7547,6 @@ ant run -Dparams=params/catparams042412fullset/cat042312_prior1000_infopt1_noise
 cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
 mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior1000_infopt1_noise1pt0_mean120_stdev50
 cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior1000_infopt1_noise1pt0_mean120_stdev50
-ant run -Dparams=params/catparams042412fullset/cat042312_prior1000_infopt2_noisept001_mean60_stdev10.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior1000_infopt2_noisept001_mean60_stdev10
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior1000_infopt2_noisept001_mean60_stdev10
-ant run -Dparams=params/catparams042412fullset/cat042312_prior1000_infopt2_noisept001_mean60_stdev30.params
-cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
-mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior1000_infopt2_noisept001_mean60_stdev30
-cp -r ./log/* ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior1000_infopt2_noisept001_mean60_stdev30
 ant run -Dparams=params/catparams042412fullset/cat042312_prior1000_infopt2_noisept001_mean60_stdev50.params
 cp -r ./log042412fullset/* ~/Dropbox/logs/log042412fullset/
 mkdir ~/Dropbox/logs/log042412fullset/completelog/cat042312_prior1000_infopt2_noisept001_mean60_stdev50
