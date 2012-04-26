@@ -210,7 +210,7 @@ cat.server.clockcontroller = edu.cuny.cat.server.EventBasedClockController
 
 cat.server.iterations = 1
 
-cat.server.gamelen = 2500
+cat.server.gamelen = 500
 cat.server.daylen = 10
 cat.server.roundlen = 500
 
